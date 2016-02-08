@@ -1,6 +1,6 @@
 ---
  - name: Rollback
-   hosts: Devices-AMS
+   hosts: fixed
    roles:       
     - Juniper.junos
    connection: local
