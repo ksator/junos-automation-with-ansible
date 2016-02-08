@@ -1,0 +1,14 @@
+# The default ansible 'hosts' file lives in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+# All junos devices with fixed ip@ into this setup
+[fixed]
+10.19.10.5
+10.19.19.19
+10.19.10.41
+
