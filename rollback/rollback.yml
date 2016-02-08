@@ -22,6 +22,6 @@
       user=pytraining
       passwd={{ DEVICE_PASSWORD }}
       logfile=rollback.log
-      diffs_file=rollback.diff
+      diffs_file={{ inventory_hostname }}.diff
       rollback=0
       comment="Rolled back by Ansible"
