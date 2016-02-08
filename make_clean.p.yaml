@@ -1,0 +1,10 @@
+---
+- name: Creating build directories for each host
+  hosts: fixe
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: remove host build temp directory
+      file: path=configs/{{inventory_hostname}}.conf state=absent
+    - name: create host build temp directory
+      file: path=configs/ state=directory

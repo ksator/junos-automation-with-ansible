@@ -1,0 +1,310 @@
+2016-02-08 14:59:45,937:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 14:59:45,956:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 14:59:45,956:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 14:59:45,957:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 14:59:45,958:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 14:59:45,977:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 14:59:46,145:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 14:59:46,175:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 14:59:46,466:ncclient.transport.session:initialized: session-id=11774 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 14:59:46,466:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 14:59:46,469:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 14:59:46,473:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 14:59:46,648:ncclient.transport.session:initialized: session-id=11781 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 14:59:46,648:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 14:59:46,648:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 14:59:46,652:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 14:59:46,689:CONFIG:10.19.10.5:Uncaught exception - please report: [Errno 2] No such file or directory: 'configs/10.19.10.5.conf'
+2016-02-08 14:59:46,692:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 14:59:46,818:CONFIG:10.19.10.41:Uncaught exception - please report: [Errno 2] No such file or directory: 'configs/10.19.10.41.conf'
+2016-02-08 14:59:46,822:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:02:04,604:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:02:04,606:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:02:04,614:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:02:04,629:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:02:04,635:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:02:04,650:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:02:04,852:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:02:04,923:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:02:05,250:ncclient.transport.session:initialized: session-id=11793 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:02:05,250:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:02:05,251:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:02:05,251:ncclient.transport.session:initialized: session-id=11792 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:02:05,251:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:02:05,251:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:02:05,254:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:02:05,255:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:02:05,420:CONFIG:10.19.10.41:Uncaught exception - please report: [Errno 2] No such file or directory: 'configs/10.19.10.41.conf'
+2016-02-08 15:02:05,421:CONFIG:10.19.10.5:Uncaught exception - please report: [Errno 2] No such file or directory: 'configs/10.19.10.5.conf'
+2016-02-08 15:02:05,423:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:02:05,425:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:02:19,033:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:02:19,034:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:02:19,035:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:02:19,045:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:02:19,054:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:02:19,066:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:02:19,249:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:02:19,323:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:02:19,624:ncclient.transport.session:initialized: session-id=11798 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:02:19,624:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:02:19,624:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:02:19,628:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:02:19,706:ncclient.transport.session:initialized: session-id=11797 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:02:19,707:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:02:19,707:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:02:19,711:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:02:19,743:CONFIG:10.19.10.41:Uncaught exception - please report: [Errno 2] No such file or directory: 'configs/10.19.10.41.conf'
+2016-02-08 15:02:19,747:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:02:19,926:CONFIG:10.19.10.5:Uncaught exception - please report: [Errno 2] No such file or directory: 'configs/10.19.10.5.conf'
+2016-02-08 15:02:19,930:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:02:41,070:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:02:41,077:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:02:41,085:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:02:41,087:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:02:41,100:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:02:41,101:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:02:41,288:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:02:41,369:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:02:41,699:ncclient.transport.session:initialized: session-id=11802 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:02:41,699:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:02:41,699:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:02:41,703:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:02:41,708:ncclient.transport.session:initialized: session-id=11803 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:02:41,708:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:02:41,708:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:02:41,712:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:02:41,871:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:02:41,885:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:06:41,955:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:06:41,955:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:06:41,956:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:06:41,959:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:06:41,978:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:06:41,978:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:06:42,165:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:06:42,167:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:06:42,486:ncclient.transport.session:initialized: session-id=11812 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:06:42,486:ncclient.transport.session:initialized: session-id=11811 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:06:42,487:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:06:42,487:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:06:42,487:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:06:42,487:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:06:42,491:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:06:42,491:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:06:42,661:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:06:42,662:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:06:59,240:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:06:59,243:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:06:59,243:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:06:59,245:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:06:59,260:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:06:59,264:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:06:59,447:ncclient.transport.ssh:Authentication (password) failed.
+2016-02-08 15:06:59,447:ncclient.transport.ssh:Authentication (password) failed.
+2016-02-08 15:06:59,563:CONFIG:10.19.10.41:unable to connect to 10.19.10.41: ConnectAuthError(10.19.10.41)
+2016-02-08 15:06:59,565:CONFIG:10.19.10.5:unable to connect to 10.19.10.5: ConnectAuthError(10.19.10.5)
+2016-02-08 15:07:20,224:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:07:20,226:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:07:20,245:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:07:20,246:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:07:20,265:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:07:20,266:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:07:20,450:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:07:20,457:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:07:20,783:ncclient.transport.session:initialized: session-id=11818 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:07:20,783:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:07:20,783:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:07:20,787:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:07:20,818:ncclient.transport.session:initialized: session-id=11819 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:07:20,818:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:07:20,818:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:07:20,822:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:07:20,941:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:07:20,957:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:17:37,252:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:17:37,263:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:17:37,265:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:17:37,269:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:17:37,273:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:17:37,303:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:17:37,460:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:17:37,529:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:17:37,782:ncclient.transport.session:initialized: session-id=11834 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:17:37,782:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:17:37,784:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:17:37,788:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:17:37,875:ncclient.transport.session:initialized: session-id=11835 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:17:37,876:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:17:37,876:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:17:37,880:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:17:37,958:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:17:38,049:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:30:38,967:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:30:38,971:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:30:38,972:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:30:38,974:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:30:38,987:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:30:38,991:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:30:39,176:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:30:39,224:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:30:39,546:ncclient.transport.session:initialized: session-id=11854 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:30:39,546:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:30:39,546:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:30:39,547:ncclient.transport.session:initialized: session-id=11855 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:30:39,548:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:30:39,548:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:30:39,551:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:30:39,552:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:30:39,669:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:30:39,720:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:33:29,203:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:33:29,204:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:33:29,205:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:33:29,207:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:33:29,224:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:33:29,225:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:33:29,414:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:33:29,414:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:33:29,733:ncclient.transport.session:initialized: session-id=11860 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:33:29,733:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:33:29,734:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:33:29,735:ncclient.transport.session:initialized: session-id=11859 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:33:29,736:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:33:29,736:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:33:29,737:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:33:29,744:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:33:29,867:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:33:29,907:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:33:52,605:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:33:52,606:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:33:52,607:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:33:52,607:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:33:52,626:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:33:52,628:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:33:52,813:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:33:52,817:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:33:53,136:ncclient.transport.session:initialized: session-id=11864 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:33:53,136:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:33:53,138:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:33:53,141:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:33:53,232:ncclient.transport.session:initialized: session-id=11865 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:33:53,233:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:33:53,233:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:33:53,237:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:33:53,311:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:33:53,356:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:34:35,713:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:34:35,714:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:34:35,716:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:34:35,720:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:34:35,733:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:34:35,741:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:34:35,924:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:34:35,927:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:34:36,250:ncclient.transport.session:initialized: session-id=11869 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:34:36,251:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:34:36,251:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:34:36,255:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:34:36,347:ncclient.transport.session:initialized: session-id=11870 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:34:36,347:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:34:36,347:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:34:36,351:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:34:36,426:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:34:36,470:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:36:40,333:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:36:40,338:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:36:40,339:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:36:40,346:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:36:40,353:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:36:40,367:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:36:40,541:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:36:40,553:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:36:40,862:ncclient.transport.session:initialized: session-id=11878 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:36:40,862:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:36:40,862:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:36:40,866:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:36:40,875:ncclient.transport.session:initialized: session-id=11879 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:36:40,875:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:36:40,875:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:36:40,879:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:36:41,036:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:36:41,047:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:36:46,445:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:36:46,447:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:36:46,448:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:36:46,450:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:36:46,466:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:36:46,469:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:36:46,653:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:36:46,653:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:36:46,971:ncclient.transport.session:initialized: session-id=11884 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:36:46,971:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:36:46,972:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:36:46,975:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:36:46,978:ncclient.transport.session:initialized: session-id=11883 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:36:46,978:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:36:46,979:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:36:46,982:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:36:47,152:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:36:47,194:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:36:59,287:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:36:59,288:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:36:59,319:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:36:59,320:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:36:59,339:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:36:59,340:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:36:59,528:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:36:59,531:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:36:59,848:ncclient.transport.session:initialized: session-id=11889 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:36:59,849:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:36:59,849:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:36:59,852:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:36:59,856:ncclient.transport.session:initialized: session-id=11888 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:36:59,856:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:36:59,856:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:36:59,860:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:37:00,018:CONFIG:10.19.10.41:Uncaught exception - please report: [Errno 2] No such file or directory: 'configs/10.19.10.41.conf'
+2016-02-08 15:37:00,021:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:37:00,025:CONFIG:10.19.10.5:Uncaught exception - please report: [Errno 2] No such file or directory: 'configs/10.19.10.5.conf'
+2016-02-08 15:37:00,028:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:38:28,694:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:38:28,696:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:38:28,696:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:38:28,697:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:38:28,717:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:38:28,718:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:38:28,904:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:38:28,989:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:38:29,229:ncclient.transport.session:initialized: session-id=11894 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:38:29,230:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:38:29,230:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:38:29,233:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:38:29,318:ncclient.transport.session:initialized: session-id=11893 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:38:29,318:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:38:29,318:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:38:29,322:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:38:29,399:CONFIG:10.19.10.41:Uncaught exception - please report: [Errno 2] No such file or directory: 'configs/10.19.10.41.conf'
+2016-02-08 15:38:29,402:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:38:29,487:CONFIG:10.19.10.5:Uncaught exception - please report: [Errno 2] No such file or directory: 'configs/10.19.10.5.conf'
+2016-02-08 15:38:29,490:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:40:00,014:CONFIG:10.19.10.5:connecting to host: pytraining@10.19.10.5:830
+2016-02-08 15:40:00,019:CONFIG:10.19.19.19:connecting to host: pytraining@10.19.19.19:830
+2016-02-08 15:40:00,021:CONFIG:10.19.10.41:connecting to host: pytraining@10.19.10.41:830
+2016-02-08 15:40:00,021:CONFIG:10.19.19.19:unable to connect to 10.19.19.19: ConnectRefusedError(10.19.19.19)
+2016-02-08 15:40:00,035:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:40:00,042:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2016-02-08 15:40:00,227:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:40:00,320:ncclient.transport.ssh:Authentication (password) successful!
+2016-02-08 15:40:00,546:ncclient.transport.session:initialized: session-id=11899 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:40:00,546:CONFIG:10.19.10.41:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:40:00,546:CONFIG:10.19.10.41:Getting config with options={'format': 'text'}
+2016-02-08 15:40:00,550:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:40:00,640:ncclient.transport.session:initialized: session-id=11902 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2016-02-08 15:40:00,640:CONFIG:10.19.10.5:Getting config with filter=<configuration><interfaces/></configuration>
+2016-02-08 15:40:00,640:CONFIG:10.19.10.5:Getting config with options={'format': 'text'}
+2016-02-08 15:40:00,644:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2016-02-08 15:40:00,715:CONFIG:10.19.10.41:Uncaught exception - please report: [Errno 2] No such file or directory: 'configs/10.19.10.41.conf'
+2016-02-08 15:40:00,718:ncclient.operations.rpc:Requesting 'CloseSession'
+2016-02-08 15:40:00,809:CONFIG:10.19.10.5:Uncaught exception - please report: [Errno 2] No such file or directory: 'configs/10.19.10.5.conf'
+2016-02-08 15:40:00,812:ncclient.operations.rpc:Requesting 'CloseSession'
