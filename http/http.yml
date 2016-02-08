@@ -6,7 +6,7 @@
 
    - name: name_task
      uri:
-      url: http://172.30.177.170:3000/rpc/get-software-information
+      url: http://66.129.233.7:3000/rpc/get-software-information
       method: GET
       user: pytraining
       password: Poclab123
