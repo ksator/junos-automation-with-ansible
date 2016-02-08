@@ -1,0 +1,27 @@
+---
+ - name: Rollback
+   hosts: Devices-AMS
+   roles:       
+    - Juniper.junos
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+    #- name: USERNAME
+    #  prompt: User name
+    #  private: no
+
+   tasks:
+
+   - name: Rollback_junos_config_task
+     junos_rollback:
+      host={{ inventory_hostname }}
+      user=pytraining
+      passwd={{ DEVICE_PASSWORD }}
+      logfile=rollback.log
+      diffs_file=rollback.diff
+      rollback=0
+      comment="Rolled back by Ansible"

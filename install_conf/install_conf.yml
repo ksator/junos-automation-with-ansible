@@ -1,0 +1,29 @@
+---
+ - name: install conf
+   hosts: Instructor-device
+   roles:       
+    - Juniper.junos
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+    #- name: USERNAME
+    #  prompt: User name
+    #  private: no
+
+   tasks:
+
+   - name: Install configuration to devices running Junos
+     junos_install_config:
+      host={{ inventory_hostname }}
+      user=pytraining
+      passwd={{ DEVICE_PASSWORD }}
+      logfile=install_config.log
+      file=banner.set
+      comment="configured by ansible"
+      diffs_file=pdiff/{{ inventory_hostname }}
+      
+

@@ -1,0 +1,27 @@
+2015-11-30 06:13:09,850:172.30.179.112:Starting the software upgrade process: images/jinstall-ex-4200-12.3R11.2-domestic-signed.tgz
+2015-11-30 06:13:09,851:172.30.179.112:computing local checksum on: images/jinstall-ex-4200-12.3R11.2-domestic-signed.tgz
+2015-11-30 06:13:10,434:172.30.179.112:cleaning filesystem ...
+2015-11-30 06:13:10,434:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:13:22,135:paramiko.transport:Connected (version 2.0, client OpenSSH_5.9)
+2015-11-30 06:13:22,551:paramiko.transport:Authentication (password) successful!
+2015-11-30 06:14:02,548:172.30.179.112:jinstall-ex-4200-12.3R11.2-domestic-signed.tgz: 11223040 / 112162169 (10%)
+2015-11-30 06:14:47,928:172.30.179.112:jinstall-ex-4200-12.3R11.2-domestic-signed.tgz: 22446080 / 112162169 (20%)
+2015-11-30 06:15:29,835:172.30.179.112:jinstall-ex-4200-12.3R11.2-domestic-signed.tgz: 33652736 / 112162169 (30%)
+2015-11-30 06:16:20,311:172.30.179.112:jinstall-ex-4200-12.3R11.2-domestic-signed.tgz: 44875776 / 112162169 (40%)
+2015-11-30 06:17:04,276:172.30.179.112:jinstall-ex-4200-12.3R11.2-domestic-signed.tgz: 56082432 / 112162169 (50%)
+2015-11-30 06:17:53,487:172.30.179.112:jinstall-ex-4200-12.3R11.2-domestic-signed.tgz: 67305472 / 112162169 (60%)
+2015-11-30 06:18:38,673:172.30.179.112:jinstall-ex-4200-12.3R11.2-domestic-signed.tgz: 78528512 / 112162169 (70%)
+2015-11-30 06:19:24,538:172.30.179.112:jinstall-ex-4200-12.3R11.2-domestic-signed.tgz: 89735168 / 112162169 (80%)
+2015-11-30 06:20:08,447:172.30.179.112:jinstall-ex-4200-12.3R11.2-domestic-signed.tgz: 100958208 / 112162169 (90%)
+2015-11-30 06:20:50,344:172.30.179.112:jinstall-ex-4200-12.3R11.2-domestic-signed.tgz: 112162169 / 112162169 (100%)
+2015-11-30 06:20:52,023:172.30.179.112:computing remote checksum on: /var/tmp/jinstall-ex-4200-12.3R11.2-domestic-signed.tgz
+2015-11-30 06:20:52,025:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:20:54,807:172.30.179.112:checksum check passed.
+2015-11-30 06:20:54,811:172.30.179.112:installing software ... please be patient ...
+2015-11-30 06:20:54,812:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:21:46,351:172.30.179.112:<REBOOT>
+2015-11-30 06:21:46,353:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:21:46,629:172.30.179.112:upgrade pending reboot cycle, please be patient.
+2015-11-30 06:21:46,630:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:21:46,802:172.30.179.112:pausing: 10
+2015-11-30 06:21:56,812:172.30.179.112:process completed OK.

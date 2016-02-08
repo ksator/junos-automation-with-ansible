@@ -1,0 +1,32 @@
+---
+ - name: Get Facts
+   hosts: Devices-AMS
+   roles:       
+    - Juniper.junos
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+    #- name: USERNAME
+    #  prompt: User name
+    #  private: no
+
+   tasks:
+
+   - name: Retrieve information from devices running Junos
+     junos_get_facts:
+      host={{ inventory_hostname }}
+      user=pytraining
+      passwd={{ DEVICE_PASSWORD }}
+      savedir=inventory
+      #user={{ USERNAME }}
+      #passwd=Poclab123
+     register: junos
+
+   - name: Print some facts
+     debug: msg="device {{junos.facts.hostname}} runs version {{junos.facts.version}}" 
+
+

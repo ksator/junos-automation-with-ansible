@@ -1,0 +1,29 @@
+---
+ - name: Get conf
+   hosts: Devices-AMS
+   roles:       
+    - Juniper.junos
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+    #- name: USERNAME
+    #  prompt: User name
+    #  private: no
+
+   tasks:
+
+   - name: Retrieve configuration from devices running Junos
+     junos_get_config:
+      host={{ inventory_hostname }}
+      user=pytraining
+      passwd={{ DEVICE_PASSWORD }}
+      dest=configs/{{ inventory_hostname }}.conf
+      format=text
+      logfile=get_config.log
+      filter=interfaces
+      
+

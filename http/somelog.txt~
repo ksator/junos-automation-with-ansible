@@ -1,0 +1,232 @@
+{
+ "software-information" : [
+ {
+    "host-name" : [
+    {
+        "data" : "mx80-17"
+    }
+    ], 
+    "product-model" : [
+    {
+        "data" : "mx80-48t"
+    }
+    ], 
+    "product-name" : [
+    {
+        "data" : "mx80-48t"
+    }
+    ], 
+    "junos-version" : [
+    {
+        "data" : "15.1R2.9"
+    }
+    ], 
+    "package-information" : [
+    {
+        "name" : [
+        {
+            "data" : "junos"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Base OS boot [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jbase"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Base OS Software Suite [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jcrypto"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Crypto Software Suite [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jpfe"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Packet Forwarding Engine Support (MX80) [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jweb"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Web Management [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jdocs"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Online Documentation [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jservices-alg"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Services Application Level Gateways [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jservices-jflow"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Services Jflow Container package [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jservices-sfw"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Services Stateful Firewall [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jservices-nat"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Services NAT [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jservices-rpm"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Services RPM [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jservices-cpcd"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Services Captive Portal and Content Delivery Container package [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jmacsec"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Macsec Software Suite [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jservices-crypto-base"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Services Crypto [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jservices-ipsec"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Services IPSec [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jkernel"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Kernel Software Suite [15.1R2.9]"
+        }
+        ]
+    }, 
+    {
+        "name" : [
+        {
+            "data" : "jroute"
+        }
+        ], 
+        "comment" : [
+        {
+            "data" : "JUNOS Routing Software Suite [15.1R2.9]"
+        }
+        ]
+    }
+    ]
+ }
+ ]
+}

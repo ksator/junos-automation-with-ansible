@@ -1,0 +1,512 @@
+2015-11-30 06:56:20,518:CONFIG:172.30.179.95:connecting to host: pytraining@172.30.179.95:830
+2015-11-30 06:56:20,524:CONFIG:172.30.177.170:connecting to host: pytraining@172.30.177.170:830
+2015-11-30 06:56:20,524:CONFIG:172.30.179.65:connecting to host: pytraining@172.30.179.65:830
+2015-11-30 06:56:20,527:CONFIG:172.30.179.96:connecting to host: pytraining@172.30.179.96:830
+2015-11-30 06:56:20,533:CONFIG:172.30.179.101:connecting to host: pytraining@172.30.179.101:830
+2015-11-30 06:56:23,600:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2015-11-30 06:56:23,601:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2015-11-30 06:56:23,599:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.1)
+2015-11-30 06:56:23,608:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2015-11-30 06:56:23,610:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_5.9)
+2015-11-30 06:56:23,983:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:23,984:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:23,986:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:24,039:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:24,100:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:24,889:ncclient.transport.session:initialized: session-id=71971 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:24,890:CONFIG:172.30.177.170:taking lock
+2015-11-30 06:56:24,902:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:25,022:CONFIG:172.30.177.170:Rolling back to: 1
+2015-11-30 06:56:25,027:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:25,306:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:25,378:ncclient.transport.session:initialized: session-id=90312 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:25,379:CONFIG:172.30.179.95:taking lock
+2015-11-30 06:56:25,384:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:25,514:ncclient.transport.session:initialized: session-id=53961 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:25,520:CONFIG:172.30.179.96:taking lock
+2015-11-30 06:56:25,526:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:25,540:ncclient.transport.session:initialized: session-id=88447 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:25,541:CONFIG:172.30.179.65:taking lock
+2015-11-30 06:56:25,544:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:25,557:CONFIG:172.30.179.95:Rolling back to: 1
+2015-11-30 06:56:25,560:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:25,654:CONFIG:172.30.179.96:Rolling back to: 1
+2015-11-30 06:56:25,659:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:25,716:CONFIG:172.30.179.65:Rolling back to: 1
+2015-11-30 06:56:25,718:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:25,842:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:25,936:ncclient.transport.session:initialized: session-id=43767 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:25,937:CONFIG:172.30.179.101:taking lock
+2015-11-30 06:56:25,944:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:26,002:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:26,046:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:26,122:CONFIG:172.30.179.95:committing change, please be patient
+2015-11-30 06:56:26,121:CONFIG:172.30.179.101:Rolling back to: 1
+2015-11-30 06:56:26,131:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:26,134:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:26,368:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:26,371:CONFIG:172.30.179.96:committing change, please be patient
+2015-11-30 06:56:26,375:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:26,377:CONFIG:172.30.179.65:committing change, please be patient
+2015-11-30 06:56:26,382:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:26,698:CONFIG:172.30.179.101:committing change, please be patient
+2015-11-30 06:56:26,703:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:26,904:CONFIG:172.30.177.170:committing change, please be patient
+2015-11-30 06:56:26,910:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:31,441:CONFIG:172.30.179.65:change completed
+2015-11-30 06:56:31,441:CONFIG:172.30.179.65:unlocking
+2015-11-30 06:56:31,446:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:31,492:CONFIG:172.30.179.96:change completed
+2015-11-30 06:56:31,492:CONFIG:172.30.179.96:unlocking
+2015-11-30 06:56:31,497:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:31,873:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:31,871:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:32,320:CONFIG:172.30.179.95:change completed
+2015-11-30 06:56:32,320:CONFIG:172.30.179.95:unlocking
+2015-11-30 06:56:32,325:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:32,352:CONFIG:172.30.179.102:connecting to host: pytraining@172.30.179.102:830
+2015-11-30 06:56:32,412:CONFIG:172.30.179.103:connecting to host: pytraining@172.30.179.103:830
+2015-11-30 06:56:32,544:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:56:32,705:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:32,918:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:32,979:CONFIG:172.30.179.101:change completed
+2015-11-30 06:56:32,979:CONFIG:172.30.179.101:unlocking
+2015-11-30 06:56:32,984:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:33,053:CONFIG:172.30.179.104:connecting to host: pytraining@172.30.179.104:830
+2015-11-30 06:56:33,153:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:56:33,361:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:33,555:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:33,765:CONFIG:172.30.179.105:connecting to host: pytraining@172.30.179.105:830
+2015-11-30 06:56:34,906:ncclient.transport.session:initialized: session-id=42354 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:34,907:CONFIG:172.30.179.103:taking lock
+2015-11-30 06:56:34,913:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:35,034:CONFIG:172.30.179.103:Rolling back to: 1
+2015-11-30 06:56:35,040:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:35,319:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:35,426:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:56:35,431:CONFIG:172.30.177.170:change completed
+2015-11-30 06:56:35,432:CONFIG:172.30.177.170:unlocking
+2015-11-30 06:56:35,437:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:35,515:ncclient.transport.session:initialized: session-id=42862 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:35,516:CONFIG:172.30.179.104:taking lock
+2015-11-30 06:56:35,524:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:35,646:CONFIG:172.30.179.104:Rolling back to: 1
+2015-11-30 06:56:35,657:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:35,699:CONFIG:172.30.179.103:committing change, please be patient
+2015-11-30 06:56:35,701:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:35,791:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:35,934:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:36,259:CONFIG:172.30.179.104:committing change, please be patient
+2015-11-30 06:56:36,263:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:36,325:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:36,996:CONFIG:172.30.179.106:connecting to host: pytraining@172.30.179.106:830
+2015-11-30 06:56:37,112:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:56:37,234:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:56:37,466:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:37,579:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:37,774:ncclient.transport.session:initialized: session-id=42853 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:37,775:CONFIG:172.30.179.102:taking lock
+2015-11-30 06:56:37,780:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:37,900:CONFIG:172.30.179.102:Rolling back to: 1
+2015-11-30 06:56:37,906:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:38,235:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:38,513:CONFIG:172.30.179.102:committing change, please be patient
+2015-11-30 06:56:38,519:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:39,471:ncclient.transport.session:initialized: session-id=41331 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:39,472:CONFIG:172.30.179.106:taking lock
+2015-11-30 06:56:39,477:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:39,554:ncclient.transport.session:initialized: session-id=35387 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:39,555:CONFIG:172.30.179.105:taking lock
+2015-11-30 06:56:39,560:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:39,651:CONFIG:172.30.179.106:Rolling back to: 1
+2015-11-30 06:56:39,657:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:39,683:CONFIG:172.30.179.105:Rolling back to: 1
+2015-11-30 06:56:39,689:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:39,931:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:39,963:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:40,255:CONFIG:172.30.179.106:committing change, please be patient
+2015-11-30 06:56:40,259:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:40,288:CONFIG:172.30.179.105:committing change, please be patient
+2015-11-30 06:56:40,290:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:40,500:CONFIG:172.30.179.104:change completed
+2015-11-30 06:56:40,500:CONFIG:172.30.179.104:unlocking
+2015-11-30 06:56:40,505:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:41,238:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:41,548:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2015-11-30 06:56:41,876:CONFIG:172.30.179.103:change completed
+2015-11-30 06:56:41,877:CONFIG:172.30.179.103:unlocking
+2015-11-30 06:56:41,882:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:41,998:CONFIG:172.30.179.102:change completed
+2015-11-30 06:56:41,998:CONFIG:172.30.179.102:unlocking
+2015-11-30 06:56:42,005:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:42,055:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:42,181:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:42,391:CONFIG:172.30.179.108:connecting to host: pytraining@172.30.179.108:830
+2015-11-30 06:56:42,642:CONFIG:172.30.179.109:connecting to host: pytraining@172.30.179.109:830
+2015-11-30 06:56:42,738:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:56:43,100:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:44,625:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:56:44,794:CONFIG:172.30.179.106:change completed
+2015-11-30 06:56:44,794:CONFIG:172.30.179.106:unlocking
+2015-11-30 06:56:44,799:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:44,924:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:44,993:CONFIG:172.30.179.105:change completed
+2015-11-30 06:56:44,994:CONFIG:172.30.179.105:unlocking
+2015-11-30 06:56:44,998:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:45,025:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:45,065:ncclient.transport.session:initialized: session-id=49220 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:45,065:CONFIG:172.30.179.109:taking lock
+2015-11-30 06:56:45,071:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:45,171:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:45,193:CONFIG:172.30.179.109:Rolling back to: 1
+2015-11-30 06:56:45,197:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:45,463:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:56:45,514:CONFIG:172.30.179.110:connecting to host: pytraining@172.30.179.110:830
+2015-11-30 06:56:45,555:CONFIG:172.30.179.111:connecting to host: pytraining@172.30.179.111:830
+2015-11-30 06:56:45,576:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:45,951:CONFIG:172.30.179.109:committing change, please be patient
+2015-11-30 06:56:45,954:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:46,030:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:46,220:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:56:46,827:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:46,983:ncclient.transport.session:initialized: session-id=41627 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:46,990:CONFIG:172.30.179.107:taking lock
+2015-11-30 06:56:46,993:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:47,113:CONFIG:172.30.179.107:Rolling back to: 1
+2015-11-30 06:56:47,115:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:47,903:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:47,957:ncclient.transport.session:initialized: session-id=48646 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:47,958:CONFIG:172.30.179.108:taking lock
+2015-11-30 06:56:47,963:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:48,135:CONFIG:172.30.179.108:Rolling back to: 1
+2015-11-30 06:56:48,143:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:48,231:CONFIG:172.30.179.107:committing change, please be patient
+2015-11-30 06:56:48,236:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:48,422:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:48,628:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:56:48,695:CONFIG:172.30.179.108:committing change, please be patient
+2015-11-30 06:56:48,700:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:48,721:CONFIG:172.30.179.109:change completed
+2015-11-30 06:56:48,721:CONFIG:172.30.179.109:unlocking
+2015-11-30 06:56:48,727:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:48,882:ncclient.transport.session:initialized: session-id=48859 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:48,882:CONFIG:172.30.179.110:taking lock
+2015-11-30 06:56:48,907:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:49,205:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:49,282:CONFIG:172.30.179.110:Rolling back to: 1
+2015-11-30 06:56:49,286:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:49,305:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:49,533:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:49,613:CONFIG:172.30.179.112:connecting to host: pytraining@172.30.179.112:830
+2015-11-30 06:56:49,908:CONFIG:172.30.179.110:committing change, please be patient
+2015-11-30 06:56:49,913:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:51,274:ncclient.transport.session:initialized: session-id=50390 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:51,275:CONFIG:172.30.179.111:taking lock
+2015-11-30 06:56:51,282:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:51,409:CONFIG:172.30.179.111:Rolling back to: 1
+2015-11-30 06:56:51,415:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:51,689:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:52,021:CONFIG:172.30.179.111:committing change, please be patient
+2015-11-30 06:56:52,026:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:52,124:CONFIG:172.30.179.107:change completed
+2015-11-30 06:56:52,125:CONFIG:172.30.179.107:unlocking
+2015-11-30 06:56:52,130:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:52,252:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:52,439:CONFIG:172.30.179.108:change completed
+2015-11-30 06:56:52,440:CONFIG:172.30.179.108:unlocking
+2015-11-30 06:56:52,445:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:52,706:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:56:52,720:CONFIG:172.30.179.113:connecting to host: pytraining@172.30.179.113:830
+2015-11-30 06:56:52,769:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:53,094:CONFIG:172.30.179.110:change completed
+2015-11-30 06:56:53,094:CONFIG:172.30.179.110:unlocking
+2015-11-30 06:56:53,096:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:53,217:ncclient.transport.ssh:Auth banner: test
+
+2015-11-30 06:56:53,218:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:53,268:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:55,194:ncclient.transport.session:initialized: session-id=2762 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:55,195:CONFIG:172.30.179.112:taking lock
+2015-11-30 06:56:55,199:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:55,322:CONFIG:172.30.179.112:Rolling back to: 1
+2015-11-30 06:56:55,326:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:55,606:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:55,796:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:56:55,932:CONFIG:172.30.179.112:committing change, please be patient
+2015-11-30 06:56:55,936:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:56,009:CONFIG:172.30.179.111:change completed
+2015-11-30 06:56:56,009:CONFIG:172.30.179.111:unlocking
+2015-11-30 06:56:56,021:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:56,160:ncclient.transport.ssh:Auth banner: test
+
+2015-11-30 06:56:56,160:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:56:56,192:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:56:58,110:ncclient.transport.session:initialized: session-id=2221 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:56:58,111:CONFIG:172.30.179.113:taking lock
+2015-11-30 06:56:58,116:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:56:58,290:CONFIG:172.30.179.113:Unable to lock configuration - will not rollback: LockError(severity: error, bad_element: None, message: configuration database modified)
+2015-11-30 06:56:58,296:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:57:01,431:CONFIG:172.30.179.112:change completed
+2015-11-30 06:57:01,431:CONFIG:172.30.179.112:unlocking
+2015-11-30 06:57:01,436:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:57:01,557:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:58:46,331:CONFIG:172.30.179.113:connecting to host: pytraining@172.30.179.113:830
+2015-11-30 06:58:49,405:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 06:58:49,988:ncclient.transport.ssh:Auth banner: test
+
+2015-11-30 06:58:49,989:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 06:58:51,882:ncclient.transport.session:initialized: session-id=2226 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 06:58:51,883:CONFIG:172.30.179.113:taking lock
+2015-11-30 06:58:51,889:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 06:58:52,111:CONFIG:172.30.179.113:Unable to lock configuration - will not rollback: LockError(severity: error, bad_element: None, message: configuration database modified)
+2015-11-30 06:58:52,114:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 06:59:58,299:CONFIG:172.30.179.95:connecting to host: pytraining@172.30.179.95:830
+2015-11-30 06:59:58,308:CONFIG:172.30.179.65:connecting to host: pytraining@172.30.179.65:830
+2015-11-30 06:59:58,309:CONFIG:172.30.177.170:connecting to host: pytraining@172.30.177.170:830
+2015-11-30 06:59:58,310:CONFIG:172.30.179.101:connecting to host: pytraining@172.30.179.101:830
+2015-11-30 06:59:58,313:CONFIG:172.30.179.96:connecting to host: pytraining@172.30.179.96:830
+2015-11-30 07:00:01,385:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.1)
+2015-11-30 07:00:01,388:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_5.9)
+2015-11-30 07:00:01,389:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2015-11-30 07:00:01,422:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2015-11-30 07:00:01,429:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.4)
+2015-11-30 07:00:01,755:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:01,768:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:01,773:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:01,797:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:01,810:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:02,555:ncclient.transport.session:initialized: session-id=72315 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:02,556:CONFIG:172.30.177.170:taking lock
+2015-11-30 07:00:02,566:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:02,739:CONFIG:172.30.177.170:Rolling back to: 0
+2015-11-30 07:00:02,745:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:02,974:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:03,135:ncclient.transport.session:initialized: session-id=90649 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:03,136:CONFIG:172.30.179.95:taking lock
+2015-11-30 07:00:03,147:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:03,319:CONFIG:172.30.179.95:Rolling back to: 0
+2015-11-30 07:00:03,325:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:03,391:ncclient.transport.session:initialized: session-id=54309 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:03,392:CONFIG:172.30.179.96:taking lock
+2015-11-30 07:00:03,399:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:03,442:ncclient.transport.session:initialized: session-id=88795 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:03,443:CONFIG:172.30.179.65:taking lock
+2015-11-30 07:00:03,447:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:03,570:CONFIG:172.30.179.96:Rolling back to: 0
+2015-11-30 07:00:03,575:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:03,604:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:03,621:CONFIG:172.30.179.65:Rolling back to: 0
+2015-11-30 07:00:03,625:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:03,702:ncclient.transport.session:initialized: session-id=43832 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:03,703:CONFIG:172.30.179.101:taking lock
+2015-11-30 07:00:03,708:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:03,856:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:03,878:CONFIG:172.30.179.95:committing change, please be patient
+2015-11-30 07:00:03,881:CONFIG:172.30.179.101:Rolling back to: 0
+2015-11-30 07:00:03,887:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:03,892:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:03,903:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:04,130:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:04,180:CONFIG:172.30.179.65:committing change, please be patient
+2015-11-30 07:00:04,185:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:04,440:CONFIG:172.30.179.96:committing change, please be patient
+2015-11-30 07:00:04,448:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:04,516:CONFIG:172.30.179.101:committing change, please be patient
+2015-11-30 07:00:04,521:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:05,232:CONFIG:172.30.177.170:committing change, please be patient
+2015-11-30 07:00:05,234:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:05,533:CONFIG:172.30.179.65:change completed
+2015-11-30 07:00:05,534:CONFIG:172.30.179.65:unlocking
+2015-11-30 07:00:05,539:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:05,712:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:06,029:CONFIG:172.30.179.102:connecting to host: pytraining@172.30.179.102:830
+2015-11-30 07:00:06,049:CONFIG:172.30.179.95:change completed
+2015-11-30 07:00:06,049:CONFIG:172.30.179.95:unlocking
+2015-11-30 07:00:06,050:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:06,427:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:06,504:CONFIG:172.30.179.96:change completed
+2015-11-30 07:00:06,505:CONFIG:172.30.179.96:unlocking
+2015-11-30 07:00:06,509:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:06,632:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:06,760:CONFIG:172.30.179.103:connecting to host: pytraining@172.30.179.103:830
+2015-11-30 07:00:07,054:CONFIG:172.30.179.104:connecting to host: pytraining@172.30.179.104:830
+2015-11-30 07:00:08,553:CONFIG:172.30.179.101:change completed
+2015-11-30 07:00:08,554:CONFIG:172.30.179.101:unlocking
+2015-11-30 07:00:08,558:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:09,107:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 07:00:09,395:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:09,451:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:09,833:CONFIG:172.30.177.170:change completed
+2015-11-30 07:00:09,833:CONFIG:172.30.177.170:unlocking
+2015-11-30 07:00:09,837:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 07:00:09,839:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:09,854:CONFIG:172.30.179.105:connecting to host: pytraining@172.30.179.105:830
+2015-11-30 07:00:10,141:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 07:00:10,555:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:11,029:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:11,092:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:11,403:ncclient.transport.session:initialized: session-id=42902 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:11,403:CONFIG:172.30.179.102:taking lock
+2015-11-30 07:00:11,409:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:11,499:CONFIG:172.30.179.106:connecting to host: pytraining@172.30.179.106:830
+2015-11-30 07:00:11,986:CONFIG:172.30.179.102:Rolling back to: 0
+2015-11-30 07:00:11,994:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:12,216:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:12,543:CONFIG:172.30.179.102:committing change, please be patient
+2015-11-30 07:00:12,549:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:12,933:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 07:00:13,016:ncclient.transport.session:initialized: session-id=42426 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:13,017:CONFIG:172.30.179.103:taking lock
+2015-11-30 07:00:13,023:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:13,025:ncclient.transport.session:initialized: session-id=42927 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:13,026:CONFIG:172.30.179.104:taking lock
+2015-11-30 07:00:13,032:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:13,194:CONFIG:172.30.179.103:Rolling back to: 0
+2015-11-30 07:00:13,198:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:13,204:CONFIG:172.30.179.104:Rolling back to: 0
+2015-11-30 07:00:13,208:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:13,315:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:13,476:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:13,487:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:13,753:CONFIG:172.30.179.103:committing change, please be patient
+2015-11-30 07:00:13,759:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:13,813:CONFIG:172.30.179.104:committing change, please be patient
+2015-11-30 07:00:13,819:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:14,651:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 07:00:15,049:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:15,293:ncclient.transport.session:initialized: session-id=35452 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:15,293:CONFIG:172.30.179.105:taking lock
+2015-11-30 07:00:15,296:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:15,519:CONFIG:172.30.179.105:Rolling back to: 0
+2015-11-30 07:00:15,525:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:15,722:CONFIG:172.30.179.102:change completed
+2015-11-30 07:00:15,723:CONFIG:172.30.179.102:unlocking
+2015-11-30 07:00:15,728:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:15,806:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:15,850:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:16,078:CONFIG:172.30.179.105:committing change, please be patient
+2015-11-30 07:00:16,083:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:16,340:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2015-11-30 07:00:16,731:CONFIG:172.30.179.103:change completed
+2015-11-30 07:00:16,742:CONFIG:172.30.179.103:unlocking
+2015-11-30 07:00:16,747:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:16,793:CONFIG:172.30.179.104:change completed
+2015-11-30 07:00:16,794:CONFIG:172.30.179.104:unlocking
+2015-11-30 07:00:16,799:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:16,919:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:17,080:ncclient.transport.session:initialized: session-id=41380 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:17,081:CONFIG:172.30.179.106:taking lock
+2015-11-30 07:00:17,087:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:17,208:CONFIG:172.30.179.106:Rolling back to: 0
+2015-11-30 07:00:17,220:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:17,223:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:17,452:CONFIG:172.30.179.108:connecting to host: pytraining@172.30.179.108:830
+2015-11-30 07:00:17,500:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:17,566:CONFIG:172.30.179.109:connecting to host: pytraining@172.30.179.109:830
+2015-11-30 07:00:17,666:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 07:00:17,827:CONFIG:172.30.179.106:committing change, please be patient
+2015-11-30 07:00:17,832:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:18,092:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:19,252:CONFIG:172.30.179.105:change completed
+2015-11-30 07:00:19,253:CONFIG:172.30.179.105:unlocking
+2015-11-30 07:00:19,258:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:19,380:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:19,415:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 07:00:19,789:CONFIG:172.30.179.110:connecting to host: pytraining@172.30.179.110:830
+2015-11-30 07:00:20,115:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:20,167:ncclient.transport.session:initialized: session-id=49265 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:20,168:CONFIG:172.30.179.109:taking lock
+2015-11-30 07:00:20,173:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:20,345:CONFIG:172.30.179.109:Rolling back to: 0
+2015-11-30 07:00:20,351:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:20,547:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 07:00:20,629:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:20,802:CONFIG:172.30.179.106:change completed
+2015-11-30 07:00:20,803:CONFIG:172.30.179.106:unlocking
+2015-11-30 07:00:20,814:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:20,953:CONFIG:172.30.179.109:committing change, please be patient
+2015-11-30 07:00:20,961:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:20,987:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:20,987:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:21,618:CONFIG:172.30.179.111:connecting to host: pytraining@172.30.179.111:830
+2015-11-30 07:00:22,158:ncclient.transport.session:initialized: session-id=41676 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:22,159:CONFIG:172.30.179.107:taking lock
+2015-11-30 07:00:22,169:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:22,292:CONFIG:172.30.179.107:Rolling back to: 0
+2015-11-30 07:00:22,296:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:22,724:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:22,874:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 07:00:23,006:ncclient.transport.session:initialized: session-id=48705 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:23,007:CONFIG:172.30.179.108:taking lock
+2015-11-30 07:00:23,013:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:23,100:CONFIG:172.30.179.107:committing change, please be patient
+2015-11-30 07:00:23,107:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:23,186:CONFIG:172.30.179.108:Rolling back to: 0
+2015-11-30 07:00:23,192:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:23,283:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:23,471:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:23,747:CONFIG:172.30.179.108:committing change, please be patient
+2015-11-30 07:00:23,752:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:23,873:CONFIG:172.30.179.109:change completed
+2015-11-30 07:00:23,874:CONFIG:172.30.179.109:unlocking
+2015-11-30 07:00:23,879:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:24,052:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:24,516:CONFIG:172.30.179.112:connecting to host: pytraining@172.30.179.112:830
+2015-11-30 07:00:24,694:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 07:00:25,285:ncclient.transport.session:initialized: session-id=48907 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:25,285:CONFIG:172.30.179.110:taking lock
+2015-11-30 07:00:25,290:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:25,413:CONFIG:172.30.179.110:Rolling back to: 0
+2015-11-30 07:00:25,418:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:25,440:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:25,698:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:26,025:CONFIG:172.30.179.110:committing change, please be patient
+2015-11-30 07:00:26,030:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:26,369:CONFIG:172.30.179.107:change completed
+2015-11-30 07:00:26,370:CONFIG:172.30.179.107:unlocking
+2015-11-30 07:00:26,375:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:26,496:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:26,670:CONFIG:172.30.179.108:change completed
+2015-11-30 07:00:26,670:CONFIG:172.30.179.108:unlocking
+2015-11-30 07:00:26,675:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:26,848:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:26,852:CONFIG:172.30.179.113:connecting to host: pytraining@172.30.179.113:830
+2015-11-30 07:00:28,219:ncclient.transport.session:initialized: session-id=50439 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:28,220:CONFIG:172.30.179.111:taking lock
+2015-11-30 07:00:28,225:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:28,349:CONFIG:172.30.179.111:Rolling back to: 0
+2015-11-30 07:00:28,354:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:28,389:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 07:00:28,634:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:28,740:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:29,000:CONFIG:172.30.179.110:change completed
+2015-11-30 07:00:29,000:CONFIG:172.30.179.110:unlocking
+2015-11-30 07:00:29,005:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:29,009:CONFIG:172.30.179.111:committing change, please be patient
+2015-11-30 07:00:29,014:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:29,182:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:30,615:ncclient.transport.session:initialized: session-id=3108 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:30,616:CONFIG:172.30.179.112:taking lock
+2015-11-30 07:00:30,618:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:30,792:CONFIG:172.30.179.112:Rolling back to: 0
+2015-11-30 07:00:30,810:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:31,088:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:31,364:CONFIG:172.30.179.112:committing change, please be patient
+2015-11-30 07:00:31,370:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:31,391:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-30 07:00:31,797:ncclient.transport.ssh:Auth banner: test
+
+2015-11-30 07:00:31,798:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-30 07:00:32,096:CONFIG:172.30.179.111:change completed
+2015-11-30 07:00:32,097:CONFIG:172.30.179.111:unlocking
+2015-11-30 07:00:32,102:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:32,225:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:33,988:ncclient.transport.session:initialized: session-id=2243 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-30 07:00:33,989:CONFIG:172.30.179.113:taking lock
+2015-11-30 07:00:33,993:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:34,116:CONFIG:172.30.179.113:Unable to lock configuration - will not rollback: LockError(severity: error, bad_element: None, message: configuration database modified)
+2015-11-30 07:00:34,121:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-30 07:00:34,549:CONFIG:172.30.179.112:change completed
+2015-11-30 07:00:34,550:CONFIG:172.30.179.112:unlocking
+2015-11-30 07:00:34,555:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-30 07:00:34,676:ncclient.operations.rpc:Requesting 'CloseSession'

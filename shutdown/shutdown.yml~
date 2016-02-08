@@ -1,0 +1,27 @@
+---
+ - name: junos_commit
+   hosts: Instructor-device
+   roles:       
+    - Juniper.junos
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+    #- name: USERNAME
+    #  prompt: User name
+    #  private: no
+
+   tasks:
+
+   - name: non_load_junos_commit
+     junos_commit:
+      host={{ inventory_hostname }}
+      user=pytraining
+      passwd={{ DEVICE_PASSWORD }}
+      port=830
+      comment="non_load_commit"
+      logfile=change.log
+

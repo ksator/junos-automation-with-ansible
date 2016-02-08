@@ -1,0 +1,16 @@
+---
+ - name: play_name_curl
+   hosts: localhost
+
+   tasks:
+
+   - name: name_task
+     uri:
+      url: http://172.30.177.170:3000/rpc/get-software-information
+      method: GET
+      user: pytraining
+      password: Poclab123
+      HEADER_Content-Type: "application/xml"
+      HEADER_Accept: "application/json"
+      force_basic_auth: yes
+      dest: somelog.txt

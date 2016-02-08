@@ -1,0 +1,28 @@
+---
+ - name: junos_shutdown-play
+   hosts: Instructor-device
+   roles:       
+    - Juniper.junos
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+    #- name: USERNAME
+    #  prompt: User name
+    #  private: no
+
+   tasks:
+
+   - name: junos_shutdown_task
+     junos_shutdown:
+      host={{ inventory_hostname }}
+      user=pytraining
+      passwd={{ DEVICE_PASSWORD }}
+      port=830
+      shutdown="shutdown"
+      reboot=yes
+
+

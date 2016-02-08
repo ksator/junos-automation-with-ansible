@@ -1,0 +1,54 @@
+2015-11-25 10:41:55,603:CONFIG:172.30.179.113:connecting to host: pytraining@172.30.179.113:830
+2015-11-25 10:41:58,651:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-25 10:41:58,919:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-25 10:42:00,814:ncclient.transport.session:initialized: session-id=42334 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-25 10:42:00,814:CONFIG:172.30.179.113:pushing file: /home/ksator/ansibletraining/install_conf/banner.set
+2015-11-25 10:42:00,815:CONFIG:172.30.179.113:taking lock
+2015-11-25 10:42:00,821:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:42:00,994:CONFIG:172.30.179.113:loading config
+2015-11-25 10:42:00,997:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:42:01,119:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:42:01,445:CONFIG:172.30.179.113:doing a commit-check, please be patient
+2015-11-25 10:42:01,450:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:42:02,540:CONFIG:172.30.179.113:committing change, please be patient
+2015-11-25 10:42:02,542:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:42:09,219:CONFIG:172.30.179.113:unlocking
+2015-11-25 10:42:09,219:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:42:09,593:CONFIG:172.30.179.113:change completed
+2015-11-25 10:42:09,594:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-25 10:44:45,382:CONFIG:172.30.179.113:connecting to host: pytraining@172.30.179.113:830
+2015-11-25 10:44:48,433:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-25 10:44:48,740:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-25 10:44:50,628:ncclient.transport.session:initialized: session-id=43024 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-25 10:44:50,629:CONFIG:172.30.179.113:pushing file: /home/ksator/ansibletraining/install_conf/banner.set
+2015-11-25 10:44:50,629:CONFIG:172.30.179.113:taking lock
+2015-11-25 10:44:50,630:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:44:50,750:CONFIG:172.30.179.113:loading config
+2015-11-25 10:44:50,753:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:44:50,927:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:44:51,253:CONFIG:172.30.179.113:doing a commit-check, please be patient
+2015-11-25 10:44:51,255:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:44:52,501:CONFIG:172.30.179.113:committing change, please be patient
+2015-11-25 10:44:52,503:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:44:59,353:CONFIG:172.30.179.113:unlocking
+2015-11-25 10:44:59,353:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:44:59,524:CONFIG:172.30.179.113:change completed
+2015-11-25 10:44:59,525:ncclient.operations.rpc:Requesting 'CloseSession'
+2015-11-25 10:47:00,070:CONFIG:172.30.179.113:connecting to host: pytraining@172.30.179.113:830
+2015-11-25 10:47:03,119:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2015-11-25 10:47:03,416:ncclient.transport.ssh:Authentication (password) successful!
+2015-11-25 10:47:06,058:ncclient.transport.session:initialized: session-id=43717 | server_capabilities=['http://xml.juniper.net/dmi/system/1.0', 'urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0', 'urn:ietf:params:xml:ns:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:validate:1.0', 'urn:ietf:params:netconf:capability:confirmed-commit:1.0', 'http://xml.juniper.net/netconf/junos/1.0', 'urn:ietf:params:netconf:base:1.0', 'urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file', 'urn:ietf:params:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:candidate:1.0', 'urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file', 'urn:ietf:params:xml:ns:netconf:base:1.0']
+2015-11-25 10:47:06,058:CONFIG:172.30.179.113:pushing file: /home/ksator/ansibletraining/install_conf/banner.set
+2015-11-25 10:47:06,059:CONFIG:172.30.179.113:taking lock
+2015-11-25 10:47:06,061:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:47:06,182:CONFIG:172.30.179.113:loading config
+2015-11-25 10:47:06,184:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:47:06,305:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:47:06,671:CONFIG:172.30.179.113:doing a commit-check, please be patient
+2015-11-25 10:47:06,673:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:47:08,029:CONFIG:172.30.179.113:committing change, please be patient
+2015-11-25 10:47:08,039:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:47:14,991:CONFIG:172.30.179.113:unlocking
+2015-11-25 10:47:14,991:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2015-11-25 10:47:15,119:CONFIG:172.30.179.113:change completed
+2015-11-25 10:47:15,119:ncclient.operations.rpc:Requesting 'CloseSession'
