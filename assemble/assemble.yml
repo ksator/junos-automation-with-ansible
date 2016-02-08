@@ -1,0 +1,10 @@
+---
+# merge all the configuration fragments into one file
+ - name: create configuration
+   hosts: localhost
+
+
+   tasks:
+
+    - name: Assembling configurations
+      assemble: src=fragments dest=junos.conf
