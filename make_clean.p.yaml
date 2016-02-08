@@ -1,6 +1,6 @@
 ---
 - name: Creating build directories for each host
-  hosts: fixe
+  hosts: fixed
   connection: local
   gather_facts: no
   tasks:
