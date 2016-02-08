@@ -1,0 +1,11 @@
+---
+ - name: check netconf
+   hosts: fixed
+   connection: local
+   gather_facts: no
+
+
+   tasks:
+
+    - name: Check netconf connectivity
+      wait_for: host={{ inventory_hostname }} port=830 timeout=5
