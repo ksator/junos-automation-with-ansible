@@ -1,6 +1,6 @@
 ---
  - name: Get conf
-   hosts: fixe
+   hosts: fixed
    roles:
     - Juniper.junos
    connection: local
