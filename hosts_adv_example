@@ -87,3 +87,5 @@ proxy=proxy.atlanta.example.com
 
 #if the inventory file path is /etc/ansible/hosts, you can also define variables in YAML files in the directories /etc/ansible/group_vars/ and /etc/ansible/host_vars/ 
 #the group_vars/ and host_vars/ directories can also exist in the playbook directory.
+
+#if you are using roles in your playbooks, if roles/x/vars/main.yml exists, the yaml file in the subfolder vars is also used to store variables
