@@ -1,0 +1,11 @@
+---
+ - name: create configuration
+   hosts: Instructor-device
+   connection: local
+
+
+
+   tasks:
+
+    - name: Render initial configuration
+      template: src=build.j2 dest=build_conf/{{ inventory_hostname }}.conf
