@@ -77,11 +77,11 @@ host1 http_port=80 maxRequestsPerChild=808
 host2 http_port=303 maxRequestsPerChild=909
 
 #Variables can also be applied to an entire group at once:
-[atlanta]
-host1
-host2
+[NYC]
+host3
+host4
 
-[atlanta:vars]
+[NYC:vars]
 ntp_server=ntp.atlanta.example.com
 proxy=proxy.atlanta.example.com
 
