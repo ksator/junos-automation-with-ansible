@@ -1,5 +1,8 @@
 # The default ansible 'hosts' file lives in /etc/ansible/hosts 
-# 
+#
+# you can run a playbook with another inventory file with this command (-i <path to host file> at the end): 
+# ansible-playbook playbook.yml -i hosts 
+#
 #   - Comments begin with the '#' character 
 #   - Blank lines are ignored 
 #   - Groups of hosts are delimited by [header] elements 
@@ -7,7 +10,7 @@
 #   - A hostname/ip can be a member of multiple groups 
  
 
-# this file come from https://github.com/dgjnpr/ansible-template-for-junos
+# this file is inspired from https://github.com/dgjnpr/ansible-template-for-junos
 
 # The 'all' group is the top of the hierarchy. 
 # The ':children' suffix means that the lines below are also groups, rather than hostnames. 
