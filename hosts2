@@ -1,0 +1,72 @@
+# this file come from https://github.com/dgjnpr/ansible-template-for-junos
+
+# The 'all' group is the top of the hierarchy. 
+# The ':children' suffix means that the lines below are also groups, rather than hostnames. 
+# This 'all' group contains all the hosts for both sites. 
+[all:children] 
+site1 
+site2 
+ 
+# 'site1' contains all the devices in that site organised by device type 
+[site1:children] 
+site1_mx 
+site1_qfabric 
+site1_srx  
+
+[site2:children] 
+site2_mx 
+site2_qfx 
+site2_ex 
+site2_srx 
+ 
+# These groups list hosts. 
+# In this fisrt example, MX devices. 
+# The group name uses the format of <location>_<platoform>
+# Just specify the hostname - not the FQDN 
+[site1_mx] 
+core1.site1 
+core2.site1  
+ 
+[site1_qfabric] 
+switch1.site1 
+ 
+[site1_srx] 
+firewall1.site1 
+firewall2.site1 
+ 
+[site2_mx] 
+core1.site2 
+core2.site2 
+ 
+[site2_qfx] 
+aggregation1.site2 
+aggregation2.site2 
+ 
+[site2_ex] 
+leaf1.site2 
+leaf2.site2 
+leaf3.site2 
+leaf4.site2 
+
+[site2_srx] 
+firewall1.site2 
+firewall2.site2 
+ 
+# Creating these groups allow for a platform specific group variable file. 
+# With this we can put all platform specific - but site independent - information in one location. 
+[mx:children] 
+site1_mx 
+site2_mx 
+  
+[qfabric:children] 
+site1_qfabric 
+ 
+[qfx:children] 
+site2_qfx 
+
+[ex:children] 
+site2_ex 
+  
+[srx:children] 
+site1_srx 
+site2_srx
