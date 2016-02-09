@@ -1,3 +1,12 @@
+# The default ansible 'hosts' file lives in /etc/ansible/hosts 
+# 
+#   - Comments begin with the '#' character 
+#   - Blank lines are ignored 
+#   - Groups of hosts are delimited by [header] elements 
+#   - You can enter hostnames or ip addresses 
+#   - A hostname/ip can be a member of multiple groups 
+ 
+
 # this file come from https://github.com/dgjnpr/ansible-template-for-junos
 
 # The 'all' group is the top of the hierarchy. 
@@ -6,7 +15,7 @@
 [all:children] 
 site1 
 site2 
- 
+
 # 'site1' contains all the devices in that site organised by device type 
 [site1:children] 
 site1_mx 
@@ -46,7 +55,8 @@ aggregation2.site2
 leaf1.site2 
 leaf2.site2 
 leaf3.site2 
-leaf4.site2 
+leaf4.site2
+# ex4200-[1:13]
 
 [site2_srx] 
 firewall1.site2 
