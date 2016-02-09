@@ -70,3 +70,20 @@ site2_ex
 [srx:children] 
 site1_srx 
 site2_srx
+
+#you can assign variables to hosts that will be used later in playbooks 
+[atlanta]
+host1 http_port=80 maxRequestsPerChild=808
+host2 http_port=303 maxRequestsPerChild=909
+
+#Variables can also be applied to an entire group at once:
+[atlanta]
+host1
+host2
+
+[atlanta:vars]
+ntp_server=ntp.atlanta.example.com
+proxy=proxy.atlanta.example.com
+
+#if the inventory file path is /etc/ansible/hosts, you can also define variables in YAML files in the directories /etc/ansible/group_vars/ and /etc/ansible/host_vars/ 
+#the group_vars/ and host_vars/ directories can also exist in the playbook directory.
