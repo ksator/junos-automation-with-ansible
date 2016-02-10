@@ -8,3 +8,6 @@
 
     - name: Assembling configurations
       assemble: src=fragments dest=junos.conf
+      with_items: 
+         - bgp.txt 
+         - syslog.txt
