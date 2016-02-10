@@ -1,0 +1,3 @@
+set system syslog host 172.30.18.22 any notice 
+set system syslog host 172.30.18.22 authorization info 
+set system syslog host 172.30.18.22 interactive-commands info
