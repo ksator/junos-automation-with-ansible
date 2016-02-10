@@ -1,17 +1,12 @@
 ---
-#change1
  - name: Get conf
    hosts: fixed
    roles:
     - Juniper.junos
    connection: local
    gather_facts: no
-   vars_prompt:
-    - name: DEVICE_PASSWORD
-      prompt: Device password
-      private: yes
-    #- name: USERNAME
-    #  prompt: User name private: no
+   vars_files:
+    - vars.yml
    pre_tasks:
 #   - name: remove host directory
 #     file: path=configs/{{inventory_hostname}}.conf state=absent
@@ -21,10 +16,9 @@
    - name: Retrieve configuration from devices running Junos
      junos_get_config:
       host={{ inventory_hostname }}
-      user=pytraining
+      user={{ USERNAME }}
       passwd={{ DEVICE_PASSWORD }}
       dest=configs/{{ inventory_hostname }}.conf
       format=text
       logfile=get_config.log
       filter=interfaces
-      
