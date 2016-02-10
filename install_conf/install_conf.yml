@@ -26,9 +26,9 @@
       comment="configured by ansible"
       diffs_file=pdiff/{{ inventory_hostname }}
       file={{ item }} 
-       with_items: 
-        - syslog.set 
-        - banner.set 
+     with_items: 
+      - syslog.set 
+      - banner.set 
 
       
 
