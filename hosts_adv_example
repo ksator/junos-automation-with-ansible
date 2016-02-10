@@ -84,6 +84,12 @@ site2_ex
 site1_srx 
 site2_srx
 
+# mail.example.com        #A single host
+# host[a:z].example.com   #26 different hosts defined by a range
+# 172.16.0.1              #A host defined by an IP
+# 172.16.0.[1:254]        #Hosts defined by an IP range
+
+
 #you can assign variables to hosts that will be used later in playbooks 
 [atlanta]
 host1 http_port=80 maxRequestsPerChild=808
