@@ -1,7 +1,7 @@
 ---
  - name: install conf
    hosts: Instructor-device
-   roles:       
+   roles:
     - Juniper.junos
    connection: local
    gather_facts: no
@@ -22,13 +22,9 @@
       user=pytraining
       passwd={{ DEVICE_PASSWORD }}
       logfile=install_config.log
-     # file=banner.set
+      file={{ item }}
       comment="configured by ansible"
       diffs_file=pdiff/{{ inventory_hostname }}
-      file={{ item }} 
-     with_items: 
-      - syslog.set 
-      - banner.set 
-
-      
-
+     with_items:
+      - syslog.set
+      - banner.set
