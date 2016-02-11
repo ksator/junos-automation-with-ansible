@@ -1,0 +1,12 @@
+---
+ - name: create configuration
+   hosts: fixed
+   connection: local
+
+
+
+
+   tasks:
+
+    - name: Render initial configuration
+      template: src=bgp_template.j2 dest=build_conf/bgp/{{ inventory_hostname }}.conf

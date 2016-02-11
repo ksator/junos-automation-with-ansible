@@ -1,0 +1,7 @@
+set system host-name {{ inventory_hostname }}
+set routing-options static route 0.0.0.0/0 next-hop {{ defaultgateway }}
+set interfaces me0 unit 0 family inet address {{ ip }}/{{ mask }} 
+set system root-authentication encrypted-password {{ root_password }}
+set system services ssh 
+set system services netconf ssh
+

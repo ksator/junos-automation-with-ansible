@@ -1,0 +1,23 @@
+---
+host_name: qfx5100-8
+management_ip: 10.19.10.21
+router_id: 10.20.1.3
+uplinks:
+ to_neighbor1:
+  interface: xe-0/0/2
+  description: "UPLINK to qfx5100-6"
+  address: 192.168.0.4
+ to_neighbor2:
+  interface: xe-0/0/1
+  description: "UPLINK to qfx5100-10"
+  address: 192.168.0.3
+bgp:
+ local_asn: 110
+ neighbors:
+  neighbor1:
+   ip: 192.168.0.5
+   peer_as: 109
+  neighbor2:
+   ip: 192.168.0.2
+   peer_as: 104
+
