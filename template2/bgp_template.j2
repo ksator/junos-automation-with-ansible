@@ -1,5 +1,5 @@
 interfaces {
-{%- for item in uplinks %}
+{% for item in uplinks %}
     {{uplinks[item]['interface']}} {
         description "{{uplinks[item]['description']}}";
         unit 0 {
@@ -8,7 +8,7 @@ interfaces {
             }
         }
     }
-{%- endfor %}
+{% endfor %}
 }
 routing-options {
     router-id {{router_id}};
@@ -27,11 +27,11 @@ protocols {
             export bgp-out;
             local-as {{bgp.local_asn}};
             multipath multiple-as;
-{%- for item in bgp.neighbors %}
+{% for item in bgp.neighbors %}
             neighbor {{bgp.neighbors[item]['ip']}} {
                 peer-as {{bgp.neighbors[item]['peer_as']}};
             }
-{%- endfor %}
+{% endfor %}
         }
     }
     lldp {
