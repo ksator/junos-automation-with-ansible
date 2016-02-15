@@ -24,7 +24,7 @@
       logfile=install_config.log
       file={{ item }}
       comment="configured by ansible"
-      diffs_file=pdiff/{{ inventory_hostname }}
+      diffs_file=pdiff/{{ inventory_hostname }}_{{ lookup('pipe', 'date +%m%d-%H%M%S') }}
      with_items:
       - syslog.set
       - banner.set
