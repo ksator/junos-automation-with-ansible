@@ -7,7 +7,7 @@
    gather_facts: no
    vars_files:
     - vars.yml
-   pre_tasks:
+   tasks:
 #   - name: remove host directory
 #     file: path=configs/{{inventory_hostname}}.conf state=absent
 #     register: baseconfdir
