@@ -1,0 +1,16 @@
+---
+ - name: Get date
+   hosts: localhost
+  
+   
+   tasks:
+
+   - name: date1
+     debug: msg="{{ lookup('pipe', 'date') }}"
+
+   - name: date2
+     debug: msg="{{ lookup('pipe', 'date +%m%d-%H%M%S') }}"
+
+
+
+
