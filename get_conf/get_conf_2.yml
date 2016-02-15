@@ -6,7 +6,7 @@
    connection: local
    gather_facts: no
    
-   pre_tasks:
+   tasks:
    - name: include vars
      include_vars: vars.yml
    - name: Retrieve configuration from devices running Junos
