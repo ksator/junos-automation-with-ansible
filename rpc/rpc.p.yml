@@ -1,0 +1,17 @@
+---
+ - name: pass rpc
+   hosts: Chris EX4200 test
+   roles:
+    - Juniper.junos
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+   - name: Get interface information
+     junos_rpc:
+        host={{ inventory_hostname }}
+        user=pytraining
+        passwd=Poclab123
+        rpc=get-interface-information
+        dest=get_interface_information.conf
