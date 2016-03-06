@@ -1,7 +1,5 @@
 set routing-options autonomous-system 100
-
 set routing-options forwarding-table export bgp-ecmp
-
 set protocols bgp group Ansibletraining type external
 set protocols bgp group Ansibletraining family inet unicast
 set protocols bgp group Ansibletraining local-as 104
@@ -10,10 +8,8 @@ set protocols bgp group Ansibletraining neighbor 192.168.0.3 peer-as 110
 set protocols bgp group Ansibletraining multipath multiple-as
 set protocols bgp group Ansibletraining import bgp-in
 set protocols bgp group Ansibletraining export bgp-out
-
 set policy-options policy-statement bgp-ecmp then load-balance per-packet
 set policy-options policy-statement bgp-in then accept
-
 set policy-options policy-statement bgp-out then accept
 
 
