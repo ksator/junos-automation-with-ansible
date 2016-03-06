@@ -1,0 +1,17 @@
+
+---
+ - name: pass cli
+   hosts: Chris EX4200 devices in Ams
+   roles:
+    - Juniper.junos
+   connection: local
+   gather_facts: no
+   tasks:
+    - name: junos cli
+      junos_cli:
+       host={{ inventory_hostname }}
+       user=pytraining
+       passwd=Poclab123
+       cli="show chassis hardware"
+       logfile=cli.log
+       dest={{ inventory_hostname }}.txt
