@@ -1,6 +1,6 @@
 ---
 - name: Creating build directories for each host
-  hosts: fixed
+  hosts: Chris EX4200 devices in Ams
   connection: local
   gather_facts: no
   tasks:
