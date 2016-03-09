@@ -1,6 +1,6 @@
 ---
  - name: install conf
-   hosts: Instructor-device
+   hosts: Chris EX4200 test
    roles:
     - Juniper.junos
    connection: local
