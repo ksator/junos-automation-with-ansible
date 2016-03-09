@@ -1,6 +1,6 @@
 ---
  - name: Rollback
-   hosts: fixed
+   hosts: Chris EX4300
    roles:       
     - Juniper.junos
    connection: local
@@ -23,5 +23,5 @@
       passwd={{ DEVICE_PASSWORD }}
       logfile=rollback.log
       diffs_file={{ inventory_hostname }}.diff
-      rollback=0
+      rollback=1
       comment="Rolled back by Ansible"
