@@ -1,6 +1,6 @@
 ---
  - name: Get conf
-   hosts: fixed
+   hosts: Chris EX4200 devices in Ams
    roles:
     - Juniper.junos
    connection: local
