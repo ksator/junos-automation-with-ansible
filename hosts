@@ -6,6 +6,12 @@
 #   - You can enter hostnames or ip addresses
 #   - A hostname/ip can be a member of multiple groups
 
+[jcl-fixed-ip]
+10.19.10.15
+10.19.10.13
+10.19.10.221
+10.19.10.23
+
 # All junos devices with fixed ip@ into this setup
 [fixed]
 10.19.10.5
