@@ -1,5 +1,5 @@
 ---
- - name: install appache
+ - name: install apache
    hosts: vm
    
    tasks:
