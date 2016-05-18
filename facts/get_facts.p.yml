@@ -1,6 +1,6 @@
 ---
  - name: Get Facts
-   hosts: Chris EX4200 devices in Ams
+   hosts: jcl-fixed-ip
    roles:       
     - Juniper.junos
    connection: local
