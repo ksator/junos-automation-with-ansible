@@ -1,4 +1,5 @@
 system {
+    replace:
     name-server {
         {% for SRV in  DNSSRVs %}
         {{ SRV }};
