@@ -25,7 +25,7 @@
  
  
     - name: Create Junos configurations from Jinja2
-      template: src={{ junos_jinja_template }} dest="{{ path }}/{{ junos.facts.hostname }}.conf" #the destination directory must already exist
+      template: src={{ junos_jinja_template }} dest="{{ path }}/{{ junos.facts.hostname }}.set" #the destination directory must already exist
  
  
     - name: Install Junos configuration template
@@ -33,5 +33,5 @@
         host={{ inventory_hostname }}
         user={{ADMUSER}}
         passwd={{ADMPASS}}
-        file="{{ path }}/{{ junos.facts.hostname }}.conf"
+        file="{{ path }}/{{ junos.facts.hostname }}.set"
         diffs_file="{{ junos.facts.hostname }}.log"
