@@ -1,6 +1,6 @@
 ---
   - name: Load Configs From Jinja2 Templates
-    hosts: sws
+    hosts: Chris EX4200 test
     roles:
      - Juniper.junos
     connection: local
