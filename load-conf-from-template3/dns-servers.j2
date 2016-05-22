@@ -1,7 +1,6 @@
-system {
-    name-server {
-        {% for SRV in  DNSSRVs %}
-        {{ SRV }};
-        {% endfor %}
-    }
-}
+{% for SRV in  DNSSRVstodelete %} 
+delete system name-server {{ SRV }}
+{% endfor %} 
+{% for SRV in  DNSSRVs %} 
+set system name-server {{ SRV }}
+{% endfor %} 
