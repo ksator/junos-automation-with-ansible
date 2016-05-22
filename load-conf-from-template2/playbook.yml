@@ -34,4 +34,5 @@
         user={{ADMUSER}}
         passwd={{ADMPASS}}
         file="{{ path }}/{{ junos.facts.hostname }}.conf"
+        replace=yes
         diffs_file="{{ junos.facts.hostname }}.log"
