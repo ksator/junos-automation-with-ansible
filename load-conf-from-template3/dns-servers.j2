@@ -1,0 +1,7 @@
+system {
+    name-server {
+        {% for SRV in  DNSSRVs %}
+        {{ SRV }};
+        {% endfor %}
+    }
+}
