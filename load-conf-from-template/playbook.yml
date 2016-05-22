@@ -30,6 +30,5 @@
         host={{ inventory_hostname }}
         user={{ADMUSER}}
         passwd={{ADMPASS}}
-        #replace=yes
         file="{{ path }}/{{ junos.facts.hostname }}.conf"
         diffs_file="load-conf-from-template/{{ junos.facts.hostname }}.log"
