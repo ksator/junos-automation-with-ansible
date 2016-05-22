@@ -6,10 +6,10 @@
     connection: local
     gather_facts: no
     vars:
-      - junos_jinja_template: "templates/dns-servers.j2"
-      - path: "junos_configs" #the directory must already exist
+      - junos_jinja_template: "load-conf-from-template/template-dns-servers.j2"
+      - path: "load-conf-from-template/junos_configs" #the directory must already exist
     vars_files:
-      - "templates/dns-servers.yml"
+      - "load-conf-from-template/variables-dns-servers.yml"
  
     tasks:
  
@@ -23,7 +23,6 @@
  
     - name: Create Junos configurations from Jinja2
       template: src={{ junos_jinja_template }} dest="{{ path }}/{{ junos.facts.hostname }}.conf" #the destination directory must already exist
-      #with_items: "{{ DNSSRVs }}"
  
  
     - name: Install Junos configuration template
@@ -31,6 +30,6 @@
         host={{ inventory_hostname }}
         user={{ADMUSER}}
         passwd={{ADMPASS}}
-        replace=yes
+        #replace=yes
         file="{{ path }}/{{ junos.facts.hostname }}.conf"
-        diffs_file="{{ junos.facts.hostname }}.log"
+        diffs_file="load-conf-from-template/{{ junos.facts.hostname }}.log"
