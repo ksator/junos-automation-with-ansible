@@ -14,7 +14,7 @@
     tasks:
  
     - name: this task simply ensures this directory exists 
-      file: path: "{{ path }}" state: directory
+      file: "{{ path }}" state: directory
 
     - name: Retrieve information from devices running Junos OS
       junos_get_facts:
