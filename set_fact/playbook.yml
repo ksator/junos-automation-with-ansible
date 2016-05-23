@@ -16,10 +16,10 @@
       register: output 
  
     - name: Print output
-      debug: msg="{{ output }}" 
+      debug: msg="{{ output.stdout }}" 
 
     - name: set vlan list 
-      set_fact: vlans_list="{{ output | regex.findall('vlan-id (.+)') }}"
+      set_fact: vlans_list="{{ output.stdout | regex.findall('vlan-id (.+)') }}"
 
     - name: Print some facts
       debug: msg="{{ vlans_list }}"
