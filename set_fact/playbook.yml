@@ -1,0 +1,25 @@
+ - name: pass cli
+   hosts: Chris EX4200 devices in Ams
+   roles:
+    - Juniper.junos
+   connection: local
+   gather_facts: no
+   tasks:
+    - name: junos cli
+      junos_cli:
+       host={{ inventory_hostname }}
+       user=pytraining
+       passwd=Poclab123
+       cli="show configuration vlans | display set"
+       logfile=cli.log
+       dest={{ inventory_hostname }}.txt
+      register: output 
+ 
+    - name: Print output
+      debug: msg={{output}} 
+
+    - name: set vlan list 
+      set_fact: vlans_list=output.findall("vlan-id (.+)", s)
+
+    - name: Print some facts
+      debug: msg={{vlans_list }}
