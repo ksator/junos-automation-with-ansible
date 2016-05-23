@@ -19,7 +19,7 @@
     #  debug: msg="{{ output.stdout }}" 
     
     - name: set fact vlans_conf 
-      set_fact: vlans_conf="{{ output.stdout }}"
+      set_fact: vlans_conf="{{ output }}"
       
     - name: set fact vlans_conf_lines 
       set_fact: vlans_conf_lines="{{ vlans_conf.split('\n') }}"
