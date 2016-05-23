@@ -15,11 +15,17 @@
        dest={{ inventory_hostname }}.txt
       register: output 
  
-    - name: Print output
-      debug: msg="{{ output.stdout }}" 
+    #- name: Print output
+    #  debug: msg="{{ output.stdout }}" 
+    
+    - name: set fact vlans_conf 
+      set_fact: vlans_conf="{{ output.stdout }}"
+      
+    - name: set fact vlans_conf_lines 
+      set_fact: vlans_conf_lines="{{ vlans_conf.split('\n') }}"
 
-    - name: set vlan list 
-      set_fact: vlans_list="{{ output.stdout | regex.findall('vlan-id (.+)') }}"
+    #- name: set vlan list 
+    #  set_fact: vlans_list="{{ output.stdout | regex.findall('vlan-id (.+)') }}"
 
-    - name: Print some facts
-      debug: msg="{{ vlans_list }}"
+    #- name: Print some facts
+    #  debug: msg="{{ vlans_list }}"
