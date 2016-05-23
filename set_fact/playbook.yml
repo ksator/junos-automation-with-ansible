@@ -10,7 +10,7 @@
        host={{ inventory_hostname }}
        user=pytraining
        passwd=Poclab123
-       cli="show configuration vlans | display set"
+       cli="show configuration vlans"
        logfile=cli.log
        dest={{ inventory_hostname }}.txt
       register: output 
