@@ -22,12 +22,10 @@
         user={{ ADMUSER }}
         passwd={{ ADMPASS }}
       register: junos
- 
- 
+      
     - name: Create Junos configurations from Jinja2
       template: src={{ junos_jinja_template }} dest="{{ path }}/{{ junos.facts.hostname }}.set" #the destination directory must already exist
- 
- 
+      
     - name: Install Junos configuration template
       junos_install_config:
         host={{ inventory_hostname }}
