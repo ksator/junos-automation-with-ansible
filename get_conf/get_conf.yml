@@ -21,4 +21,4 @@
       dest=configs/{{ inventory_hostname }}.conf
       format=text
       logfile=get_config.log
-      filter=interfaces
+      filter="system/name-server"
