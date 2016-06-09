@@ -35,3 +35,19 @@
         passwd={{ADMPASS}}
         file="{{ path }}/{{ junos.facts.hostname }}.set"
         diffs_file="{{ junos.facts.hostname }}.log"
+        
+    - name: remove host build temp directory
+      file: path=configs/{{inventory_hostname}}.conf state=absent
+
+    - name: create host build temp directory
+      file: path=configs/ state=directory
+
+    - name: Retrieve configuration from devices running Junos
+      junos_get_config:
+        host={{ inventory_hostname }}
+        user={{ADMUSER}}
+        passwd={{ADMPASS}}
+        dest=configs/{{ inventory_hostname }}.conf
+        format=text
+        logfile=get_config.log
+        filter=name-server
