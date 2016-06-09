@@ -48,6 +48,6 @@
         dest=configs/{{ inventory_hostname }}.conf
         format=text
         logfile=get_config.log
-        filter=system
+        filter=system/name-server
     
   
