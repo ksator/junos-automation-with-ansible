@@ -21,4 +21,4 @@
       dest=configs/{{ inventory_hostname }}.xml
       format=xml
       logfile=get_config.log
-      filter=system
+      filter=system/login
