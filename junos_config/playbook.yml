@@ -19,3 +19,5 @@
        - delete system name-server 172.30.179.2
        - set system host-name newname
       comment: update config
+      confirm: 1
+
