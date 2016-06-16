@@ -21,7 +21,7 @@
       host={{ inventory_hostname }}
       user=pytraining
       passwd={{ DEVICE_PASSWORD }}
-      savedir=inventory
+      savedir=inv
       #user={{ USERNAME }}
       #passwd=Poclab123
      register: junos
