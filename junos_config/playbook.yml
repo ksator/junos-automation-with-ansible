@@ -13,6 +13,6 @@
    - name: test
      junos_config:
       username: pytraining
-      password: {{ DEVICE_PASSWORD }}
+      password: "{{ DEVICE_PASSWORD }}"
       lines: set system host-name newname
       comment: update config
