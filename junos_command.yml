@@ -1,6 +1,6 @@
 ---
  - name: core module junos_command
-   hosts: Chris-EX4200-test
+   hosts: Chris-EX4300
    connection: local
    gather_facts: no
 
@@ -18,3 +18,5 @@
       commands:
       - show lldp neighbor
       - show bgp neighbor
+      waitfor:
+      - "result[1].Peer contains Established"
