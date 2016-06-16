@@ -1,0 +1,20 @@
+---
+ - name: core module junos_config
+   hosts: Chris-EX4200-devices-in-Ams
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+
+   tasks:
+   - name: test
+     junos_config:
+      host={{ inventory_hostname }}
+      username=pytraining
+      password={{ DEVICE_PASSWORD }}
+      lines:
+      - set system host-name newname
+    comment: update config
