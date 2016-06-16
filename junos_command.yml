@@ -20,3 +20,5 @@
       - show bgp neighbor
       waitfor:
       - "result[1].Peer contains Established"
+      interval: 1
+      retries: 10
