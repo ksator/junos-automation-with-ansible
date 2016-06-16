@@ -1,0 +1,20 @@
+---
+ - name: core module junos_command
+   hosts: Chris-EX4200-test
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+
+   tasks:
+   - name: test
+     junos_config:
+      host: "{{ inventory_hostname }}"
+      username: pytraining
+      password: "{{ DEVICE_PASSWORD }}"
+      commands:
+      - show lldp neighbor
+      - show bgp neighbor
