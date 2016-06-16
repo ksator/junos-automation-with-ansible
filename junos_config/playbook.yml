@@ -1,6 +1,6 @@
 ---
  - name: core module junos_config
-   hosts: Chris-EX4200-devices-in-Ams
+   hosts: Chris-EX4200-test
    connection: local
    gather_facts: no
 
