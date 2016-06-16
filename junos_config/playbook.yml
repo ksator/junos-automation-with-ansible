@@ -15,6 +15,5 @@
       host={{ inventory_hostname }}
       username=pytraining
       password={{ DEVICE_PASSWORD }}
-      lines:
-      - set system host-name newname
-    comment: update config
+      lines=set system host-name newname
+      comment= update config
