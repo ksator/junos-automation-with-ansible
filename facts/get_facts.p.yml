@@ -15,13 +15,16 @@
     #  private: no
 
    tasks:
-
+   - name: remove host from inventory directory
+     file: path=inventory/{{inventory_hostname}}.conf state=absent
+   - name: create inventory directory
+     file: path=inventory/ state=directory
    - name: Retrieve information from devices running Junos
      junos_get_facts:
       host={{ inventory_hostname }}
       user=pytraining
       passwd={{ DEVICE_PASSWORD }}
-      savedir=inv
+      savedir=inventory
       #user={{ USERNAME }}
       #passwd=Poclab123
      register: junos
