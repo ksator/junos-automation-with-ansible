@@ -19,6 +19,6 @@
       - show lldp neighbor
       - show bgp neighbor
       waitfor:
-      - "result[1].Peer contains Established"
+      - "result[1].bgp-peer.peer-state eq Established"
       interval: 1
       retries: 10
