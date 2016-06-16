@@ -12,8 +12,8 @@
    tasks:
    - name: test
      junos_config:
-      host={{ inventory_hostname }}
-      username=pytraining
-      password={{ DEVICE_PASSWORD }}
-      lines=set system host-name newname
-      comment= update config
+      host: {{ inventory_hostname }}
+      username: pytraining
+      password: {{ DEVICE_PASSWORD }}
+      lines: set system host-name newname
+      comment: update config
