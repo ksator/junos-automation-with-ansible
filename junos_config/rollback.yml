@@ -1,0 +1,19 @@
+---
+ - name: core module junos_config
+   hosts: Chris-EX4200-test
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+
+   tasks:
+   - name: rollback
+     junos_config:
+      host: "{{ inventory_hostname }}"
+      username: pytraining
+      password: "{{ DEVICE_PASSWORD }}"
+      rollback: 1
+
