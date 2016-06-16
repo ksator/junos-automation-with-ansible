@@ -15,7 +15,7 @@
       host: "{{ inventory_hostname }}"
       username: pytraining
       password: "{{ DEVICE_PASSWORD }}"
-      lines: 
-       - set system host-name newname
+      lines:
        - delete system name-server 172.30.179.2
+       - set system host-name newname
       comment: update config
