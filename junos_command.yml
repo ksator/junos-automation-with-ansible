@@ -15,10 +15,12 @@
       host: "{{ inventory_hostname }}"
       username: pytraining
       password: "{{ DEVICE_PASSWORD }}"
-      commands:
-      - show lldp neighbor
-      - show bgp neighbor 192.168.0.2
+      #commands:
+      #- show lldp neighbor
+      #- show bgp neighbor 192.168.0.2
+      rpcs:
+      - "get_bgp_neighbor_information neighbor_address=192.168.0.0"
       waitfor:
-      - "result[1].bgp-peer.peer-state eq Established"
-      interval: 1
-      retries: 10
+      - "result[0].bgp-peer.peer-state eq Established"
+      #interval: 1
+      #retries: 10
