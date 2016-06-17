@@ -15,3 +15,4 @@
        cli="show chassis hardware"
        logfile=cli.log
        dest={{ inventory_hostname }}.txt
+       #test
