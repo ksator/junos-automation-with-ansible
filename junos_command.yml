@@ -20,6 +20,7 @@
       #- show bgp neighbor 192.168.0.2
       rpcs:
       #- "get_bgp_neighbor_information"
-      - "get_bgp_neighbor_information neighbor-address={{ item }}
-        with_items:
-         - 192.168.0.2
+       - "get_bgp_neighbor_information neighbor-address={{ item }}
+      with_items:
+       - 192.168.0.2
+      
