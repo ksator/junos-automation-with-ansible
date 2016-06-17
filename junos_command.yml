@@ -17,7 +17,7 @@
       password: "{{ DEVICE_PASSWORD }}"
       commands:
       - show lldp neighbor
-      - show bgp neighbor
+      - show bgp neighbor 192.168.0.2
       waitfor:
       - "result[1].bgp-peer.peer-state eq Established"
       interval: 1
