@@ -11,7 +11,7 @@
 
    tasks:
    - name: test
-     junos_config:
+     junos_command:
       host: "{{ inventory_hostname }}"
       username: pytraining
       password: "{{ DEVICE_PASSWORD }}"
