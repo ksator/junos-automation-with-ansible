@@ -1,0 +1,19 @@
+---
+ - name: core module junos_netconf 
+   hosts: Chris-EX4300
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+
+   tasks:
+   - name: test
+     junos_netconf: 
+      host: "{{ inventory_hostname }}"
+      username: pytraining
+      password: "{{ DEVICE_PASSWORD }}"
+      listens_on: 830
+      state: present
