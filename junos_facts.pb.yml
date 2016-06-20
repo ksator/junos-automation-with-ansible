@@ -1,0 +1,24 @@
+---
+ - name: Get Facts
+   hosts: Chris-EX4200-devices-in-Ams
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+
+   tasks:
+
+   - name: Retrieve information from devices running Junos
+     junos_facts:
+      host={{ inventory_hostname }}
+      user=pytraining
+      passwd={{ DEVICE_PASSWORD }}
+     register: junos
+
+   - name: Print some facts
+     debug: msg="device {{junos["facts"]["hostname"]}} runs version {{junos.facts.version}}" 
+     when: junos.facts.version != "12.3R11.2"
+ 
