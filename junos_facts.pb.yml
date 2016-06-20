@@ -13,11 +13,11 @@
 
    - name: Retrieve information from devices running Junos
      junos_facts:
-      host={{ inventory_hostname }}
+      host="{{ inventory_hostname }}"
       user=pytraining
-      passwd={{ DEVICE_PASSWORD }}
-      config: yes
-      config_format: set
+      passwd="{{ DEVICE_PASSWORD }}"
+      config=yes
+      config_format=set
      register: junos
 
    - name: Print some facts
