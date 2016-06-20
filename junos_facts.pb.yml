@@ -1,6 +1,6 @@
 ---
  - name: Get Facts
-   hosts: Chris-EX4200-devices-in-Ams
+   hosts: Chris-EX4200-test
    connection: local
    gather_facts: no
 
@@ -23,6 +23,10 @@
    - name: Print some facts
      debug: msg="device {{junos.ansible_facts.hostname}} runs version {{junos.ansible_facts.version}}"
      when: ("{{ junos.ansible_facts.version }}" != "12.3R11.2")
+   
+   - name: Print some facts
+     debug: msg="device {{junos.ansible_facts.config}}"
+
 
 
 
