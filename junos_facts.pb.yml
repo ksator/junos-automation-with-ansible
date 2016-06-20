@@ -26,6 +26,13 @@
    
    - name: Print some facts
      debug: msg="device {{junos.ansible_facts.config}}"
+     
+   - name: Print some facts
+     debug: msg="device {{junos.ansible_facts.config_json.configuration.vlans}}"
+
+
+
+
 
 
 
