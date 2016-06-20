@@ -17,7 +17,7 @@
       username=pytraining
       password="{{ DEVICE_PASSWORD }}"
       config=yes
-      config_format=set
+      config_format=xml
      register: junos
 
    - name: Print some facts
