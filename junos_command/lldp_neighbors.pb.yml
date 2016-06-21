@@ -16,10 +16,10 @@
       username: pytraining
       password: "{{ DEVICE_PASSWORD }}"
       commands:
-       - show lldp neighbors interface "ge-0/0/0"
+       - show lldp neighbors interface ge-0/0/0
        #- show lldp neighbors interface "ge-0/0/1"
-      waitfor:
-      - "result[0].lldp-neighbors-information.lldp-neighbors-information.lldp-remote-system-name eq ex4300-9"
+      #waitfor:
+      #- "result[0].lldp-neighbors-information.lldp-neighbors-information.lldp-remote-system-name eq ex4300-9"
       #- "result[1].lldp-neighbors-information.lldp-neighbors-information.lldp-remote-system-name eq ex4300-10"
-      retries: 10
-      interval: 1
+      #retries: 10
+      #interval: 1
