@@ -1,0 +1,26 @@
+---
+ - name: core module junos_command
+   hosts: 172.30.179.65
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+
+   tasks:
+   - name: test
+     junos_command:
+      host: "{{ inventory_hostname }}"
+      username: pytraining
+      password: "{{ DEVICE_PASSWORD }}"
+      commands:
+       - show bgp neighbor "{{ item }}"
+      with_items:
+       - "192.168.0.1"
+       - "192.168.0.3" 
+      waitfor:
+      - "result[0].bgp-information.bgp-peer.peer-state eq Established"
+      retries: 10
+      interval: 1
