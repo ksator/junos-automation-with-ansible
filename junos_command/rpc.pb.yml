@@ -17,6 +17,8 @@
       password: "{{ DEVICE_PASSWORD }}"
       rpcs:
        - "get_bgp_neighbor_information neighbor-address={{ item }}"
+      waitfor: 
+       - "result[0].bgp-information.bgp-peer.peer-state eq Established"
      with_items:
       - "192.168.0.1"
       - "192.168.0.3"
