@@ -1,0 +1,25 @@
+---
+ - name: core module junos_command
+   hosts: 172.30.179.65
+   connection: local
+   gather_facts: no
+
+   vars_prompt:
+    - name: DEVICE_PASSWORD
+      prompt: Device password
+      private: yes
+
+   tasks:
+   - name: test
+     junos_command:
+      host: "{{ inventory_hostname }}"
+      username: pytraining
+      password: "{{ DEVICE_PASSWORD }}"
+      commands:
+       - show lldp neighbors interface ge-0/0/0
+       - show lldp neighbors interface ge-0/0/1
+      waitfor:
+      - "result[0].lldp-neighbors-information.lldp-neighbors-information.lldp-remote-system-name eq ex4300-9"
+      - "result[1].lldp-neighbors-information.lldp-neighbors-information.lldp-remote-system-name eq ex4300-10"
+      retries: 10
+      interval: 1
