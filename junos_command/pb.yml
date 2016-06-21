@@ -19,7 +19,7 @@
       - show lldp neighbor
       - show bgp neighbor
       #- show bgp neighbor "{{ item }}"
-      rpcs:
+      #rpcs:
       #- "get_bgp_neighbor_information"
       #- "get_bgp_neighbor_information neighbor-address={{ item }}"
       #with_items:
