@@ -16,11 +16,12 @@
       username: pytraining
       password: "{{ DEVICE_PASSWORD }}"
       commands:
-      #- show lldp neighbor
-      - show bgp neighbor "{{ item }}"
+      - show lldp neighbor
+      - show bgp neighbor
+      #- show bgp neighbor "{{ item }}"
       rpcs:
       #- "get_bgp_neighbor_information"
       #- "get_bgp_neighbor_information neighbor-address={{ item }}"
-      with_items:
-       - "192.168.0.2"
+      #with_items:
+      # - "192.168.0.2"
       
