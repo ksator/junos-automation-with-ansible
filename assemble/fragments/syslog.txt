@@ -7,5 +7,3 @@ set system syslog host 172.30.189.2 authorization info
 set system syslog host 172.30.189.2 interactive-commands info
 set system syslog file messages any notice
 set system syslog file messages authorization info
-
-
