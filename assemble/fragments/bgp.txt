@@ -11,5 +11,3 @@ set protocols bgp group Ansibletraining export bgp-out
 set policy-options policy-statement bgp-ecmp then load-balance per-packet
 set policy-options policy-statement bgp-in then accept
 set policy-options policy-statement bgp-out then accept
-
-
