@@ -1,0 +1,3 @@
+neighbors:
+ - peer_ip: 192.168.0.1 
+ - peer_ip: 192.168.0.3
