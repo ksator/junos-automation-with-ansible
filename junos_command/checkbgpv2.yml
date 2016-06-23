@@ -1,6 +1,6 @@
 ---
  - name: core module junos_command
-   hosts: 172.30.179.65
+   hosts: Chris-EX4300
    connection: local
    gather_facts: no
 
