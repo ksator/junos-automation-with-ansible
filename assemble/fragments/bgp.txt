@@ -1,4 +1,4 @@
-set routing-options autonomous-system 11191
+set routing-options autonomous-system 1119
 set routing-options forwarding-table export bgp-ecmp
 set protocols bgp group Ansibletraining type external
 set protocols bgp group Ansibletraining family inet unicast
