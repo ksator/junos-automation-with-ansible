@@ -1,4 +1,13 @@
 ---
+ - name: include vars
+   hosts: localhost
+   gather_facts: no
+   
+   tasks:
+    
+   - name: include vars
+     include_vars: "{{playbook_dir}}/vars.yml"
+     
  - name: Retrieve configuration from junos devices
    hosts: AMS-EX4200
    roles:
@@ -7,8 +16,6 @@
    gather_facts: no
    
    tasks:
-   - name: include vars
-     include_vars: "{{playbook_dir}}/vars.yml"
      
    - name: Retrieve configuration from junos devices
      junos_get_config:
