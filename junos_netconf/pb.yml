@@ -10,7 +10,7 @@
       private: yes
 
    tasks:
-   - name: test
+   - name: configure netconf on junos devices
      junos_netconf: 
       host: "{{ inventory_hostname }}"
       username: pytraining
