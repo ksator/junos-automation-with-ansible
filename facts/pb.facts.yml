@@ -1,4 +1,12 @@
 ---
+ - name: create inventory directory
+   hosts: localhost
+   
+   tasks:
+    
+   - name: create inventory directory
+     file: path=inventory/ state=directory
+     
  - name: Get Facts
    hosts: Chris-EX4200-devices-in-Ams
    roles:       
@@ -18,9 +26,6 @@
    
    - name: remove host from inventory directory
      file: path=inventory/{{inventory_hostname}}.conf state=absent
-     
-   - name: create inventory directory
-     file: path=inventory/ state=directory
      
    - name: Retrieve information from devices running Junos
      junos_get_facts:
