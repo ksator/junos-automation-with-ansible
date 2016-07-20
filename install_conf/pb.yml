@@ -19,9 +19,11 @@
       user=pytraining
       passwd={{ DEVICE_PASSWORD }}
       logfile={{playbook_dir}}/install_config.log
+      replace=no
+      overwrite=no
       file={{ item }}
       comment="configured by ansible"
-      diffs_file={{playbook_dir}}/{{ inventory_hostname }}_{{ item }}_{{ lookup('pipe', 'date +%m%d-%H%M%S') }}
+      diffs_file={{playbook_dir}}/{{ inventory_hostname }}_{{ lookup('pipe', 'date +%m%d-%H%M%S') }}
      with_items:
-      - syslog.set
-      - banner.set
+      - "{{playbook_dir}}/syslog.set"
+      - "{{playbook_dir}}/banner.set"
