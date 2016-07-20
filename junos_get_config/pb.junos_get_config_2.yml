@@ -1,6 +1,6 @@
 ---
  - name: Retrieve configuration from junos devices
-   hosts: fixed
+   hosts: AMS-EX4200
    roles:
     - Juniper.junos
    connection: local
@@ -8,7 +8,7 @@
    
    tasks:
    - name: include vars
-     include_vars: {{playbook_dir}}/vars.yml
+     include_vars: "{{playbook_dir}}/vars.yml"
      
    - name: Retrieve configuration from junos devices
      junos_get_config:
