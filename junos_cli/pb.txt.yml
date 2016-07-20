@@ -13,5 +13,5 @@
        user=pytraining
        passwd=Poclab123
        cli="show chassis hardware"
-       logfile=cli.log
-       dest={{ inventory_hostname }}.txt
+       logfile={{playbook_dir}}/cli.log
+       dest={{playbook_dir}}/{{ inventory_hostname }}.txt
