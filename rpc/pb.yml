@@ -1,6 +1,6 @@
 ---
- - name: pass rpc
-   hosts: Chris EX4200 test
+ - name: pass rpc to junos devices
+   hosts: AMS-EX4200
    roles:
     - Juniper.junos
    connection: local
@@ -8,10 +8,10 @@
 
    tasks:
 
-   - name: Get interface information
+   - name: get interface information
      junos_rpc:
         host={{ inventory_hostname }}
         user=pytraining
         passwd=Poclab123
         rpc=get-interface-information
-        dest=get_interface_information.conf
+        dest={{playbook_dir}}/get_interface_information.conf
