@@ -14,7 +14,7 @@
       HEADER_Content-Type: "application/xml"
       HEADER_Accept: "application/json"
       force_basic_auth: yes
-      dest: {{playbook_dir}}/somelog.json
+      dest: "{{ playbook_dir }}/somelog.json"
      register: junos
 
    - name: Print some mx details
