@@ -21,9 +21,9 @@
       logfile={{playbook_dir}}/install_config.log
       replace=no
       overwrite=no
-      file={{ item }}
+      file={{playbook_dir}}/{{ item }}
       comment="configured by ansible"
       diffs_file={{playbook_dir}}/{{ inventory_hostname }}_{{ lookup('pipe', 'date +%m%d-%H%M%S') }}
      with_items:
-      - "{{playbook_dir}}/syslog.set"
-      - "{{playbook_dir}}/banner.set"
+      - syslog.set
+      - banner.set
