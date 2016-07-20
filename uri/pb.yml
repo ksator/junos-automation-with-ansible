@@ -14,6 +14,7 @@
       HEADER_Content-Type: "application/xml"
       HEADER_Accept: "application/json"
       force_basic_auth: yes
+      dest: /home/ksator/ansible-training-for-junos/uri/somelog.json
      register: junos
 
    - name: Print some mx details
