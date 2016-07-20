@@ -15,4 +15,4 @@
        cli="show chassis hardware"
        logfile=cli.log
        format=xml
-       dest={{ inventory_hostname }}.xmk
+       dest={{ inventory_hostname }}.xml
