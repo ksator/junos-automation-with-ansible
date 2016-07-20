@@ -9,7 +9,7 @@
      file: path={{playbook_dir}}/inventory state=directory
      
  - name: Get Facts
-   hosts: Chris-EX4200-devices-in-Ams
+   hosts: AMS-EX4200
    roles:       
     - Juniper.junos
    connection: local
