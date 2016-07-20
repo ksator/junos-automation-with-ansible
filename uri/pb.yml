@@ -1,0 +1,23 @@
+---
+ - name: play_name_curl
+   hosts: localhost
+   gather_facts: no
+
+   tasks:
+
+   - name: make rest call to mx
+     uri:
+      url: http://172.30.177.170:3000/rpc/get-software-information
+      method: GET
+      user: pytraining
+      password: Poclab123
+      HEADER_Content-Type: "application/xml"
+      HEADER_Accept: "application/json"
+      force_basic_auth: yes
+     register: junos
+
+   - name: Print some mx details
+     debug: msg="device {{junos.json['software-information'][0]['host-name'][0]['data']}} runs version {{junos.json['software-information'][0]['junos-version'][0]['data']}}"
+
+
+
