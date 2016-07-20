@@ -7,11 +7,11 @@
 
    - name: make rest call to mx
      uri:
-      url: http://66.129.233.7:3000/rpc/get-software-information
+      url: http://172.30.177.170:3000/rpc/get-software-information
       method: GET
       user: pytraining
       password: Poclab123
       HEADER_Content-Type: "application/xml"
       HEADER_Accept: "application/json"
       force_basic_auth: yes
-      dest: somelog.txt
+      dest: somelog.json
