@@ -1,6 +1,6 @@
 ---
  - name: Rollback configuration on junos devices
-   hosts: Chris-test
+   hosts: AMS-test
    roles:       
     - Juniper.junos
    connection: local
