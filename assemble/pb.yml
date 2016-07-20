@@ -12,4 +12,4 @@
       register: path
 
     - name: Assembling configurations
-      assemble: src={{path.stdout}}/fragments dest={{path.stdout}}/junos.conf
+      assemble: src={{path.stdout}}/assemble/fragments dest={{path.stdout}}/assemble/junos.conf
