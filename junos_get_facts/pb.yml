@@ -6,7 +6,7 @@
    tasks:
     
    - name: create inventory directory
-     file: path=/home/ksator/ansible-training-for-junos/junos_get_facts/inventory state=directory
+     file: path={{playbook_dir}}/inventory state=directory
      
  - name: Get Facts
    hosts: Chris-EX4200-devices-in-Ams
@@ -26,14 +26,14 @@
    tasks:
    
    - name: remove host from inventory directory
-     file: path=/home/ksator/ansible-training-for-junos/junos_get_facts/inventory/{{inventory_hostname}}.conf state=absent
+     file: path={{playbook_dir}}/inventory/{{inventory_hostname}}.conf state=absent
      
    - name: Retrieve information from devices running Junos
      junos_get_facts:
       host={{ inventory_hostname }}
       user=pytraining
       passwd={{ DEVICE_PASSWORD }}
-      savedir=/home/ksator/ansible-training-for-junos/junos_get_facts/inventory
+      savedir={{playbook_dir}}/inventory
       #user={{ USERNAME }}
       #passwd=Poclab123
      register: junos
