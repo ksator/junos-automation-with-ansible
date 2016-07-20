@@ -8,5 +8,5 @@
    tasks:
 
     - name: Assembling configurations
-      assemble: src=/home/ksator/ansible-training-for-junos/fragments dest=junos.conf
+      assemble: src=/home/ksator/ansible-training-for-junos/assemble/fragments dest=junos.conf
       
