@@ -15,5 +15,5 @@
       passwd={{ DEVICE_PASSWORD }}
       dest={{playbook_dir}}/configs/{{ inventory_hostname }}.conf
       format=text
-      logfile={{playbook_dir}}/get_config.log
+      logfile={{playbook_dir}}/junos_get_config.log
       filter=system
