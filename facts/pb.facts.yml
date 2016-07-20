@@ -15,10 +15,13 @@
     #  private: no
 
    tasks:
+   
    - name: remove host from inventory directory
      file: path=inventory/{{inventory_hostname}}.conf state=absent
+     
    - name: create inventory directory
      file: path=inventory/ state=directory
+     
    - name: Retrieve information from devices running Junos
      junos_get_facts:
       host={{ inventory_hostname }}
@@ -32,7 +35,3 @@
    - name: Print some facts
      debug: msg="device {{junos["facts"]["hostname"]}} runs version {{junos.facts.version}}" 
      when: junos.facts.version != "12.3R11.2"
- 
-          
-
-
