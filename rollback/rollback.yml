@@ -1,6 +1,6 @@
 ---
  - name: Rollback
-   hosts: Chris EX4300
+   hosts: Chris-EX4300
    roles:       
     - Juniper.junos
    connection: local
