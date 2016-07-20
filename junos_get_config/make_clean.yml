@@ -1,10 +1,19 @@
 ---
-- name: Create directories for each host
-  hosts: AMS-EX4200
-  connection: local
-  gather_facts: no
-  tasks:
-    - name: remove host build temp directory
-      file: path=configs/{{inventory_hostname}}.conf state=absent
-    - name: create host build temp directory
-      file: path=configs/ state=directory
+ - name: create a directory 
+   hosts: localhost
+   gather_facts: no
+   
+   tasks:
+    
+   - name: create a directory
+     file: path={{playbook_dir}}/configs state=directory
+
+ - name: remove old files from the directory for each host
+   hosts: AMS-EX4200
+   connection: local
+   gather_facts: no
+
+   tasks:
+   
+   - name: remove old files from the configs directory for each host
+     file: path={{playbook_dir}}/configs/{{inventory_hostname}}.conf state=absent
