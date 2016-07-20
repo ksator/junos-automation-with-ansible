@@ -1,6 +1,7 @@
 ---
  - name: create inventory directory
    hosts: localhost
+   gather_facts: no
    
    tasks:
     
