@@ -14,4 +14,4 @@
         user=pytraining
         passwd=Poclab123
         rpc=get-interface-information
-        dest={{playbook_dir}}/get_interface_information.conf
+        dest={{playbook_dir}}/{{ inventory_hostname }}.conf
