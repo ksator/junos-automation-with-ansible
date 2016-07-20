@@ -4,4 +4,8 @@ doc: http://junos-ansible-modules.readthedocs.io/en/1.3.1/
 
 playbooks: pass cli to junos devices.  
 requirement: enable netconf on junos.  
+usages:   
+ansible-playbook junos_cli/pb.txt.yml -i hosts  
+ansible-playbook junos_cli/pb.xml.yml -i hosts  
+
 
