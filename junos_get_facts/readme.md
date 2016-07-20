@@ -4,4 +4,4 @@ doc: http://junos-ansible-modules.readthedocs.io/en/1.3.1/
 
 playbooks: get some facts from junos devices.  
 requirement: enable netconf on junos.    
-usage: ansible-playbook junos_get_facts/pb.yml -i hosts  
+usage: ansible-playbook junos_get_facts/pb.yml  
