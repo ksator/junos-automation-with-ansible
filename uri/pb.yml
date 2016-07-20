@@ -14,4 +14,4 @@
       HEADER_Content-Type: "application/xml"
       HEADER_Accept: "application/json"
       force_basic_auth: yes
-      dest: somelog.json
+      dest: somelog.txt
