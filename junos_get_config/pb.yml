@@ -1,5 +1,5 @@
 ---
 # This playbook will clean the directory and then should bug  and apply configuration to all of the devices
 
-- include: make_clean.yaml
+- include: make_clean.yml
 - include: junos_get_config.yml
