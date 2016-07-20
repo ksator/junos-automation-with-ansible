@@ -1,9 +1,8 @@
 ---
  - name: check netconf
-   hosts: fixed
+   hosts: AMS-EX4200
    connection: local
    gather_facts: no
-
 
    tasks:
 
