@@ -1,24 +1,19 @@
 ---
- - name: Get conf
-   hosts: Chris-EX4200-devices-in-Ams
+ - name: Retrieve configuration from Junos devices
+   hosts: AMS-EX4200
    roles:
     - Juniper.junos
    connection: local
    gather_facts: no
    vars_files:
-    - vars.yml
+    - {{playbook_dir}}/vars.yml
    tasks:
-#   - name: remove host directory
-#     file: path=configs/{{inventory_hostname}}.conf state=absent
-#     register: baseconfdir
-#   - name: create host-baseconf directory
-#     file: path=configs state=directory 
-   - name: Retrieve configuration from devices running Junos
+   - name: Retrieve configuration from Junos devices
      junos_get_config:
       host={{ inventory_hostname }}
       user={{ USERNAME }}
       passwd={{ DEVICE_PASSWORD }}
-      dest=configs/{{ inventory_hostname }}.conf
+      dest={{playbook_dir}}/configs/{{ inventory_hostname }}.conf
       format=text
-      logfile=get_config.log
+      logfile={{playbook_dir}}/get_config.log
       filter=system
