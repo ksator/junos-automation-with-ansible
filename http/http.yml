@@ -1,10 +1,11 @@
 ---
  - name: play_name_curl
    hosts: localhost
+   gather_facts: no
 
    tasks:
 
-   - name: name_task
+   - name: make rest call to mx
      uri:
       url: http://66.129.233.7:3000/rpc/get-software-information
       method: GET
