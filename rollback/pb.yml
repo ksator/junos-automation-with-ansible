@@ -1,6 +1,6 @@
 ---
- - name: Rollback
-   hosts: Chris-EX4300
+ - name: Rollback configuration on junos devices
+   hosts: Chris-test
    roles:       
     - Juniper.junos
    connection: local
@@ -21,7 +21,7 @@
       host={{ inventory_hostname }}
       user=pytraining
       passwd={{ DEVICE_PASSWORD }}
-      logfile=rollback.log
-      diffs_file={{ inventory_hostname }}.diff
+      logfile={{playbook_dir}}/rollback.log
+      diffs_file={{playbook_dir}}/{{ inventory_hostname }}.diff
       rollback=1
-      comment="Rolled back by Ansible"
+      comment="configuration rolled back by Ansible"
