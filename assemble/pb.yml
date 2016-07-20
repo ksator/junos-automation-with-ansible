@@ -7,9 +7,5 @@
 
    tasks:
 
-    - name: Find out pwd
-      shell: pwd
-      register: path
-
     - name: Assembling configurations
-      assemble: src={{path.stdout}}/assemble/fragments dest={{path.stdout}}/assemble/junos.conf
+      assemble: src={{playbook_dir}}/fragments dest={{playbook_dir}}/junos.conf
