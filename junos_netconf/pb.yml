@@ -1,6 +1,6 @@
 ---
  - name: core module junos_netconf 
-   hosts: Chris-EX4300
+   hosts: AMS-EX4300
    connection: local
    gather_facts: no
 
