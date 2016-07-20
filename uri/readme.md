@@ -5,7 +5,7 @@ doc: http://docs.ansible.com/ansible/uri_module.html
 
 playbook: make a rest call to a junos device  
 requirement: enable rest api on junos  
-
+usage: ansible-playbook uri/pb.yml
 
 
 
