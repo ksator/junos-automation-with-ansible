@@ -1,7 +1,7 @@
 ---
-#use case is for confirming a commit confirm
+#use case is to confirm a commit confirm
  - name: junos_commit
-   hosts: Instructor-device
+   hosts: AMS-test
    roles:       
     - Juniper.junos
    connection: local
@@ -11,18 +11,15 @@
     - name: DEVICE_PASSWORD
       prompt: Device password
       private: yes
-    #- name: USERNAME
-    #  prompt: User name
-    #  private: no
-
+      
    tasks:
-
-   - name: non_load_junos_commit
+   
+   - name: confirm a commit confirm
      junos_commit:
       host={{ inventory_hostname }}
       user=pytraining
       passwd={{ DEVICE_PASSWORD }}
       port=830
-      comment="non_load_commit"
-      logfile=change.log
+      comment="confirm a commit confirm"
+      logfile={{playbook_dir}}/change.log
 
