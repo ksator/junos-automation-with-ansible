@@ -1,5 +1,5 @@
 ---
- - name: Get conf
+ - name: Retrieve configuration from junos devices
    hosts: fixed
    roles:
     - Juniper.junos
@@ -8,13 +8,14 @@
    
    tasks:
    - name: include vars
-     include_vars: vars.yml
-   - name: Retrieve configuration from devices running Junos
+     include_vars: {{playbook_dir}}/vars.yml
+     
+   - name: Retrieve configuration from junos devices
      junos_get_config:
       host={{ inventory_hostname }}
       user={{ USERNAME }}
       passwd={{ DEVICE_PASSWORD }}
-      dest=configs/{{ inventory_hostname }}.conf
+      dest={{playbook_dir}}/configs/{{ inventory_hostname }}.conf
       format=text
-      logfile=get_config.log
+      logfile={{playbook_dir}}/get_config.log
       filter=interfaces
