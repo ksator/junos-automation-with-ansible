@@ -14,5 +14,5 @@
        passwd=Poclab123
        cli="show chassis hardware"
        logfile=cli.log
-       dest={{ inventory_hostname }}.txt
-       #comment
+       format=xml
+       dest={{ inventory_hostname }}.xmk
