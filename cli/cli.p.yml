@@ -1,7 +1,7 @@
 
 ---
  - name: pass cli
-   hosts: Chris EX4200 devices in Ams
+   hosts: Chris-EX4200-devices-in-Ams
    roles:
     - Juniper.junos
    connection: local
@@ -14,4 +14,6 @@
        passwd=Poclab123
        cli="show chassis hardware"
        logfile=cli.log
+       #format=xml
        dest={{ inventory_hostname }}.txt
+       #dest={{ inventory_hostname }}.xml
