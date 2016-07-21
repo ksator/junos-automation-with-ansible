@@ -1,5 +1,5 @@
 #Ansible librairies to interact with Junos:  
-There are two Ansible librairies to interact with Junos
+There are two Ansible librairies to interact with Junos:
 
 ##Ansible modules for Junos built by Juniper:  
 doc: http://junos-ansible-modules.readthedocs.io/en/1.3.1/  
@@ -12,7 +12,7 @@ installation: core modules. They ship with ansible itself (from Ansible 2.1)
 source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/junos  
 
 ##Requirements: 
-most of these modules requires to install on the Ansible server the pytthon librairy py-junos-eznc.  
+Most of these modules requires to install on the Ansible server the pytthon librairy py-junos-eznc.  
 Some requires also junos-netconify.  
 
 #About this project:   
