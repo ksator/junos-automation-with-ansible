@@ -14,15 +14,7 @@
     - Juniper.junos
    connection: local
    gather_facts: no
-
-   vars_prompt:
-    - name: DEVICE_PASSWORD
-      prompt: Device password
-      private: yes
-    #- name: USERNAME
-    #  prompt: User name
-    #  private: no
-
+   
    tasks:
    
    - name: remove host from inventory directory
@@ -32,10 +24,8 @@
      junos_get_facts:
       host={{ inventory_hostname }}
       user=pytraining
-      passwd={{ DEVICE_PASSWORD }}
+      passwd=Poclab123
       savedir={{playbook_dir}}/inventory
-      #user={{ USERNAME }}
-      #passwd=Poclab123
      register: junos
 
    - name: Print some facts
