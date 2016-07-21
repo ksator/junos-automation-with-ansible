@@ -29,7 +29,8 @@ The inventory file we are using in this repository is hosts.
 It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.   
 
 ###Config file for ansible:   
-There is an ansible.cfg file at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.cfg) that refers to this inventory file.   
+There is an ansible.cfg file at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.cfg).  
+It refers to the inventory file.     
 So, despite ithe inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands.  
 
 ###Download the content:  
