@@ -1,12 +1,4 @@
-# continuous-integration with Travis CI
 [![Build Status](https://travis-ci.org/ksator/ansible-training-for-junos.svg?branch=master)](https://travis-ci.org/ksator/ansible-training-for-junos)  
-
-There is a github webhook with Travis CI. 
-The playbooks in  this repository are tested by Travis CI, with several Ansible versions. 
-
-We are using two types of playbooks:
-Some playbooks do not interact with Junos: Travis CI is testing them.  
-Some playbooks interact with Junos. ansible-playbook has a built in option (--syntax-check) to check the playbook's syntax. If there are any syntax error, Travis will fail the build and output the errors in the log. This is how Travis is testing our playbooks that interact with Junos.  
 
 #About this project:   
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
@@ -30,6 +22,18 @@ source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/
 ###Requirements:  
 Most of these modules requires to install on the Ansible server the pytthon librairy py-junos-eznc.  
 Some requires also junos-netconify.  
+
+## continuous-integration with Travis CI
+There is a github webhook with Travis CI. 
+The playbooks in  this repository are tested by Travis CI, with several Ansible versions. 
+
+We are using two types of playbooks:
+
+###Some playbooks do not interact with Junos:   
+Travis CI is testing them.  
+
+###Some playbooks interact with Junos.  
+ansible-playbook has a built in option (--syntax-check) to check the playbook's syntax. If there are any syntax error, Travis will fail the build and output the errors in the log. This is how Travis is testing our playbooks that interact with Junos.  
 
 ##How to use this project: 
 
