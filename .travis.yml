@@ -19,7 +19,7 @@ install:
 
 script:
   - ansible-playbook assemble/pb.yml
-  - ansible-playbook debug/pb.yml --syntax-check
+ #- ansible-playbook debug/pb.yml --syntax-check
  #- ansible-playbook install_conf/pb.yml --syntax-check
   - ansible-playbook junos_cli/pb.txt.yml --syntax-check
   - ansible-playbook junos_cli/pb.xml.yml --syntax-check  
