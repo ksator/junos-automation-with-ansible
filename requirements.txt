@@ -1,1 +1,3 @@
-junos-eznc
+cryptography==1.2.1
+junos-eznc==1.3.1
+
