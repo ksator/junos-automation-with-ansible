@@ -11,8 +11,8 @@ env:
 
 install:
   - pip install -r requirements.txt
-  - pip install ansible==$ANSIBLE_VERSION
-  - ansible-galaxy install Juniper.junos
+  - pip install -q ansible==$ANSIBLE_VERSION
+  - ansible-galaxy install Juniper.junos ./roles
 
 script:
   - ansible-playbook assemble/pb.yml 
