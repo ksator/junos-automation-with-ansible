@@ -1,0 +1,19 @@
+language: python
+python:
+  - 2.7
+
+sudo: required
+dist: trusty
+
+env:
+  - ANSIBLE_VERSION=1.9.4
+  - ANSIBLE_VERSION=2.1.0.0
+
+install:
+  - pip install -r requirements.txt
+  - pip install ansible==$ANSIBLE_VERSION
+  - ansible-galaxy install Juniper.junos
+
+script:
+  - ansible-playbook assemble/pb.yml 
+  - ansible-playbook junos_get_facts/pb.yml --syntax-check
