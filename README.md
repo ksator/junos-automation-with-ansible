@@ -34,7 +34,7 @@ So, despite ithe inventory file is not /etc/ansible/hosts, there is no need to a
 git clone https://github.com/ksator/ansible-training-for-junos.git  
 cd ansible-training-for-junos/    
 
-###Use ansible-playbook commands to execute playbooks:    
+###And use ansible-playbook commands to execute playbooks:    
 ansible-playbook xxx/pb.yml  
 
 
