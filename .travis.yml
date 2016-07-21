@@ -9,10 +9,13 @@ env:
   - ANSIBLE_VERSION=1.9.4
   - ANSIBLE_VERSION=2.1.0.0
 
+before_install:
+  - apt-get install -y python-dev libxml2-dev python-pip libxslt1-dev build-essential libssl-dev libffi-dev
+
 install:
   - pip install -r requirements.txt
   - pip install -q ansible==$ANSIBLE_VERSION
-  - ansible-galaxy install Juniper.junos -p ./roles
+  - ansible-galaxy --force install Juniper.junos -p ./roles
 
 script:
   - ansible-playbook assemble/pb.yml 
