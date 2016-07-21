@@ -23,7 +23,7 @@ script:
  #- ansible-playbook install_conf/pb.yml --syntax-check
   - ansible-playbook junos_cli/pb.txt.yml --syntax-check
   - ansible-playbook junos_cli/pb.xml.yml --syntax-check  
-  - ansible-playbook junos_commit/pb.yml --syntax-check
+ #- ansible-playbook junos_commit/pb.yml --syntax-check
   - ansible-playbook junos_get_config/pb.make_clean.yml
   - ansible-playbook junos_get_config/pb.yml --syntax-check
   - ansible-playbook junos_get_config/pb.2.yml --syntax-check
