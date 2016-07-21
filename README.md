@@ -16,5 +16,19 @@ cd ansible-training-for-junos/
 ##use ansible-playbook commands to execute playbooks:    
 ansible-playbook xxx/pb.yml  
 
+##There are two Ansible librairies to interact with Junos:  
+
+###Ansible modules for Junos built by Juniper:  
+doc: http://junos-ansible-modules.readthedocs.io/en/1.3.1/  
+installation: this is hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/). To download the junos role to the Ansible server, execute the command: ansible-galaxy install Juniper.junos  
+source code: https://github.com/Juniper/ansible-junos-stdlib  
+
+###Ansible modules for Junos built by Ansible:   
+doc: http://docs.ansible.com/ansible/list_of_network_modules.html    
+installation: core modules. They ship with ansible itself (from Ansible 2.1)  
+source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/junos  
+
+###Requirements: most of these modules requires to install on the Ansible server the pytthon librairy py-junos-eznc. Some requires also junos-netconify.    
+
 
 
