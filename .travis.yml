@@ -15,7 +15,7 @@ before_install:
 install:
   - pip install -r requirements.txt
   - pip install -q ansible==$ANSIBLE_VERSION
-  - sudo ansible-galaxy --force install Juniper.junos
+  - ansible-galaxy --force install Juniper.junos -p ./roles
 
 script:
   - ansible-playbook assemble/pb.yml 
