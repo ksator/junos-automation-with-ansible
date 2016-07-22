@@ -5,19 +5,14 @@
     - Juniper.junos
    connection: local
    gather_facts: no
-
-   vars_prompt:
-    - name: DEVICE_PASSWORD
-      prompt: Device password
-      private: yes
-      
+   
    tasks:
    
    - name: Install configuration to devices running Junos
      junos_install_config:
       host={{ inventory_hostname }}
       user=pytraining
-      passwd={{ DEVICE_PASSWORD }}
+      passwd=Poclab123
       logfile={{playbook_dir}}/install_config.log
       replace=no
       overwrite=no
