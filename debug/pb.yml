@@ -11,8 +11,8 @@
    - name: Retrieve information from devices running Junos
      junos_get_facts:
       host={{ inventory_hostname }}
-      user=pytraining
-      passwd=Poclab123
+      user={{ ADMUSER }}
+      passwd={{ ADMPASS }}
      register: junos
      
    - name: Print some facts
