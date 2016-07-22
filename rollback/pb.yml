@@ -19,8 +19,8 @@
    - name: Rollback_junos_config_task
      junos_rollback:
       host={{ inventory_hostname }}
-      #user={{ USERNAME }}
-      #passwd={{ DEVICE_PASSWORD }}
+     #user={{ USERNAME }}
+     #passwd={{ DEVICE_PASSWORD }}
       user=pytraining
       passwd=Poclab123
       logfile={{playbook_dir}}/rollback.log
