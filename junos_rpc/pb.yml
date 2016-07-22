@@ -11,7 +11,7 @@
    - name: get interface information
      junos_rpc:
         host={{ inventory_hostname }}
-        user=pytraining
-        passwd=Poclab123
+        user={{ ADMUSER }}
+        passwd={{ ADMPASS }}
         rpc=get-interface-information
         dest={{playbook_dir}}/{{ inventory_hostname }}.conf
