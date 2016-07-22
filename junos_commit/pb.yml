@@ -12,8 +12,8 @@
    - name: confirm a commit confirm
      junos_commit:
       host=Poclab123
-      user=pytraining
-      passwd={{ DEVICE_PASSWORD }}
+      user={{ ADMUSER }}
+      passwd={{ ADMPASS }}
       port=830
       comment="confirm a commit confirm"
       logfile={{playbook_dir}}/change.log
