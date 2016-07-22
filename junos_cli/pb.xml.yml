@@ -10,8 +10,8 @@
     - name: junos cli
       junos_cli:
        host={{ inventory_hostname }}
-       user=pytraining
-       passwd=Poclab123
+       user={{ ADMUSER }}
+       passwd={{ ADMPASS }}
        cli="show chassis hardware"
        logfile={{playbook_dir}}/cli.log
        format=xml
