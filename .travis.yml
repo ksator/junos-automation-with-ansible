@@ -31,7 +31,7 @@ script:
  #- ansible-playbook junos_netconf/pb.yml --syntax-check
   - ansible-playbook junos_rpc/pb.yml --syntax-check
   - ansible-playbook lookup/pb.yml
- #- ansible-playbook rollback/pb.yml --syntax-check
+  - ansible-playbook rollback/pb.yml --syntax-check
   - ansible-playbook uri/pb.yml --syntax-check 
   - ansible-playbook wait_for/pb.yml --syntax-check
 
