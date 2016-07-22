@@ -6,17 +6,12 @@
     - Juniper.junos
    connection: local
    gather_facts: no
-
-   vars_prompt:
-    - name: DEVICE_PASSWORD
-      prompt: Device password
-      private: yes
-      
+   
    tasks:
    
    - name: confirm a commit confirm
      junos_commit:
-      host={{ inventory_hostname }}
+      host=Poclab123
       user=pytraining
       passwd={{ DEVICE_PASSWORD }}
       port=830
