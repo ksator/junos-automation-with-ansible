@@ -6,10 +6,10 @@
    connection: local
    gather_facts: no
 
-   vars_prompt:
-    - name: DEVICE_PASSWORD
-      prompt: Device password
-      private: yes
+   #vars_prompt:
+    #- name: DEVICE_PASSWORD
+    #  prompt: Device password
+    #  private: yes
     #- name: USERNAME
     #  prompt: User name
     #  private: no
@@ -19,8 +19,10 @@
    - name: Rollback_junos_config_task
      junos_rollback:
       host={{ inventory_hostname }}
+      #user={{ USERNAME }}
+      #passwd={{ DEVICE_PASSWORD }}
       user=pytraining
-      passwd={{ DEVICE_PASSWORD }}
+      passwd=Poclab123
       logfile={{playbook_dir}}/rollback.log
       diffs_file={{playbook_dir}}/{{ inventory_hostname }}.diff
       rollback=1
