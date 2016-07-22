@@ -3,17 +3,12 @@
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
-
-   vars_prompt:
-    - name: DEVICE_PASSWORD
-      prompt: Device password
-      private: yes
-
+   
    tasks:
    - name: configure netconf on junos devices
      junos_netconf: 
       host: "{{ inventory_hostname }}"
       username: pytraining
-      password: "{{ DEVICE_PASSWORD }}"
+      password: Poclab123
       listens_on: 830
       state: present
