@@ -19,7 +19,7 @@ install:
 
 script:
   - ansible-playbook assemble/pb.yml
- #- ansible-playbook debug/pb.yml --syntax-check
+  - ansible-playbook debug/pb.yml --syntax-check
  #- ansible-playbook install_conf/pb.yml --syntax-check
   - ansible-playbook junos_cli/pb.txt.yml --syntax-check
   - ansible-playbook junos_cli/pb.xml.yml --syntax-check  
@@ -30,6 +30,7 @@ script:
  #- ansible-playbook junos_get_facts/pb.yml --syntax-check
  #- ansible-playbook junos_netconf/pb.yml --syntax-check
   - ansible-playbook junos_rpc/pb.yml --syntax-check
+  - ansible-playbook lookup/pb.yml
  #- ansible-playbook rollback/pb.yml --syntax-check
   - ansible-playbook uri/pb.yml --syntax-check 
   - ansible-playbook wait_for/pb.yml --syntax-check
