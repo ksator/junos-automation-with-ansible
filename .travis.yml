@@ -39,6 +39,11 @@ branches:
   only:
    - master
 
+matrix:
+  exclude:
+  - env: ANSIBLE_VERSION=1.9.4
+    script: ansible-playbook junos_netconf/pb.yml --syntax-check
+
 notifications:
   email:
     recipients:
