@@ -9,8 +9,8 @@
      uri:
       url: http://172.30.177.170:3000/rpc/get-software-information
       method: GET
-      user: {{ ADMUSER }}
-      password: {{ ADMPASS }}
+      user: "{{ ADMUSER }}"
+      password: "{{ ADMPASS }}"
       HEADER_Content-Type: "application/xml"
       HEADER_Accept: "application/json"
       force_basic_auth: yes
