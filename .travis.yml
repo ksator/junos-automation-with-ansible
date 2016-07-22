@@ -27,7 +27,7 @@ script:
   - ansible-playbook junos_get_config/pb.make_clean.yml
   - ansible-playbook junos_get_config/pb.yml --syntax-check
   - ansible-playbook junos_get_config/pb.2.yml --syntax-check
- #- ansible-playbook junos_get_facts/pb.yml --syntax-check
+  - ansible-playbook junos_get_facts/pb.yml --syntax-check
  #- ansible-playbook junos_netconf/pb.yml --syntax-check
   - ansible-playbook junos_rpc/pb.yml --syntax-check
   - ansible-playbook lookup/pb.yml
