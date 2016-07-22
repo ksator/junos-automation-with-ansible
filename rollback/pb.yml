@@ -19,11 +19,12 @@
    - name: Rollback_junos_config_task
      junos_rollback:
       host={{ inventory_hostname }}
-      user=pytraining
-      passwd=Poclab123
+      user={{ ADMUSER }}
+      passwd={{ ADMPASS }}
       logfile={{playbook_dir}}/rollback.log
       diffs_file={{playbook_dir}}/{{ inventory_hostname }}.diff
       rollback=1
       comment="configuration rolled back by Ansible"
       #user={{ USERNAME }}
       #passwd={{ DEVICE_PASSWORD }}
+      
