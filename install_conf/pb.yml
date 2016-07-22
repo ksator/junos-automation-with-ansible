@@ -11,8 +11,8 @@
    - name: Install configuration to devices running Junos
      junos_install_config:
       host={{ inventory_hostname }}
-      user=pytraining
-      passwd=Poclab123
+      user={{ ADMUSER }}
+      passwd={{ ADMPASS }}
       logfile={{playbook_dir}}/install_config.log
       replace=no
       overwrite=no
