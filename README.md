@@ -39,8 +39,7 @@ ansible-playbook has a built in option (--syntax-check) to check the playbook's 
 
 #####Inventory file:  
 The default ansible 'hosts' file is supposed to live in /etc/ansible/hosts  
-The inventory file we are using in this repository is hosts.   
-It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.   
+The inventory file we are using in this repository is hosts: It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.   
 
 #####Config file for ansible:   
 There is an ansible.cfg file at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.cfg).  
@@ -53,6 +52,7 @@ git clone https://github.com/ksator/ansible-training-for-junos.git
 ```
 
 #####And use ansible-playbook commands to execute playbooks:    
+All playbooks are named pb.*.yaml  
 ```
 cd ansible-training-for-junos/    
 ansible-playbook xxx/pb.yml  
