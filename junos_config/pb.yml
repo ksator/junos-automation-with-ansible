@@ -1,0 +1,17 @@
+---
+ - name: pass set and delete commands
+   hosts: AMS-EX4300
+   connection: local
+   gather_facts: no
+
+   tasks:
+   - name: pass set and delete commands  
+     junos_config:
+      provider: "{{ credentials }}"
+      lines:
+       - delete system name-server 172.30.179.2
+       - set system host-name newname
+       - set system login message newbanner
+      comment: update config from Ansible
+      confirm: 2
+
