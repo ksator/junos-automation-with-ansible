@@ -4,7 +4,7 @@ Documentation: http://junos-ansible-modules.readthedocs.io/en/1.3.1/
 Requirement: enable netconf on junos.  
 
 playbooks: 
-- pb.yml: Execute a commit on Junos devices independently of loading a configuration. The use case is to confirm a previous commit confirm.   
+- pb.yml: Execute a commit on a group of Junos devices independently of loading a configuration. The use case is to confirm a previous commit confirm.   
 
 Usage: 
 ```
