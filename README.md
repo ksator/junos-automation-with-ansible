@@ -90,11 +90,12 @@ cd ansible-training-for-junos/
 ansible-playbook xxx/pb.yml  
 ```
 
-### continuous-integration with Travis CI
+### Continuous integration with Travis CI
 There is a github webhook with Travis CI. 
 The playbooks in  this repository are tested by Travis CI, with several Ansible versions. 
+The files .travis.yml and requirements.txt at the root of this repository are used for this.  
 
-We are using two types of playbooks:
+We are using two types of playbooks in this repository:  
 
 #####Some playbooks do not interact with Junos:   
 Travis CI is testing them.  
