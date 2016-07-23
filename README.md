@@ -65,7 +65,7 @@ All playbooks are named pb.*.yaml
 The playbooks in this repository are ready to use if you access to the Junos devices refered into this project. 
 The Junos devices we are using in this repository are only accessible from the Juniper Networks corporate network.   
 
-But you can very easily reuse this automation content with your own Junos devices (Junos physical devices, Junos virtual devices, vagrant boxes running Junos): you would just need to adapt this content with your IP addresses, username and password. 
+But you can very easily reuse this automation content with your own Junos devices (Junos physical devices, Junos virtual devices, vagrant boxes running Junos): you would just need to adapt this content with your IP addresses, username and password.   
 If you want to build a Junos topology using Vagrant boxes, you can use this repository: https://github.com/ksator/vagrant-junos    
 
 #####Inventory file:  
