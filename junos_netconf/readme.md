@@ -1,6 +1,6 @@
 module: junos_netconf  
 installation: this is a core module  
-doc: http://docs.ansible.com/ansible/junos_netconf_module.html  
+documentation: http://docs.ansible.com/ansible/junos_netconf_module.html  
 requirement: Ansible 2.1  
 
 pb.yml: configure the Netconf API on Junos devices.  
