@@ -13,17 +13,17 @@ Both of the Ansible libraries for Junos are used into this repository.
 #####Ansible modules for Junos built by Juniper:  
 
 Modules (version 1.3.1):     
-junos_cli - Execute CLI on device and save the output locally  
-junos_commit - Execute commit on device  
-junos_get_config - Retrieve configuration of device  
-junos_get_facts - Retrieve facts for a device running Junos OS.  
-junos_install_config - Load a configuration file or snippet onto a device running Junos OS.  
-junos_install_os - Install a Junos OS image.  
-junos_rollback - Rollback configuration of device  
-junos_rpc - run given rpc  
-junos_shutdown - Shut down or reboot a device running Junos OS.  
-junos_srx_cluster - Create an srx chassis cluster for cluster capable srx running Junos OS.  
-junos_zeroize - Erase all data, including configuration and log files, on a device running Junos OS.  
+- junos_cli - Execute CLI on device and save the output locally  
+- junos_commit - Execute commit on device  
+- junos_get_config - Retrieve configuration of device  
+- junos_get_facts - Retrieve facts for a device running Junos OS.  
+- junos_install_config - Load a configuration file or snippet onto a device running Junos OS.  
+- junos_install_os - Install a Junos OS image.  
+- junos_rollback - Rollback configuration of device  
+- junos_rpc - run given rpc  
+- junos_shutdown - Shut down or reboot a device running Junos OS.  
+- junos_srx_cluster - Create an srx chassis cluster for cluster capable srx running Junos OS.  
+- junos_zeroize - Erase all data, including configuration and log files, on a device running Junos OS.  
 
 Documentation: http://junos-ansible-modules.readthedocs.io/en/1.3.1/  
 Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/). To download them to the Ansible server, execute the command: ansible-galaxy install Juniper.junos  
@@ -32,14 +32,14 @@ Source code: https://github.com/Juniper/ansible-junos-stdlib
 #####Ansible modules for Junos built by Ansible:   
 
 Modules (Ansible 2.1):   
-junos_command - Execute arbitrary commands on a remote device running Junos  
-junos_config - Manage configuration on remote devices running Junos  
-junos_facts - Collect facts from remote device running Junos  
-junos_netconf - Configures the Junos Netconf system service  
-junos_package - Installs packages on remote devices running Junos  
-junos_template - Manage configuration on remote devices running Junos  
+- junos_command - Execute arbitrary commands on a remote device running Junos  
+- junos_config - Manage configuration on remote devices running Junos  
+- junos_facts - Collect facts from remote device running Junos  
+- junos_netconf - Configures the Junos Netconf system service  
+- junos_package - Installs packages on remote devices running Junos  
+- junos_template - Manage configuration on remote devices running Junos  
 
-Documetation: http://docs.ansible.com/ansible/list_of_network_modules.html    
+Documentation: http://docs.ansible.com/ansible/list_of_network_modules.html    
 Installation: core modules. They ship with ansible itself (from Ansible 2.1)  
 Source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/junos  
 
