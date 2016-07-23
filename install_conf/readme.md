@@ -3,7 +3,8 @@ Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/J
 Doc: http://junos-ansible-modules.readthedocs.io/en/1.3.1/  
 Requirement: Enable netconf on junos.   
 
-Pb.yml: install configuration files on junos devices.  
+playbooks:
+- Pb.yml: install configuration files on junos devices.  
 Usage:  
 ```
 ansible-playbook install_conf/pb.yml  
