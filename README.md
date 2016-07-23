@@ -45,12 +45,14 @@ The inventory file we are using in this repository is hosts: It is at the root o
 There is an ansible.cfg file at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.cfg).  
 It refers to the inventory file: So, despite ithe inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands.  
 
-#####Download the content:  
+#####Installation instructions:  
+
+######Download the content:  
 ```
 git clone https://github.com/ksator/ansible-training-for-junos.git  
 ```
 
-#####And use ansible-playbook commands to execute playbooks:    
+######And use ansible-playbook commands to execute playbooks:    
 All playbooks are named pb.*.yaml  
 ```
 cd ansible-training-for-junos/    
