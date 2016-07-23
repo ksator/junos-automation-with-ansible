@@ -1,11 +1,11 @@
-module: assemble  
-installation: core module  
-documentation : http://docs.ansible.com/ansible/assemble_module.html  
+Module: assemble  
+Installation: this is a core module. It ships with ansible itself  
+Documentation : http://docs.ansible.com/ansible/assemble_module.html  
 
-playbooks:
+Playbooks:
 - pb.yml: Assembles all the junos configuration files in the directory fragments into a junos configuration file named junos.conf    
 
-usage:   
+Usage:   
 ```
 sudo ansible-playbook assemble/pb.yml   
 ```
