@@ -37,12 +37,23 @@ Modules (Ansible 2.1):
 - **junos_template** - Manage configuration on remote devices running Junos  
 
 Documentation: http://docs.ansible.com/ansible/list_of_network_modules.html    
-Installation: core modules. They ship with ansible itself (from Ansible 2.1)  
+Installation: core modules. They ship with ansible itself (from Ansible 2.1). Ansible 2.1 or above is required.    
 Source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/junos  
 
 ###Requirements:  
-Most of these modules requires to install on the Ansible server the pytthon librairy py-junos-eznc.  
-Some requires also junos-netconify.  
+
+##### On the Ansible server:
+
+Most of these modules requires to install the python library py-junos-eznc.  
+Some options (console option in junos_install_config as example) require also the python library junos-netconify.
+
+##### On the Junos devices:
+
+Most of these Ansible modules for Junos require the Netconf API to be configured on the Junos devices. 
+```
+set system services netconf ssh
+commit
+```
 
 #About this project:   
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
