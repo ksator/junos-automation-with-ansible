@@ -44,12 +44,12 @@ Source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/
 
 ##### On the Ansible server:
 
-Most of these modules requires to install the python library py-junos-eznc.  
-Some options (console option in junos_install_config as example) require also the python library junos-netconify.
+Most of these Ansbile modules require to install the python library py-junos-eznc on the Ansible server.  
+Some options (like the console option in the junos_install_config module) require also the python library junos-netconify.
 
 ##### On the Junos devices:
 
-Most of these Ansible modules for Junos require the Netconf API to be configured on the Junos devices. 
+Most of these Ansible modules for Junos require the Netconf API to be configured on the Junos devices:
 ```
 set system services netconf ssh
 commit
