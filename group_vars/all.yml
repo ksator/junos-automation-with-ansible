@@ -1,3 +1,7 @@
 ---
 ADMUSER: pytraining
 ADMPASS: Poclab123
+credentials:
+  host: "{{ inventory_hostname }}"
+  username: pytraining
+  password: Poclab123
