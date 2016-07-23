@@ -4,8 +4,8 @@ Documentation: http://junos-ansible-modules.readthedocs.io/en/1.3.1/
 Requirement: enable netconf on junos.  
 
 Playbooks:
-- pb.txt.yml: pass cli to junos devices. Save output saved in text format  
-- pb.xml.yml: pass cli to junos devices. Save output saved in XML format  
+- pb.txt.yml: pass cli to junos devices. Save output in text format  
+- pb.xml.yml: pass cli to junos devices. Save output in XML format  
 
 Usage:   
 ```
