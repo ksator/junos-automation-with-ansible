@@ -48,12 +48,15 @@ It refers to the inventory file.
 So, despite ithe inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands.  
 
 #####Download the content:  
+```
 git clone https://github.com/ksator/ansible-training-for-junos.git  
-cd ansible-training-for-junos/    
+```
 
 #####And use ansible-playbook commands to execute playbooks:    
+```
+cd ansible-training-for-junos/    
 ansible-playbook xxx/pb.yml  
-
+```
 
 
 
