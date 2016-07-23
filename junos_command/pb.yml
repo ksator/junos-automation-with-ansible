@@ -1,0 +1,27 @@
+---
+ - name: pass some junos cli with the junos_command core module and save the output on Ansible
+   hosts: AMS-EX4300
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+   - name: pass some cli
+     junos_command  
+      provider: "{{ credentials }}"
+      commands:
+       - show version
+       - show system uptime
+     register: cli
+
+   - name: print some details from the device (hostname and junos version)
+     debug: msg="device {{ cli.stdout[0]["multi-routing-engine-results"]["multi-routing-engine-item"]["software-information"]["host-name"] }} run version {{ cli.stdout[0]["multi-routing-engine-results"]["multi-routing-engine-item"]["software-information"]["junos-version"] }}"
+   
+   - name: save on the Ansible server the various commands output for devices not running a specific junos version
+     copy:
+      content: "{{cli.stdout}}"
+      dest: "{{playbook_dir}}/{{inventory_hostname}}.text"
+     when: cli.stdout[0]["multi-routing-engine-results"]["multi-routing-engine-item"]["software-information"]["junos-version"]!="14.1X53-D30.3"
+
+
+
