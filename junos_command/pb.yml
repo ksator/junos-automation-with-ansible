@@ -7,7 +7,7 @@
    tasks:
 
    - name: pass some cli
-     junos_command  
+     junos_command:  
       provider: "{{ credentials }}"
       commands:
        - show version
