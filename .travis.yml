@@ -43,5 +43,4 @@ notifications:
   email:
     recipients:
       - khelil.sator.git@gmail.com
-    on_success: always
     on_failure: always
