@@ -47,12 +47,12 @@ It refers to the inventory file: So, despite ithe inventory file is not /etc/ans
 
 #####Installation instructions:  
 
-######Download the content:  
+Download the content:  
 ```
 git clone https://github.com/ksator/ansible-training-for-junos.git  
 ```
 
-######And use ansible-playbook commands to execute playbooks:    
+And use ansible-playbook commands to execute playbooks:    
 All playbooks are named pb.*.yaml  
 ```
 cd ansible-training-for-junos/    
