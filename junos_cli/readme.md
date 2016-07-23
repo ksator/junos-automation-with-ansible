@@ -3,8 +3,9 @@ installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/J
 doc: http://junos-ansible-modules.readthedocs.io/en/1.3.1/  
 requirement: enable netconf on junos.  
 
-pb.txt.yml: pass cli to junos devices. Save output saved in text format  
-pb.xml.yml: pass cli to junos devices. Save output saved in XML format  
+playbooks:
+- pb.txt.yml: pass cli to junos devices. Save output saved in text format  
+- pb.xml.yml: pass cli to junos devices. Save output saved in XML format  
 
 usages:   
 ```
