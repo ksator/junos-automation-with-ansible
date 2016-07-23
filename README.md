@@ -5,8 +5,9 @@ This project has many ready to use Ansible playbooks to interact with Junos devi
 
 ###Ansible librairies to interact with Junos:  
 There are two Ansible librairies to interact with Junos.  
-- One Ansible library for Junos built by Juniper.  
-- One Ansible library for Junos built by Ansible.  
+- An Ansible library for Junos built by Juniper.  
+- An Ansible library for Junos built by Ansible.  
+
 Both of the Ansible libraries for Junos are used into this repository.  
 
 #####Ansible modules for Junos built by Juniper:  
