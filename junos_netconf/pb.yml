@@ -8,7 +8,7 @@
    - name: configure netconf on junos devices
      junos_netconf: 
       host: "{{ inventory_hostname }}"
-      username: pytraining
-      password: Poclab123
+      username: "{{ ADMUSER }}"
+      password: "{{ ADMPASS }}"
       listens_on: 830
       state: present
