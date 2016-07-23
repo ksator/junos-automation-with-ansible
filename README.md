@@ -58,6 +58,7 @@ commit
 #About this project:   
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
 All playbooks are named pb.*.yaml  
+I am using them in Ansible trainings to network engineers.  
 
 ###How to use this project: 
 
@@ -100,7 +101,7 @@ We are using two types of playbooks in this repository:
 #####Some playbooks do not interact with Junos:   
 Travis CI is testing them.  
 
-#####Some playbooks interact with Junos.  
+#####Some playbooks interact with Junos:    
 ansible-playbook has a built in option (--syntax-check) to check the playbook's syntax. If there are any syntax error, Travis will fail the build and output the errors in the log. This is how Travis is testing our playbooks that interact with Junos.  
 
 ### More examples on of how to use Ansible with Junos:   
