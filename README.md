@@ -1,16 +1,13 @@
 [![Build Status](https://travis-ci.org/ksator/ansible-training-for-junos.svg?branch=master)](https://travis-ci.org/ksator/ansible-training-for-junos)  
 
-#About this project:   
-This project has many ready to use Ansible playbooks to interact with Junos devices.    
-
-###Ansible librairies to interact with Junos:  
+#Ansible librairies to interact with Junos:  
 There are two Ansible librairies to interact with Junos.  
 - An Ansible library for Junos built by Juniper.  
 - An Ansible library for Junos built by Ansible.  
 
 Both of the Ansible libraries for Junos are used into this repository.  
 
-#####Ansible modules for Junos built by Juniper:  
+###Ansible modules for Junos built by Juniper:  
 
 Modules (version 1.3.1):     
 - junos_cli - Execute CLI on device and save the output locally  
@@ -29,7 +26,7 @@ Documentation: http://junos-ansible-modules.readthedocs.io/en/1.3.1/
 Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/). To download them to the Ansible server, execute the command: ansible-galaxy install Juniper.junos  
 Source code: https://github.com/Juniper/ansible-junos-stdlib  
 
-#####Ansible modules for Junos built by Ansible:   
+###Ansible modules for Junos built by Ansible:   
 
 Modules (Ansible 2.1):   
 - junos_command - Execute arbitrary commands on a remote device running Junos  
@@ -43,21 +40,13 @@ Documentation: http://docs.ansible.com/ansible/list_of_network_modules.html
 Installation: core modules. They ship with ansible itself (from Ansible 2.1)  
 Source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/junos  
 
-#####Requirements:  
+###Requirements:  
 Most of these modules requires to install on the Ansible server the pytthon librairy py-junos-eznc.  
 Some requires also junos-netconify.  
 
-### continuous-integration with Travis CI
-There is a github webhook with Travis CI. 
-The playbooks in  this repository are tested by Travis CI, with several Ansible versions. 
-
-We are using two types of playbooks:
-
-#####Some playbooks do not interact with Junos:   
-Travis CI is testing them.  
-
-#####Some playbooks interact with Junos.  
-ansible-playbook has a built in option (--syntax-check) to check the playbook's syntax. If there are any syntax error, Travis will fail the build and output the errors in the log. This is how Travis is testing our playbooks that interact with Junos.  
+#About this project:   
+This project has many ready to use Ansible playbooks to interact with Junos devices.    
+All playbooks are named pb.*.yaml  
 
 ###How to use this project: 
 
@@ -83,6 +72,17 @@ cd ansible-training-for-junos/
 ansible-playbook xxx/pb.yml  
 ```
 
+### continuous-integration with Travis CI
+There is a github webhook with Travis CI. 
+The playbooks in  this repository are tested by Travis CI, with several Ansible versions. 
+
+We are using two types of playbooks:
+
+#####Some playbooks do not interact with Junos:   
+Travis CI is testing them.  
+
+#####Some playbooks interact with Junos.  
+ansible-playbook has a built in option (--syntax-check) to check the playbook's syntax. If there are any syntax error, Travis will fail the build and output the errors in the log. This is how Travis is testing our playbooks that interact with Junos.  
 
 
 
