@@ -1,11 +1,13 @@
-module: uri   
-installation: this is a core module  
-dependency: The dependency on httplib2 was removed in Ansible 2.1  
-doc: http://docs.ansible.com/ansible/uri_module.html  
+Module: uri   
+Documenatation: http://docs.ansible.com/ansible/uri_module.html  
+Installation: this is a core module. It ships with ansible itself.   
+Dependency: The dependency on httplib2 was removed in Ansible 2.1  
+Requirement: Enable rest api on junos  
 
-playbook: make a rest call to a junos device  
-requirement: enable rest api on junos  
-usage: ansible-playbook uri/pb.yml
+Playbook: 
+- pb.yml: it makes a rest call to a junos devices, and use the debug module to print some of the collected data.   
 
-
-
+Usage: 
+```
+ansible-playbook uri/pb.yml
+```
