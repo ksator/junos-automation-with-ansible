@@ -1,5 +1,5 @@
 ---
- - name: Get Facts and configuration
+ - name: Get configuration
    hosts: AMS-test
    connection: local
    gather_facts: no
@@ -13,10 +13,6 @@
       config_format=xml
      register: junos
 
-   - name: Print some facts
-     debug: msg="device {{junos.ansible_facts.hostname}} runs version {{junos.ansible_facts.version}}"
-     when: ("{{ junos.ansible_facts.version }}" != "12.3R11.2")
-       
-   - name: Print syslog configuration
+   - name: Print syslog configuration in json
      debug: 
       msg="syslog device configuration is {{junos.ansible_facts.config_json.configuration.system.syslog}}"
