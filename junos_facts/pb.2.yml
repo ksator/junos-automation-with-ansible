@@ -1,0 +1,19 @@
+---
+ - name: Get Facts
+   hosts: AMS-test
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+   - name: Retrieve information from devices running Junos
+     junos_facts:
+      provider="{{ credentials }}"
+      config=no
+     register: junos
+
+   - name: Print some facts
+     debug: msg="device {{junos.ansible_facts.hostname}} runs version {{junos.ansible_facts.version}}"
+
+
+
