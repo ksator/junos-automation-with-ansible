@@ -1,20 +1,13 @@
 ---
- - name: core module junos_command
+ - name: check bgp with core module junos_command
    hosts: 172.30.179.65
    connection: local
    gather_facts: no
 
-   vars_prompt:
-    - name: DEVICE_PASSWORD
-      prompt: Device password
-      private: yes
-
    tasks:
-   - name: test
+   - name: check bgp
      junos_command:
-      host: "{{ inventory_hostname }}"
-      username: pytraining
-      password: "{{ DEVICE_PASSWORD }}"
+      provider: "{{ credentials }}"
       commands:
        - show bgp neighbor "{{ item }}"
       waitfor:
@@ -23,4 +16,4 @@
       interval: 1
      with_items:
        - "192.168.0.1"
-       - "192.168.0.3" 
+       - "192.168.0.3"
