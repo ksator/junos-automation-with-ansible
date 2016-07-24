@@ -1,5 +1,5 @@
 ---
- - name: pass some cli and save the output on Ansible
+ - name: pass set of cli and save the output on Ansible
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
