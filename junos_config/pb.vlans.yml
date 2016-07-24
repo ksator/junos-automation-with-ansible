@@ -14,5 +14,4 @@
         - "set vlans {{ item.name }} vlan-id {{ item.id }}"
       comment: "create vlans from Ansible"
       provider: "{{ credentials }}"
-      confirm: 2
     with_items: "{{ vlans }}"
