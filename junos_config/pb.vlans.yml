@@ -1,0 +1,18 @@
+---
+- name: Change configuration using junos_config module
+  hosts: AMS-test
+  connection: local
+  gather_facts: no
+  vars_files:
+  - "vlans.yml"
+  
+  tasks:
+
+  - name: create vlans
+    junos_config:
+      lines:
+        - "set vlans {{ item.name }} vlan-id {{ item.id }}"
+      comment: "create vlans from Ansible"
+      provider: "{{ credential }}"
+      confirm: 2
+    with_items: "{{ vlans }}"
