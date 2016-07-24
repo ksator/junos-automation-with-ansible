@@ -1,0 +1,8 @@
+---
+vlans:
+ - name: red
+   id: 111
+ - name: green
+   id: 112
+ - name: blue
+   id: 113
