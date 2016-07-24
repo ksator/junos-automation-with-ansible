@@ -1,11 +1,11 @@
 ---
- - name: core module junos_command
+ - name: check lldp neighbors with core module junos_command
    hosts: 172.30.179.65
    connection: local
    gather_facts: no
 
    tasks:
-   - name: test
+   - name: check lldp neighbors
      junos_command:
       provider: "{{ credentials }}"
       commands:
