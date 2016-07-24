@@ -1,20 +1,13 @@
 ---
- - name: core module junos_command
-   hosts: Chris-EX4300
+ - name: check bgp with core module junos_command
+   hosts: AMS-EX4300
    connection: local
    gather_facts: no
 
-   vars_prompt:
-    - name: DEVICE_PASSWORD
-      prompt: Device password
-      private: yes
-
    tasks:
-   - name: test
+   - name: check bgp
      junos_command:
-      host: "{{ inventory_hostname }}"
-      username: pytraining
-      password: "{{ DEVICE_PASSWORD }}"
+      provider: "{{  credentials }}"
       commands:
        - show bgp neighbor "{{ item }}"
       waitfor:
