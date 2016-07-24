@@ -22,7 +22,6 @@
       commands:
        - show vlans {{item.name}}
       waitfor:
-       - "result[0].l2ng-l2ald-vlan-instance-information.l2ng-l2ald-vlan-instance-group.l2ng-l2rtb-name eq {{item.name}} "
-      retries: 10
-      interval: 1
-     with_items: "{{ vlans }}"
+       - "result[0].vlan-information.vlan.vlan-name eq {{item.name }} "
+    with_items: "{{ vlans }}"
+    
