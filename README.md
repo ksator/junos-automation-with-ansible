@@ -58,7 +58,7 @@ commit
 #About this project:   
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
 All playbooks are named pb.*.yaml  
-I am using them in Ansible trainings to network engineers.  
+I am using them to deliver Ansible trainings to network engineers.  
 
 ###How to use this project: 
 
@@ -84,11 +84,11 @@ Download the content:
 git clone https://github.com/ksator/ansible-training-for-junos.git  
 ```
 
-And use ansible-playbook commands to execute playbooks:    
+And use ansible-playbook commands to execute the playbooks:    
 All playbooks are named pb.*.yaml  
 ```
 cd ansible-training-for-junos/    
-ansible-playbook xxx/pb.yml  
+ansible-playbook xxx/pb.*.yml  
 ```
 
 ### Continuous integration with Travis CI
