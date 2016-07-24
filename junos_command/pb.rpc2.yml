@@ -1,0 +1,19 @@
+---
+ - name: pass rpc
+   hosts: 172.30.179.65
+   connection: local
+   gather_facts: no
+
+   tasks:
+   - name: pass rpc 
+     junos_command:
+      provider: "{{ credentials }}"
+      rpcs:
+       - "get_route_information brief=True"
+     register: result
+
+   - name: Command results in JSON
+     debug: var=result.stdout[0]
+
+   - name: Command results in XML
+     debug: var=result.xml[0]
