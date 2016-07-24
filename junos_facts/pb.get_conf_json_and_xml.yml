@@ -1,0 +1,20 @@
+---
+- name: get configuration into JSON and XML format
+  hosts: AMS-test
+  connection: local
+  gather_facts: no
+  tasks:
+
+  - name: Collect device Facts and Configuration in XML
+    junos_facts:
+      config: yes
+      config_format: xml
+      provider: "{{ credential }}"
+    register: result
+
+  - name: Configuration in JSON (converted from XML)
+    debug: var=result.ansible_facts.config_json
+
+  - name: Configuration in XML
+    debug: var=result.ansible_facts.config
+    
