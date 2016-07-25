@@ -4,13 +4,14 @@
    connection: local
    gather_facts: no
    tags:
-    -requires ansible 2.1 or above
+    - requires ansible 2.1 or above
    
    tasks:
-   - name: configure netconf on junos devices
-     junos_netconf: 
-      host: "{{ inventory_hostname }}"
-      username: "{{ ADMUSER }}"
-      password: "{{ ADMPASS }}"
-      listens_on: 830
-      state: present
+    - name: configure netconf on junos devices
+      junos_netconf: 
+       host: "{{ inventory_hostname }}"
+       username: "{{ ADMUSER }}"
+       password: "{{ ADMPASS }}"
+       listens_on: 830
+       state: present
+  
