@@ -6,9 +6,9 @@ sudo: required
 dist: trusty
 
 env:
-  - ANSIBLE_VERSION=1.9.4 SKIP_TAGS=2.1
-  - ANSIBLE_VERSION=2.1.0.0 SKIP_TAGS=none
-
+  - ANSIBLE_VERSION=1.9.4
+  - ANSIBLE_VERSION=2.1.0.0
+  
 before_install:
   - sudo apt-get install -y python-dev libxml2-dev python-pip libxslt1-dev build-essential libssl-dev libffi-dev
 
@@ -28,11 +28,7 @@ script:
   - ansible-playbook junos_get_config/pb.yml --syntax-check
   - ansible-playbook junos_get_config/pb.2.yml --syntax-check
   - ansible-playbook junos_get_facts/pb.yml --syntax-check
-  - ansible-playbook junos_netconf/pb.yml --syntax-check --skip-tags "requires ansible $SKIP_TAGS or above"
-  - ansible-playbook junos_netconf/pb.yml --syntax-check --skip-tags "requires ansible \$SKIP_TAGS or above"
-  - ansible-playbook junos_netconf/pb.yml --syntax-check --skip-tags "requires ansible "$SKIP_TAGS" or above"
-  - ansible-playbook junos_netconf/pb.yml --syntax-check --skip-tags "requires ansible \\$SKIP_TAGS or above"
-  - ansible-playbook junos_netconf/pb.yml --syntax-check --skip-tags $SKIP_TAGS 
+  #- ansible-playbook junos_netconf/pb.yml --syntax-check 
   - ansible-playbook junos_rpc/pb.yml --syntax-check
   - ansible-playbook lookup/pb.yml
   - ansible-playbook rollback/pb.yml --syntax-check
