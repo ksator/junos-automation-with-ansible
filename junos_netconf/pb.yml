@@ -3,6 +3,8 @@
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
+   tags:
+    -requires ansible 2.1 or above
    
    tasks:
    - name: configure netconf on junos devices
