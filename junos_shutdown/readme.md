@@ -1,7 +1,6 @@
 Module: junos_shutdown  
 Shut down or reboot a device running Junos OS.  
-Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).   
-To download it to the Ansible server, execute the command:   
+Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/). To download it to the Ansible server, execute the command:   
 ```
 sudo ansible-galaxy install Juniper.junos  
 ```
