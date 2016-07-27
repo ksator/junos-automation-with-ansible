@@ -60,7 +60,6 @@ commit
 
 #About this project:   
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
-All playbooks are named **pb.*.yml**  
 I am using them to deliver Ansible trainings to network engineers.  
 
 ###How to use this project: 
@@ -80,6 +79,13 @@ The inventory file we are using in this repository is **hosts**: It is at the ro
 There is an **ansible.cfg** file at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.cfg).  
 It refers to our inventory file (**hosts**): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands.  
 
+#####Variables:   
+**group_vars** and **host_vars** directories at the root of this repository define variables for hosts and for groups. 
+Some playbooks use other variables as well. 
+
+#####Playbooks:  
+All playbooks are named **pb.*.yml**  
+
 #####Installation instructions:  
 
 Download the content:  
@@ -88,7 +94,6 @@ git clone https://github.com/ksator/ansible-training-for-junos.git
 ```
 
 And use ansible-playbook commands to execute the playbooks:    
-All playbooks are named pb.*.yaml  
 ```
 cd ansible-training-for-junos/    
 ansible-playbook xxx/pb.*.yml  
