@@ -2,6 +2,9 @@ apt is a core module
 http://docs.ansible.com/ansible/apt_module.html  
 
 ```
+$ apt list --installed | grep apache
+WARNING: apt does not have a stable CLI interface yet. Use with caution in scripts.
+
 $ ansible-playbook apt/pb.yml -u ksator --ask-sudo-pass --check --diff
 SUDO password: 
 [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
