@@ -1,0 +1,5 @@
+--- 
+host_name: ex4300-9
+ip: 172.30.179.95
+mask: 24 
+default_gateway: 172.30.179.1
