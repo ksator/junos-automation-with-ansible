@@ -1,0 +1,19 @@
+---
+ - name: create a directory 
+   hosts: localhost
+   gather_facts: no
+   
+   tasks:
+    
+   - name: create the directory render
+     file: path={{playbook_dir}}/render state=directory
+
+ - name: create BGP junos configuration
+   hosts: AMS-EX4300
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+    - name: Render BGP configuration for junos devices
+      template: src={{playbook_dir}}/bgp.j2 dest={{playbook_dir}}/render/{{ inventory_hostname }}.bgp.conf
