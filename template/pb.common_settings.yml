@@ -8,7 +8,7 @@
    - name: create the directory render
      file: path={{playbook_dir}}/render state=directory
 
- - name: create initial junos configuration
+ - name: create common settings configuration
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
