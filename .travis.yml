@@ -32,6 +32,7 @@ script:
   - ansible-playbook junos_netconf/pb.yml --syntax-check 
   - ansible-playbook junos_rpc/pb.yml --syntax-check
   - ansible-playbook junos_shutdown/pb.yml --syntax-check
+  - ansible-playbook junos_shutdown/pb.bgp.yml --syntax-check
   - ansible-playbook lookup/pb.yml
   - ansible-playbook rollback/pb.yml --syntax-check
   - ansible-playbook template/pb.initial_configuration.yml
