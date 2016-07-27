@@ -60,7 +60,7 @@ commit
 
 #About this project:   
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
-All playbooks are named pb.*.yaml  
+All playbooks are named pb.*.yml  
 I am using them to deliver Ansible trainings to network engineers.  
 
 ###How to use this project: 
