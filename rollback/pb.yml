@@ -1,6 +1,6 @@
 ---
  - name: Rollback configuration on junos devices
-   hosts: AMS-test
+   hosts: AMS-EX4300
    roles:       
     - Juniper.junos
    connection: local
