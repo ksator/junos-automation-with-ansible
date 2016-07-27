@@ -1,6 +1,6 @@
 ---
  - name: junos_shutdown-play
-   hosts: Instructor-device
+   hosts: AMS-test
    roles:       
     - Juniper.junos
    connection: local
@@ -24,5 +24,3 @@
       port=830
       shutdown="shutdown"
       reboot=yes
-
-
