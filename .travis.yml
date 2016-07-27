@@ -35,6 +35,8 @@ script:
   - ansible-playbook lookup/pb.yml
   - ansible-playbook rollback/pb.yml --syntax-check
   - ansible-playbook template/pb.initial_configuration.yml
+  - ansible-playbook template/pb.common_settings.yml
+  - ansible-playbook template/pb.bgp.yml
   - ansible-playbook uri/pb.yml --syntax-check 
   - ansible-playbook wait_for/pb.yml --syntax-check
 
