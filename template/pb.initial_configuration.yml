@@ -16,4 +16,4 @@
    tasks:
 
     - name: Render initial configuration for junos devices
-      template: src={{playbook_dir}}/initial_configuration.j2 dest={{playbook_dir}}/render/{{ inventory_hostname }}.conf
+      template: src={{playbook_dir}}/initial_configuration.j2 dest={{playbook_dir}}/render/{{ inventory_hostname }}.initial_configuration.conf
