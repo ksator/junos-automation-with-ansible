@@ -18,3 +18,6 @@ SSH password:
 }
 $
 ```
+
+you can also use the command core module to test: https://github.com/ksator/ansible-training-for-junos/tree/master/command  
+
