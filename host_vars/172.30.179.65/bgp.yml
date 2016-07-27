@@ -1,7 +1,6 @@
 ---
 loopback: 10.20.1.1
 local_asn: 104
-local_ip: 10.40.1.1
 neighbors:
    - interface: ge-0/0/0
      name: to ex4300-9
