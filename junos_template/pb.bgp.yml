@@ -14,10 +14,10 @@
      junos_command:
       provider: "{{  credentials }}"
       commands:
-       - show bgp neighbor "{{ item }}"
+       - show bgp neighbor "{{ item.peer_ip }}"
       waitfor:
       - "result[0].bgp-information.bgp-peer.peer-state eq Established"
       retries: 10
       interval: 1
      with_items:
-     - "{{ neighbors.peer_ip }}"
+     - "{{ neighbors}}"
