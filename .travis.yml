@@ -34,6 +34,7 @@ script:
   - ansible-playbook junos_shutdown/pb.yml --syntax-check
   - ansible-playbook lookup/pb.yml
   - ansible-playbook rollback/pb.yml --syntax-check
+  - ansible-playbook template/pb.initial_configuration.yml
   - ansible-playbook uri/pb.yml --syntax-check 
   - ansible-playbook wait_for/pb.yml --syntax-check
 
