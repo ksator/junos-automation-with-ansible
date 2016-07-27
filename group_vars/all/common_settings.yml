@@ -1,4 +1,5 @@
 ---
+root_password: $1$/NHg28eO$pqaVlLlPQ2thlQQ0ZB.Vx/
 login_message: This is the banner
 time_zone: America/Los_Angeles
 name_servers:
