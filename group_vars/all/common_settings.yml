@@ -1,0 +1,11 @@
+---
+login_message: This is the banner
+time_zone: America/Los_Angeles
+name_servers:
+- 8.8.8.8
+- 8.8.8.4
+ntp_servers:
+- 172.17.28.5
+snmp:
+ location: DC4
+ contact: team4@juniper.net
