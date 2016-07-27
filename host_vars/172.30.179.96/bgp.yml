@@ -4,7 +4,7 @@ local_asn: 110
 neighbors:
    - interface: ge-0/0/0
      name: to ex4300-9
-     asn: 110
+     asn: 109
      peer_ip: 192.168.0.5  
      local_ip: 192.168.0.4
    - interface: ge-0/0/1 
