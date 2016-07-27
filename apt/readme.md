@@ -1,6 +1,5 @@
-http://docs.ansible.com/ansible/apt_module.html
-apt is a core module
-
+apt is a core module  
+http://docs.ansible.com/ansible/apt_module.html  
 
 ```
 $ ansible-playbook apt/pb.yml -u ksator --ask-sudo-pass --check --diff
