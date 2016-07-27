@@ -23,11 +23,11 @@ Modules (version 1.3.1):
 - **junos_zeroize** - Erase all data, including configuration and log files, on a device running Junos OS.  
 
 Documentation: http://junos-ansible-modules.readthedocs.io/en/1.3.1/  
+Source code: https://github.com/Juniper/ansible-junos-stdlib  
 Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/). To download them to the Ansible server, execute the command:   
 ```
 sudo ansible-galaxy install Juniper.junos  
 ```
-Source code: https://github.com/Juniper/ansible-junos-stdlib  
 
 ###Ansible modules for Junos built by Ansible:   
 
