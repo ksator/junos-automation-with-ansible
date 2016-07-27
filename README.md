@@ -60,7 +60,7 @@ commit
 
 #About this project:   
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
-All playbooks are named pb.*.yml  
+All playbooks are named **pb.*.yml**  
 I am using them to deliver Ansible trainings to network engineers.  
 
 ###How to use this project: 
@@ -74,10 +74,10 @@ If you want to build a Junos topology using Vagrant boxes, you can use this repo
 
 #####Inventory file:  
 The default ansible 'hosts' file is supposed to live in /etc/ansible/hosts  
-The inventory file we are using in this repository is hosts: It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.   
+The inventory file we are using in this repository is **hosts**: It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.   
 
 #####Config file for ansible:   
-There is an ansible.cfg file at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.cfg).  
+There is an **ansible.cfg** file at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.cfg).  
 It refers to our inventory file (hosts): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands.  
 
 #####Installation instructions:  
@@ -97,7 +97,7 @@ ansible-playbook xxx/pb.*.yml
 ### Continuous integration with Travis CI
 There is a github webhook with Travis CI. 
 The playbooks in  this repository are tested by Travis CI, with several Ansible versions. 
-The files .travis.yml and requirements.txt at the root of this repository are used for this.  
+The files **.travis.yml** and **requirements.txt** at the root of this repository are used for this.  
 
 We are using two types of playbooks in this repository:  
 
