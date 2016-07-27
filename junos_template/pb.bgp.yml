@@ -1,5 +1,5 @@
 ---
- - name: configure bgp and audit the status
+ - name: configure bgp
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
@@ -9,7 +9,20 @@
      junos_template:
       provider: "{{  credentials }}"
       src: bgp.j2
-
+      
+ - name: wait for peers to establish connections
+   hosts: localhost
+   gather_facts: no
+   
+   tasks:
+   - pause: seconds=25
+   
+ - name: check bgp peers status
+   hosts: AMS-EX4300
+   connection: local
+   gather_facts: no
+   
+   tasks:
    - name: check bgp
      junos_command:
       provider: "{{  credentials }}"
@@ -17,7 +30,7 @@
        - show bgp neighbor "{{ item.peer_ip }}"
       waitfor:
       - "result[0].bgp-information.bgp-peer.peer-state eq Established"
-      retries: 12
+      retries: 10
       interval: 2
      with_items:
      - "{{ neighbors}}"
