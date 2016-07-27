@@ -17,7 +17,7 @@
        - show bgp neighbor "{{ item.peer_ip }}"
       waitfor:
       - "result[0].bgp-information.bgp-peer.peer-state eq Established"
-      retries: 10
-      interval: 1
+      retries: 12
+      interval: 2
      with_items:
      - "{{ neighbors}}"
