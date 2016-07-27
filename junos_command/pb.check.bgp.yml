@@ -15,4 +15,4 @@
       retries: 10
       interval: 1
      with_items:
-      - "{{ neighbors }}"
+      - "{{ neighbors.peer_ip }}"
