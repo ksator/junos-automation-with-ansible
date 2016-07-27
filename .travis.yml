@@ -6,7 +6,7 @@ sudo: required
 dist: trusty
 
 env:
-  - ANSIBLE_VERSION=1.9.4
+  #- ANSIBLE_VERSION=1.9.4
   - ANSIBLE_VERSION=2.1.0.0
   
 before_install:
@@ -28,8 +28,9 @@ script:
   - ansible-playbook junos_get_config/pb.yml --syntax-check
   - ansible-playbook junos_get_config/pb.2.yml --syntax-check
   - ansible-playbook junos_get_facts/pb.yml --syntax-check
-  #- ansible-playbook junos_netconf/pb.yml --syntax-check 
+  - ansible-playbook junos_netconf/pb.yml --syntax-check 
   - ansible-playbook junos_rpc/pb.yml --syntax-check
+  - ansible-playbook junos_shutdown/pb.yml --syntax-check
   - ansible-playbook lookup/pb.yml
   - ansible-playbook rollback/pb.yml --syntax-check
   - ansible-playbook uri/pb.yml --syntax-check 
