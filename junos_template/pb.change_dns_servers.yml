@@ -15,6 +15,7 @@
      junos_template:
       provider: "{{  credentials }}"
       src: "{{ junos_jinja_template }}"
+      config_format: set
       
    - name: Retrieve configuration from devices running Junos
      junos_get_config:
