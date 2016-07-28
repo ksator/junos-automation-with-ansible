@@ -1,37 +1,43 @@
 ---
+  - name: create a directory render
+    hosts: localhost
+    gather_facts: no
+
+    tasks:
+
+    - name: create and push the directory render
+      file: path={{playbook_dir}}/render state=directory
+
   - name: Load Configs From Jinja2 Templates
-    hosts: Chris EX4200 test
+    hosts: AMS-EX4300
     roles:
      - Juniper.junos
     connection: local
     gather_facts: no
     vars:
-      - junos_jinja_template: "dns-servers.j2"
-      - path: "junos_configs"
+      - junos_jinja_template: "{{playbook_dir}}/dns-servers.j2"
     vars_files:
-      - "dns-servers.yml"
- 
+      - "{{playbook_dir}}/dns-servers.yml"
+
     tasks:
- 
-    - name: this task simply ensures this directory exists 
-      file: path={{ path }} state=directory
-      
+
     - name: Retrieve information from devices running Junos OS
       junos_get_facts:
         host={{ inventory_hostname }}
         user={{ ADMUSER }}
         passwd={{ ADMPASS }}
       register: junos
- 
- 
+
     - name: Create Junos configurations from Jinja2
-      template: src={{ junos_jinja_template }} dest="{{ path }}/{{ junos.facts.hostname }}.conf" #the destination directory must already exist
- 
- 
+      template: src={{ junos_jinja_template }} dest="{{playbook_dir}}/render/{{ junos.facts.hostname }}.conf"
+
     - name: Install Junos configuration template
       junos_install_config:
         host={{ inventory_hostname }}
         user={{ADMUSER}}
         passwd={{ADMPASS}}
-        file="{{ path }}/{{ junos.facts.hostname }}.conf"
-        diffs_file="{{ junos.facts.hostname }}.log"
+        file="{{playbook_dir}}/render/{{ junos.facts.hostname }}.conf"
+        diffs_file="{{playbook_dir}}/{{ junos.facts.hostname }}.log"
+        replace=false
+        overwrite=false
+        
