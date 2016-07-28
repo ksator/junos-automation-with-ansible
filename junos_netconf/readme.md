@@ -1,6 +1,7 @@
 Module: junos_netconf  
-Installation: this is a core module. It ships with ansible itself   
+This module configures netconf on Junos devices.   
 Documentation: http://docs.ansible.com/ansible/junos_netconf_module.html  
+Installation: this is a core module. It ships with ansible itself   
 Requirement: Ansible 2.1  
 
 Playbooks:
