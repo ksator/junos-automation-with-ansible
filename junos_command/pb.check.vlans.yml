@@ -1,5 +1,5 @@
 ---
-- name: check on devices if desirated vlans are presents
+- name: check from devices operationnal state if desirated vlans are presents
   hosts: AMS-test
   connection: local
   gather_facts: no
