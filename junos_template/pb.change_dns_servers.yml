@@ -1,8 +1,10 @@
 ---
  - name: change DNS servers
    hosts: AMS-EX4300
-   connection: local
+   roles:
+    - Juniper.junos
    gather_facts: no
+   connection: local
    vars:
       - junos_jinja_template: "{{playbook_dir}}/change-dns-servers.j2"
    vars_files:
