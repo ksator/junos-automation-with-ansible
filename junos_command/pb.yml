@@ -1,12 +1,12 @@
 ---
- - name: pass set of cli and save the output on Ansible
+ - name: pass various commands on Junos devices
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
 
    tasks:
 
-   - name: pass some cli
+   - name: pass some commands
      junos_command:  
       provider: "{{ credentials }}"
       commands:
@@ -17,7 +17,7 @@
    - name: print some details from the device (hostname and junos version)
      debug: msg="device {{ cli.stdout[0]["multi-routing-engine-results"]["multi-routing-engine-item"]["software-information"]["host-name"] }} run version {{ cli.stdout[0]["multi-routing-engine-results"]["multi-routing-engine-item"]["software-information"]["junos-version"] }}"
    
-   - name: save on the Ansible server the various commands output for devices not running a specific junos version
+   - name: save on the Ansible server the output of the various commands (only for devices not running a specific junos version)
      copy:
       content: "{{cli.stdout}}"
       dest: "{{playbook_dir}}/{{inventory_hostname}}.text"
