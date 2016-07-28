@@ -53,6 +53,8 @@ script:
   - ansible-playbook template/pb.initial_configuration.yml
   - ansible-playbook template/pb.common_settings.yml
   - ansible-playbook template/pb.bgp.yml
+  - ansible-playbook template/pb.load_cfg_from_template.yml --syntax-check 
+  - ansible-playbook template/pb.load_cfg_from_template.replace.yml --syntax-check 
   - ansible-playbook uri/pb.yml --syntax-check 
   - ansible-playbook wait_for/pb.yml --syntax-check
 
