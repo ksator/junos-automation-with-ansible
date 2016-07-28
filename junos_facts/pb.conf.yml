@@ -1,18 +1,18 @@
 ---
- - name: Get configuration
+ - name: Get configuration from Junos devices
    hosts: AMS-test
    connection: local
    gather_facts: no
 
    tasks:
 
-   - name: Retrieve information from devices running Junos
+   - name: Retrieve configuration
      junos_facts:
       provider="{{ credentials }}"
       config=yes
       config_format=xml
      register: junos
-
+     
    - name: Print syslog configuration in json
      debug: 
       msg="syslog device configuration is {{junos.ansible_facts.config_json.configuration.system.syslog}}"
