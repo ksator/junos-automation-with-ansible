@@ -45,6 +45,7 @@ script:
   - ansible-playbook junos_netconf/pb.yml --syntax-check 
   - ansible-playbook junos_rpc/pb.yml --syntax-check
   - ansible-playbook junos_shutdown/pb.yml --syntax-check
+  - ansible-playbook junos_template/pb.change_dns_servers.yml --syntax-check
   - ansible-playbook junos_template/pb.bgp.yml --syntax-check
   - ansible-playbook junos_template/pb.bgp.2.yml --syntax-check
   - ansible-playbook lookup/pb.yml
