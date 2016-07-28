@@ -1,5 +1,5 @@
 ---
-- name: junos_facts module
+- name: Collect facts and configuration from devices
   hosts: AMS-test
   connection: local
   gather_facts: no
@@ -8,7 +8,7 @@
   ## This playbook will query facts and configuration in text format
   ## and Store the configuration in Ansible server
 
-  - name: Collect facts and configurion in text on device
+  - name: Collect facts and configuration from devices
     junos_facts:
       config: yes
       config_format: text
