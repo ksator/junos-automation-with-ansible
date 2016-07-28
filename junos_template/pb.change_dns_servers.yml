@@ -1,0 +1,15 @@
+---
+ - name: change DNS servers
+   hosts: AMS-EX4300
+   connection: local
+   gather_facts: no
+   vars:
+      - junos_jinja_template: "{{playbook_dir}}/change-dns-servers.j2"
+   vars_files:
+      - "{{playbook_dir}}/change-dns-servers.yml"
+
+   tasks:
+   - name: change DNS servers
+     junos_template:
+      provider: "{{  credentials }}"
+      src: {{ junos_jinja_template }}
