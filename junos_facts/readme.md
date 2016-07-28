@@ -8,7 +8,7 @@ Requirements on  Junos devices: netconf
 
 Playbooks:  
 - pb.facts.yml: Collect facts. Parse them.    
-- pb.conf.yml: collect configuration devices.   
+- pb.conf.yml: collect configuration.   
 - pb.conf_json_and_xml.yml: Collect Facts and Configuration. Print locally configuration in XML and JSON format.  
 - pb.conf.txt.yaml: Collect facts and configuration. Save locally the configuration in text format.   
 
