@@ -1,5 +1,5 @@
 ---
- - name: Install_os_play
+ - name: upgrade
    hosts: 172.30.179.103
    roles:       
     - Juniper.junos
