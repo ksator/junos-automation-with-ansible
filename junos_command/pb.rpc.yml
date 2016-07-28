@@ -1,5 +1,5 @@
 ---
- - name: pass rpc
+ - name: pass rpc to Junos devices and print result in JSON and XML
    hosts: 172.30.179.65
    connection: local
    gather_facts: no
@@ -12,8 +12,8 @@
        - "get_route_information brief=True"
      register: result
 
-   - name: Command results in JSON
+   - name: results in JSON
      debug: var=result.stdout[0]
 
-   - name: Command results in XML
+   - name: results in XML
      debug: var=result.xml[0]
