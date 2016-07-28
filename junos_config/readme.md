@@ -15,9 +15,11 @@ Usage:
 ```
 ansible-playbook junos_config/pb.yml --check --diff --limit 172.30.179.96
 
+ansible-playbook junos_config/pb.yml --check 
+
 ansible-playbook junos_config/pb.yml
 
-ansible-playbook junos_config/pb.vlans.yml
+ansible-playbook junos_config/pb.vlans.yml --diff
 
 ansible-playbook junos_config/pb.rollback.yml
 ```
