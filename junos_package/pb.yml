@@ -1,0 +1,13 @@
+---
+- name: upgrade junos
+  hosts: 172.30.179.102
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: install local package on remote device
+    junos_package:
+      src: "{{playbook_dir}}/jinstall-ex-4200-12.3R12.4-domestic-signed.tgz"
+      reboot: true
+      provider: "{{ credentials }}"
+      version: 12.3R12.4
