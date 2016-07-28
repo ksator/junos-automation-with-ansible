@@ -1,27 +1,21 @@
 ---
  - name: Install_os_play
-   hosts: Test
+   hosts: 172.30.179.103
    roles:       
     - Juniper.junos
    connection: local
    gather_facts: no
 
-   vars_prompt:
-    - name: DEVICE_PASSWORD
-      prompt: Device password
-      private: yes
-    #- name: USERNAME
-    #  prompt: User name
-    #  private: no
-
    tasks:
 
-   - name: junos_install_os_tasl
+   - name: upgrade
      junos_install_os:
       host={{ inventory_hostname }}
       user=pytraining
-      passwd={{ DEVICE_PASSWORD }}
-      version=12.3R11.2
-      package=images/jinstall-ex-4200-12.3R11.2-domestic-signed.tgz
-      logfile=logs/software.log
+      passwd=Poclab123
+      version=12.3R12.4
+      package={{playbook_dir}}/jinstall-ex-4200-12.3R12.4-domestic-signed.tgz
+      logfile=software.log
       port=830
+      reboot=yes
+      no_copy=yes
