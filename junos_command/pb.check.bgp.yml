@@ -1,11 +1,11 @@
 ---
- - name: check bgp with core module junos_command
+ - name: check bgp states
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
 
    tasks:
-   - name: check bgp
+   - name: check if bgp neighbors are established
      junos_command:
       provider: "{{  credentials }}"
       commands:
