@@ -21,7 +21,7 @@
    - name: push bgp configuration on devices
      junos_template:
       provider: "{{  credentials }}"
-      src: {{playbook_dir}}/render/{{ inventory_hostname }}.conf
+      src: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
       
  - name: wait for peers to establish connections
    hosts: localhost
