@@ -34,7 +34,11 @@ script:
   - ansible-playbook junos_config/pb.yml --syntax-check
   - ansible-playbook junos_config/pb.vlans.yml --syntax-check
   - ansible-playbook junos_config/pb.rollback.yml --syntax-check
-  - ansible-playbook junos_get_config/pb.make_clean.yml
+  - ansible-playbook junos_facts/pb.facts.yml --syntax-check
+  - ansible-playbook junos_facts/pb.conf.yml --syntax-check
+  - ansible-playbook junos_facts/pb.conf_json_and_xml.yml --syntax-check
+  - ansible-playbook junos_facts/pb.conf.txt.yaml --syntax-check
+  - ansible-playbook junos_get_config/pb.make_clean.yml --syntax-check
   - ansible-playbook junos_get_config/pb.yml --syntax-check
   - ansible-playbook junos_get_config/pb.2.yml --syntax-check
   - ansible-playbook junos_get_facts/pb.yml --syntax-check
