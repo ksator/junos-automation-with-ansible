@@ -24,6 +24,12 @@ script:
   - ansible-playbook install_conf/pb.yml --syntax-check
   - ansible-playbook junos_cli/pb.txt.yml --syntax-check
   - ansible-playbook junos_cli/pb.xml.yml --syntax-check  
+  - ansible-playbook junos_command/pb.check_lldp.yml --syntax-check  
+  - ansible-playbook junos_command/pb.check.bgp.yml --syntax-check
+  - ansible-playbook junos_command/pb.check.bgp_2.yml --syntax-check
+  - ansible-playbook junos_command/pb.check.vlans.yml --syntax-check
+  - ansible-playbook junos_command/pb.yml --syntax-check
+  - ansible-playbook junos_command/pb.rpc.yml --syntax-check
   - ansible-playbook junos_commit/pb.yml --syntax-check
   - ansible-playbook junos_config/pb.yml --syntax-check
   - ansible-playbook junos_config/pb.vlans.yml --syntax-check
