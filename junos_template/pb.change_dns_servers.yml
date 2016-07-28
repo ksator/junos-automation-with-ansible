@@ -13,3 +13,13 @@
      junos_template:
       provider: "{{  credentials }}"
       src: "{{ junos_jinja_template }}"
+      
+   - name: Retrieve configuration from devices running Junos
+     junos_get_config:
+      host={{ inventory_hostname }}
+      user={{ADMUSER}}
+      passwd={{ADMPASS}}
+      dest={{ inventory_hostname }}.conf
+      format=text
+      logfile=get_config.log
+      filter=system
