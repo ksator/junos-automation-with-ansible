@@ -3,7 +3,9 @@
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
-
+   tags:
+   - configuration
+   
    tasks:
    - name: configure bgp
      junos_template:
