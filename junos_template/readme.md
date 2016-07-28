@@ -6,8 +6,9 @@ Requirements on Ansible: Ansible 2.1 and junos-eznc
 Requirements on  Junos devices: netconf  
 
 Playbooks:  
-- pb.bgp.yml: It load a configuration file to Junos devices from a jinja 2 template that is automatically rendered.  The same task renders a jinja2 template with BGP details and loads it to Junos devices. Another task in the same playbook audit the states of the BGP neighbors. 
-- pb.bgp.2.yml: it does the same thing as pb.bgp.yml but we splitted into two separate tasks the template rendering (so we can have a copy of the document) and the configuration loading.    
+- **pb.bgp.yml**: It load a configuration file to Junos devices from a jinja 2 template that is automatically rendered.  The same task renders a jinja2 template with BGP details and loads it to Junos devices. Another task in the same playbook audit the states of the BGP neighbors. 
+- **pb.bgp.2.yml**: it does the same thing as pb.bgp.yml but we splitted into two separate tasks the template rendering (so we can have a copy of the document) and the configuration loading.  
+- **pb.change_dns_servers.yml**: it reconfigures the list of DNS servers on Junos Devices (adding some and removing others) 
 
 Usage:
 ```
@@ -16,4 +17,6 @@ ansible-playbook junos_template/pb.bgp.yml
 
 ansible-playbook junos_template/pb.bgp.2.yml  
 ls junos_template/render/   
+
+ansible-playbook junos_template/pb.change_dns_servers.yml --check --diff --limit 172.30.179.65
 ```
