@@ -31,7 +31,7 @@
     - name: Create Junos configurations from Jinja2
       template: src={{ junos_jinja_template }} dest="{{playbook_dir}}/render/{{ junos.facts.hostname }}.conf"
 
-    - name: Install Junos configuration template
+    - name: Install rendered configuration
       junos_install_config:
         host={{ inventory_hostname }}
         user={{ADMUSER}}
