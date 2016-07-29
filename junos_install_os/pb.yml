@@ -1,5 +1,4 @@
 ---
-#doesnt work
  - name: upgrade
    hosts: 172.30.179.103
    roles:       
@@ -19,4 +18,4 @@
       logfile=software.log
       port=830
       reboot=yes
-      no_copy=false
+      no_copy=no
