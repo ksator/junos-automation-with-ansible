@@ -19,4 +19,4 @@
       logfile=software.log
       port=830
       reboot=yes
-      no_copy=yes
+      no_copy=false
