@@ -10,6 +10,7 @@
      junos_config:
       provider: "{{ credentials }}"
       lines:
+        - set interfaces {{ item.interface }} unit 0 family inet address {{ item.local_ip }}/31
         - set protocols lldp interface "{{ item.interface }}"
      with_items:
      - "{{ neighbors }}"
