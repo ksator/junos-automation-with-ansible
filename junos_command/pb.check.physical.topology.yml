@@ -14,7 +14,9 @@
         - set protocols lldp interface "{{ item.interface }}"
      with_items:
      - "{{ neighbors }}"
-        
+
+   - pause: seconds=10
+   
    - name: check if lldp neighbors are the ones we expect
      junos_command:
       provider: "{{ credentials }}"
