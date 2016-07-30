@@ -3,12 +3,12 @@ loopback: 10.20.1.1
 local_asn: 104
 neighbors:
    - interface: ge-0/0/0
-     name: ex4300-9
+     name: to ex4300-9
      asn: 109
      peer_ip: 192.168.0.1 
      local_ip: 192.168.0.0
    - interface: ge-0/0/1 
-     name: ex4300-10
+     name: to ex4300-10
      asn: 110
      peer_ip: 192.168.0.3
      local_ip: 192.168.0.2 
