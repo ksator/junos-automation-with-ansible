@@ -22,7 +22,7 @@
    tasks:
    - pause: seconds=10
    
- - name: configure devices with lldp 
+ - name: check devices lldp neighbors 
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
