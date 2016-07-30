@@ -16,7 +16,7 @@
      junos_command:
       commands:
        - "show interfaces terse {{ item.interface }}"
-      provider: "{{ credential }}"
+      provider: "{{ credentials }}"
       waitfor:
        - "result[0]['interface-information']['physical-interface']['oper-status'] eq up"
      with_items: "{{ neighbors }}"
