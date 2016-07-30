@@ -6,11 +6,20 @@
    
    tasks:
        
-   - name: configure netconf on junos devices
+   - name: make sure netconf is configured on junos devices
      junos_netconf: 
       provider: "{{ credentials }}"
       listens_on: 830
       state: present
+   
+   - name: Check Physical Interface Status
+     junos_command:
+      commands:
+       - "show interfaces terse {{ item.interface }}"
+      provider: "{{ credential }}"
+      waitfor:
+       - "result[0]['interface-information']['physical-interface']['oper-status'] eq up"
+     with_items: "{{ neighbors }}"
       
    - name: configure lldp
      junos_config:
