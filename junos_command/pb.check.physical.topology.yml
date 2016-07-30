@@ -18,11 +18,11 @@
      junos_command:
       provider: "{{ credentials }}"
       commands:
-       - show lldp neighbors interface "{{ item.interface }}"
+       - show lldp neighbors interface {{ item.interface }}
       waitfor:
        - "result[0].lldp-neighbors-information.lldp-neighbor-information.lldp-remote-system-name contains {{ item.name }}"
-      retries: 10
-      interval: 1
+      retries: 5
+      interval: 2
      with_items:
      - "{{ neighbors }}"
 
