@@ -7,8 +7,8 @@ neighbors:
      asn: 110
      peer_ip: 192.168.0.4 
      local_ip: 192.168.0.5
-   - interface: to ge-0/0/1  
-     name: ex4300-4
+   - interface: ge-0/0/1  
+     name: to ex4300-4
      asn: 104
      peer_ip: 192.168.0.0
      local_ip: 192.168.0.1
