@@ -1,5 +1,5 @@
 ---
- - name: configure devices with lldp 
+ - name: configure Junos devices with lldp 
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
