@@ -10,7 +10,7 @@
      junos_config:
       provider: "{{ credentials }}"
       lines:
-        - set protocol lldp interface "{{ item.interface }}"
+        - set protocols lldp interface "{{ item.interface }}"
      with_items:
      - "{{ neighbors }}"
         
@@ -19,12 +19,12 @@
       provider: "{{ credentials }}"
       commands:
        - show lldp neighbors interface "{{ item.interface }}"
-       waitfor:
-      - "result[0].lldp-neighbors-information.lldp-neighbor-information.lldp-remote-system-name contains {{ item.name }}"
+      waitfor:
+       - "result[0].lldp-neighbors-information.lldp-neighbor-information.lldp-remote-system-name contains {{ item.name }}"
       retries: 10
       interval: 1
-    with_items:
-    - "{{ neighbors }}"
+     with_items:
+     - "{{ neighbors }}"
 
 
 
