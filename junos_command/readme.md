@@ -8,7 +8,8 @@ Requirements on Ansible: Ansible 2.1 and junos-eznc
 Requirements on  Junos devices: netconf  
 
 Playbooks:  
-- pb.check_lldp.yml: check if the lldp neighbors are the ones we expect (so check if there is no cabling error)  
+- pb.check_lldp.yml: check if the lldp neighbors are the ones we expect (so check if there is no cabling error) 
+- pb.check.physical.topology.yml: check if the lldp neighbors are the ones we expect (so check if there is no cabling error)
 - pb.check.bgp.yml: check if the state of your bgp neighbors are established.  
 - pb.check.bgp_2.yml: check if the state of your bgp neighbors are established.   
 - pb.check.vlans.yml: check from devices operationnal state if desirated vlans are presents  
@@ -18,6 +19,7 @@ Playbooks:
 Usage:  
 ```
 ansible-playbook junos_command/pb.check_lldp.yml  
+ansible-playbook junos_command/pb.check.physical.topology.yml
 ansible-playbook junos_command/pb.check.bgp.yml
 ansible-playbook junos_command/pb.check.bgp_2.yml
 ansible-playbook junos_command/pb.check.vlans.yml
