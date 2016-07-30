@@ -20,7 +20,7 @@
    gather_facts: no
    
    tasks:
-   - pause: seconds=25
+   - pause: seconds=10
    
  - name: configure devices with lldp 
    hosts: AMS-EX4300
