@@ -3,9 +3,15 @@
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
-
+   
    tasks:
-
+       
+   - name: configure netconf on junos devices
+     junos_netconf: 
+      provider: "{{ credentials }}"
+      listens_on: 830
+      state: present
+      
    - name: configure lldp
      junos_config:
       provider: "{{ credentials }}"
@@ -14,7 +20,7 @@
         - set protocols lldp interface "{{ item.interface }}"
      with_items:
      - "{{ neighbors }}"
-
+     
  - name: wait for lldp neighbors to be discovered
    hosts: localhost
    gather_facts: no
