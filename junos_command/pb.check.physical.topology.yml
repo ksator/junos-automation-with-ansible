@@ -26,7 +26,7 @@
    gather_facts: no
    
    tasks:
-   - pause: seconds=10
+   - pause: seconds=15
    
  - name: check devices lldp neighbors 
    hosts: AMS-EX4300
