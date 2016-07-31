@@ -85,6 +85,7 @@ Some playbooks use other variables as well.
 
 #####Playbooks:  
 All playbooks are named **pb.*.yml**  
+You will find them in different directories. Each directory has a readme file as well.    
 
 #####Installation instructions:  
 
@@ -95,7 +96,10 @@ git clone https://github.com/ksator/ansible-training-for-junos.git
 
 And use ansible-playbook commands to execute the playbooks:    
 ```
-cd ansible-training-for-junos/    
+cd ansible-training-for-junos/
+ls
+ls xxx/
+more xxx/readme.md
 ansible-playbook xxx/pb.*.yml  
 ```
 
