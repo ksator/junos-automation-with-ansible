@@ -21,7 +21,7 @@ script:
   - ansible-playbook assemble/pb.yml
   - ansible-playbook apt/pb.yml --syntax-check
   - ansible-playbook debug/pb.yml --syntax-check
-  - ansible-playbook install_conf/pb.yml --syntax-check
+  - ansible-playbook junos_install_conf/pb.yml --syntax-check
   - ansible-playbook junos_cli/pb.txt.yml --syntax-check
   - ansible-playbook junos_cli/pb.xml.yml --syntax-check  
   - ansible-playbook junos_command/pb.check_lldp.yml --syntax-check
