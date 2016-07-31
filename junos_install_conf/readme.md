@@ -8,5 +8,5 @@ playbooks:
 
 Usage:  
 ```
-ansible-playbook install_conf/pb.yml  
+ansible-playbook junos_install_conf/pb.yml  
 ```
