@@ -29,6 +29,7 @@ script:
   - ansible-playbook junos_command/pb.check.bgp.yml --syntax-check
   - ansible-playbook junos_command/pb.check.bgp_2.yml --syntax-check
   - ansible-playbook junos_command/pb.check.vlans.yml --syntax-check
+  - ansible-playbook junos_command/pb.check.routes.yml --syntax-check
   - ansible-playbook junos_command/pb.yml --syntax-check
   - ansible-playbook junos_command/pb.rpc.yml --syntax-check
   - ansible-playbook junos_commit/pb.yml --syntax-check
