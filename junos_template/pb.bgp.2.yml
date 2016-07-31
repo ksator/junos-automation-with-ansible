@@ -30,13 +30,13 @@
    tasks:
    - pause: seconds=25
    
- - name: check bgp peers status
+ - name: check bgp states
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
    
    tasks:
-   - name: check bgp
+   - name: check bgp peers states
      junos_command:
       provider: "{{  credentials }}"
       commands:
@@ -47,3 +47,13 @@
       interval: 2
      with_items:
      - "{{ neighbors}}"
+     
+   - name: check if junos devices learnt some routes with BGP
+     junos_command:
+      provider: "{{  credentials }}"
+      commands:
+       - show route protocol bgp {{item.peer_loopback}}/32
+      waitfor:
+       - "result[0].route-information.route-table.rt.rt-destination eq {{item.peer_loopback}}/32"
+     with_items:
+      - "{{ neighbors }}"
