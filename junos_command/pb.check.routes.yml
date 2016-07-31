@@ -1,0 +1,19 @@
+---
+- name: check if junos device learnt correctly some routes
+  hosts: 172.30.179.65
+  connection: local
+  gather_facts: no
+
+  tasks:
+
+  - name: check if junos device learnt with BGP a route to 192.168.0.2/31 with next hop 192.168.0.3
+    junos_command:
+      provider: "{{  credentials }}"
+      commands:
+       - show route protocol bgp 192.168.0.2/31
+      waitfor:
+       - "result[0].route-information.route-table.rt.rt-entry.nh.to eq 192.168.0.3"
+    register: junos
+
+  - debug: var=junos.stdout[0]
+  
