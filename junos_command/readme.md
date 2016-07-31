@@ -13,6 +13,8 @@ Playbooks:
 - pb.check.bgp.yml: check if the state of your bgp neighbors are established.  
 - pb.check.bgp_2.yml: check if the state of your bgp neighbors are established. 
 - pb.check.routes.yml: check details in the device routing table 
+- pb.check.routes.2.yml: check details in the device routing table 
+- pb.check.routes.3.yml: check details in the device routing table  
 - pb.check.vlans.yml: check from devices operationnal state if desirated vlans are presents  
 - pb.yml: pass various commands on Junos devices. Parse the commands output. Save the output on the Ansible server.   
 - pb.rpc.yml: pass rpc to Junos devices. And print the result in JSON and XML format.  
@@ -24,6 +26,8 @@ ansible-playbook junos_command/pb.check.physical.topology.yml
 ansible-playbook junos_command/pb.check.bgp.yml
 ansible-playbook junos_command/pb.check.bgp_2.yml
 ansible-playbook junos_command/pb.check.routes.yml
+ansible-playbook junos_command/pb.check.routes.2.yml
+ansible-playbook junos_command/pb.check.routes.3.yml
 ansible-playbook junos_command/pb.check.vlans.yml
 ansible-playbook junos_command/pb.yml
 ansible-playbook junos_command/pb.rpc.yml
