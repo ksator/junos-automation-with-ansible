@@ -29,7 +29,7 @@ Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/J
 sudo ansible-galaxy install Juniper.junos  
 ```
 
-###Ansible modules for Junos built by Ansible:   
+###Ansible core modules for Junos built by Ansible:   
 
 Modules (Ansible 2.1):   
 - **junos_command** - Execute arbitrary commands on a remote device running Junos  
