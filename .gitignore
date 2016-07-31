@@ -3,5 +3,6 @@
 *.xml
 *.conf
 *.diff
+*.json
 
 
