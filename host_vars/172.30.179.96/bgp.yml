@@ -7,8 +7,10 @@ neighbors:
      asn: 109
      peer_ip: 192.168.0.5  
      local_ip: 192.168.0.4
+     peer_loopback: 192.179.0.95
    - interface: ge-0/0/1 
      name: ex4300-4
      asn: 104
      peer_ip: 192.168.0.2
      local_ip: 192.168.0.3
+     peer_loopback: 192.179.0.65
