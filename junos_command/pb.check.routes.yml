@@ -1,4 +1,5 @@
 ---
+# probably easier with jsnapy? the below doesnt work if there are several next hops in the routing table for this destination.
 - name: check if junos device learnt correctly some routes
   hosts: 172.30.179.65
   connection: local
