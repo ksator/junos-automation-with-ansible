@@ -36,3 +36,13 @@
       interval: 2
      with_items:
      - "{{ neighbors}}"
+    
+   - name: check if junos devices learnt some routes with BGP
+     junos_command:
+      provider: "{{  credentials }}"
+      commands:
+       - show route protocol bgp {{item.peer_loopback}}/32
+      waitfor:
+       - "result[0].route-information.route-table.rt.rt-destination eq {{item.peer_loopback}}/32"
+     with_items:
+      - "{{ neighbors }}"
