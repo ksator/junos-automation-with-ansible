@@ -26,10 +26,11 @@ protocols {
         }
     }
     lldp {
-        interface all;
+{% for neighbor in neighbors %}
+        interface "{{ neighbor.interface }}";
+{% endfor %}
     }
 }
-
 routing-options {
     router-id {{ loopback }};
     forwarding-table {
