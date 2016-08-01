@@ -7,7 +7,8 @@ Requirements on Ansible: Ansible 2.1 and junos-eznc
 Requirements on  Junos devices: netconf  
 
 Playbooks:  
-- pb.vlans.yml: configure a list of vlans on Junos devices and double check on Junos devices if it is OK with the new operationnal state. - pb.rollback.yml: rollback junos configuration on devices    
+- pb.vlans.yml: configure a list of vlans on Junos devices and double check on Junos devices if it is OK with the new operationnal state.   
+- pb.rollback.yml: rollback junos configuration on devices    
 - pb.yml: pass some set/delete commands to Junos devices.   
 
 Usage:  
