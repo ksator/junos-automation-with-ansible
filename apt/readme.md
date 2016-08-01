@@ -11,7 +11,7 @@ SUDO password:
 This feature will be removed in a future release. 
 Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
 
-PLAY [localhost] ***************************************************************
+PLAY [[install latest apache2 on localhost] ************************************
 
 TASK [setup] *******************************************************************
 ok: [localhost]
