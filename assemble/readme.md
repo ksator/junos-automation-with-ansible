@@ -8,9 +8,7 @@ Playbooks:
 
 Usage:   
 ```
-ls -l assemble/
 sudo ansible-playbook assemble/pb.yml --diff
-ls -l assemble/
 sudo ansible-playbook assemble/pb.yml
 ls -l assemble/
 more assemble/junos.conf
