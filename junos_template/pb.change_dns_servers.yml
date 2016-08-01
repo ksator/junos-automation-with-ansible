@@ -26,3 +26,6 @@
       format=text
       logfile=get_config.log
       filter=system
+     tags:
+      - Retrieve configuration
+  
