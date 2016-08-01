@@ -10,7 +10,7 @@
    tasks:
    - name: Retrieve configuration from Junos devices
      junos_get_config:
-      host={{ inventory_hostname }}
+      host={{ junos_host }}
       user={{ USERNAME }}
       passwd={{ DEVICE_PASSWORD }}
       dest={{playbook_dir}}/configs/{{ inventory_hostname }}.conf
