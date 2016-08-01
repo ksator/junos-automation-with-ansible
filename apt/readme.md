@@ -1,7 +1,10 @@
-apt is a core module  
+apt is a core module
 http://docs.ansible.com/ansible/apt_module.html  
+it manages packages on ubuntu: you can use it to install/remove packages on ubuntu endpoints.     
+it is idempotent.  
 
 ```
+$ ansible-playbook --help
 $ ansible-playbook apt/pb.yml -u ksator --ask-sudo-pass --check --diff
 SUDO password: 
 [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
