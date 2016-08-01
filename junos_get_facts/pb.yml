@@ -22,7 +22,7 @@
      
    - name: Retrieve information from devices running Junos
      junos_get_facts:
-      host={{ inventory_hostname }}
+      host={{ junos_host }}
       user={{ ADMUSER }}
       passwd={{ ADMPASS }}
       savedir={{playbook_dir}}/inventory
