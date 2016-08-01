@@ -18,6 +18,5 @@ Usage:
 ansible-playbook junos_template/pb.change_dns_servers.yml --diff --skip-tags "Retrieve configuration"
 ansible-playbook rollback/pb.yml
 ls -l rollback/
-more rollback/172.30.179.65.diff
-
+more rollback/ex4300-9.diff
 ```
