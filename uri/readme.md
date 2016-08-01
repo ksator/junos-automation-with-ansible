@@ -8,7 +8,7 @@ set system services rest http
 ```
 
 Playbook: 
-- **pb.yml**: it makes a rest call to a junos devices. It saves locally the downloaded file.  it uses the debug module to print some of the collected data.   
+- **pb.yml**: it check if the rest api default port (3000) is enabled on the MX device. it makes a rest call to the junos devices. It saves locally the downloaded file.  it uses the debug module to print some of the collected data.   
 
 Usage: 
 ```
