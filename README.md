@@ -63,11 +63,13 @@ Note: It is not required to do this with cli. This can be done with the Ansible 
 #About this project:   
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
 I am using them to deliver Ansible trainings to network engineers.  
+There is an Ansible presentation: [ansible presentation.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible%20presentation.pdf)  
 
 ###How to use this project: 
 
-#####Lab:  
 The playbooks in this repository are ready to use if you access to the Junos devices refered into this project. 
+
+#####Lab:  
 The Junos devices we are using in this repository are only accessible from the Juniper Networks corporate network.   
 
 But you can very easily reuse this automation content with your own Junos devices (Junos physical devices, Junos virtual devices, vagrant boxes running Junos): you would just need to adapt this content with your IP addresses, username and password.   
