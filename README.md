@@ -87,7 +87,10 @@ Some playbooks use other variables as well.
 #####Playbooks:  
 All playbooks are named **pb.*.yml**  
 You will find them in different directories.  
-Each directory has a readme file as well.    
+
+#####Directories:
+Playbooks are in different directories.   
+Each directory has a readme file as well. Please read the instructions in the readme file of each directory before executing the playbooks.    
 
 #####Installation instructions:  
 
