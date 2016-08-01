@@ -5,7 +5,7 @@ Requirement on Ansible: junos-eznc
 Requirement on Junos devices: enable netconf on junos.  
 
 playbooks:
-- Pb.yml: install a list of configuration files on junos devices (2 files: syslog.set and banner.set, this makes 2 separate commit, one per file).   
+- **Pb.yml**: install a list of configuration files on junos devices (2 files: syslog.set and banner.set, this makes 2 separate commit, one per file).   
 
 Usage:  
 ```
