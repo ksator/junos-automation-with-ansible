@@ -13,7 +13,13 @@ Playbooks:
 
 Usage:   
 ```
-ansible-playbook junos_cli/pb.txt.yml   
-ansible-playbook junos_cli/pb.xml.yml    
+ansible-playbook junos_cli/pb.txt.yml
+ls junos_cli/
+more junos_cli/172.30.179.108.txt
+more junos_cli/cli.log
+
+ansible-playbook junos_cli/pb.xml.yml
+ls junos_cli/
+more junos_cli/172.30.179.108.xml
 ```
 
