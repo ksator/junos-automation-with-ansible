@@ -1,6 +1,6 @@
 Module: junos_command  
 Executes commands (cli or rpc) on Junos devices and return the results to the Ansible playbook.     
-In addition, it can specify a set of conditionals to be evaluated against the returned output, only returning control to the playbook once the entire set of conditionals has been met. So you can check if you bgp neighbors are established as example.  
+In addition, it can specify a set of conditionals (with the optional argument waitfor) to be evaluated against the returned output, only returning control to the playbook once the entire set of conditionals has been met (or after a configured timeout). If the conditional is not true by the configured timeout (retries and interval arguments), the task fails for the host. So you can check if you bgp neighbors are established as example.  
 Documentation: http://docs.ansible.com/ansible/junos_command_module.html  
 source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/junos  
 Installation: this is a core module. It ships with ansible itself      
