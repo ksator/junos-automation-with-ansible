@@ -16,7 +16,7 @@
 
    tasks:
 
-   - name: Rollback_junos_config_task
+   - name: Rollback junos config task
      junos_rollback:
       host={{ inventory_hostname }}
       user={{ ADMUSER }}
