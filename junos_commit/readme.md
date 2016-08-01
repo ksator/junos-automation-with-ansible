@@ -6,7 +6,7 @@ Requirement on Junos devices: enable netconf.
 Requirements on Ansible: junos-eznc
 
 playbooks: 
-- pb.yml: Execute a commit on a group of Junos devices independently of loading a configuration. 
+- **pb.yml**: Execute a commit on a group of Junos devices independently of loading a configuration. 
 
 Usage: 
 ```
