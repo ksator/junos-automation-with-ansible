@@ -22,9 +22,10 @@ Modules (version 1.3.1):
 - **junos_srx_cluster** - Create an srx chassis cluster for cluster capable srx running Junos OS.  
 - **junos_zeroize** - Erase all data, including configuration and log files, on a device running Junos OS.  
 
-Documentation: http://junos-ansible-modules.readthedocs.io/en/1.3.1/  
+Documentation: http://junos-ansible-modules.readthedocs.io/  
 Source code: https://github.com/Juniper/ansible-junos-stdlib  
-Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/). To download them to the Ansible server, execute the command:   
+Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).  
+To download them to the Ansible server, execute the command:   
 ```
 sudo ansible-galaxy install Juniper.junos  
 ```
@@ -52,11 +53,12 @@ Some options (like the console option in the junos_install_config module) requir
 
 ##### On the Junos devices:
 
-Most of these Ansible modules for Junos require the Netconf API to be configured on the Junos devices:
+All these Ansible modules for Junos require the Netconf API to be configured on the Junos devices (except the module junos_netconf):
 ```
 set system services netconf ssh
 commit
 ```
+Note: It is not required to do this with cli. This can be done with the module junos_netconf. 
 
 #About this project:   
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
@@ -90,7 +92,7 @@ You will find them in different directories.
 
 #####Directories:
 Playbooks are in different directories.   
-Each directory has a readme file as well. Please read the instructions in the readme file of each directory before executing the playbooks.    
+Each directory has a readme file as well. Please read the instructions in the readme.md file of each directory before executing the playbooks.    
 
 #####Installation instructions:  
 
