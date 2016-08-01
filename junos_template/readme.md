@@ -24,5 +24,9 @@ ansible-playbook rollback/pb.yml
 
 ansible-playbook junos_template/pb.change_dns_servers.yml --check --diff --limit ex4300-4
 ansible-playbook junos_template/pb.change_dns_servers.yml
+ls junos_template/   
+more junos_template/get_config.log
+more junos_template/ex4300-10.conf
 ansible-playbook rollback/pb.yml
+
 ```
