@@ -15,9 +15,11 @@ Usage:
 ```
 ansible-playbook junos_template/pb.bgp.yml --limit 172.30.179.65 --tags "configuration" --check --diff  
 ansible-playbook junos_template/pb.bgp.yml  
+ansible-playbook rollback/pb.yml
 
 ansible-playbook junos_template/pb.bgp.2.yml  
 ls junos_template/render/   
+ansible-playbook rollback/pb.yml
 
 ansible-playbook junos_template/pb.change_dns_servers.yml --check --diff --limit 172.30.179.65
 ansible-playbook junos_template/pb.change_dns_servers.yml
