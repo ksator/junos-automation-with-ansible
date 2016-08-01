@@ -83,8 +83,9 @@ It refers to our inventory file (**hosts**): So, despite the inventory file is n
 
 #####Variables:   
 **group_vars** and **host_vars** directories at the root of this repository define variables for hosts and for groups.  
-Ansible uses them.   
-Some playbooks use other variables as well. 
+The inventory file also defines some variables.   
+Ansible uses all of them.   
+Some playbooks use also other variables.  
 
 #####Playbooks:  
 All playbooks are named **pb.*.yml**  
