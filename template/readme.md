@@ -27,13 +27,19 @@ ansible-playbook template/pb.bgp.yml
 ls -l template/render/*.bgp.conf
 more template/render/172.30.179.65.bgp.conf
 
+ansible-playbook template/pb.load_cfg_from_template.yml --check --diff
 ansible-playbook template/pb.load_cfg_from_template.yml
-ls -l template/render/
-ls template/
+ls -l template/render/*.conf
+more template/render/ex4300-10.conf
+ls -l template/*.log
+more template/ex4300-10.log
 ansible-playbook rollback/pb.yml
 
+ansible-playbook template/pb.load_cfg_from_template.replace.yml --check --diff
 ansible-playbook template/pb.load_cfg_from_template.replace.yml
-ls -l template/render/
-ls template/
+ls -l template/render/*.conf
+more template/render/ex4300-10.conf
+ls -l template/*.log
+more template/ex4300-10.log
 ansible-playbook rollback/pb.yml
 ```
