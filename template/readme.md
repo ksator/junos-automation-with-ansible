@@ -24,8 +24,10 @@ ls template/render/
 ansible-playbook template/pb.load_cfg_from_template.yml
 ls template/render/
 ls template/
+ansible-playbook rollback/pb.yml
 
 ansible-playbook template/pb.load_cfg_from_template.replace.yml
 ls template/render/
 ls template/
+ansible-playbook rollback/pb.yml
 ```
