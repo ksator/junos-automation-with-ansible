@@ -12,7 +12,7 @@ requirements on Junos devices: netconf
 requirements on Ansible: junos-eznc.  junos-netconify when using the console optional argument.    
 
 Playbooks:  
-- pb.yml: this playbook get the junos facts from a group of junos devices, and print the hostname of the devices that are not running a specific junos version.     
+- **pb.yml**: this playbook get the junos facts from a group of junos devices, and print the hostname of the devices that are not running a specific junos version.     
 
 Usage: 
 ```
