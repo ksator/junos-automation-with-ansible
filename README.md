@@ -5,7 +5,7 @@ There are two Ansible librairies to interact with Junos.
 - An Ansible library for Junos built by Juniper.  
 - An Ansible library for Junos built by Ansible.  
 
-Both of the Ansible libraries for Junos are used into this repository.  
+Both of them are used into this repository.  
 
 ###Ansible modules for Junos built by Juniper:  
 
@@ -53,12 +53,12 @@ Some options (like the console option in the junos_install_config module) requir
 
 ##### On the Junos devices:
 
-All these Ansible modules for Junos require the Netconf API to be configured on the Junos devices (except the module junos_netconf):
+Except for the module junos_netconf, all these Ansible modules for Junos require the Netconf API to be configured on the Junos devices:
 ```
 set system services netconf ssh
 commit
 ```
-Note: It is not required to do this with cli. This can be done with the Ansible module junos_netconf. 
+Note: It is not required to do use cli to configure Netconf on Junos devices. This can be done with the Ansible module junos_netconf. 
 
 #About this project:   
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
