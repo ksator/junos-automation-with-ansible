@@ -24,7 +24,7 @@
       passwd={{ADMPASS}}
       dest={{playbook_dir}}/{{ inventory_hostname }}.conf
       format=text
-      logfile=get_config.log
+      logfile={{playbook_dir}}/get_config.log
       filter=system
      tags:
       - Retrieve configuration
