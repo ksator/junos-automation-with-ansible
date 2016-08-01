@@ -16,12 +16,12 @@
    tasks:
 
    - name: Render BGP configuration for junos devices
-     template: src={{playbook_dir}}/bgp.j2 dest={{playbook_dir}}/render/{{ junos_host }}.conf
+     template: src={{playbook_dir}}/bgp.j2 dest={{playbook_dir}}/render/{{ inventory_hostname }}.conf
 
    - name: push bgp configuration on devices
      junos_template:
       provider: "{{  credentials }}"
-      src: "{{playbook_dir}}/render/{{ junos_host }}.conf"
+      src: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
       
  - name: wait for peers to establish connections
    hosts: localhost
