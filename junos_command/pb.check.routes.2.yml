@@ -1,6 +1,6 @@
 ---
 - name: check if a junos device learnt some routes
-  hosts: 172.30.179.65
+  hosts: ex4300-4
   connection: local
   gather_facts: no
 
