@@ -1,6 +1,6 @@
 ---
  - name: pass rpc to Junos devices and print result in JSON and XML
-   hosts: 172.30.179.65
+   hosts: ex4300-4
    connection: local
    gather_facts: no
 
