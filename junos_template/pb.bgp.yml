@@ -19,13 +19,13 @@
    tasks:
    - pause: seconds=25
    
- - name: check bgp peers status
+ - name: check bgp 
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
    
    tasks:
-   - name: check bgp
+   - name: check bgp peers status
      junos_command:
       provider: "{{  credentials }}"
       commands:
