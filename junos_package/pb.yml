@@ -5,7 +5,7 @@
   gather_facts: no
 
   tasks:
-  - name: install local package on remote device
+  - name: install local package on remote device and reboot the device
     junos_package:
       src: "{{playbook_dir}}/jinstall-ex-4200-12.3R12.4-domestic-signed.tgz"
       reboot: true
