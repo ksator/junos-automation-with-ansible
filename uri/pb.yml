@@ -6,7 +6,7 @@
 
    tasks:
 
-    - name: Check ssh and netconf connectivity
+    - name: Check rest connectivity
       wait_for: host={{ junos_host }} port=3000 timeout=5
  
  - name: rest call to a junos device
