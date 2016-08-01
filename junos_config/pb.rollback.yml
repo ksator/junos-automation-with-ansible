@@ -8,5 +8,5 @@
    - name: rollback
      junos_config:
       provider: "{{ credentials }}"
-      rollback: 1
+      rollback: 3
 
