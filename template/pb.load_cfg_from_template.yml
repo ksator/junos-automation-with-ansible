@@ -23,7 +23,7 @@
 
     - name: Retrieve information from devices running Junos OS
       junos_get_facts:
-        host={{ inventory_hostname }}
+        host={{ junos_host }}
         user={{ ADMUSER }}
         passwd={{ ADMPASS }}
       register: junos
@@ -33,7 +33,7 @@
 
     - name: Install rendered configuration
       junos_install_config:
-        host={{ inventory_hostname }}
+        host={{ junos_host }}
         user={{ADMUSER}}
         passwd={{ADMPASS}}
         file="{{playbook_dir}}/render/{{ junos.facts.hostname }}.conf"
