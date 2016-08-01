@@ -1,10 +1,13 @@
 ---
- - name: check netconf
+ - name: check ssh and netconf ports on Junos devices
    hosts: AMS-EX4200
    connection: local
    gather_facts: no
 
    tasks:
 
-    - name: Check netconf connectivity
-      wait_for: host={{ inventory_hostname }} port=830 timeout=5
+    - name: Check ssh and netconf connectivity
+      wait_for: host={{ inventory_hostname }} port={{ item }} timeout=5
+      with_items:
+       - 22
+       - 830
