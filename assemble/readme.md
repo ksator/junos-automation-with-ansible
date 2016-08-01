@@ -4,7 +4,7 @@ Installation: this is a core module. It ships with ansible itself
 it is idempotent  
 
 Playbooks:
-- pb.yml: Assembles all the junos configuration files in the directory fragments into a junos configuration file named junos.conf    
+- **pb.yml**: Assembles all the junos configuration files in the directory fragments into a junos configuration file named junos.conf    
 
 Usage:   
 ```
