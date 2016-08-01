@@ -14,8 +14,8 @@ Playbooks:
 
 Usage:  
 ```
-- ansible-playbook junos_facts/pb.facts.yml
-- ansible-playbook junos_facts/pb.conf.yml
-- ansible-playbook junos_facts/pb.conf_json_and_xml.yml
-- ansible-playbook junos_facts/pb.conf.txt.yaml
+ansible-playbook junos_facts/pb.facts.yml
+ansible-playbook junos_facts/pb.conf.yml
+ansible-playbook junos_facts/pb.conf_json_and_xml.yml
+ansible-playbook junos_facts/pb.conf.txt.yaml
 ```
