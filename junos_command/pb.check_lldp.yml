@@ -1,6 +1,6 @@
 ---
  - name: check lldp neighbors
-   hosts: 172.30.179.65
+   hosts: ex4300-4
    connection: local
    gather_facts: no
 
