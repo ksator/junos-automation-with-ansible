@@ -1,5 +1,5 @@
 ---
- - name: play_name_curl
+ - name: rest call to a junos device
    hosts: localhost
    gather_facts: no
 
