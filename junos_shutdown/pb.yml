@@ -1,5 +1,5 @@
 ---
- - name: junos_shutdown-play
+ - name: reboot Junos devices
    hosts: AMS-test
    roles:       
     - Juniper.junos
@@ -18,8 +18,8 @@
 
    - name: junos_shutdown_task
      junos_shutdown:
-      host={{ inventory_hostname }}
-      user=pytraining
+      host={{ junos_host }}
+      user={{ ADMUSER }}
       passwd={{ DEVICE_PASSWORD }}
       port=830
       shutdown="shutdown"
