@@ -1,4 +1,5 @@
 Module: junos_rollback  
+Rollback the configuration of a device running Junos  
 Documentation: http://junos-ansible-modules.readthedocs.io/  
 Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).   
 To download it to the Ansible server, execute the command: 
