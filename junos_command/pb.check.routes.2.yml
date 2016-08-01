@@ -6,7 +6,7 @@
 
   tasks:
 
-  - name: check if junos device learnt with BGP a route to 192.168.0.2/31
+  - name: check if junos device learnt with BGP a route to 192.168.0.4/31
     junos_command:
       provider: "{{  credentials }}"
       commands:
