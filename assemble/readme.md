@@ -1,5 +1,5 @@
 Module: assemble  
-Documentation : http://docs.ansible.com/ansible/assemble_module.html
+Documentation : http://docs.ansible.com/ansible/assemble_module.html  
 Installation: this is a core module. It ships with ansible itself  
 it is idempotent  
 
