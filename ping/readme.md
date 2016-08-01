@@ -4,17 +4,9 @@ This is not an ICMP ping: it tries to connect to host, and it verifies there is 
 Ths is a core module  
 
 
-the module is ping, the username is administrator, the host is vm:
+the module is ping, the username is administrator, the endpoint is an ubuntu vm (172.30.204.10):
 ```
 ansible --help
-
-ansible vm -m ping -u administrator -k
-SSH password: 
-172.30.204.10 | SUCCESS => {
-    "changed": false, 
-    "ping": "pong"
-}
-
 
 ansible 172.30.204.10 -m ping -u administrator -k
 SSH password:
@@ -24,7 +16,7 @@ SSH password:
 }
 
 
-ansible vm -m ping -u administrator --ask-pass
+ansible 172.30.204.10 -m ping -u administrator --ask-pass
 SSH password: 
 172.30.204.10 | SUCCESS => {
     "changed": false, 
