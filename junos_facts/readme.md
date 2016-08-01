@@ -14,8 +14,11 @@ Playbooks:
 
 Usage:  
 ```
+ansible-playbook junos_facts/pb.conf.txt.yaml
+ls junos_facts/
+more junos_facts/172.30.179.111.conf
+
 ansible-playbook junos_facts/pb.facts.yml
 ansible-playbook junos_facts/pb.conf.yml
 ansible-playbook junos_facts/pb.conf_json_and_xml.yml
-ansible-playbook junos_facts/pb.conf.txt.yaml
 ```
