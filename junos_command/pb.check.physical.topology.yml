@@ -12,7 +12,7 @@
       listens_on: 830
       state: present
    
-   - name: Check Physical Interface Status
+   - name: Check if Physical Interfaces are up
      junos_command:
       commands:
        - "show interfaces terse {{ item.interface }}"
