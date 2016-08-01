@@ -12,5 +12,5 @@ Usage:
 ```
 ansible-playbook junos_rpc/pb.yml  
 ls -l junos_rpc/
-more junos_rpc/172.30.179.102.conf
+more junos_rpc/ex4200-11.conf
 ```
