@@ -21,14 +21,20 @@ Playbooks:
 
 Usage:  
 ```
-ansible-playbook junos_command/pb.check_lldp.yml  
-ansible-playbook junos_command/pb.check.physical.topology.yml
+ansible-playbook junos_command/pb.yml
+ansible-playbook junos_command/pb.rpc.yml
+
+ansible-playbook junos_config/pb.vlans.yml
+ansible-playbook junos_command/pb.check.vlans.yml
+
+ansible-playbook junos_template/pb.bgp.yml
 ansible-playbook junos_command/pb.check.bgp.yml
 ansible-playbook junos_command/pb.check.bgp_2.yml
 ansible-playbook junos_command/pb.check.routes.yml
 ansible-playbook junos_command/pb.check.routes.2.yml
 ansible-playbook junos_command/pb.check.routes.3.yml
-ansible-playbook junos_command/pb.check.vlans.yml
-ansible-playbook junos_command/pb.yml
-ansible-playbook junos_command/pb.rpc.yml
+ansible-playbook junos_command/pb.check_lldp.yml  
+ansible-playbook rollback/pb.yml
+
+ansible-playbook junos_command/pb.check.physical.topology.yml
 ```
