@@ -7,7 +7,7 @@
    tasks:
 
     - name: Check ssh and netconf connectivity
-      wait_for: host={{ inventory_hostname }} port={{ item }} timeout=5
+      wait_for: host={{ junos_host }} port={{ item }} timeout=5
       with_items:
        - 22
        - 830
