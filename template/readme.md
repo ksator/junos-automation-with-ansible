@@ -12,22 +12,28 @@ Playbooks:
 
 Usage:   
 ```
-ansible-playbook template/pb.initial_configuration.yml
-ls template/render/
-
 ansible-playbook template/pb.common_settings.yml
-ls template/render/
+ls -l template/render/*common_settings.conf
+more template/render/172.30.179.65.common_settings.conf
 
+ansible-playbook template/pb.initial_configuration.yml --check
+ansible-playbook template/pb.initial_configuration.yml --check --diff
+ansible-playbook template/pb.initial_configuration.yml
+ls -l template/render/*initial_configuration.conf
+more template/render/172.30.179.65.initial_configuration.conf
+
+ansible-playbook template/pb.bgp.yml --check --diff --limit 172.30.179.65
 ansible-playbook template/pb.bgp.yml
-ls template/render/
+ls -l template/render/*.bgp.conf
+more template/render/172.30.179.65.bgp.conf
 
 ansible-playbook template/pb.load_cfg_from_template.yml
-ls template/render/
+ls -l template/render/
 ls template/
 ansible-playbook rollback/pb.yml
 
 ansible-playbook template/pb.load_cfg_from_template.replace.yml
-ls template/render/
+ls -l template/render/
 ls template/
 ansible-playbook rollback/pb.yml
 ```
