@@ -5,7 +5,7 @@ Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/J
 ```
 sudo ansible-galaxy install Juniper.junos  
 ```
-Requirement on Ansible: junos-eznc
+Requirement on Ansible: junos-eznc  
 Requirement on Junos devices: enable netconf on junos. 
 
 
