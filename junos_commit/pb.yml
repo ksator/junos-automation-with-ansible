@@ -11,7 +11,7 @@
    
    - name: confirm a commit confirm
      junos_commit:
-      host=Poclab123
+      host={{ inventory_hostname }}
       user={{ ADMUSER }}
       passwd={{ ADMPASS }}
       port=830
