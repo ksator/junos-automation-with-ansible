@@ -15,8 +15,10 @@ Usage:
 ansible-playbook junos_get_config/pb.2.yml  
 ls -l junos_get_config/configs/
 more junos_get_config/configs/172.30.179.102.conf
+more junos_get_config/junos_get_config.log
 
 ansible-playbook junos_get_config/pb.yml  
 ls -l junos_get_config/configs/
 more junos_get_config/configs/172.30.179.102.conf
+more junos_get_config/junos_get_config.log
 ```
