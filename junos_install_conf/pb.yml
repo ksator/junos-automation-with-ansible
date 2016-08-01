@@ -18,7 +18,7 @@
       overwrite=no
       file={{playbook_dir}}/{{ item }}
       comment="configured by ansible"
-      diffs_file={{playbook_dir}}/{{ junos_host }}_{{ item }}_{{ lookup('pipe', 'date +%m%d-%H%M%S') }}
+      diffs_file={{playbook_dir}}/{{ inventory_hostname }}_{{ item }}_{{ lookup('pipe', 'date +%m%d-%H%M%S') }}
      with_items:
       - syslog.set
       - banner.set
