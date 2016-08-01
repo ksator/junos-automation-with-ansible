@@ -108,14 +108,6 @@ more xxx/readme.md
 ansible-playbook xxx/pb.*.yml  
 ```
 
-### More examples on of how to use Ansible with Junos:   
-For more examples on of how to use Ansible with Junos, you can visit these repositories:   
-https://github.com/JNPRAutomate/ansible-junos-examples  
-https://github.com/dgjnpr/ansible-template-for-junos  
-https://github.com/JNPRAutomate/ansible-junos-evpn-vxlan    
-https://github.com/JNPRAutomate/ansible-demo-ip-fabric  
-
-
 ### Continuous integration with Travis CI
 There is a github webhook with Travis CI. 
 The playbooks in  this repository are tested by Travis CI, with several Ansible versions. 
@@ -129,7 +121,11 @@ Travis CI is testing them.
 #####Some playbooks interact with Junos:    
 ansible-playbook has a built in option (--syntax-check) to check the playbook's syntax. If there are any syntax error, Travis will fail the build and output the errors in the log. This is how Travis is testing our playbooks that interact with Junos.  
 
-
-
+### More examples on of how to use Ansible with Junos:   
+For more examples on of how to use Ansible with Junos, you can visit these repositories:   
+https://github.com/JNPRAutomate/ansible-junos-examples  
+https://github.com/dgjnpr/ansible-template-for-junos  
+https://github.com/JNPRAutomate/ansible-junos-evpn-vxlan    
+https://github.com/JNPRAutomate/ansible-demo-ip-fabric  
 
 
