@@ -1,6 +1,6 @@
 ---
  - name: pass set and delete commands
-   hosts: AMS-EX4300
+   hosts: AMS-test
    connection: local
    gather_facts: no
 
@@ -13,5 +13,5 @@
        - set system host-name newname
        - set system login message newbanner
       comment: configured by Ansible module junos_config
-      confirm: 2
+      #confirm: 2
 
