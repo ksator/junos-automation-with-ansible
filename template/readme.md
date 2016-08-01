@@ -14,13 +14,13 @@ Usage:
 ```
 ansible-playbook template/pb.common_settings.yml
 ls -l template/render/*common_settings.conf
-more template/render/172.30.179.65.common_settings.conf
+more template/render/ex4300-10.common_settings.conf
 
 ansible-playbook template/pb.initial_configuration.yml --check
 ansible-playbook template/pb.initial_configuration.yml --check --diff
 ansible-playbook template/pb.initial_configuration.yml
 ls -l template/render/*initial_configuration.conf
-more template/render/172.30.179.65.initial_configuration.conf
+more template/render/ex4300-10.initial_configuration.conf
 
 ansible-playbook template/pb.bgp.yml --check --diff --limit 172.30.179.65
 ansible-playbook template/pb.bgp.yml
