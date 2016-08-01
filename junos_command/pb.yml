@@ -14,7 +14,7 @@
        - show system uptime
      register: cli
 
-   - name: print some details from the device (hostname and junos version)
+   - name: print on Ansible some details from the device (hostname and junos version)
      debug: msg="device {{ cli.stdout[0]["multi-routing-engine-results"]["multi-routing-engine-item"]["software-information"]["host-name"] }} run version {{ cli.stdout[0]["multi-routing-engine-results"]["multi-routing-engine-item"]["software-information"]["junos-version"] }}"
    
    - name: save on the Ansible server the output of the various commands (only for devices not running a specific junos version)
