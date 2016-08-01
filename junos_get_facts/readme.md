@@ -6,7 +6,7 @@ Requirements on Ansible: junos-eznc
 Requirements on Junos devices: netconf 
 
 playbooks: 
-- pb.yml: get some facts from junos devices.  Save them locally. Print devices hostname if they are not running 12.3R11.2
+- **pb.yml**: get some facts from junos devices.  Save them locally. Print devices hostname if they are not running 12.3R11.2
 
 usage: 
 ```
