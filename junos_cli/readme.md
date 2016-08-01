@@ -8,8 +8,8 @@ Requirement on Junos devices: enable netconf on junos.
 
 
 Playbooks:
-- pb.txt.yml: pass cli to junos devices. Save output in text format  
-- pb.xml.yml: pass cli to junos devices. Save output in XML format  
+- **pb.txt.yml**: pass cli to junos devices. Save output in text format  
+- **pb.xml.yml**: pass cli to junos devices. Save output in XML format  
 
 Usage:   
 ```
