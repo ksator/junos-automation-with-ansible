@@ -9,7 +9,7 @@
    tasks:
     - name: configure netconf on junos devices
       junos_netconf: 
-       host: "{{ inventory_hostname }}"
+       host: "{{ junos_host }}"
        username: "{{ ADMUSER }}"
        password: "{{ ADMPASS }}"
        listens_on: 830
