@@ -25,7 +25,7 @@ more template/render/ex4300-10.initial_configuration.conf
 ansible-playbook template/pb.bgp.yml --check --diff --limit 172.30.179.65
 ansible-playbook template/pb.bgp.yml
 ls -l template/render/*.bgp.conf
-more template/render/172.30.179.65.bgp.conf
+more template/render/ex4300-10.bgp.conf
 
 ansible-playbook template/pb.load_cfg_from_template.yml --check --diff
 ansible-playbook template/pb.load_cfg_from_template.yml
