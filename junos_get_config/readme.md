@@ -5,10 +5,10 @@ Requirement on Ansible: junos-eznc
 Requirement on Junos devices: enable netconf  
 
 Playbooks: 
-- pb.junos_get_config.yml: It retrieves junos configuration from junos devices and save it to a file in the configs directory on the Ansible server. This will fail if the configs directory doesnt exist on the Ansible server.
-- pb.make_clean.yml: It makes sure the configs directory exist, and removes the old files from the configs directory for each host.  
-- pb.yml: it includes pb.make_clean.yml and pb.junos_get_config.yml playbooks.  
-- pb.2.yml: it does the same thing as pb.yml, with a different filter (so it retrieves another part of the junos configuration file)  
+- **pb.junos_get_config.yml**: It retrieves junos configuration from junos devices and save it to a file in the configs directory on the Ansible server. This will fail if the configs directory doesnt exist on the Ansible server.
+- **pb.make_clean.yml**: It makes sure the configs directory exist, and removes the old files from the configs directory for each host.  
+- **pb.yml**: it includes pb.make_clean.yml and pb.junos_get_config.yml playbooks.  
+- **pb.2.yml**: it does the same thing as pb.yml, with a different filter (so it retrieves another part of the junos configuration file)  
  
 Usage:
 ```
