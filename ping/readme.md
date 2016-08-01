@@ -15,6 +15,15 @@ SSH password:
     "ping": "pong"
 }
 
+
+ansible 172.30.204.10 -m ping -u administrator -k
+SSH password:
+172.30.204.10 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+
+
 ansible vm -m ping -u administrator --ask-pass
 SSH password: 
 172.30.204.10 | SUCCESS => {
