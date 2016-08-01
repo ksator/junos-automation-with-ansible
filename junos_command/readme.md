@@ -9,7 +9,7 @@ Requirements on  Junos devices: netconf
 
 Playbooks:  
 - pb.check_lldp.yml: check if the lldp neighbors are the ones we expect (so check if there is no cabling error) 
-- pb.check.physical.topology.yml: check various things on Junos devices like interfaces op states, lldp neighbors, netconf API, ...
+- pb.check.physical.topology.yml: check various things on Junos devices like interfaces operational states (are they up?), lldp neighbors (is there any cabling error?), netconf API (is it configured?), ...  
 - pb.check.bgp.yml: check if the state of your bgp neighbors are established.  
 - pb.check.bgp_2.yml: check if the state of your bgp neighbors are established. 
 - pb.check.routes.yml: check details in the device routing table 
