@@ -19,6 +19,7 @@ ansible-playbook rollback/pb.yml
 
 ansible-playbook junos_template/pb.bgp.2.yml  
 ls junos_template/render/   
+more junos_template/render/172.30.179.65.conf
 ansible-playbook rollback/pb.yml
 
 ansible-playbook junos_template/pb.change_dns_servers.yml --check --diff --limit 172.30.179.65
