@@ -73,6 +73,9 @@ The Junos devices we are using in this repository are only accessible from the J
 But you can very easily reuse this automation content with your own Junos devices (Junos physical devices, Junos virtual devices, vagrant boxes running Junos): you would just need to adapt this content with your IP addresses, username and password.   
 If you want to build a Junos topology using Vagrant boxes, you can use this repository: https://github.com/ksator/vagrant-junos    
 
+#####Topology:   
+The lab topology is described in the file [lab topology.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/lab%20topology.pdf)  
+
 #####Inventory file:  
 The default ansible 'hosts' file is supposed to live in /etc/ansible/hosts  
 The inventory file we are using in this repository is **hosts**: It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.   
