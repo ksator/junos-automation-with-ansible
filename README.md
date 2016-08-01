@@ -80,12 +80,14 @@ There is an **ansible.cfg** file at the root of the repository (https://github.c
 It refers to our inventory file (**hosts**): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands.  
 
 #####Variables:   
-**group_vars** and **host_vars** directories at the root of this repository define variables for hosts and for groups. 
+**group_vars** and **host_vars** directories at the root of this repository define variables for hosts and for groups.  
+Ansible uses them.   
 Some playbooks use other variables as well. 
 
 #####Playbooks:  
 All playbooks are named **pb.*.yml**  
-You will find them in different directories. Each directory has a readme file as well.    
+You will find them in different directories.  
+Each directory has a readme file as well.    
 
 #####Installation instructions:  
 
