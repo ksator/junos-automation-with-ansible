@@ -13,16 +13,16 @@ Another task in the same playbook audit the BGP status of Junos devices (checkin
 
 Usage:
 ```
-ansible-playbook junos_template/pb.bgp.yml --limit 172.30.179.65 --tags "configuration" --check --diff  
+ansible-playbook junos_template/pb.bgp.yml --limit ex4300-4 --tags "configuration" --check --diff  
 ansible-playbook junos_template/pb.bgp.yml  
 ansible-playbook rollback/pb.yml
 
 ansible-playbook junos_template/pb.bgp.2.yml  
 ls junos_template/render/   
-more junos_template/render/172.30.179.65.conf
+more junos_template/render/ex4300-10.conf
 ansible-playbook rollback/pb.yml
 
-ansible-playbook junos_template/pb.change_dns_servers.yml --check --diff --limit 172.30.179.65
+ansible-playbook junos_template/pb.change_dns_servers.yml --check --diff --limit ex4300-4
 ansible-playbook junos_template/pb.change_dns_servers.yml
 ansible-playbook rollback/pb.yml
 ```
