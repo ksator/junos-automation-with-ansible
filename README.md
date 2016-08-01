@@ -58,7 +58,7 @@ All these Ansible modules for Junos require the Netconf API to be configured on 
 set system services netconf ssh
 commit
 ```
-Note: It is not required to do this with cli. This can be done with the module junos_netconf. 
+Note: It is not required to do this with cli. This can be done with the Ansible module junos_netconf. 
 
 #About this project:   
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
