@@ -33,6 +33,7 @@ ansible-playbook rollback/pb.yml
 
 ansible-playbook junos_config/pb.vlans.yml
 ansible-playbook junos_command/pb.check.vlans.yml
+ansible-playbook junos_config/pb.rollback.yml
 
 ansible-playbook junos_command/pb.yml
 ansible-playbook junos_command/pb.rpc.yml
