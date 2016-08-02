@@ -93,7 +93,8 @@ Some playbooks use also other variables.
 #####Playbooks:  
 All playbooks are named **pb.*.yml**  
 These playbooks use the modules from the two Ansible librairies to interact with Junos (the one built by Juniper and hosted on galaxy, and the core modules built by Ansible).  
-They also use other Ansible modules (template, assemble, uri, wait_for, debug, ...). They are ready to use if you access to the lab.    
+They also use other Ansible modules (template, assemble, uri, wait_for, debug, ...).  
+They are all ready to use if you access to the lab.    
 You will find them into different directories.  
 
 #####Directories:
