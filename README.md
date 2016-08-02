@@ -87,13 +87,14 @@ It refers to our inventory file (**hosts**): So, despite the inventory file is n
 #####Variables:   
 **group_vars** and **host_vars** directories at the root of this repository define variables for hosts and for groups.  
 The inventory file (**hosts** file at the root of the repository) also defines some variables.   
-Ansible uses all of them.   
+Our playbooks use all of them.   
 Some playbooks use also other variables.  
 
 #####Playbooks:  
 All playbooks are named **pb.*.yml**  
-These playbooks use the modules from the two Ansible librairies to interact with Junos (the one built by Juniper and hosted on galaxy, and the core modules built by Ansible). They also use other Ansible modules (template, assemble, uri, wait_for, debug, ...). They are ready to use if you access to the lab.  
-You will find them in different directories.  
+These playbooks use the modules from the two Ansible librairies to interact with Junos (the one built by Juniper and hosted on galaxy, and the core modules built by Ansible).  
+They also use other Ansible modules (template, assemble, uri, wait_for, debug, ...). They are ready to use if you access to the lab.    
+You will find them into different directories.  
 
 #####Directories:
 Playbooks are in different directories.   
@@ -117,7 +118,7 @@ ansible-playbook xxx/pb.*.yml
 
 ### Continuous integration with Travis CI
 There is a github webhook with Travis CI. 
-The playbooks in  this repository are tested by Travis CI.  
+The playbooks in  this repository are tested automatically by Travis CI.  
 The files **.travis.yml** and **requirements.txt** at the root of this repository are used for this.  
 
 We are using two types of playbooks in this repository:  
