@@ -1,0 +1,14 @@
+---
+topo:
+    EX4300-04:
+        port1: { name: ge-0/0/0,     peer: ex4300-9,     pport: port2 }
+        port2: { name: ge-0/0/1,     peer: ex4300-10,     pport: port2 }
+        
+    EX4300-09:
+        port1: { name: ge-0/0/0,     peer: ex4300-10,     pport: port1 }
+        port2: { name: ge-0/0/1,     peer: ex4300-4,     pport: port1 }
+        
+    EX4300-10:
+        port1: { name: ge-0/0/0,    peer: ex4300-9,       pport: port1 }
+        port2: { name: ge-0/0/1,    peer: ex4300-4,       pport: port2 }
+

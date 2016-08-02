@@ -2,14 +2,14 @@
 loopback: 10.20.1.1
 local_asn: 104
 neighbors:
-   - interface: ge-0/0/0
-     name: ex4300-9
+   - interface: "{{ topo[inventory_hostname].port1.name }}"
+     name: "{{ topo[inventory_hostname].port1.peer }}"
      asn: 109
      peer_ip: 192.168.0.1 
      local_ip: 192.168.0.0
      peer_loopback: 192.179.0.95
-   - interface: ge-0/0/1 
-     name: ex4300-10
+   - interface: "{{ topo[inventory_hostname].port2.name }}"
+     name: "{{ topo[inventory_hostname].port2.peer }}"
      asn: 110
      peer_ip: 192.168.0.3
      local_ip: 192.168.0.2 
