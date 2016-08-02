@@ -71,13 +71,14 @@ There is an Ansible presentation available in this repository: [Ansible presenta
 The playbooks in this repository are ready to use if you access to the Junos devices refered into this project. 
 
 #####Lab:  
+The Junos devices we are using in this repository are in a lab which is only accessible from the Juniper Networks corporate network.   
 The lab topology is described in the file [lab topology.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/lab%20topology.pdf)  
-The Junos devices we are using in this repository are in lab which is only accessible from the Juniper Networks corporate network.   
-But you can very easily reuse this automation content with your own Junos devices (Junos physical devices, Junos virtual devices, vagrant boxes running Junos): you would just need to build a similar lab and to adapt this content with your IP addresses, username and password.   
+
+You can very easily reuse this automation content with your own Junos devices (Junos physical devices, Junos virtual devices, vagrant boxes running Junos): you would just need to build a similar topology and to adapt this content with your IP addresses, username and password.   
 If you want to build a Junos topology using Vagrant boxes, you can refer to this repository: https://github.com/ksator/vagrant-junos    
 #####Inventory file:  
-The default ansible 'hosts' file is supposed to live in /etc/ansible/hosts  
-The inventory file we are using in this repository is **hosts**: It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.   
+The default 'hosts' file is supposed to live in /etc/ansible/hosts  
+The inventory file we are using in this repository is **hosts**. It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.   
 
 #####Config file for ansible:   
 There is an **ansible.cfg** file at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.cfg).  
