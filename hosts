@@ -26,6 +26,3 @@ ex4300-10   junos_host=172.30.179.96
 [AMS-MX]
 mx80-17     junos_host=172.30.177.170
 
-[AMS-EX4300:vars]
-topology_file=topology.yml
-
