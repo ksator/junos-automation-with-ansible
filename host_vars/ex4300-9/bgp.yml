@@ -3,13 +3,13 @@ loopback: 10.20.1.2
 local_asn: 109
 neighbors:
    - interface: "{{ topo[inventory_hostname].port1.name }}"
-     name: "{{ topo[inventory_hostname].port1.item }}"
+     name: "{{ topo[inventory_hostname].port1.peer }}"
      asn: 110
      peer_ip: 192.168.0.4 
      local_ip: 192.168.0.5
      peer_loopback: 192.179.0.96
    - interface: "{{ topo[inventory_hostname].port2.name }}"
-     name: "{{ topo[inventory_hostname].port2.item }}"
+     name: "{{ topo[inventory_hostname].port2.peer }}"
      asn: 104
      peer_ip: 192.168.0.0
      local_ip: 192.168.0.1
