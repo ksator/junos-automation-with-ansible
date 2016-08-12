@@ -117,6 +117,9 @@ more xxx/readme.md
 ansible-playbook xxx/pb.*.yml  
 ```
 
+##### Contributions, bugs, questions, enhancement requests:      
+Please submit github issues or pull requests.  
+
 ### Continuous integration with Travis CI
 There is a github webhook with Travis CI. 
 The playbooks in  this repository are tested automatically by Travis CI.  
