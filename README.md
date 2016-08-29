@@ -153,7 +153,7 @@ neighbors:
      peer_loopback: 192.179.0.65
 ```
 - **files in the host_vars directory in the topology_independent branch:**    
-in the topology_independent branch, they use {{topo}}. So if we change the file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml), the content of the files in the host_vars directory change.    
+in the topology_independent branch, they use {{topo}}. So if we change the file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml), the content of the files in the host_vars directory change: no need to rewrite it.   
 Example with https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/host_vars/ex4300-10/bgp.yml  
 ```
 ---
