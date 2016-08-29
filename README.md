@@ -79,7 +79,7 @@ If you want to build a Junos topology using Vagrant boxes, you can refer to this
 #####Inventory file:  
 The default 'hosts' file is supposed to live in /etc/ansible/hosts  
 The inventory file we are using in this repository is **hosts**. It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.  
-it also define the ip address of each device with the variable junos_host.   
+it also define the ip address of each device with the variable **junos_host**. This variable is reused in the playbooks.     
 
 #####Config file for ansible:   
 There is an **ansible.cfg** file at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.cfg).  
@@ -102,18 +102,21 @@ You will find them into different directories.
 Playbooks are in different directories.   
 Each directory has a readme file as well. Please read the instructions in the readme.md file of each directory before executing the playbooks.    
 
-#####Branches: 
+#####Toplogy:
+
+The lab topology is described in the file [lab topology.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/lab%20topology.pdf)  
+
 There are currently 2 branches into this repository: 
-- **master** - This is the original one, and the active one. 
+- **master** - This is the original one, and the active one.   
 - **topology_independent** - This is a new one. Probably not always up to date/in sync with the master branch. The topology_independent branch allows to use a different network topology without changing the playbooks.   
 
 Here's how the topology_independent branch works: 
 
-###### topology.yml file: 
-I added the file topology.yml into group_vars/all 
+I added the file **topology.yml** into group_vars/all 
 https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml 
 This file defines the topology.
 here's an example:
+```
 ---
 topo:
     ex4300-4:
@@ -127,6 +130,7 @@ topo:
     ex4300-10:
         port1: { name: ge-0/0/0,    peer: ex4300-9,       pport: port1 }
         port2: { name: ge-0/0/1,    peer: ex4300-4,       pport: port2 }
+```
 
 it is a dictionnary with the key topo. the value of this key is the topology.
 because this file is located into the directory group_vars/all, {{topo}} can be automatically used for all devices. 
