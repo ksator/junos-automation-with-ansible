@@ -103,9 +103,7 @@ The lab topology is described in the file [lab topology.pdf] (https://github.com
 You can very easily reuse this automation content with your own Junos devices (Junos physical devices, Junos virtual devices, vagrant boxes running Junos): you would just need to build a similar topology and to adapt this content with your IP addresses, username and password.   
 If you want to build a Junos topology using Vagrant boxes, you can refer to this repository: https://github.com/ksator/vagrant-junos  
 
-#####Topology:
-
-The lab topology is described in the file [lab topology.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/lab%20topology.pdf)  
+#####Branches:
 
 There are currently 2 branches into this repository: 
 - **master** - This is the original one, and the active one.   
@@ -113,9 +111,7 @@ There are currently 2 branches into this repository:
 
 Here's how the **topology_independent** branch works: 
 
-There is a file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml) into group_vars/all 
-This yaml file defines the topology.
-here's an example:
+There is a file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml) into group_vars/all. This yaml file defines the topology. here's an example:  
 ```
 ---
 topo:
@@ -131,8 +127,7 @@ topo:
         port1: { name: ge-0/0/0,    peer: ex4300-9,       pport: port1 }
         port2: { name: ge-0/0/1,    peer: ex4300-4,       pport: port2 }
 ```
-
-It is a dictionnary with the key topo. The value of this key is the topology.  
+This file is a dictionnary with the key topo. The value of this key is the topology.  
 Because this file is located into the directory group_vars/all, {{topo}} can be automatically used for all devices. 
 
 Files in the host_vars directory were rewrited.    
@@ -157,7 +152,6 @@ neighbors:
      local_ip: 192.168.0.3
      peer_loopback: 192.179.0.65
 ```
-
 - **files in the host_vars directory in the topology_independent branch:**    
 in the topology_independent branch, they use {{topo}}. So if we change the file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml), the content of the files in the host_vars directory change.    
 Example with https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/host_vars/ex4300-10/bgp.yml  
