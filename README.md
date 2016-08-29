@@ -78,7 +78,8 @@ You can very easily reuse this automation content with your own Junos devices (J
 If you want to build a Junos topology using Vagrant boxes, you can refer to this repository: https://github.com/ksator/vagrant-junos    
 #####Inventory file:  
 The default 'hosts' file is supposed to live in /etc/ansible/hosts  
-The inventory file we are using in this repository is **hosts**. It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.   
+The inventory file we are using in this repository is **hosts**. It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.  
+it also define the ip address of each device with the variable junos_host.   
 
 #####Config file for ansible:   
 There is an **ansible.cfg** file at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.cfg).  
@@ -100,6 +101,79 @@ You will find them into different directories.
 #####Directories:
 Playbooks are in different directories.   
 Each directory has a readme file as well. Please read the instructions in the readme.md file of each directory before executing the playbooks.    
+
+#####Branches: 
+There are currently 2 branches into this repository: 
+- **master** - This is the original one, and the active one. 
+- **topology_independent** - This is a new one. Probably not always up to date/in sync with the master branch. The topology_independent branch allows to use a different network topology without changing the playbooks.   
+
+Here's how the topology_independent branch works: 
+
+###### topology.yml file: 
+I added the file topology.yml into group_vars/all 
+https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml 
+This file defines the topology.
+here's an example:
+---
+topo:
+    ex4300-4:
+        port1: { name: ge-0/0/0,     peer: ex4300-9,     pport: port2 }
+        port2: { name: ge-0/0/1,     peer: ex4300-10,     pport: port2 }
+        
+    ex4300-9:
+        port1: { name: ge-0/0/0,     peer: ex4300-10,     pport: port1 }
+        port2: { name: ge-0/0/1,     peer: ex4300-4,     pport: port1 }
+        
+    ex4300-10:
+        port1: { name: ge-0/0/0,    peer: ex4300-9,       pport: port1 }
+        port2: { name: ge-0/0/1,    peer: ex4300-4,       pport: port2 }
+
+it is a dictionnary with the key topo. the value of this key is the topology.
+because this file is located into the directory group_vars/all, {{topo}} can be automatically used for all devices. 
+
+######files in the host_vars directory:  
+I rewrited files in the host_vars directory.   
+In the master branch, they are static.   
+Example with https://github.com/ksator/ansible-training-for-junos/blob/master/host_vars/ex4300-10/bgp.yml  
+```
+---  
+loopback: 10.20.1.3  
+local_asn: 110
+neighbors:
+   - interface: ge-0/0/0
+     name: ex4300-9
+     asn: 109
+     peer_ip: 192.168.0.5  
+     local_ip: 192.168.0.4
+     peer_loopback: 192.179.0.95
+   - interface: ge-0/0/1 
+     name: ex4300-4
+     asn: 104
+     peer_ip: 192.168.0.2
+     local_ip: 192.168.0.3
+     peer_loopback: 192.179.0.65
+```
+
+in the topology_independent branch, they use {{topo}}  
+Example with https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/host_vars/ex4300-10/bgp.yml  
+```
+---
+loopback: 10.20.1.3
+local_asn: 110
+neighbors:
+   - interface: "{{ topo[inventory_hostname].port1.name }}"
+     name: "{{ topo[inventory_hostname].port1.peer }}"
+     asn: 109
+     peer_ip: 192.168.0.5  
+     local_ip: 192.168.0.4
+     peer_loopback: 192.179.0.95
+   - interface: "{{ topo[inventory_hostname].port2.name }}"
+     name: "{{ topo[inventory_hostname].port2.peer }}"
+     asn: 104
+     peer_ip: 192.168.0.2
+     local_ip: 192.168.0.3
+     peer_loopback: 192.179.0.65
+```
 
 #####Installation instructions:  
 
