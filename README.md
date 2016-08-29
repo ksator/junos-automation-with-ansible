@@ -102,19 +102,18 @@ You will find them into different directories.
 Playbooks are in different directories.   
 Each directory has a readme file as well. Please read the instructions in the readme.md file of each directory before executing the playbooks.    
 
-#####Toplogy:
+#####Topology:
 
 The lab topology is described in the file [lab topology.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/lab%20topology.pdf)  
 
 There are currently 2 branches into this repository: 
 - **master** - This is the original one, and the active one.   
-- **topology_independent** - This is a new one. Probably not always up to date/in sync with the master branch. The topology_independent branch allows to use a different network topology without changing the playbooks.   
+- **topology_independent** - This is a new one. The automation content is probably not always up to date/in sync with the master branch. The topology_independent branch allows to use a different network topology without changing the playbooks.   
 
 Here's how the topology_independent branch works: 
 
-I added the file **topology.yml** into group_vars/all 
-https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml 
-This file defines the topology.
+There is a file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml) into group_vars/all 
+This yaml file defines the topology.
 here's an example:
 ```
 ---
@@ -132,12 +131,12 @@ topo:
         port2: { name: ge-0/0/1,    peer: ex4300-4,       pport: port2 }
 ```
 
-it is a dictionnary with the key topo. the value of this key is the topology.
-because this file is located into the directory group_vars/all, {{topo}} can be automatically used for all devices. 
+It is a dictionnary with the key topo. The value of this key is the topology.  
+Because this file is located into the directory group_vars/all, {{topo}} can be automatically used for all devices. 
 
-######files in the host_vars directory:  
-I rewrited files in the host_vars directory.   
-In the master branch, they are static.   
+Files in the host_vars directory were rewrited.    
+- files in the host_vars directory in the master branch: 
+They are static. So if you use another network topology, it doesnt work anymore until you rewrite these files.   
 Example with https://github.com/ksator/ansible-training-for-junos/blob/master/host_vars/ex4300-10/bgp.yml  
 ```
 ---  
@@ -158,7 +157,8 @@ neighbors:
      peer_loopback: 192.179.0.65
 ```
 
-in the topology_independent branch, they use {{topo}}  
+- files in the host_vars directory in the topology_independent branch:  
+in the topology_independent branch, they use {{topo}}. So if we change the file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml), the content of the files in the host_vars directory change.    
 Example with https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/host_vars/ex4300-10/bgp.yml  
 ```
 ---
