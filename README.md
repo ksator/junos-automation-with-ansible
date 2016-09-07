@@ -8,7 +8,7 @@ There are two Ansible librairies to interact with Junos.
 Both of them are used into this repository.  
 
 ###Ansible modules for Junos built by Juniper:  
-
+Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).    
 Modules (version 1.3.1):     
 - **junos_cli** - Execute CLI on device and save the output locally  
 - **junos_commit** - Execute commit on device  
