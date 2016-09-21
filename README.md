@@ -32,7 +32,7 @@ sudo ansible-galaxy install Juniper.junos
 
 ###Ansible core modules for Junos built by Ansible:   
 
-Modules (Ansible 2.1):   
+Modules (Ansible 2.1.1.0):   
 - **junos_command** - Execute arbitrary commands on a remote device running Junos  
 - **junos_config** - Manage configuration on remote devices running Junos  
 - **junos_facts** - Collect facts from remote device running Junos  
