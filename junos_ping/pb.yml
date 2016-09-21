@@ -1,0 +1,33 @@
+---
+
+ - name: check routing details
+   hosts: AMS-EX4300
+   connection: local
+   gather_facts: no
+   roles:
+   - Juniper.junos
+
+   tasks:
+
+   - name: check if junos devices can ping directly connected ip @
+     junos_ping:
+        host: "{{ junos_host }}"
+        user: "{{ ADMUSER }}"
+        passwd: "{{ ADMPASS }}"
+        dest_ip: "{{ item.peer_ip }}"
+        source_ip: "{{ item.local_ip }}"
+        ttl: 1
+     with_items:
+      - "{{ neighbors }}"
+
+   - name: check if junos devices can ping some ip @ supposed to be learnt with BGP
+     junos_ping:
+        host: "{{ junos_host }}"
+        user: "{{ ADMUSER }}"
+        passwd: "{{ ADMPASS }}"
+        dest_ip: "{{ item.peer_loopback }}"
+        source_ip: "{{ item.local_ip }}"
+        ttl: 1
+     with_items:
+      - "{{ neighbors }}"
+

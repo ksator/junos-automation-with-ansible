@@ -1,6 +1,6 @@
 module: junos_install_os  
 Install a Junos OS image. 
-doc: http://junos-ansible-modules.readthedocs.io/en/1.3.1/  
+doc: http://junos-ansible-modules.readthedocs.io/  
 installation: this role is hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/). To download the junos role to the Ansible server, execute the command: ansible-galaxy install Juniper.junos  
 requirements: enable netconf on junos, install py-junos-eznc on Ansible.    
 
