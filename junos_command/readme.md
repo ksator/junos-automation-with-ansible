@@ -18,6 +18,7 @@ Playbooks:
 - **pb.check.vlans.yml**: check from devices operationnal state if desirated vlans are presents. you first need to configure these VLANs  on your devices.  you can use this playbook to congifure the VLANs on your device  https://github.com/ksator/ansible-training-for-junos/blob/master/junos_config/pb.vlans.yml  
 - **pb.yml**: pass various commands on Junos devices. Parse the commands output. Print on Ansible some details gathered from the device. Save the output on the Ansible server.   
 - **pb.rpc.yml**: pass rpc to Junos devices. And print on Ansible the result in JSON and XML format.  
+- **pb.rpc3.yml**: pass rpc to audit BGP state.  
 
 Usage:  
 ```
