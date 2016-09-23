@@ -5,8 +5,8 @@ Requirement on Ansible: junos-eznc
 Requirement on Junos devices: enable netconf on junos. 
 
 Playbooks: 
-- **pb.yml**: it passes an rpc to junos devices and save the output on the Ansible server.  
-
+- **pb.yml**: it passes an rpc to junos devices and save the output on the Ansible server. 
+- **pb.2.yml**: it passes an rpc with arguments to a junos device, and print the rpc reply in json 
 
 Usage: 
 ```
