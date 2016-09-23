@@ -13,4 +13,6 @@ Usage:
 ansible-playbook junos_rpc/pb.yml  
 ls -l junos_rpc/
 more junos_rpc/ex4200-11.conf
+
+ansible-playbook junos_rpc/pb.2.yml  
 ```
