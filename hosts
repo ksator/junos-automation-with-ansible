@@ -4,17 +4,29 @@ AMS-EX4300
 AMS-MX
 
 [AMS-EX4200]
-ex4200-2    junos_host=172.30.179.102
-ex4200-3    junos_host=172.30.179.103
-ex4200-4    junos_host=172.30.179.104
-ex4200-5    junos_host=172.30.179.105
-ex4200-6    junos_host=172.30.179.106
-ex4200-9    junos_host=172.30.179.109
-ex4200-10   junos_host=172.30.179.110
-ex4200-11   junos_host=172.30.179.111
+#ex4200-2    junos_host=172.30.179.102
+#ex4200-3    junos_host=172.30.179.103
+#ex4200-4    junos_host=172.30.179.104
+#ex4200-5    junos_host=172.30.179.105
+#ex4200-6    junos_host=172.30.179.106
+#ex4200-9    junos_host=172.30.179.109
+#ex4200-10   junos_host=172.30.179.110
+#ex4200-11   junos_host=172.30.179.111
+WFD-QFX5100-48T-01 junos_host=10.19.10.13
+WFD-QFX5100-48S-07 junos_host=10.19.10.7
+WFD-QFX5100-48S-06 junos_host=10.19.10.5
+WFD-QFX5100-48S-05 junos_host=10.19.10.113
+WFD-QFX5100-48S-08 junos_host=10.19.10.21
+WFD-QFX5100-48S-11 junos_host=10.19.10.97
+WFD-QFX5100-48S-12 junos_host=10.19.10.99
+WFD-QFX5100-48S-19 junos_host=10.19.10.101
+WFD-QFX5100-48T-02 junos_host=10.19.10.15
+WFD-QFX5100-48T-04 junos_host=10.19.10.211
+WFD-QFX5100-48S-14 junos_host=10.19.10.103
 
 [AMS-test]
-ex4200-11
+#ex4200-11
+WFD-QFX5100-48T-04
 
 [AMS-EX4300]
 ex4300-4    junos_host=172.30.179.65
@@ -22,4 +34,6 @@ ex4300-9    junos_host=172.30.179.95
 ex4300-10   junos_host=172.30.179.96
 
 [AMS-MX]
-mx80-17     junos_host=172.30.177.170
+#mx80-17     junos_host=172.30.177.170
+WFD-MX80-01  junos_host=10.19.10.23
+WFD-MX80-02  junos_host=10.19.10.33
