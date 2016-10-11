@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/ksator/ansible-training-for-junos.svg?branch=master)](https://travis-ci.org/ksator/ansible-training-for-junos)  
 
+
+
 #Ansible librairies to interact with Junos:  
 There are two Ansible librairies to interact with Junos.  
 - An Ansible library for Junos built by Juniper.  
