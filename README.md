@@ -7,7 +7,6 @@ There are two Ansible librairies to interact with Junos.
 
 Both of them are used into this repository.  
 
-
 ###Ansible modules for Junos built by Juniper:  
 Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).    
 Modules (version 1.4.0):     
