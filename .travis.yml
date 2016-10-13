@@ -77,6 +77,6 @@ notifications:
       - khelil.sator.git@gmail.com
     on_failure: always
   slack: 
-    ksator-junos:AzUMaM0SlS68va4J5RwYdQua
+    ksator-junos:XAUJP6A29mgYtUtGIJQdPBS7
 
 
