@@ -69,7 +69,7 @@ Note: It is not required to use cli to configure Netconf on Junos devices. This 
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
 I am using them to deliver Ansible trainings to network engineers.  
 
-There is an Ansible presentation available in this repository: [Ansible presentation.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/Ansible%20presentation.pdf)  
+There is an Ansible presentation available in this repository: [Ansible.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/Ansible.pdf)  
  
 ###How to use this project: 
 
