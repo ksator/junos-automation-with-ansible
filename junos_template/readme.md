@@ -8,7 +8,7 @@ Requirements on  Junos devices: netconf
 Playbooks:  
 - **pb.bgp.yml**: It load a configuration file to Junos devices from the jinja 2 template **bgp.j2** that is automatically rendered (the same task renders the jinja2 template with BGP details and loads it to Junos devices).  
 Another task in the same playbook audit the BGP status of Junos devices (checking if the new BGP neighbors are established, and checking if the Junos devices learnt some routes wuth BGP. For more details about these check with the **junos_command** module and its optional **waitfor** argument, please visit https://github.com/ksator/ansible-training-for-junos/tree/master/junos_command).  
-- **pb.bgp.2.yml**: it does the same thing as **pb.bgp.yml** but we splitted into two separate tasks the template rendering (so we can have a local copy of the document) and the configuration loading. Also **pb.bgp.2.yml** runs more tests than **pb.bgp.yml* 
+- **pb.bgp.2.yml**: it does the same thing as **pb.bgp.yml** but we splitted into two separate tasks the template rendering (so we can have a local copy of the document) and the configuration loading. Also **pb.bgp.2.yml** runs more tests than **pb.bgp.yml** 
 - **pb.change_dns_servers.yml**: it uses the template **change-dns-servers.j2** and the variables **change-dns-servers.yml** to reconfigure the list of DNS servers on Junos Devices (adding some and removing others). It retrieves the new configuration. 
 
 Usage:
