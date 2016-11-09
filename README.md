@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/ksator/ansible-training-for-junos.svg?branch=master)](https://travis-ci.org/ksator/ansible-training-for-junos)  
+[![Build Status](https://travis-ci.org/ksator/ansible-training-for-junos-automation.svg?branch=master](https://travis-ci.org/ksator/ansible-training-for-junos-automation)  
+
 
 
 
