@@ -33,7 +33,7 @@ ls -l template/render/*.conf
 more template/render/ex4300-10.conf
 ls -l template/*.log
 more template/ex4300-10.log
-ansible-playbook rollback/pb.yml
+ansible-playbook junos_rollback/pb.yml
 
 ansible-playbook template/pb.load_cfg_from_template.replace.yml --check --diff
 ansible-playbook template/pb.load_cfg_from_template.replace.yml
@@ -41,5 +41,5 @@ ls -l template/render/*.conf
 more template/render/ex4300-10.conf
 ls -l template/*.log
 more template/ex4300-10.log
-ansible-playbook rollback/pb.yml
+ansible-playbook junos_rollback/pb.yml
 ```
