@@ -10,6 +10,5 @@ Playbooks:
 Usage:
 ```
 ansible-playbook junos_netconf/pb.yml --check   
-ansible-playbook junos_netconf/pb.yml --check --diff
 ansible-playbook junos_netconf/pb.yml  
 ```
