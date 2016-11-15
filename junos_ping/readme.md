@@ -14,6 +14,6 @@ Usage:
 ```
 ansible-playbook junos_template/pb.bgp.2.yml
 ansible-playbook junos_ping/pb.yml
-ansible-playbook rollback/pb.yml
+ansible-playbook junos_rollback/pb.yml
 ```
 
