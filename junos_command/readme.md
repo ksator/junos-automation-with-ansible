@@ -30,7 +30,7 @@ ansible-playbook junos_command/pb.check.routes.2.yml
 ansible-playbook junos_command/pb.check.routes.3.yml
 ansible-playbook junos_command/pb.check_lldp.yml  
 ansible-playbook junos_command/pb.check.physical.topology.yml
-ansible-playbook rollback/pb.yml
+ansible-playbook junos_rollback/pb.yml
 
 ansible-playbook junos_config/pb.vlans.yml
 ansible-playbook junos_command/pb.check.vlans.yml
