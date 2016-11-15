@@ -8,11 +8,11 @@ Playbooks:
 
 Usage:   
 ```
-sudo ansible-playbook assemble/pb.yml --diff
+sudo ansible-playbook assemble/pb.yml
 sudo ansible-playbook assemble/pb.yml
 ls -l assemble/
 more assemble/junos.conf
-sudo ansible-playbook assemble/pb.yml --diff
+sudo ansible-playbook assemble/pb.yml
 nano assemble/fragments/bgp.txt
-sudo ansible-playbook assemble/pb.yml --diff
+sudo ansible-playbook assemble/pb.yml
 ```
