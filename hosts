@@ -2,24 +2,33 @@
 AMS-EX4200
 AMS-EX4300
 AMS-MX
+AMS-QFX
 
 [AMS-EX4200]
-ex4200-2    junos_host=172.30.179.102
-ex4200-3    junos_host=172.30.179.103
-ex4200-4    junos_host=172.30.179.104
-ex4200-5    junos_host=172.30.179.105
-ex4200-6    junos_host=172.30.179.106
-ex4200-9    junos_host=172.30.179.109
-ex4200-10   junos_host=172.30.179.110
-ex4200-11   junos_host=172.30.179.111
+#ex4200-2    junos_host=172.30.179.102
+#ex4200-3    junos_host=172.30.179.103
+#ex4200-4    junos_host=172.30.179.104
+#ex4200-5    junos_host=172.30.179.105
+#ex4200-6    junos_host=172.30.179.106
+#ex4200-10   junos_host=172.30.179.110
+#ex4200-11   junos_host=172.30.179.111
+ex4200-7 junos_host=172.30.179.107
+ex4200-8 junos_host=172.30.179.108
+ex4200-9 junos_host=172.30.179.109
+ex4200-12 junos_host=172.30.179.112
 
 [AMS-test]
-ex4200-11
+#ex4200-7
 
 [AMS-EX4300]
-ex4300-4    junos_host=172.30.179.65
-ex4300-9    junos_host=172.30.179.95
-ex4300-10   junos_host=172.30.179.96
+#ex4300-4    junos_host=172.30.179.65
+#ex4300-10   junos_host=172.30.179.96
+ex4300-9     junos_host=172.30.179.95
+ex4300-18    junos_host=172.30.179.74
+ex4300-17    junos_host=172.30.179.73
 
 [AMS-MX]
 mx80-17     junos_host=172.30.177.170
+
+[AMS-QFX]
+qfx5100-44  junos_host=172.30.179.239
