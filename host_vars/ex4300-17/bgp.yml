@@ -1,16 +1,16 @@
 ---
-loopback: 10.20.1.1
+loopback: 192.179.0.73
 local_asn: 104
 neighbors:
    - interface: ge-0/0/0
      name: ex4300-9
      asn: 109
-     peer_ip: 192.168.0.1 
-     local_ip: 192.168.0.0
+     peer_ip: 192.168.0.5 
+     local_ip: 192.168.0.4
      peer_loopback: 192.179.0.95
    - interface: ge-0/0/1 
-     name: ex4300-10
+     name: ex4300-18
      asn: 110
      peer_ip: 192.168.0.3
      local_ip: 192.168.0.2 
-     peer_loopback: 192.179.0.96
+     peer_loopback: 192.179.0.74

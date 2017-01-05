@@ -1,5 +1,5 @@
 --- 
-host_name: ex4300-4
-ip: 172.30.179.65
+host_name: ex4300-18
+ip: 172.30.179.74
 mask: 24 
 default_gateway: 172.30.179.1
