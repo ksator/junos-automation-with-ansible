@@ -9,7 +9,7 @@
     junos_facts:
       config: yes
       config_format: xml
-      provider: "{{ credential }}"
+      provider: "{{ credentials }}"
     register: result
 
   - name: Configuration in JSON (converted from XML)
