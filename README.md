@@ -3,7 +3,7 @@
 
 
 #Ansible librairies to interact with junos
-There are two Ansible librairies to interact with Junos.  
+There are two Ansible librairies to interact with Junos
 - An Ansible library for Junos built by Juniper.  
 - An Ansible library for Junos built by Ansible.  
 
