@@ -17,7 +17,7 @@
 
    - name: Print some facts
      debug:
-      msg: device "{{junos.facts.hostname}}" runs version "{{junos.facts.version}}"
+      msg: "device {{ junos.facts.hostname }} runs version {{ junos.facts.version }}"
      when: junos.facts.version != "12.3R11.2"
 
    - name: print devices facts using ansible-playbook command with -vv
