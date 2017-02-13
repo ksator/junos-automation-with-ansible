@@ -1,0 +1,23 @@
+---
+ - name: create initial junos configuration
+   hosts: AMS-EX4300
+   connection: local
+   gather_facts: no
+   tasks:
+
+    - name: Render initial configuration for junos devices
+      template: 
+        src: "{{playbook_dir}}/initial_configuration.j2"
+        dest: "{{playbook_dir}}/{{ inventory_hostname }}.initial_configuration.conf"
+
+ - name: push to the remote git repository in the master branch 
+   hosts: localhost
+   gather_facts: no
+   become: yes
+   become_user: ksator
+   tasks:
+   - shell: git add .
+   - shell: git commit -m "{{ comment }}"
+   - shell: git push origin master
+
+

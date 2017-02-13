@@ -1,0 +1,27 @@
+system {
+    host-name {{ host_name }};
+    root-authentication {
+        encrypted-password {{ root_password }}; 
+    }
+    services {
+        ssh;
+        netconf {
+            ssh;
+        }
+    }
+}    
+interfaces {
+   em0 {
+        description "management interface";
+        unit 0 {
+            family inet {
+                address {{ ip }}/{{ mask }};
+            }
+        }
+    }
+}
+routing-options {
+    static {
+        route 0.0.0.0/0 next-hop {{ default_gateway }};
+    }
+}
