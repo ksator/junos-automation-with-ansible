@@ -7,8 +7,9 @@ dist: trusty
 
 env:
   #- ANSIBLE_VERSION=1.9.4
-  - ANSIBLE_VERSION=2.1.0.0
   - ANSIBLE_VERSION=2.1.1.0
+  - ANSIBLE_VERSION=2.1.4.0
+  - ANSIBLE_VERSION=2.2.1.0
   
 before_install:
   - sudo apt-get install -y python-dev libxml2-dev python-pip libxslt1-dev build-essential libssl-dev libffi-dev
@@ -22,6 +23,7 @@ script:
   - ansible-playbook assemble/pb.yml
   - ansible-playbook apt/pb.yml --syntax-check
   - ansible-playbook debug/pb.yml --syntax-check
+  - ansible-playbook debug/pb.verbose.yml --syntax-check
   - ansible-playbook junos_install_conf/pb.yml --syntax-check
   - ansible-playbook junos_cli/pb.txt.yml --syntax-check
   - ansible-playbook junos_cli/pb.xml.yml --syntax-check  
