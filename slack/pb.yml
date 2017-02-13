@@ -1,0 +1,24 @@
+---
+ - name: pass junos set commands and then send a slack notification
+   hosts: AMS-test
+   connection: local
+   gather_facts: no
+
+   tasks:
+   - name: pass set and delete commands  
+     junos_config:
+      provider: "{{ credentials }}"
+      lines:
+       - set system host-name newname
+       - set system login message newbanner
+      comment: configured by Ansible module junos_config
+
+   - name: Send Slack notification to the team
+     local_action:
+       module: slack
+       #http://docs.ansible.com/ansible/slack_module.html
+       username: "Ansible on {{ inventory_hostname }}"
+       channel: general       
+       token: T2MBN64JX/B2N0Z2MEU/1OoB46XLX6Q1oFf89Xl2X9gq
+       icon_url: "https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png"
+       msg: "configuration commited using pb.slack.yml"
