@@ -13,8 +13,13 @@ requirements on Ansible: junos-eznc.  junos-netconify when using the console opt
 
 Playbooks:  
 - **pb.yml**: this playbook get the junos facts from a group of junos devices, and print the hostname of the devices that are not running a specific junos version.     
+- **pb.verbose.yml**: this playbook get the junos facts from a group of junos devices, and print the hostname of the devices that are not running a specific junos version. it also print the junos facts if we use -vv     
+
 
 Usage: 
 ```
-sudo ansible-playbook debug/pb.yml   
+sudo ansible-playbook debug/pb.yml
+
+sudo ansible-playbook debug/pb.verbose.yml
+sudo ansible-playbook debug/pb.verbose.yml -vv
 ```
