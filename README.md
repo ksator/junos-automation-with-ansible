@@ -89,6 +89,10 @@ It refers to our inventory file (**hosts**): So, despite the inventory file is n
 The inventory file (**hosts** file at the root of the repository) also defines some variables.   
 Our playbooks use all of them.   
 Some playbooks use also other variables.  
+In order to see all variables for an hostname, you can run this command:  
+```
+ansible -m debug -a "var=hostvars['hostname']" localhost
+```
 
 #####Playbooks:  
 All playbooks are named **pb.*.yml**  
