@@ -135,6 +135,7 @@ Files in the host_vars directory were rewrited.
 They are static. So if you use another network topology, it doesnt work anymore until you rewrite these files.   
 Example with https://github.com/ksator/ansible-training-for-junos/blob/master/host_vars/ex4300-10/bgp.yml  
 ```
+
 ---  
 loopback: 10.20.1.3  
 local_asn: 110
@@ -155,6 +156,7 @@ neighbors:
 - **files in the host_vars directory in the topology_independent branch:**    
 in the topology_independent branch, they use {{topo}}. So if we change the file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml), the content of the files in the host_vars directory change: no need to rewrite it.   
 Example with https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/host_vars/ex4300-10/bgp.yml  
+
 ```
 ---
 loopback: 10.20.1.3
