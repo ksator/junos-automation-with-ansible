@@ -219,7 +219,3 @@ https://github.com/JNPRAutomate/ansible-junos-examples
 https://github.com/dgjnpr/ansible-template-for-junos  
 https://github.com/JNPRAutomate/ansible-junos-evpn-vxlan    
 https://github.com/JNPRAutomate/ansible-demo-ip-fabric  
-
-### Juniper Networks video at AnsibleFest Brooklyn 2016  
-https://www.ansible.com/reusable-campus-deployment-a-ubs-use-case
-
