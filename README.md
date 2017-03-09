@@ -218,4 +218,6 @@ For more examples, you can visit these repositories:
 https://github.com/JNPRAutomate/ansible-junos-examples  
 https://github.com/dgjnpr/ansible-template-for-junos  
 https://github.com/JNPRAutomate/ansible-junos-evpn-vxlan    
-https://github.com/JNPRAutomate/ansible-demo-ip-fabric  
+https://github.com/JNPRAutomate/ansible-demo-ip-fabric   
+https://juniper.gosavo.com/Document/Document.aspx?id=38124877&view=&srlid=49559553&srisprm=False&sritidx=0&srpgidx=0&srpgsz=25  
+
