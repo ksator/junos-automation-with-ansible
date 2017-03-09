@@ -1,13 +1,13 @@
 [![Build Status](https://travis-ci.org/ksator/ansible-training-for-junos.svg?branch=master)](https://travis-ci.org/ksator/ansible-training-for-junos)  
 
-#Ansible librairies to interact with Junos:  
+# Ansible librairies to interact with Junos:  
 There are two Ansible librairies to interact with Junos.  
 - An Ansible library for Junos built by Juniper.  
 - An Ansible library for Junos built by Ansible.  
 
 Both of them are used into this repository.  
 
-###Ansible modules for Junos built by Juniper:  
+### Ansible modules for Junos built by Juniper:  
 
 Modules (version 1.3.1):     
 - **junos_cli** - Execute CLI on device and save the output locally  
@@ -30,7 +30,7 @@ To download them to the Ansible server, execute the command:
 sudo ansible-galaxy install Juniper.junos  
 ```
 
-###Ansible core modules for Junos built by Ansible:   
+### Ansible core modules for Junos built by Ansible:   
 
 Modules (Ansible 2.1):   
 - **junos_command** - Execute arbitrary commands on a remote device running Junos  
@@ -44,7 +44,7 @@ Documentation: http://docs.ansible.com/ansible/list_of_network_modules.html
 Installation: core modules. They ship with ansible itself (from Ansible 2.1). Ansible 2.1 or above is required.    
 Source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/junos  
 
-###Requirements:  
+### Requirements:  
 
 ##### On the Ansible server:
 
@@ -60,50 +60,50 @@ commit
 ```
 Note: It is not required to use cli to configure Netconf on Junos devices. This can be done with the Ansible module junos_netconf. 
 
-#About this project:   
+# About this project:   
 This project has many ready to use Ansible playbooks to interact with Junos devices.    
 I am using them to deliver Ansible trainings to network engineers.  
 
 There is an Ansible presentation available in this repository: [Ansible presentation.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/Ansible%20presentation.pdf)  
  
-###How to use this project: 
+### How to use this project: 
 
 The playbooks in this repository are ready to use if you access to the Junos devices refered into this project. 
 
-#####Inventory file:  
+##### Inventory file:  
 The default 'hosts' file is supposed to live in /etc/ansible/hosts  
 The inventory file we are using in this repository is **hosts**. It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.  
 it also define the ip address of each device with the variable **junos_host**. This variable is reused in the playbooks.     
 
-#####Config file for ansible:   
+##### Config file for ansible:   
 There is an **ansible.cfg** file at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.cfg).  
 It refers to our inventory file (**hosts**): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands.  
 
-#####Variables:   
+##### Variables:   
 **group_vars** and **host_vars** directories at the root of this repository define variables for hosts and for groups.  
 The inventory file (**hosts** file at the root of the repository) also defines some variables.   
 Our playbooks use all of them.   
 Some playbooks use also other variables.  
 
-#####Playbooks:  
+##### Playbooks:  
 All playbooks are named **pb.*.yml**  
 These playbooks use the modules from the two Ansible librairies to interact with Junos (the one built by Juniper and hosted on galaxy, and the core modules built by Ansible).  
 They also use other Ansible modules (template, assemble, uri, wait_for, debug, ...).  
 They are all ready to use if you access to the lab.    
 You will find them into different directories.  
 
-#####Directories:
+##### Directories:
 Playbooks are in different directories.   
 Each directory has a readme file as well. Please read the instructions in the readme.md file of each directory before executing the playbooks.    
 
-#####Lab:  
+##### Lab:  
 The Junos devices we are using in this repository are in a lab which is only accessible from the Juniper Networks corporate network.   
 The lab topology is described in the file [lab topology.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/lab%20topology.pdf)  
 
 You can very easily reuse this automation content with your own Junos devices (Junos physical devices, Junos virtual devices, vagrant boxes running Junos): you would just need to build a similar topology and to adapt this content with your IP addresses, username and password.   
 If you want to build a Junos topology using Vagrant boxes, you can refer to this repository: https://github.com/ksator/vagrant-junos  
 
-#####Branches:
+##### Branches:
 
 There are currently 2 branches into this repository: 
 - **master** - This is the original one, and the active one.   
@@ -174,7 +174,7 @@ neighbors:
      peer_loopback: 192.179.0.65
 ```
 
-#####Installation instructions:  
+##### Installation instructions:  
 
 Download the content:  
 ```
@@ -200,10 +200,10 @@ The files **.travis.yml** and **requirements.txt** at the root of this repositor
 
 We are using two types of playbooks in this repository:  
 
-#####Some playbooks do not interact with Junos:   
+##### Some playbooks do not interact with Junos:   
 Travis CI is testing them.  
 
-#####Some playbooks interact with Junos:    
+##### Some playbooks interact with Junos:    
 ansible-playbook has a built in option to check only the playbook's syntax (--syntax-check). This is how Travis is testing our playbooks that interact with Junos. If there are any syntax error, Travis will fail the build and output the errors in the log.  
 
 ### More examples on of how to use Ansible with Junos:   
