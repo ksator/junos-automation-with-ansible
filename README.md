@@ -5,7 +5,7 @@ There are two Ansible librairies to interact with Junos
 - An Ansible library for Junos built by Juniper.  
 - An Ansible library for Junos built by Ansible.  
 
-Both of them are used into this repository.  
+Both of them are used in this repository.  
 
 ### Ansible modules for Junos built by Juniper:  
 Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).    
@@ -19,11 +19,11 @@ Modules (version 1.4.0):
 - **junos_install_os** - Install a Junos OS image. 
 - **junos_jsnapy** - Execute JSNAPy test from Ansible
 - **junos_rollback** - Rollback configuration of device  
-- **junos_rpc** - run given rpc  
+- **junos_rpc** - Run given rpc  
 - **junos_shutdown** - Shut down or reboot a device running Junos OS.  
 - **junos_srx_cluster** - Create an srx chassis cluster for cluster capable srx running Junos OS.
-- **junos_ping** - execute ping on junos devices
-- **junos_zeroize** - Erase all data, including configuration and log files, on a device running Junos OS.  
+- **junos_ping** - Execute ping on junos devices
+- **junos_zeroize** - Erase all data including configuration and log files on a device running Junos OS.  
 
 Documentation: http://junos-ansible-modules.readthedocs.io/  
 Source code: https://github.com/Juniper/ansible-junos-stdlib  
@@ -39,8 +39,8 @@ Modules (Ansible 2.1.1.0):
 - **junos_command** - Execute arbitrary commands on a remote device running Junos  
 - **junos_config** - Manage configuration on remote devices running Junos  
 - **junos_facts** - Collect facts from remote device running Junos  
-- **junos_netconf** - Configures the Junos Netconf system service  
-- **junos_package** - Installs packages on remote devices running Junos  
+- **junos_netconf** - Configure the Junos Netconf system service  
+- **junos_package** - Install packages on remote devices running Junos  
 - **junos_template** - Manage configuration on remote devices running Junos  
 
 Documentation: http://docs.ansible.com/ansible/list_of_network_modules.html    
@@ -51,8 +51,8 @@ Source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/
 
 ##### On the Ansible server:
 
-Most of these Ansbile modules require to install the python library py-junos-eznc on the Ansible server.  
-Some options (like the console option in the junos_install_config module) require also the python library junos-netconify.
+Most of these Ansbile modules require installing the python library py-junos-eznc on the Ansible server.  
+Some options (like the console option in the junos_install_config module) also require the python library junos-netconify.
 
 ##### On the Junos devices:
 
@@ -64,30 +64,30 @@ commit
 Note: It is not required to use cli to configure Netconf on Junos devices. This can be done with the Ansible module junos_netconf. 
 
 # About this project:   
-This project has many ready to use Ansible playbooks to interact with Junos devices.    
+This project has many ready-to-use Ansible playbooks to interact with Junos devices.    
 I am using them to deliver Ansible trainings to network engineers.  
 
 There is an ansible presentation available in this repository: [ansible.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.pdf)
  
 ### How to use this project: 
 
-The playbooks in this repository are ready to use if you access to the Junos devices refered into this project. 
+The playbooks in this repository are ready-to-use if you access the Junos devices referred to this project. 
 
 ##### Inventory file:  
-The default 'hosts' file is supposed to live in /etc/ansible/hosts  
+The default 'hosts' file is supposed to live in /etc/ansible/hosts.  
 The inventory file we are using in this repository is **hosts**. It is at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/hosts), so it is not at the default place.  
-it also define the ip address of each device with the variable **junos_host**. This variable is reused in the playbooks.     
+It also defines the ip address of each device with the variable **junos_host**. This variable is re-used in the playbooks.     
 
 ##### Config file for ansible:   
 There is an **ansible.cfg** file at the root of the repository (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.cfg).  
-It refers to our inventory file (**hosts**): So, despite the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands.  
+It refers to our inventory file (**hosts**): So even if the inventory file is not /etc/ansible/hosts, there is no need to add -i hosts to your ansible-playbook commands.  
 
 ##### Variables:   
 **group_vars** and **host_vars** directories at the root of this repository define variables for hosts and for groups.  
 The inventory file (**hosts** file at the root of the repository) also defines some variables.   
 Our playbooks use all of them.   
-Some playbooks use also other variables.  
-In order to see all variables for an hostname, you can run this command:  
+Some playbooks also use other variables.  
+In order to see all variables for a hostname, you can run this command:  
 ```
 ansible -m debug -a "var=hostvars['hostname']" localhost
 ```
@@ -96,8 +96,8 @@ ansible -m debug -a "var=hostvars['hostname']" localhost
 All playbooks are named **pb.*.yml**  
 These playbooks use the modules from the two Ansible librairies to interact with Junos (the one built by Juniper and hosted on galaxy, and the core modules built by Ansible).  
 They also use other Ansible modules (template, assemble, uri, wait_for, debug, ...).  
-They are all ready to use if you access to the lab.    
-You will find them into different directories.  
+They are all ready-to-use if you access to the lab.    
+You will find them in different directories.  
 
 ##### Directories:
 Playbooks are in different directories.   
@@ -107,18 +107,18 @@ Each directory has a readme file as well. Please read the instructions in the re
 The Junos devices we are using in this repository are in a lab which is only accessible from the Juniper Networks corporate network.   
 The lab topology is described in the file [lab topology.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/lab%20topology.pdf)  
 
-You can very easily reuse this automation content with your own Junos devices (Junos physical devices, Junos virtual devices, vagrant boxes running Junos): you would just need to build a similar topology and to adapt this content with your IP addresses, username and password.   
+You can very easily re-use this automation content with your own Junos devices (Junos physical devices, Junos virtual devices, vagrant boxes running Junos): you would just need to build a similar topology and to adapt this content with your IP addresses, username and password.   
 If you want to build a Junos topology using Vagrant boxes, you can refer to this repository: https://github.com/ksator/vagrant-junos  
 
 ##### Branches:
 
-There are currently 2 branches into this repository: 
+There are currently 2 branches in this repository: 
 - **master** - This is the original one, and the active one.   
-- **topology_independent** - This is a new one. The topology_independent branch allows to use a different network topology without changing the playbooks. The automation content into this branch is probably not always up to date/in sync with the master branch.  
+- **topology_independent** - This is a new one. The topology_independent branch allows to use a different network topology without changing the playbooks. The automation content in this branch is probably not always up to date/in sync with the master branch.  
 
 Here's how the **topology_independent** branch works: 
 
-There is a file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml) into group_vars/all. This yaml file defines the topology. here's an example:  
+There is a file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml) in group_vars/all. This yaml file defines the topology. Here's an example:  
 ```
 ---
 topo:
@@ -134,12 +134,12 @@ topo:
         port1: { name: ge-0/0/0,    peer: ex4300-9,       pport: port1 }
         port2: { name: ge-0/0/1,    peer: ex4300-4,       pport: port2 }
 ```
-This file is a dictionnary with the key topo. The value of this key is the topology.  
-Because this file is located into the directory group_vars/all, {{topo}} can be automatically used for all devices. 
+This file is a dictionary with the key topo. The value of this key is the topology.  
+Because this file is located in the directory group_vars/all, {{topo}} can be automatically used for all devices. 
 
-Files in the host_vars directory were rewrited.    
+Files in the host_vars directory were re-written.    
 - **files in the host_vars directory in the master branch:**    
-They are static. So if you use another network topology, it doesnt work anymore until you rewrite these files.   
+They are static. So if you use another network topology, it doesn’t work anymore until you rewrite these files.   
 Example with https://github.com/ksator/ansible-training-for-junos/blob/master/host_vars/ex4300-10/bgp.yml  
 
 ```
@@ -161,7 +161,7 @@ neighbors:
      peer_loopback: 192.179.0.65
 ```
 - **files in the host_vars directory in the topology_independent branch:**    
-in the topology_independent branch, they use {{topo}}. So if we change the file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml), the content of the files in the host_vars directory change: no need to rewrite it.   
+In the topology_independent branch, they use {{topo}}. So if we change the file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml), the content of the files in the host_vars directory change: no need to re-write it.   
 Example with https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/host_vars/ex4300-10/bgp.yml  
 
 ```
@@ -213,7 +213,7 @@ We are using two types of playbooks in this repository:
 Travis CI is testing them.  
 
 ##### Some playbooks interact with Junos:    
-ansible-playbook has a built in option to check only the playbook's syntax (--syntax-check). This is how Travis is testing our playbooks that interact with Junos. If there are any syntax error, Travis will fail the build and output the errors in the log.  
+ansible-playbook has a built-in option to check only the playbook's syntax (--syntax-check). This is how Travis is testing our playbooks that interact with Junos. If there are any syntax errors, Travis will fail the build and output the errors in the log.  
 
 ### More examples on of how to use Ansible with Junos:   
 For more examples, you can visit these repositories:   
