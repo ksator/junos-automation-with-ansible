@@ -225,8 +225,6 @@ https://juniper.gosavo.com/Document/Document.aspx?id=38124877&view=&srlid=495595
 
 ### Looking for more Junos automation examples:  
 
-junos automation with IaC (Infrastructure as Code, gitlab CI, gitlab runners, gitflow, Continuous Integration/Continuous Delivery, docker, ansible, jinja, yaml)  
-https://gitlab.com/ksator/network-infrastructure-as-code  
 
 How to automate junos with python (pyez, ncclient, napalm, json, yaml, jinja, netconf, lxml, rest api)  
 https://github.com/ksator/python-training-for-network-engineers  
@@ -237,14 +235,17 @@ https://github.com/ksator/ansible-training-for-junos-automation
 How to use Openconfig with Juniper devices (openconfig, pyang, pyangbind, netconf, yang, pyez, ansible, jinja, travis CI)  
 https://github.com/ksator/openconfig-demo-with-juniper-devices  
 
-How to automate operational states verifications and configuration audits on Junos devices using JSNAPy (jsnapy, pyez, ansible)  
-https://github.com/ksator/junos-verifications-automation-with-jsnapy  
+How to package junos automation tools in a Dockerfile on Github, and to publish the Docker image automatically in the docker registery    
+https://github.com/ksator/junos-automation-apps-dockerized  
 
 How to orchestrate Junos virtual machines with Vagrant (vsrx, vqfx, vagrant, virtualbox, ansible)  
 https://github.com/ksator/vagrant-with-junos  
 
-How to package junos automation tools in a Dockerfile on Github, and to publish the Docker image automatically in the docker registery    
-https://github.com/ksator/junos-automation-apps-dockerized  
+How to automate operational states verifications and configuration audits on Junos devices using JSNAPy (jsnapy, pyez, ansible)  
+https://github.com/ksator/junos-verifications-automation-with-jsnapy  
+
+junos automation with IaC (Infrastructure as Code, gitlab CI, gitlab runners, gitflow, Continuous Integration/Continuous Delivery, docker, ansible, jinja, yaml)  
+https://github.com/ksator/network-Infrastructure-as-Code
 
 How to delegate junos automation tasks chatting to hubot with slack (chatops, chatbot, hubot, slack, docker, Travic CI, ansible)  
 https://github.com/ksator/junos-automation-with-chatops-in-ams  
