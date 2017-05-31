@@ -1,5 +1,8 @@
 [![Build Status](https://travis-ci.org/ksator/ansible-training-for-junos-automation.svg?branch=master)](https://travis-ci.org/ksator/ansible-training-for-junos-automation)
 
+# Ansible vs Saltstack vs Stackstorm
+https://medium.com/@anthonypjshaw/ansible-v-s-salt-saltstack-v-s-stackstorm-3d8f57149368
+
 # Ansible librairies to interact with junos: 
 There are two Ansible librairies to interact with Junos
 - An Ansible library for Junos built by Juniper.  
