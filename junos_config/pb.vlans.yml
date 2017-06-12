@@ -9,6 +9,7 @@
   tasks:
 
   - name: create vlans
+    tags: configuration
     junos_config:
       lines:
         - "set vlans {{ item.name }} vlan-id {{ item.id }}"
