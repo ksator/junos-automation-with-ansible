@@ -14,11 +14,12 @@ AMS-QFX
 #ex4200-11   junos_host=172.30.179.111
 ex4200-7 junos_host=172.30.179.107
 ex4200-8 junos_host=172.30.179.108
-ex4200-9 junos_host=172.30.179.109
+#ex4200-9 junos_host=172.30.179.109
 ex4200-12 junos_host=172.30.179.112
 
 [AMS-test]
 ex4200-7
+
 
 [AMS-EX4300]
 #ex4300-4    junos_host=172.30.179.65

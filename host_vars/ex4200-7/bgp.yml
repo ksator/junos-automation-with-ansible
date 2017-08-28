@@ -1,0 +1,16 @@
+---
+loopback: 192.179.0.107
+local_asn: 209
+neighbors:
+   - interface: ge-0/0/1
+     name: ex4200-8
+     asn: 210
+     peer_ip: 192.168.10.4 
+     local_ip: 192.168.10.5
+     peer_loopback: 192.179.0.108
+   - interface: ge-0/0/0  
+     name: ex4200-12
+     asn: 204
+     peer_ip: 192.168.10.0
+     local_ip: 192.168.10.1
+     peer_loopback: 192.179.0.112
