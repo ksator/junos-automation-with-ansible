@@ -9,7 +9,7 @@
      file: path={{playbook_dir}}/render state=directory
 
  - name: create BGP junos configuration
-   hosts: AMS-EX4300
+   hosts: AMS-EX4200
    connection: local
    gather_facts: no
 
@@ -31,7 +31,7 @@
    - pause: seconds=25
 
  - name: check bgp states
-   hosts: AMS-EX4300
+   hosts: AMS-EX4200
    connection: local
    gather_facts: no
    roles:

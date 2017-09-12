@@ -1,6 +1,6 @@
 ---
  - name: Rollback configuration on junos devices
-   hosts: AMS-EX4300
+   hosts: AMS-EX4200
    roles:       
     - Juniper.junos
    connection: local
@@ -23,7 +23,7 @@
       passwd={{ ADMPASS }}
       logfile={{playbook_dir}}/rollback.log
       diffs_file={{playbook_dir}}/{{ inventory_hostname }}.diff
-      rollback=1
+      rollback={{ rbid }} 
       comment="configuration rolled back by Ansible"
       #user={{ USERNAME }}
       #passwd={{ DEVICE_PASSWORD }}
