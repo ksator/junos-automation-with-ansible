@@ -178,6 +178,67 @@ ansible 2.3.2.0
   python version = 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4]
 ```
 ****with xml****  
+```
+ksator@ubuntu:~/ansible-training-for-junos-automation$ more junos_command/pb.check.bgp.xml.yml 
+---
+ - name: check bgp states
+   hosts: AMS-EX4200
+   connection: local
+   gather_facts: no
+   tasks:
+
+   - name: check if bgp neighbors are established
+     junos_command:
+      provider: "{{  credentials }}"
+      display: 'xml'
+      commands:
+       - show bgp neighbor "{{ item.peer_ip }}"
+      waitfor:
+       - "result[0].rpc-reply.bgp-information.bgp-peer.peer-state eq 'Established'"
+     with_items:
+      - "{{ neighbors }}"
+
+   - name: check if bgp neighbors are established using another sysntax
+     junos_command:
+      provider: "{{  credentials }}"
+      display: 'xml'
+      commands:
+       - show bgp neighbor "{{ item.peer_ip }}"
+      waitfor:
+        - "result[0]['rpc-reply']['bgp-information']['bgp-peer']['peer-state'] eq 'Established'"
+     with_items:
+      - "{{ neighbors }}"
+```
+```
+ksator@ubuntu:~/ansible-training-for-junos-automation$ ansible-playbook junos_command/pb.check.bgp.xml.yml 
+
+PLAY [check bgp states] ***********************************************************************************************************************************************************
+
+TASK [check if bgp neighbors are established] *************************************************************************************************************************************
+ok: [ex4200-12] => (item={u'peer_loopback': u'192.179.0.107', u'local_ip': u'192.168.10.0', u'peer_ip': u'192.168.10.1', u'interface': u'ge-0/0/0', u'asn': 209, u'name': u'ex4200-7'})
+ok: [ex4200-7] => (item={u'peer_loopback': u'192.179.0.108', u'local_ip': u'192.168.10.5', u'peer_ip': u'192.168.10.4', u'interface': u'ge-0/0/1', u'asn': 210, u'name': u'ex4200-8'})
+ok: [ex4200-8] => (item={u'peer_loopback': u'192.179.0.107', u'local_ip': u'192.168.10.4', u'peer_ip': u'192.168.10.5', u'interface': u'ge-0/0/0', u'asn': 209, u'name': u'ex4200-7'})
+ok: [ex4200-12] => (item={u'peer_loopback': u'192.179.0.108', u'local_ip': u'192.168.10.3', u'peer_ip': u'192.168.10.2', u'interface': u'ge-0/0/1', u'asn': 210, u'name': u'ex4200-8'})
+ok: [ex4200-7] => (item={u'peer_loopback': u'192.179.0.112', u'local_ip': u'192.168.10.1', u'peer_ip': u'192.168.10.0', u'interface': u'ge-0/0/0', u'asn': 204, u'name': u'ex4200-12'})
+ok: [ex4200-8] => (item={u'peer_loopback': u'192.179.0.112', u'local_ip': u'192.168.10.2', u'peer_ip': u'192.168.10.3', u'interface': u'ge-0/0/1', u'asn': 204, u'name': u'ex4200-12'})
+
+TASK [check if bgp neighbors are established using another sysntax] ***************************************************************************************************************
+ok: [ex4200-7] => (item={u'peer_loopback': u'192.179.0.108', u'local_ip': u'192.168.10.5', u'peer_ip': u'192.168.10.4', u'interface': u'ge-0/0/1', u'asn': 210, u'name': u'ex4200-8'})
+ok: [ex4200-12] => (item={u'peer_loopback': u'192.179.0.107', u'local_ip': u'192.168.10.0', u'peer_ip': u'192.168.10.1', u'interface': u'ge-0/0/0', u'asn': 209, u'name': u'ex4200-7'})
+ok: [ex4200-8] => (item={u'peer_loopback': u'192.179.0.107', u'local_ip': u'192.168.10.4', u'peer_ip': u'192.168.10.5', u'interface': u'ge-0/0/0', u'asn': 209, u'name': u'ex4200-7'})
+ok: [ex4200-12] => (item={u'peer_loopback': u'192.179.0.108', u'local_ip': u'192.168.10.3', u'peer_ip': u'192.168.10.2', u'interface': u'ge-0/0/1', u'asn': 210, u'name': u'ex4200-8'})
+ok: [ex4200-7] => (item={u'peer_loopback': u'192.179.0.112', u'local_ip': u'192.168.10.1', u'peer_ip': u'192.168.10.0', u'interface': u'ge-0/0/0', u'asn': 204, u'name': u'ex4200-12'})
+ok: [ex4200-8] => (item={u'peer_loopback': u'192.179.0.112', u'local_ip': u'192.168.10.2', u'peer_ip': u'192.168.10.3', u'interface': u'ge-0/0/1', u'asn': 204, u'name': u'ex4200-12'})
+
+PLAY RECAP ************************************************************************************************************************************************************************
+ex4200-12                  : ok=2    changed=0    unreachable=0    failed=0   
+ex4200-7                   : ok=2    changed=0    unreachable=0    failed=0   
+ex4200-8                   : ok=2    changed=0    unreachable=0    failed=0   
+
+ksator@ubuntu:~/ansible-training-for-junos-automation$ 
+
+```
+
 
 ****with json****   
 Parsing for json output from ex4200-24t running Junos 15.1R2.9:  
