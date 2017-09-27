@@ -374,4 +374,7 @@ root@ubuntu:~/ansible-training-for-junos-automation# ansible --versionansible 2.
   python version = 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4]
 root@ubuntu:~/ansible-training-for-junos-automation# 
 ```
+- the structured response DOES include the 'rpc-reply' key.
+- the structured response is returned in the 'output' key. 
+
 
