@@ -41,12 +41,67 @@ ansible-playbook junos_command/pb.rpc.yml
 
 ```
 
+** Important Notes: **  
+
 This ansible module provide a diff output from devices based on Ansible versions.  
 So the parsing (using the wait_for optionnal argument from this module) depends on Ansible versions.    
 Above playbooks have been tested with Ansible 2.1/2.2
 For other Ansible versions, see below examples  
 
-Ansible 2.3.2 parsing for json output from ex4200-24t running Junos 15.1R2.9:  
+*** Ansible 2.2.3 *** 
+
+```
+root@ksator-virtual-machine:~/ansible-training-for-junos-automation# ansible --version
+ansible 2.2.3.0
+  config file = /home/ksator/ansible-training-for-junos-automation/ansible.cfg
+  configured module search path = Default w/o overrides
+```
+```
+root@ksator-virtual-machine:~/ansible-training-for-junos-automation# more junos_command/pb.check.bgp.yml 
+---
+ - name: check bgp states
+   hosts: AMS-EX4300
+   connection: local
+   gather_facts: no
+
+   tasks:
+   - name: check if bgp neighbors are established
+     junos_command:
+      provider: "{{  credentials }}"
+      commands:
+       - show bgp neighbor "{{ item.peer_ip }}"
+#      display: 'xml'
+      waitfor:
+#      - "result[0].bgp-information.bgp-peer.peer-state eq Established"
+      - "result[0]['bgp-information']['bgp-peer']['peer-state'] eq Established"
+     with_items:
+      - "{{ neighbors }}"
+```
+```
+root@ksator-virtual-machine:~/ansible-training-for-junos-automation# ansible-playbook junos_command/pb.check.bgp.yml 
+
+PLAY [check bgp states] ********************************************************
+
+TASK [check if bgp neighbors are established] **********************************
+ok: [ex4300-18] => (item={u'peer_loopback': u'192.179.0.95', u'local_ip': u'192.168.0.0', u'peer_ip': u'192.168.0.1', u'interface': u'ge-0/0/0', u'asn': 109, u'name': u'ex4300-9'})
+ok: [ex4300-9] => (item={u'peer_loopback': u'192.179.0.73', u'local_ip': u'192.168.0.5', u'peer_ip': u'192.168.0.4', u'interface': u'ge-0/0/0', u'asn': 110, u'name': u'ex4300-17'})
+ok: [ex4300-17] => (item={u'peer_loopback': u'192.179.0.95', u'local_ip': u'192.168.0.4', u'peer_ip': u'192.168.0.5', u'interface': u'ge-0/0/0', u'asn': 109, u'name': u'ex4300-9'})
+ok: [ex4300-18] => (item={u'peer_loopback': u'192.179.0.73', u'local_ip': u'192.168.0.3', u'peer_ip': u'192.168.0.2', u'interface': u'ge-0/0/1', u'asn': 110, u'name': u'ex4300-17'})
+ok: [ex4300-17] => (item={u'peer_loopback': u'192.179.0.74', u'local_ip': u'192.168.0.2', u'peer_ip': u'192.168.0.3', u'interface': u'ge-0/0/1', u'asn': 104, u'name': u'ex4300-18'})
+ok: [ex4300-9] => (item={u'peer_loopback': u'192.179.0.74', u'local_ip': u'192.168.0.1', u'peer_ip': u'192.168.0.0', u'interface': u'ge-0/0/1', u'asn': 104, u'name': u'ex4300-18'})
+
+PLAY RECAP *********************************************************************
+ex4300-17                  : ok=1    changed=0    unreachable=0    failed=0   
+ex4300-18                  : ok=1    changed=0    unreachable=0    failed=0   
+ex4300-9                   : ok=1    changed=0    unreachable=0    failed=0   
+
+root@ksator-virtual-machine:~/ansible-training-for-junos-automation# 
+
+```
+
+*** Ansible 2.3.2 *** 
+
+Parsing for json output from ex4200-24t running Junos 15.1R2.9:  
 
 ```
 ksator@ubuntu:~/ansible-training-for-junos-automation$ more junos_command/pb.check.bgp.yml
