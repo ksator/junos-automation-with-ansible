@@ -41,14 +41,14 @@ ansible-playbook junos_command/pb.rpc.yml
 
 ```
 
-** Important Notes: **  
+**Important Notes:**  
 
 This ansible module provide a diff output from devices based on Ansible versions.  
 So the parsing (using the wait_for optionnal argument from this module) depends on Ansible versions.    
 Above playbooks have been tested with Ansible 2.1/2.2
 For other Ansible versions, see below examples  
 
-*** Ansible 2.2.3 *** 
+***Ansible 2.2.3*** 
 
 ```
 root@ksator-virtual-machine:~/ansible-training-for-junos-automation# ansible --version
@@ -99,7 +99,7 @@ root@ksator-virtual-machine:~/ansible-training-for-junos-automation#
 
 ```
 
-*** Ansible 2.3.2 *** 
+***Ansible 2.3.2*** 
 
 Parsing for json output from ex4200-24t running Junos 15.1R2.9:  
 
