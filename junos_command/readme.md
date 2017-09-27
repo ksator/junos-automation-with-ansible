@@ -170,6 +170,13 @@ root@ksator-virtual-machine:~/ansible-training-for-junos-automation#
 
 ***Ansible 2.3.2***  
 
+```
+ksator@ubuntu:~/ansible-training-for-junos-automation$ ansible --version
+ansible 2.3.2.0
+  config file = /home/ksator/ansible-training-for-junos-automation/ansible.cfg
+  configured module search path = Default w/o overrides
+  python version = 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4]
+```
 ****with xml****  
 
 ****with json****   
