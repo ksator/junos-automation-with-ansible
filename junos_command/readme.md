@@ -40,3 +40,128 @@ ansible-playbook junos_command/pb.yml
 ansible-playbook junos_command/pb.rpc.yml
 
 ```
+
+This ansible module provide a diff output from devices based on Ansible versions.  
+So the parsing (using the wait_for optionnal argument from this module) depends on Ansible versions.    
+Above playbooks have been tested with Ansible 2.1/2.2
+For other Ansible versions, see below examples  
+
+Ansible 2.3.2 parsing for json output from ex4200-24t running Junos 15.1R2.9:  
+
+```
+ksator@ubuntu:~/ansible-training-for-junos-automation$ more junos_command/pb.check.bgp.yml
+---
+ - name: check bgp states
+   hosts: ex4200-12
+   connection: local
+   gather_facts: no
+   # ansible 2.3.2 parsing for json output from ex4200-24t running Junos 15.1R2.9
+   tasks:
+
+   - name: check if bgp neighbors are established
+     junos_command:
+      provider: "{{  credentials }}"
+      display: json
+      commands:
+       - show bgp neighbor "{{ item.peer_ip }}"
+      waitfor:
+       - "result[0].bgp-information[0].bgp-peer[0].peer-state[0].data eq Established"
+     register: bgpdetails
+     with_items:
+      - "{{ neighbors }}"
+
+   - name: check if bgp neighbors are established using another sysntax
+     junos_command:
+      provider: "{{  credentials }}"
+      display: json
+      commands:
+       - show bgp neighbor "{{ item.peer_ip }}"
+      waitfor:
+        - "result[0]['bgp-information'][0]['bgp-peer'][0]['peer-state'][0]['data'] eq Established"
+     register: bgp
+     with_items:
+      - "{{ neighbors }}"
+
+   - name: print bgp state for item number 0
+     debug: 
+       msg="bgp session state for item 0 is {{ bgp.results[0].stdout[0]['bgp-information'][0]['bgp-peer'][0]['peer-state'][0]['data'] }}"
+
+   - name: print bgp state for item number 1
+     debug:
+       msg="bgp session state for item 1 is {{bgp.results[1].stdout[0]['bgp-information'][0]['bgp-peer'][0]['peer-state'][0]['data']}}"
+
+   - name: "print bgp states for all items"
+     debug:
+        msg="bgp state is {{ item.stdout[0]['bgp-information'][0]['bgp-peer'][0]['peer-state'][0]['data'] }}"
+     with_items: "{{ bgp['results'] }}"
+     no_log: True
+
+   - name: assert bgp state is established for item number 0
+     assert:
+       that:
+       - "'Established' in bgp.results[0].stdout[0]['bgp-information'][0]['bgp-peer'][0]['peer-state'][0]['data']"
+       msg: "bgp state on device {{ inventory_hostname }} is not established"
+
+   - name: assert bgp state is established for item number 1
+     assert:
+       that:
+       - "bgp.results[1].stdout[0]['bgp-information'][0]['bgp-peer'][0]['peer-state'][0]['data'] == 'Established'"
+       msg: "bgp state on device {{ inventory_hostname }} is not established"
+
+   - name: assert bgp state is established for all items
+     assert:
+       that:
+       - "item.stdout[0]['bgp-information'][0]['bgp-peer'][0]['peer-state'][0]['data'] == 'Established'"
+       msg: "bgp state on device {{ inventory_hostname }} is not established"
+     with_items: "{{ bgp['results'] }}"
+     no_log: True
+
+```
+```
+ksator@ubuntu:~/ansible-training-for-junos-automation$ ansible-playbook junos_command/pb.check.bgp.yml
+
+PLAY [check bgp states] ***********************************************************************************************************************************************************
+
+TASK [check if bgp neighbors are established] *************************************************************************************************************************************
+ok: [ex4200-12] => (item={u'peer_loopback': u'192.179.0.107', u'local_ip': u'192.168.10.0', u'peer_ip': u'192.168.10.1', u'interface': u'ge-0/0/0', u'asn': 209, u'name': u'ex4200-7'})
+ok: [ex4200-12] => (item={u'peer_loopback': u'192.179.0.108', u'local_ip': u'192.168.10.3', u'peer_ip': u'192.168.10.2', u'interface': u'ge-0/0/1', u'asn': 210, u'name': u'ex4200-8'})
+
+TASK [check if bgp neighbors are established using another sysntax] ***************************************************************************************************************
+ok: [ex4200-12] => (item={u'peer_loopback': u'192.179.0.107', u'local_ip': u'192.168.10.0', u'peer_ip': u'192.168.10.1', u'interface': u'ge-0/0/0', u'asn': 209, u'name': u'ex4200-7'})
+ok: [ex4200-12] => (item={u'peer_loopback': u'192.179.0.108', u'local_ip': u'192.168.10.3', u'peer_ip': u'192.168.10.2', u'interface': u'ge-0/0/1', u'asn': 210, u'name': u'ex4200-8'})
+
+TASK [print bgp state for item number 0] ******************************************************************************************************************************************
+ok: [ex4200-12] => {
+    "msg": "bgp session state for item 0 is Established"
+}
+
+TASK [print bgp state for item number 1] ******************************************************************************************************************************************
+ok: [ex4200-12] => {
+    "msg": "bgp session state for item 1 is Established"
+}
+
+TASK [print bgp states for all items] *********************************************************************************************************************************************
+ok: [ex4200-12] => (item=(censored due to no_log)) => {"censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result"}
+ok: [ex4200-12] => (item=(censored due to no_log)) => {"censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result"}
+
+TASK [assert bgp state is established for item number 0] **************************************************************************************************************************
+ok: [ex4200-12] => {
+    "changed": false, 
+    "msg": "All assertions passed"
+}
+
+TASK [assert bgp state is established for item number 1] **************************************************************************************************************************
+ok: [ex4200-12] => {
+    "changed": false, 
+    "msg": "All assertions passed"
+}
+
+TASK [assert bgp state is established for all items] ******************************************************************************************************************************
+ok: [ex4200-12] => (item=(censored due to no_log)) => {"censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result"}
+ok: [ex4200-12] => (item=(censored due to no_log)) => {"censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result"}
+
+PLAY RECAP ************************************************************************************************************************************************************************
+ex4200-12                  : ok=8    changed=0    unreachable=0    failed=0   
+
+ksator@ubuntu:~/ansible-training-for-junos-automation$ 
+```
