@@ -168,8 +168,11 @@ root@ksator-virtual-machine:~/ansible-training-for-junos-automation#
 
 ```
 
-***Ansible 2.3.2*** 
+***Ansible 2.3.2***  
 
+****with xml****  
+
+****with json****   
 Parsing for json output from ex4200-24t running Junos 15.1R2.9:  
 
 ```
