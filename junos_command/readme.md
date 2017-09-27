@@ -49,6 +49,12 @@ Above playbooks have been tested with Ansible 2.1/2.2
 For other Ansible versions, see below examples  
 
 ***Ansible 2.2.3*** 
+- the structured response is returned in the 'stdout' key. 
+- the structured response does not include the 'rpc-reply' key.  
+- If you register a variable named response
+  - then the structured response for the first command in commands is response['stdout'][0] if you are not using with_items
+  - or response['results'][item_number]['stdout'][0] if you are using with_items.
+- The implicit result variable used in the wait_for conditions maps to response['results'][current_item_number]['stdout'].
 
 ```
 root@ksator-virtual-machine:~/ansible-training-for-junos-automation# ansible --version
@@ -59,7 +65,7 @@ ansible 2.2.3.0
 ```
 root@ksator-virtual-machine:~/ansible-training-for-junos-automation# more junos_command/pb.check.bgp.yml 
 ---
- - name: check bgp states
+ - name: check bgp states (with items)
    hosts: AMS-EX4300
    connection: local
    gather_facts: no
@@ -76,24 +82,87 @@ root@ksator-virtual-machine:~/ansible-training-for-junos-automation# more junos_
       - "result[0]['bgp-information']['bgp-peer']['peer-state'] eq Established"
      with_items:
       - "{{ neighbors }}"
+     register: junos
+
+   - name: "Debug with items. first item"
+     debug:
+        var: junos['results'][0]['stdout'][0]['bgp-information']['bgp-peer']['peer-state']
+
+   - name: "Debug with items. second item"
+     debug:
+        var: junos['results'][1]['stdout'][0]['bgp-information']['bgp-peer']['peer-state']
+      
+ - name: check bgp states (without item)
+   hosts: ex4300-9
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+
+   - name: check if bgp neighbors are established
+     junos_command:
+      provider: "{{  credentials }}"
+      commands:
+       - show bgp neighbor 192.168.0.0
+      waitfor:
+      - "result[0]['bgp-information']['bgp-peer']['peer-state'] eq Established"
+     register: junos
+
+   - name: "Debug without item"
+     debug:
+        var: junos['stdout'][0]['bgp-information']['bgp-peer']['peer-state']
+
 ```
 ```
 root@ksator-virtual-machine:~/ansible-training-for-junos-automation# ansible-playbook junos_command/pb.check.bgp.yml 
 
-PLAY [check bgp states] ********************************************************
+PLAY [check bgp states (with items)] *******************************************
 
 TASK [check if bgp neighbors are established] **********************************
 ok: [ex4300-18] => (item={u'peer_loopback': u'192.179.0.95', u'local_ip': u'192.168.0.0', u'peer_ip': u'192.168.0.1', u'interface': u'ge-0/0/0', u'asn': 109, u'name': u'ex4300-9'})
 ok: [ex4300-9] => (item={u'peer_loopback': u'192.179.0.73', u'local_ip': u'192.168.0.5', u'peer_ip': u'192.168.0.4', u'interface': u'ge-0/0/0', u'asn': 110, u'name': u'ex4300-17'})
 ok: [ex4300-17] => (item={u'peer_loopback': u'192.179.0.95', u'local_ip': u'192.168.0.4', u'peer_ip': u'192.168.0.5', u'interface': u'ge-0/0/0', u'asn': 109, u'name': u'ex4300-9'})
 ok: [ex4300-18] => (item={u'peer_loopback': u'192.179.0.73', u'local_ip': u'192.168.0.3', u'peer_ip': u'192.168.0.2', u'interface': u'ge-0/0/1', u'asn': 110, u'name': u'ex4300-17'})
-ok: [ex4300-17] => (item={u'peer_loopback': u'192.179.0.74', u'local_ip': u'192.168.0.2', u'peer_ip': u'192.168.0.3', u'interface': u'ge-0/0/1', u'asn': 104, u'name': u'ex4300-18'})
 ok: [ex4300-9] => (item={u'peer_loopback': u'192.179.0.74', u'local_ip': u'192.168.0.1', u'peer_ip': u'192.168.0.0', u'interface': u'ge-0/0/1', u'asn': 104, u'name': u'ex4300-18'})
+ok: [ex4300-17] => (item={u'peer_loopback': u'192.179.0.74', u'local_ip': u'192.168.0.2', u'peer_ip': u'192.168.0.3', u'interface': u'ge-0/0/1', u'asn': 104, u'name': u'ex4300-18'})
+
+TASK [Debug with items. first item] ********************************************
+ok: [ex4300-9] => {
+    "junos['results'][0]['stdout'][0]['bgp-information']['bgp-peer']['peer-state']": "Established"
+}
+ok: [ex4300-17] => {
+    "junos['results'][0]['stdout'][0]['bgp-information']['bgp-peer']['peer-state']": "Established"
+}
+ok: [ex4300-18] => {
+    "junos['results'][0]['stdout'][0]['bgp-information']['bgp-peer']['peer-state']": "Established"
+}
+
+TASK [Debug with items. second item] *******************************************
+ok: [ex4300-18] => {
+    "junos['results'][1]['stdout'][0]['bgp-information']['bgp-peer']['peer-state']": "Established"
+}
+ok: [ex4300-17] => {
+    "junos['results'][1]['stdout'][0]['bgp-information']['bgp-peer']['peer-state']": "Established"
+}
+ok: [ex4300-9] => {
+    "junos['results'][1]['stdout'][0]['bgp-information']['bgp-peer']['peer-state']": "Established"
+}
+
+PLAY [check bgp states (without item)] *****************************************
+
+TASK [check if bgp neighbors are established] **********************************
+ok: [ex4300-9]
+
+TASK [Debug without item] ******************************************************
+ok: [ex4300-9] => {
+    "junos['stdout'][0]['bgp-information']['bgp-peer']['peer-state']": "Established"
+}
 
 PLAY RECAP *********************************************************************
-ex4300-17                  : ok=1    changed=0    unreachable=0    failed=0   
-ex4300-18                  : ok=1    changed=0    unreachable=0    failed=0   
-ex4300-9                   : ok=1    changed=0    unreachable=0    failed=0   
+ex4300-17                  : ok=3    changed=0    unreachable=0    failed=0   
+ex4300-18                  : ok=3    changed=0    unreachable=0    failed=0   
+ex4300-9                   : ok=5    changed=0    unreachable=0    failed=0   
 
 root@ksator-virtual-machine:~/ansible-training-for-junos-automation# 
 
