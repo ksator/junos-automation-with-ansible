@@ -363,3 +363,15 @@ ex4200-12                  : ok=8    changed=0    unreachable=0    failed=0
 
 ksator@ubuntu:~/ansible-training-for-junos-automation$ 
 ```
+
+***Ansible 2.4***
+```
+root@ubuntu:~/ansible-training-for-junos-automation# ansible --versionansible 2.4.0.0
+  config file = /home/ksator/ansible-training-for-junos-automation/ansible.cfg
+  configured module search path = [u'/home/ksator/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python2.7/dist-packages/ansible
+  executable location = /usr/local/bin/ansible
+  python version = 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4]
+root@ubuntu:~/ansible-training-for-junos-automation# 
+```
+
