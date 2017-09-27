@@ -178,6 +178,9 @@ ansible 2.3.2.0
   python version = 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4]
 ```
 ****with xml****  
+
+- the structured response DOES include the 'rpc-reply' key.  
+
 ```
 ksator@ubuntu:~/ansible-training-for-junos-automation$ more junos_command/pb.check.bgp.xml.yml 
 ---
