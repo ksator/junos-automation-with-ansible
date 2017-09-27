@@ -45,7 +45,7 @@ ansible-playbook junos_command/pb.rpc.yml
 
 This ansible module provide a diff output from devices based on Ansible versions.  
 So the parsing (using the wait_for optionnal argument from this module) depends on Ansible versions.    
-Above playbooks have been tested with Ansible 2.1/2.2
+Above playbooks have been tested with Ansible 2.1/2.2  
 For other Ansible versions, see below examples  
 
 ***Ansible 2.2.3*** 
