@@ -228,7 +228,8 @@ https://github.com/JNPRAutomate/ansible-demo-ip-fabric
 https://juniper.gosavo.com/Document/Document.aspx?id=38124877&view=&srlid=49559553&srisprm=False&sritidx=0&srpgidx=0&srpgsz=25  
 
 
-### Looking for more Junos automation examples:  
+### Looking for more Junos automation solutions:  
 
 https://github.com/ksator?tab=repositories  
-https://gitlab.com/users/ksator/projects 
+https://gitlab.com/users/ksator/projects  
+https://gist.github.com/ksator/  
