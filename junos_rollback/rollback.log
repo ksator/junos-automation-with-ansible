@@ -510,3 +510,103 @@
 2015-11-30 07:00:34,550:CONFIG:172.30.179.112:unlocking
 2015-11-30 07:00:34,555:ncclient.operations.rpc:Requesting 'ExecuteRpc'
 2015-11-30 07:00:34,676:ncclient.operations.rpc:Requesting 'CloseSession'
+2017-11-07 12:15:17,408:CONFIG:172.30.179.108:connecting to host: pytraining@172.30.179.108:830
+2017-11-07 12:15:17,421:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2017-11-07 12:15:17,440:CONFIG:172.30.179.112:connecting to host: pytraining@172.30.179.112:830
+2017-11-07 12:15:17,517:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2017-11-07 12:15:17,526:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2017-11-07 12:15:17,560:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2017-11-07 12:15:17,886:ncclient.transport.ssh:Auth banner: newbanner
+
+2017-11-07 12:15:17,886:ncclient.transport.ssh:Authentication (publickey) failed.
+2017-11-07 12:15:17,886:ncclient.transport.ssh:Authentication (publickey) failed.
+2017-11-07 12:15:17,972:ncclient.transport.ssh:Authentication (password) successful!
+2017-11-07 12:15:17,982:ncclient.transport.ssh:Authentication (password) successful!
+2017-11-07 12:15:18,266:ncclient.transport.ssh:Authentication (publickey) failed.
+2017-11-07 12:15:18,338:ncclient.transport.ssh:Authentication (password) successful!
+2017-11-07 12:15:19,225:ncclient.transport.session:initialized: session-id=11677 | server_capabilities=<dictionary-keyiterator object at 0x7f77ee8a9890>
+2017-11-07 12:15:19,225:CONFIG:172.30.179.112:taking lock
+2017-11-07 12:15:19,226:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:19,343:CONFIG:172.30.179.112:Rolling back to: 1
+2017-11-07 12:15:19,344:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:19,613:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:19,919:ncclient.transport.session:initialized: session-id=14295 | server_capabilities=<dictionary-keyiterator object at 0x7faf0d151838>
+2017-11-07 12:15:19,920:CONFIG:172.30.179.108:taking lock
+2017-11-07 12:15:19,920:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:19,929:ncclient.transport.session:initialized: session-id=14495 | server_capabilities=<dictionary-keyiterator object at 0x7fa9e808f838>
+2017-11-07 12:15:19,931:CONFIG:172.30.179.107:taking lock
+2017-11-07 12:15:19,931:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:19,932:CONFIG:172.30.179.112:committing change, please be patient
+2017-11-07 12:15:19,933:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:20,036:CONFIG:172.30.179.108:Rolling back to: 1
+2017-11-07 12:15:20,036:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:20,048:CONFIG:172.30.179.107:Rolling back to: 1
+2017-11-07 12:15:20,048:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:20,317:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:20,355:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:20,635:CONFIG:172.30.179.107:committing change, please be patient
+2017-11-07 12:15:20,635:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:20,673:CONFIG:172.30.179.108:committing change, please be patient
+2017-11-07 12:15:20,673:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:26,001:CONFIG:172.30.179.112:change completed
+2017-11-07 12:15:26,001:CONFIG:172.30.179.112:unlocking
+2017-11-07 12:15:26,001:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:26,280:CONFIG:172.30.179.108:change completed
+2017-11-07 12:15:26,281:CONFIG:172.30.179.108:unlocking
+2017-11-07 12:15:26,281:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:26,448:ncclient.operations.rpc:Requesting 'CloseSession'
+2017-11-07 12:15:26,658:CONFIG:172.30.179.107:change completed
+2017-11-07 12:15:26,658:CONFIG:172.30.179.107:unlocking
+2017-11-07 12:15:26,658:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:15:26,818:ncclient.operations.rpc:Requesting 'CloseSession'
+2017-11-07 12:15:27,534:ncclient.operations.rpc:Requesting 'CloseSession'
+2017-11-07 12:16:57,514:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2017-11-07 12:16:57,527:CONFIG:172.30.179.108:connecting to host: pytraining@172.30.179.108:830
+2017-11-07 12:16:57,536:CONFIG:172.30.179.112:connecting to host: pytraining@172.30.179.112:830
+2017-11-07 12:16:57,622:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2017-11-07 12:16:57,639:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2017-11-07 12:16:57,655:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2017-11-07 12:16:57,976:ncclient.transport.ssh:Auth banner: newbanner
+
+2017-11-07 12:16:57,976:ncclient.transport.ssh:Authentication (publickey) failed.
+2017-11-07 12:16:57,990:ncclient.transport.ssh:Authentication (publickey) failed.
+2017-11-07 12:16:58,068:ncclient.transport.ssh:Authentication (publickey) failed.
+2017-11-07 12:16:58,073:ncclient.transport.ssh:Authentication (password) successful!
+2017-11-07 12:16:58,085:ncclient.transport.ssh:Authentication (password) successful!
+2017-11-07 12:16:58,161:ncclient.transport.ssh:Authentication (password) successful!
+2017-11-07 12:16:59,050:ncclient.transport.session:initialized: session-id=11870 | server_capabilities=<dictionary-keyiterator object at 0x7f9fc1b81890>
+2017-11-07 12:16:59,050:CONFIG:172.30.179.112:taking lock
+2017-11-07 12:16:59,050:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:16:59,167:CONFIG:172.30.179.112:Rolling back to: 1
+2017-11-07 12:16:59,167:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:16:59,434:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:16:59,752:CONFIG:172.30.179.112:committing change, please be patient
+2017-11-07 12:16:59,752:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:16:59,964:ncclient.transport.session:initialized: session-id=14993 | server_capabilities=<dictionary-keyiterator object at 0x7fcc67abd838>
+2017-11-07 12:16:59,964:CONFIG:172.30.179.107:taking lock
+2017-11-07 12:16:59,964:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:16:59,983:ncclient.transport.session:initialized: session-id=14794 | server_capabilities=<dictionary-keyiterator object at 0x7f827066d838>
+2017-11-07 12:16:59,983:CONFIG:172.30.179.108:taking lock
+2017-11-07 12:16:59,983:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:17:00,080:CONFIG:172.30.179.107:Rolling back to: 1
+2017-11-07 12:17:00,080:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:17:00,101:CONFIG:172.30.179.108:Rolling back to: 1
+2017-11-07 12:17:00,101:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:17:00,347:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:17:00,369:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:17:00,718:CONFIG:172.30.179.107:committing change, please be patient
+2017-11-07 12:17:00,718:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:17:00,739:CONFIG:172.30.179.108:committing change, please be patient
+2017-11-07 12:17:00,739:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:17:05,863:CONFIG:172.30.179.112:change completed
+2017-11-07 12:17:05,863:CONFIG:172.30.179.112:unlocking
+2017-11-07 12:17:05,863:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:17:05,980:ncclient.operations.rpc:Requesting 'CloseSession'
+2017-11-07 12:17:06,182:CONFIG:172.30.179.107:change completed
+2017-11-07 12:17:06,182:CONFIG:172.30.179.107:unlocking
+2017-11-07 12:17:06,183:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:17:06,194:CONFIG:172.30.179.108:change completed
+2017-11-07 12:17:06,194:CONFIG:172.30.179.108:unlocking
+2017-11-07 12:17:06,194:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2017-11-07 12:17:06,300:ncclient.operations.rpc:Requesting 'CloseSession'
+2017-11-07 12:17:06,362:ncclient.operations.rpc:Requesting 'CloseSession'
