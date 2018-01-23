@@ -15,9 +15,9 @@
    gather_facts: no
    become: yes
    tasks:
-   - command: git add .
-   - command: git commit -m {{ comment }}
-   - command: git push origin update
+   - shell: git add .
+   - shell: git commit -m {{ comment }}
+   - shell: git push origin update
 
    
 
