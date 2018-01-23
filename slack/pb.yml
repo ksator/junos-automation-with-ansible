@@ -1,6 +1,6 @@
 ---
  - name: pass junos set commands and then send a slack notification
-   hosts: AMS-test
+   hosts: test
    connection: local
    gather_facts: no
 
@@ -10,8 +10,8 @@
       provider: "{{ credentials }}"
       lines:
        - set system host-name newname
-       - set system login message newbanner
-      comment: configured by Ansible module junos_config
+       - delete system login message banner
+      comment: lines configured by Ansible module junos_config
 
    - name: Send Slack notification to the team
      local_action:
