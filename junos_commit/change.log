@@ -1,0 +1,30 @@
+2018-01-23 02:38:53,758:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 02:38:53,869:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 02:38:54,210:ncclient.transport.ssh:Auth banner: new_banner
+
+2018-01-23 02:38:54,211:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:38:54,293:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:38:56,206:ncclient.transport.session:initialized: session-id=35091 | server_capabilities=<dictionary-keyiterator object at 0x7f09fbfdc9f0>
+2018-01-23 02:38:56,206:CONFIG:172.30.179.107:taking lock
+2018-01-23 02:38:56,207:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:38:56,377:CONFIG:172.30.179.107:committing change, please be patient
+2018-01-23 02:38:56,378:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:38:59,393:CONFIG:172.30.179.107:change completed
+2018-01-23 02:38:59,393:CONFIG:172.30.179.107:unlocking
+2018-01-23 02:38:59,398:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:38:59,569:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:41:33,228:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 02:41:33,338:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 02:41:33,721:ncclient.transport.ssh:Auth banner: new_banner
+
+2018-01-23 02:41:33,721:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:41:33,799:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:41:35,792:ncclient.transport.session:initialized: session-id=35824 | server_capabilities=<dictionary-keyiterator object at 0x7fb66d5479f0>
+2018-01-23 02:41:35,793:CONFIG:172.30.179.107:taking lock
+2018-01-23 02:41:35,794:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:41:35,917:CONFIG:172.30.179.107:committing change, please be patient
+2018-01-23 02:41:35,919:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:41:43,542:CONFIG:172.30.179.107:change completed
+2018-01-23 02:41:43,542:CONFIG:172.30.179.107:unlocking
+2018-01-23 02:41:43,542:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:41:43,713:ncclient.operations.rpc:Requesting 'CloseSession'

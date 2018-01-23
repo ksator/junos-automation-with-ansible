@@ -11,6 +11,7 @@ Playbooks:
 - **pb_collect_cli_output.yml**: pass a list a cli (from the file **cli.yml**) to junos devices and save the output in the directory **cli** 
 
 Usage:   
+# pb_txt.yml
 ```
 # ls junos_cli/
 cli.yml cli.log  pb_txt.yml  pb_xml.yml  readme.md
@@ -47,6 +48,7 @@ FPC 0            REV 07   750-021254   BP0208111225      EX4200-48T, 8 POE
 Power Supply 0   REV 02   740-020957   AT0508118512      PS 320W AC
 Fan Tray                                                 Fan Tray
 ```
+# pb_xml.yml
 ```
 # ansible-playbook junos_cli/pb_xml.yml 
 
@@ -122,6 +124,7 @@ cli.yml cli.log  ex4200-12.txt  ex4200-12.xml  ex4200-7.txt  ex4200-7.xml  ex420
 </chassis>
 </chassis-inventory>
 ```
+# pb_collect_cli_output.yml
 ```
 # more junos_cli/cli.yml 
 ---
@@ -193,7 +196,7 @@ show bgp neighbor.txt      show configuration | display set.txt  show interfaces
 show chassis hardware.txt  show configuration.txt                show lldp neighbors.txt    show vlans.txt
 ```
 ```
-root@ubuntu:~/ansible-training-for-junos-automation# more junos_cli/cli/ex4200-12/"show chassis hardware.txt"
+# more junos_cli/cli/ex4200-12/"show chassis hardware.txt"
 
 Hardware inventory:
 Item             Version  Part number  Serial number     Description

@@ -1,4 +1,4 @@
-[junos-all:children]
+[junos_all:children]
 EX4200
 EX4300
 MX
