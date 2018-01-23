@@ -14,10 +14,9 @@
    hosts: localhost
    gather_facts: no
    become: yes
-#   become_user: ksator
    tasks:
    - command: "git add ."
-   - command: "git commit -m m"
+   - command: "git commit -m {{ comment }}"
    - command: "git push origin update"
 
    
