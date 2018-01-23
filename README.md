@@ -1,9 +1,6 @@
 [![Build Status](https://travis-ci.org/ksator/ansible-training-for-junos-automation.svg?branch=master)](https://travis-ci.org/ksator/ansible-training-for-junos-automation)
 
 
-# Ansible vs Saltstack vs  Stackstorm
-https://medium.com/@anthonypjshaw/ansible-v-s-salt-saltstack-v-s-stackstorm-3d8f57149368
-
 # Ansible librairies to interact with junos: 
 There are two Ansible librairies to interact with Junos
 - An Ansible library for Junos built by Juniper.  
@@ -227,6 +224,8 @@ https://github.com/dgjnpr/ansible-template-for-junos
 https://github.com/JNPRAutomate/ansible-junos-evpn-vxlan    
 https://github.com/JNPRAutomate/ansible-demo-ip-fabric   
 
+# Ansible vs Saltstack vs Stackstorm
+https://medium.com/@anthonypjshaw/ansible-v-s-salt-saltstack-v-s-stackstorm-3d8f57149368
 
 ### Looking for more Junos automation solutions:  
 
