@@ -56,5 +56,4 @@ pytraining@newname> show configuration | compare rollback 1
 -   message banner;
 
 ```
-
-![slack_notification_from_ansible.png](slack_notification.png)  
+Here's the slack notification sent by this playbook: ![slack_notification_from_ansible.png](slack_notification.png)  
