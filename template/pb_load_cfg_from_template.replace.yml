@@ -6,10 +6,12 @@
     tasks:
 
     - name: create and push the directory render
-      file: path={{playbook_dir}}/render state=directory
+      file: 
+        path: "{{playbook_dir}}/render" 
+        state: directory
 
   - name: Load Configs From Jinja2 Templates
-    hosts: AMS-EX4300
+    hosts: EX4300
     roles:
      - Juniper.junos
     connection: local
@@ -23,21 +25,23 @@
 
     - name: Retrieve information from devices running Junos OS
       junos_get_facts:
-        host={{ junos_host }}
-        user={{ ADMUSER }}
-        passwd={{ ADMPASS }}
+        host: "{{ junos_host }}"
+        user: "{{ ADMUSER }}"
+        passwd: "{{ ADMPASS }}"
       register: junos
 
     - name: Create Junos configurations from Jinja2
-      template: src={{ junos_jinja_template }} dest="{{playbook_dir}}/render/{{ junos.facts.hostname }}.conf"
+      template: 
+        src: "{{ junos_jinja_template }}" 
+        dest: "{{playbook_dir}}/render/{{ junos.facts.hostname }}.conf"
 
     - name: Install rendered configuration
       junos_install_config:
-        host={{ junos_host }}
-        user={{ADMUSER}}
-        passwd={{ADMPASS}}
-        file="{{playbook_dir}}/render/{{ junos.facts.hostname }}.conf"
-        diffs_file="{{playbook_dir}}/{{ junos.facts.hostname }}.log"
-        replace=yes
-        overwrite=false
+        host: "{{ junos_host }}"
+        user: "{{ADMUSER}}"
+        passwd: {{ADMPASS}}"
+        file: "{{playbook_dir}}/render/{{ junos.facts.hostname }}.conf"
+        diffs_file: "{{playbook_dir}}/{{ junos.facts.hostname }}.log"
+        replace: yes
+        overwrite: false
         

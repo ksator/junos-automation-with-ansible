@@ -6,14 +6,18 @@
    tasks:
     
    - name: create the directory render
-     file: path={{playbook_dir}}/render state=directory
+     file: 
+       path: "{{playbook_dir}}/render" 
+       state: directory
 
  - name: create common settings configuration
-   hosts: AMS-EX4300
+   hosts: EX4300
    connection: local
    gather_facts: no
 
    tasks:
 
     - name: Render initial configuration for junos devices
-      template: src={{playbook_dir}}/common_settings.j2 dest={{playbook_dir}}/render/{{ inventory_hostname }}.common_settings.conf
+      template: 
+        src: "{{ playbook_dir }}/common_settings.j2"
+        dest: "{{playbook_dir}}/render/{{ inventory_hostname }}.common_settings.conf"

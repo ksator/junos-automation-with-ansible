@@ -9,4 +9,4 @@ ntp_servers:
 - 172.17.28.5
 snmp:
  location: DC4
- contact: team4@juniper.net
+ contact: xxxx@juniper.net

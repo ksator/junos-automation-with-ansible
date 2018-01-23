@@ -1,6 +1,6 @@
 ---
  - name: reboot Junos devices
-   hosts: AMS-test
+   hosts: test
    roles:       
     - Juniper.junos
    connection: local
@@ -18,9 +18,9 @@
 
    - name: junos_shutdown_task
      junos_shutdown:
-      host={{ junos_host }}
-      user={{ ADMUSER }}
-      passwd={{ DEVICE_PASSWORD }}
-      port=830
-      shutdown="shutdown"
-      reboot=yes
+      host: "{{ junos_host }}"
+      user: "{{ ADMUSER }}"
+      passwd: "{{ DEVICE_PASSWORD }}"
+      port: 830
+      shutdown: "shutdown"
+      reboot: yes
