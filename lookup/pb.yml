@@ -5,10 +5,12 @@
    tasks:
    
    - name: date1
-     debug: msg="{{ lookup('pipe', 'date') }}"
+     debug:  
+       msg: "{{ lookup('pipe', 'date') }}"
      
    - name: date2
-     debug: msg="{{ lookup('pipe', 'date +%m%d-%H%M%S') }}"
+     debug: 
+       msg: "{{ lookup('pipe', 'date +%m%d-%H%M%S') }}"
 
 
 
