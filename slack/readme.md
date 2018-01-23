@@ -57,3 +57,4 @@ pytraining@newname> show configuration | compare rollback 1
 
 ```
 
+![slack_notification_from_ansible.png](slack_notification.png)  
