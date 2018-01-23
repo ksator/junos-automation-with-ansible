@@ -1,0 +1,40 @@
+---
+ - name: create cli directories
+   hosts: localhost
+   gather_facts: no
+   tasks:
+
+   - name: create cli directory
+     file:
+       path: "{{playbook_dir}}/cli"
+       state: directory
+
+
+ - name: pass cli to junos devices
+   hosts: EX4200
+   roles:
+    - Juniper.junos
+   connection: local
+   gather_facts: no
+   
+   vars_files: 
+    - "{{ playbook_dir }}/cli.yml"
+
+   tasks:
+
+    - name: create cli subdirectories
+      file:
+       path: "{{playbook_dir}}/cli/{{ inventory_hostname }}"
+       state: directory
+
+
+    - name: pass the junos cli from the files cli.yml and save the output in the dir cli 
+      junos_cli:
+       host: "{{ junos_host }}"
+       user: "{{ ADMUSER }}"
+       passwd: "{{ ADMPASS }}"
+       cli: "{{ item }}"
+       dest: "{{playbook_dir}}/cli/{{ inventory_hostname }}/{{ item }}.txt"
+      with_items: 
+      - "{{ cli }}"
+

@@ -1,0 +1,10 @@
+
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                BP0208111225      EX4200-48T
+Routing Engine 0 REV 07   750-021254   BP0208111225      EX4200-48T, 8 POE
+FPC 0            REV 07   750-021254   BP0208111225      EX4200-48T, 8 POE
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           48x 10/100/1000 Base-T
+Power Supply 0   REV 02   740-020957   AT0508118512      PS 320W AC
+Fan Tray                                                 Fan Tray

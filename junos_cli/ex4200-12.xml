@@ -1,0 +1,52 @@
+<chassis-inventory>
+<chassis style="inventory">
+<name>Chassis</name>
+<serial-number>BM0210118007</serial-number>
+<description>EX4200-24T</description>
+<chassis-module>
+<name>Routing Engine 0</name>
+<version>REV 22</version>
+<part-number>750-021256</part-number>
+<serial-number>BM0210118007</serial-number>
+<description>EX4200-24T, 8 POE</description>
+<clei-code>COM5T00BRA</clei-code>
+<model-number>EX4200-24T</model-number>
+</chassis-module>
+<chassis-module>
+<name>FPC 0</name>
+<version>REV 22</version>
+<part-number>750-021256</part-number>
+<serial-number>BM0210118007</serial-number>
+<description>EX4200-24T, 8 POE</description>
+<clei-code>COM5T00BRA</clei-code>
+<model-number>EX4200-24T</model-number>
+<chassis-sub-module>
+<name>CPU</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>FPC CPU</description>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>PIC 0</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>24x 10/100/1000 Base-T</description>
+<clei-code>COM5T00BRA</clei-code>
+<model-number>EX4200-24T</model-number>
+</chassis-sub-module>
+</chassis-module>
+<chassis-module>
+<name>Power Supply 0</name>
+<version>REV 04</version>
+<part-number>740-020957</part-number>
+<serial-number>AT0510055247</serial-number>
+<description>PS 320W AC</description>
+<clei-code>COUPACCEAB</clei-code>
+<model-number>EX-PWR-320-AC</model-number>
+</chassis-module>
+<chassis-module>
+<name>Fan Tray</name>
+<description>Fan Tray</description>
+</chassis-module>
+</chassis>
+</chassis-inventory>

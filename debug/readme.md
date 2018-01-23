@@ -42,7 +42,7 @@ ex4200-8                   : ok=1    changed=0    unreachable=0    failed=0
 ```
 
 ```
-# ansible-playbook debug/pb.verbose.yml
+# ansible-playbook debug/pb_verbose.yml
 
 PLAY [Get Facts] *********************************************************************************************************************************************************
 
@@ -71,7 +71,7 @@ ex4200-8                   : ok=1    changed=0    unreachable=0    failed=0
 ```
 
 ```
-# ansible-playbook debug/pb.verbose.yml -vv
+# ansible-playbook debug/pb_verbose.yml -vv
 ansible-playbook 2.4.2.0
   config file = /home/ksator/ansible-training-for-junos-automation/ansible.cfg
   configured module search path = [u'/home/ksator/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']

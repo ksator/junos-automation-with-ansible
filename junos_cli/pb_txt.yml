@@ -1,0 +1,17 @@
+
+---
+ - name: pass cli and save output
+   hosts: EX4200
+   roles:
+    - Juniper.junos
+   connection: local
+   gather_facts: no
+   tasks:
+    - name: junos cli
+      junos_cli:
+       host: "{{ junos_host  }}"
+       user: "{{ ADMUSER }}"
+       passwd: "{{ ADMPASS }}"
+       cli: "show chassis hardware"
+       logfile: "{{playbook_dir}}/cli.log"
+       dest: "{{playbook_dir}}/{{ inventory_hostname }}.txt"

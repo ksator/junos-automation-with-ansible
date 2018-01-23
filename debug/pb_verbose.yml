@@ -1,6 +1,6 @@
 ---
  - name: Get Facts
-   hosts: AMS-EX4200
+   hosts: EX4200
    roles:
     - Juniper.junos
    connection: local

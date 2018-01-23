@@ -1,0 +1,10 @@
+
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                BM0210118007      EX4200-24T
+Routing Engine 0 REV 22   750-021256   BM0210118007      EX4200-24T, 8 POE
+FPC 0            REV 22   750-021256   BM0210118007      EX4200-24T, 8 POE
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           24x 10/100/1000 Base-T
+Power Supply 0   REV 04   740-020957   AT0510055247      PS 320W AC
+Fan Tray                                                 Fan Tray

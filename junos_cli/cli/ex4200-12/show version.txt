@@ -1,0 +1,11 @@
+
+fpc0:
+--------------------------------------------------------------------------
+Hostname: ex4200-12
+Model: ex4200-24t
+Junos: 15.1R2.9
+JUNOS EX  Software Suite [15.1R2.9]
+JUNOS FIPS mode utilities [15.1R2.9]
+JUNOS Online Documentation [15.1R2.9]
+JUNOS EX 4200 Software Suite [15.1R2.9]
+JUNOS Web Management Platform Package [15.1R2.9]

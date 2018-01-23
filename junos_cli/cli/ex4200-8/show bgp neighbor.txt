@@ -1,0 +1,74 @@
+
+Peer: 192.168.10.3+53557 AS 204 Local: 192.168.10.2+179 AS 210  
+  Type: External    State: Established    Flags: <Sync>
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: None
+  Export: [ bgp-out ] Import: [ bgp-in ]
+  Options: <Preference LogUpDown PeerAS Multipath LocalAS Refresh>
+  Options: <MultipathAs>
+  Holdtime: 90 Preference: 170 Local AS: 210 Local System AS: 100
+  Number of flaps: 0
+  Peer ID: 192.179.0.112   Local ID: 192.179.0.108     Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 0   
+  BFD: disabled, down
+  Local Interface: ge-0/0/1.0                       
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer supports 4 byte AS extension (peer-as 204)
+  Peer does not support Addpath
+  Table inet.0 Bit: 10000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              2
+    Received prefixes:            5
+    Accepted prefixes:            5
+    Suppressed due to damping:    0
+    Advertised prefixes:          5
+  Last traffic (seconds): Received 18   Sent 4    Checked 34  
+  Input messages:  Total 168392	Updates 3	Refreshes 0	Octets 3199572
+  Output messages: Total 168357	Updates 2	Refreshes 0	Octets 3198922
+  Output Queue[0]: 0
+
+Peer: 192.168.10.5+50783 AS 209 Local: 192.168.10.4+179 AS 210  
+  Type: External    State: Established    Flags: <Sync>
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: None
+  Export: [ bgp-out ] Import: [ bgp-in ]
+  Options: <Preference LogUpDown PeerAS Multipath LocalAS Refresh>
+  Options: <MultipathAs>
+  Holdtime: 90 Preference: 170 Local AS: 210 Local System AS: 100
+  Number of flaps: 0
+  Peer ID: 192.179.0.107   Local ID: 192.179.0.108     Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 1   
+  BFD: disabled, down
+  Local Interface: ge-0/0/0.0                       
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer supports 4 byte AS extension (peer-as 209)
+  Peer does not support Addpath
+  Table inet.0 Bit: 10000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              2
+    Received prefixes:            5
+    Accepted prefixes:            5
+    Suppressed due to damping:    0
+    Advertised prefixes:          6
+  Last traffic (seconds): Received 9    Sent 17   Checked 21  
+  Input messages:  Total 168402	Updates 3	Refreshes 0	Octets 3199758
+  Output messages: Total 168355	Updates 2	Refreshes 0	Octets 3198889
+  Output Queue[0]: 0

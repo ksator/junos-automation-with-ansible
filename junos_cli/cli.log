@@ -1,0 +1,174 @@
+2018-01-23 01:58:48,677:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 01:58:48,689:CONFIG:172.30.179.112:connecting to host: pytraining@172.30.179.112:830
+2018-01-23 01:58:48,701:CONFIG:172.30.179.108:connecting to host: pytraining@172.30.179.108:830
+2018-01-23 01:58:48,850:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 01:58:48,863:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 01:58:48,874:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2018-01-23 01:58:49,396:ncclient.transport.ssh:Auth banner: new_banner
+
+2018-01-23 01:58:49,396:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 01:58:49,397:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 01:58:49,399:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 01:58:49,519:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 01:58:49,546:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 01:58:49,546:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 01:58:50,461:ncclient.transport.session:initialized: session-id=8324 | server_capabilities=<dictionary-keyiterator object at 0x7fc1b015fa48>
+2018-01-23 01:58:50,461:CONFIG:172.30.179.112:Getting cli output
+2018-01-23 01:58:50,463:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 01:58:50,588:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 01:58:51,472:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 01:58:51,559:ncclient.transport.session:initialized: session-id=34846 | server_capabilities=<dictionary-keyiterator object at 0x7ff7ba3dcaa0>
+2018-01-23 01:58:51,560:CONFIG:172.30.179.107:Getting cli output
+2018-01-23 01:58:51,562:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 01:58:51,565:ncclient.transport.session:initialized: session-id=32706 | server_capabilities=<dictionary-keyiterator object at 0x7f3d89eaeaa0>
+2018-01-23 01:58:51,566:CONFIG:172.30.179.108:Getting cli output
+2018-01-23 01:58:51,568:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 01:58:51,733:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 01:58:51,738:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 01:58:52,206:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 01:58:52,262:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 01:59:33,325:CONFIG:172.30.179.112:connecting to host: pytraining@172.30.179.112:830
+2018-01-23 01:59:33,333:CONFIG:172.30.179.108:connecting to host: pytraining@172.30.179.108:830
+2018-01-23 01:59:33,355:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 01:59:33,506:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 01:59:33,514:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2018-01-23 01:59:33,529:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 01:59:34,182:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 01:59:34,186:ncclient.transport.ssh:Auth banner: new_banner
+
+2018-01-23 01:59:34,187:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 01:59:34,207:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 01:59:34,333:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 01:59:34,344:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 01:59:34,349:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 01:59:35,345:ncclient.transport.session:initialized: session-id=8330 | server_capabilities=<dictionary-keyiterator object at 0x7f6be072ea48>
+2018-01-23 01:59:35,346:CONFIG:172.30.179.112:Getting cli output
+2018-01-23 01:59:35,347:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 01:59:35,521:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 01:59:36,300:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 01:59:36,331:ncclient.transport.session:initialized: session-id=32712 | server_capabilities=<dictionary-keyiterator object at 0x7f2da84efaa0>
+2018-01-23 01:59:36,331:CONFIG:172.30.179.108:Getting cli output
+2018-01-23 01:59:36,332:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 01:59:36,383:ncclient.transport.session:initialized: session-id=34852 | server_capabilities=<dictionary-keyiterator object at 0x7f8f44667aa0>
+2018-01-23 01:59:36,383:CONFIG:172.30.179.107:Getting cli output
+2018-01-23 01:59:36,384:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 01:59:36,502:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 01:59:36,555:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 01:59:37,027:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 01:59:38,393:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:00:46,888:CONFIG:172.30.179.112:connecting to host: pytraining@172.30.179.112:830
+2018-01-23 02:00:46,906:CONFIG:172.30.179.108:connecting to host: pytraining@172.30.179.108:830
+2018-01-23 02:00:46,913:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 02:00:47,075:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 02:00:47,097:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 02:00:47,111:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2018-01-23 02:00:47,525:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:00:47,569:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:00:47,615:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:00:47,627:ncclient.transport.ssh:Auth banner: new_banner
+
+2018-01-23 02:00:47,628:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:00:47,654:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:00:47,696:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:00:48,535:ncclient.transport.session:initialized: session-id=8343 | server_capabilities=<dictionary-keyiterator object at 0x7fdae98c2a48>
+2018-01-23 02:00:48,536:CONFIG:172.30.179.112:Getting cli output
+2018-01-23 02:00:48,538:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:00:48,659:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:00:49,434:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:00:49,534:ncclient.transport.session:initialized: session-id=32725 | server_capabilities=<dictionary-keyiterator object at 0x7f6ad40b8aa0>
+2018-01-23 02:00:49,534:CONFIG:172.30.179.108:Getting cli output
+2018-01-23 02:00:49,535:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:00:49,704:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:00:49,787:ncclient.transport.session:initialized: session-id=34866 | server_capabilities=<dictionary-keyiterator object at 0x7fe200bdbaa0>
+2018-01-23 02:00:49,787:CONFIG:172.30.179.107:Getting cli output
+2018-01-23 02:00:49,788:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:00:49,960:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:00:50,228:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:00:50,482:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:05:10,000:CONFIG:172.30.179.112:connecting to host: pytraining@172.30.179.112:830
+2018-01-23 02:05:10,006:CONFIG:172.30.179.108:connecting to host: pytraining@172.30.179.108:830
+2018-01-23 02:05:10,028:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 02:05:10,203:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 02:05:10,212:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2018-01-23 02:05:10,231:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 02:05:11,056:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:05:11,056:ncclient.transport.ssh:Auth banner: new_banner
+
+2018-01-23 02:05:11,056:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:05:11,061:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:05:11,197:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:05:11,213:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:05:11,223:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:05:12,234:ncclient.transport.session:initialized: session-id=8352 | server_capabilities=<dictionary-keyiterator object at 0x7ff6e122ca48>
+2018-01-23 02:05:12,234:CONFIG:172.30.179.112:Getting cli output
+2018-01-23 02:05:12,235:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:05:12,506:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:05:12,780:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:05:13,175:ncclient.transport.session:initialized: session-id=32735 | server_capabilities=<dictionary-keyiterator object at 0x7f488da91aa0>
+2018-01-23 02:05:13,175:CONFIG:172.30.179.108:Getting cli output
+2018-01-23 02:05:13,176:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:05:13,346:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:05:13,582:ncclient.transport.session:initialized: session-id=34876 | server_capabilities=<dictionary-keyiterator object at 0x7f6ebd5d0aa0>
+2018-01-23 02:05:13,582:CONFIG:172.30.179.107:Getting cli output
+2018-01-23 02:05:13,582:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:05:13,621:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:05:13,756:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:05:13,928:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:07:10,700:CONFIG:172.30.179.108:connecting to host: pytraining@172.30.179.108:830
+2018-01-23 02:07:10,706:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 02:07:10,722:CONFIG:172.30.179.112:connecting to host: pytraining@172.30.179.112:830
+2018-01-23 02:07:10,812:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 02:07:10,818:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 02:07:10,846:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2018-01-23 02:07:11,221:ncclient.transport.ssh:Auth banner: new_banner
+
+2018-01-23 02:07:11,222:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:07:11,223:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:07:11,268:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:07:11,299:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:07:11,323:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:07:11,353:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:07:12,279:ncclient.transport.session:initialized: session-id=8357 | server_capabilities=<dictionary-keyiterator object at 0x7fd5b01c6a48>
+2018-01-23 02:07:12,280:CONFIG:172.30.179.112:Getting cli output
+2018-01-23 02:07:12,281:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:07:12,403:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:07:13,337:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:07:13,371:ncclient.transport.session:initialized: session-id=34881 | server_capabilities=<dictionary-keyiterator object at 0x7fe38953daa0>
+2018-01-23 02:07:13,371:CONFIG:172.30.179.107:Getting cli output
+2018-01-23 02:07:13,372:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:07:13,375:ncclient.transport.session:initialized: session-id=32740 | server_capabilities=<dictionary-keyiterator object at 0x7faae0cc5aa0>
+2018-01-23 02:07:13,375:CONFIG:172.30.179.108:Getting cli output
+2018-01-23 02:07:13,376:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:07:13,492:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:07:13,498:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:07:14,323:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:07:14,327:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:07:56,961:CONFIG:172.30.179.112:connecting to host: pytraining@172.30.179.112:830
+2018-01-23 02:07:56,990:CONFIG:172.30.179.108:connecting to host: pytraining@172.30.179.108:830
+2018-01-23 02:07:56,996:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 02:07:57,083:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2018-01-23 02:07:57,100:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 02:07:57,109:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 02:07:57,425:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:07:57,436:ncclient.transport.ssh:Auth banner: new_banner
+
+2018-01-23 02:07:57,437:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:07:57,462:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 02:07:57,499:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:07:57,512:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:07:57,539:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 02:07:58,398:ncclient.transport.session:initialized: session-id=8363 | server_capabilities=<dictionary-keyiterator object at 0x7f6a1a4b3a48>
+2018-01-23 02:07:58,399:CONFIG:172.30.179.112:Getting cli output
+2018-01-23 02:07:58,400:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:07:58,576:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:07:58,748:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:07:59,421:ncclient.transport.session:initialized: session-id=32746 | server_capabilities=<dictionary-keyiterator object at 0x7fe7fc17aaa0>
+2018-01-23 02:07:59,422:CONFIG:172.30.179.108:Getting cli output
+2018-01-23 02:07:59,423:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:07:59,440:ncclient.transport.session:initialized: session-id=34887 | server_capabilities=<dictionary-keyiterator object at 0x7f86fd378aa0>
+2018-01-23 02:07:59,441:CONFIG:172.30.179.107:Getting cli output
+2018-01-23 02:07:59,442:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:07:59,595:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:07:59,618:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 02:07:59,796:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 02:07:59,821:ncclient.operations.rpc:Requesting 'CloseSession'

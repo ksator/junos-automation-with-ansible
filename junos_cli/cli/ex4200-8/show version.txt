@@ -1,0 +1,15 @@
+
+fpc0:
+--------------------------------------------------------------------------
+Hostname: ex4200-8
+Model: ex4200-48t
+JUNOS Base OS boot [12.3R11.2]
+JUNOS Base OS Software Suite [12.3R11.2]
+JUNOS Kernel Software Suite [12.3R11.2]
+JUNOS Crypto Software Suite [12.3R11.2]
+JUNOS Online Documentation [12.3R11.2]
+JUNOS Enterprise Software Suite [12.3R11.2]
+JUNOS Packet Forwarding Engine Enterprise Software Suite [12.3R11.2]
+JUNOS Routing Software Suite [12.3R11.2]
+JUNOS Web Management [12.3R11.2]
+JUNOS FIPS mode utilities [12.3R11.2]
