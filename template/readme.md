@@ -361,12 +361,105 @@ pytraining@ex4300-17> show configuration | compare rollback 1
 +   8.8.8.8;
 +   8.8.4.4;
 ```
+# pb_load_cfg_from_template_replace.yml
 
-ansible-playbook template/pb.load_cfg_from_template.replace.yml --check --diff
-ansible-playbook template/pb.load_cfg_from_template.replace.yml
-ls -l template/render/*.conf
-more template/render/ex4300-10.conf
-ls -l template/*.log
-more template/ex4300-10.log
-ansible-playbook junos_rollback/pb.yml
+```
+# ansible-playbook template/pb_load_cfg_from_template_replace.yml --check --diff --limit ex4300-9
+
+PLAY [create a directory render] *****************************************************************************************************************************************
+skipping: no hosts matched
+
+PLAY [Load Configs From Jinja2 Templates] ********************************************************************************************************************************
+
+TASK [Retrieve information from devices running Junos OS] ****************************************************************************************************************
+ok: [ex4300-9]
+
+TASK [Create Junos configurations from Jinja2] ***************************************************************************************************************************
+--- before: /home/ksator/ansible-training-for-junos-automation/template/render/ex4300-9.conf
++++ after: /tmp/tmpTfSxe6/dns-servers_replace.j2
+@@ -1,4 +1,5 @@
+ system {
++    replace:
+     name-server {
+                 8.8.8.8;
+                 8.8.4.4;
+
+changed: [ex4300-9]
+
+TASK [Install rendered configuration] ************************************************************************************************************************************
+ok: [ex4300-9]
+
+PLAY RECAP ***************************************************************************************************************************************************************
+ex4300-9                   : ok=3    changed=1    unreachable=0    failed=0   
+
+root@ubuntu:~/ansible-training-for-junos-automation# ansible-playbook template/pb_load_cfg_from_template_replace.yml
+
+PLAY [create a directory render] *****************************************************************************************************************************************
+
+TASK [create directories] ************************************************************************************************************************************************
+ok: [localhost] => (item=render)
+changed: [localhost] => (item=diff)
+
+PLAY [Load Configs From Jinja2 Templates] ********************************************************************************************************************************
+
+TASK [Retrieve information from devices running Junos OS] ****************************************************************************************************************
+ok: [ex4300-18]
+ok: [ex4300-17]
+ok: [ex4300-9]
+
+TASK [Create Junos configurations from Jinja2] ***************************************************************************************************************************
+changed: [ex4300-17]
+changed: [ex4300-18]
+changed: [ex4300-9]
+
+TASK [Install rendered configuration] ************************************************************************************************************************************
+changed: [ex4300-17]
+changed: [ex4300-9]
+changed: [ex4300-18]
+
+PLAY RECAP ***************************************************************************************************************************************************************
+ex4300-17                  : ok=3    changed=2    unreachable=0    failed=0   
+ex4300-18                  : ok=3    changed=2    unreachable=0    failed=0   
+ex4300-9                   : ok=3    changed=2    unreachable=0    failed=0   
+localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+```
+```
+# ls template/diff/
+ex4300-17.log  ex4300-18.log  ex4300-9.log
+```
+```
+# more template/diff/ex4300-9.log 
+
+[edit system name-server]
+-   172.30.179.2;
+-   172.30.179.3;
+```
+```
+# more template/render/ex4300-9.conf 
+system {
+    replace:
+    name-server {
+                8.8.8.8;
+                8.8.4.4;
+            }
+}
+```
+```
+# ssh pytraining@172.30.179.73
+Password:
+--- JUNOS 15.1R5.5 built 2016-11-25 16:55:57 UTC
+{master:0}
+pytraining@ex4300-17> show system commit 
+0   2018-01-23 21:03:40 CET by pytraining via netconf
+```
+```
+pytraining@ex4300-17> show configuration | compare rollback 1 
+[edit system name-server]
+-   172.30.179.2;
+-   172.30.179.3;
+```
+```
+pytraining@ex4300-17> show configuration system name-server 
+8.8.8.8;
+8.8.4.4;
 ```
