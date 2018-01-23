@@ -1,6 +1,6 @@
 ---
  - name: Get configuration from Junos devices
-   hosts: AMS-test
+   hosts: test
    connection: local
    gather_facts: no
 

@@ -1,0 +1,17 @@
+---
+ - name: Get Facts
+   hosts: junos_all
+   connection: local
+   gather_facts: no
+   tasks:
+
+   - name: Retrieve information from devices running Junos
+     junos_facts:
+      provider: "{{ credentials }}"
+      gather_subset: hardware
+     register: junos
+
+   - name: Print some facts
+     debug:
+       msg: "device {{ junos.ansible_facts.ansible_net_hostname }} is a {{ junos.ansible_facts.ansible_net_model }} running junos version {{ junos.ansible_facts.ansible_net_version }}"
+
