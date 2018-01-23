@@ -1,25 +1,31 @@
 ---
  - name: check ssh and netconf ports on Junos devices
-   hosts: AMS-all
+   hosts: [EX4200,EX4300]
    connection: local
    gather_facts: no
 
    tasks:
 
-    - name: Check ssh and netconf connectivity
-      wait_for: host={{ junos_host }} port={{ item }} timeout=5
+    - name: Check ssh and netconf ports connectivity
+      wait_for: 
+        host: "{{ junos_host }}" 
+        port: "{{ item }}" 
+        timeout: 5
       with_items:
        - 22
        - 830
 
  - name: check rest port on Junos devices
-   hosts: AMS-MX
+   hosts: QFX
    connection: local
    gather_facts: no
 
    tasks:
 
-    - name: Check ssh and netconf connectivity
-      wait_for: host={{ junos_host }} port={{ item }} timeout=5
+    - name: Check REST port connectivity
+      wait_for: 
+        host: "{{ junos_host }}" 
+        port: "{{ item }}" 
+        timeout: 5
       with_items:
        - 3000

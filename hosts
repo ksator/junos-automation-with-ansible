@@ -1,7 +1,7 @@
 [junos_all:children]
 EX4200
 EX4300
-MX
+#MX
 QFX
 
 [EX4200]
@@ -30,8 +30,8 @@ ex4300-9     junos_host=172.30.179.95
 ex4300-18    junos_host=172.30.179.74
 ex4300-17    junos_host=172.30.179.73
 
-[MX]
-mx80-17     junos_host=172.30.177.170
+#[MX]
+#mx80-17     junos_host=172.30.177.170
 
 [QFX]
 qfx5100-44  junos_host=172.30.179.239

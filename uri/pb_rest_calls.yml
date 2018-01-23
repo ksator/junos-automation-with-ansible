@@ -1,0 +1,41 @@
+---
+
+ - name: make rest calls to junos devices
+   hosts: QFX
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+    - name: check if some ports are reachable on Junos devices
+      wait_for: 
+        host: "{{ junos_host }}" 
+        port: "{{ item }}" 
+        timeout: 5
+      with_items:
+       - 22
+       - 830
+       - 3000
+ 
+    - name: create device directories
+      local_action:
+       module: file
+       path: "{{playbook_dir}}/{{ inventory_hostname }}"
+       state: directory
+
+
+    - name: make rest call to QFX devices
+      local_action:
+       module: uri
+       url: "http://{{ junos_host }}:3000/rpc/{{ item }}"
+       method: GET
+       user: "{{ ADMUSER }}"
+       password: "{{ ADMPASS }}"
+       HEADER_Content-Type: "application/xml"
+       HEADER_Accept: "application/json"
+       force_basic_auth: yes
+       dest: "{{ playbook_dir }}/{{inventory_hostname}}/{{ item }}_output.json"
+      with_items: 
+       - get-software-information
+       - get-bgp-neighbor-information
+

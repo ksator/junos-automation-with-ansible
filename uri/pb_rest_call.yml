@@ -1,0 +1,45 @@
+---
+
+ - name: make rest call to Junos devices, save and parse output
+   hosts: QFX
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+    - name: check if some ports are reachable on Junos devices
+      wait_for: 
+        host: "{{ junos_host }}" 
+        port: "{{ item }}" 
+        timeout: 5
+      with_items:
+       - 22
+       - 830
+       - 3000
+ 
+    - name: create device directories
+      local_action:
+       module: file
+       path: "{{playbook_dir}}/{{ inventory_hostname }}"
+       state: directory
+
+
+    - name: make rest call to QFX devices
+      local_action:
+       module: uri
+       url: "http://{{ junos_host }}:3000/rpc/get-software-information"
+       method: GET
+       user: "{{ ADMUSER }}"
+       password: "{{ ADMPASS }}"
+       HEADER_Content-Type: "application/xml"
+       HEADER_Accept: "application/json"
+       force_basic_auth: yes
+       dest: "{{ playbook_dir }}/{{inventory_hostname}}/rpc_output.json"
+      register: junos
+
+    - name: Print some QFX details
+      debug: 
+        msg: "device hostname {{junos.json['multi-routing-engine-results'][0]['multi-routing-engine-item'][0]['software-information'][0]['host-name'][0]['data']}} is running {{junos.json['multi-routing-engine-results'][0]['multi-routing-engine-item'][0]['software-information'][0]['junos-version'][0]['data']}}"
+
+
+
