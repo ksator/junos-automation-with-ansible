@@ -391,8 +391,9 @@ ok: [ex4300-9]
 
 PLAY RECAP ***************************************************************************************************************************************************************
 ex4300-9                   : ok=3    changed=1    unreachable=0    failed=0   
-
-root@ubuntu:~/ansible-training-for-junos-automation# ansible-playbook template/pb_load_cfg_from_template_replace.yml
+```
+```
+# ansible-playbook template/pb_load_cfg_from_template_replace.yml
 
 PLAY [create a directory render] *****************************************************************************************************************************************
 
