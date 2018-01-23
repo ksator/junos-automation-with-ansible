@@ -217,15 +217,15 @@ We are using two types of playbooks in this repository:
 Travis CI is testing them.  
 
 ##### Some playbooks interact with Junos:    
-ansible-playbook has a built-in option to check only the playbook's syntax (--syntax-check). This is how Travis is testing our playbooks that interact with Junos. If there are any syntax errors, Travis will fail the build and output the errors in the log.  
+ansible-playbook has a built-in option to check only the playbook's syntax (--syntax-check). This is how Travis is testing the playbooks in this repositories that interact with Junos. If there is any syntax error, Travis will fail the build and output the errors in the log.  
 
 ### More examples on of how to use Ansible with Junos:   
 For more examples, you can visit these repositories:   
+https://github.com/JNPRAutomate/juniper_junos_ansible_modules_examples  
 https://github.com/JNPRAutomate/ansible-junos-examples  
 https://github.com/dgjnpr/ansible-template-for-junos  
 https://github.com/JNPRAutomate/ansible-junos-evpn-vxlan    
 https://github.com/JNPRAutomate/ansible-demo-ip-fabric   
-https://juniper.gosavo.com/Document/Document.aspx?id=38124877&view=&srlid=49559553&srisprm=False&sritidx=0&srpgidx=0&srpgsz=25  
 
 
 ### Looking for more Junos automation solutions:  
