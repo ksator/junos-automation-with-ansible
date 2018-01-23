@@ -1,0 +1,4 @@
+
+[edit system]
+-  host-name ex4200-7;
++  host-name newname;

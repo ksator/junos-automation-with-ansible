@@ -6,10 +6,12 @@
    tasks:
     
    - name: create inventory directory
-     file: path={{playbook_dir}}/inventory state=directory
+     file: 
+       path: "{{playbook_dir}}/inventory" 
+       state: directory
      
  - name: Get Facts
-   hosts: AMS-EX4200
+   hosts: EX4200
    roles:       
     - Juniper.junos
    connection: local
@@ -18,17 +20,20 @@
    tasks:
    
    - name: remove host from inventory directory
-     file: path={{playbook_dir}}/inventory/{{inventory_hostname}}.conf state=absent
+     file: 
+        path: "{{ playbook_dir }}/inventory/{{ inventory_hostname }}.conf" 
+        state: absent
      
    - name: Retrieve information from devices running Junos
      junos_get_facts:
-      host={{ junos_host }}
-      user={{ ADMUSER }}
-      passwd={{ ADMPASS }}
-      savedir={{playbook_dir}}/inventory
+      host: "{{ junos_host }}"
+      user: "{{ ADMUSER }}"
+      passwd: "{{ ADMPASS }}"
+      savedir: "{{playbook_dir}}/inventory"
      register: junos
 
    - name: Print some facts
-     debug: msg="device {{junos["facts"]["hostname"]}} runs version {{junos.facts.version}}" 
+     debug: 
+       msg: "device {{junos['facts']['hostname']}} runs version {{junos.facts.version}}" 
      when: junos.facts.version != "12.3R11.2"
      
