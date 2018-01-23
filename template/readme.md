@@ -292,14 +292,75 @@ policy-options {
 }
 
 ```
+# pb_load_cfg_from_template.yml
 
-ansible-playbook template/pb.load_cfg_from_template.yml --check --diff
-ansible-playbook template/pb.load_cfg_from_template.yml
-ls -l template/render/*.conf
-more template/render/ex4300-10.conf
-ls -l template/*.log
-more template/ex4300-10.log
-ansible-playbook junos_rollback/pb.yml
+```
+# ansible-playbook template/pb_load_cfg_from_template.yml
+
+PLAY [create a directory render] *****************************************************************************************************************************************
+
+TASK [create and push the directory render] ******************************************************************************************************************************
+changed: [localhost]
+
+PLAY [Load Configs From Jinja2 Templates] ********************************************************************************************************************************
+
+TASK [Retrieve information from devices running Junos OS] ****************************************************************************************************************
+ok: [ex4300-17]
+ok: [ex4300-18]
+ok: [ex4300-9]
+
+TASK [Create Junos configurations from Jinja2] ***************************************************************************************************************************
+changed: [ex4300-18]
+changed: [ex4300-17]
+changed: [ex4300-9]
+
+TASK [Install rendered configuration] ************************************************************************************************************************************
+changed: [ex4300-9]
+changed: [ex4300-18]
+changed: [ex4300-17]
+
+PLAY RECAP ***************************************************************************************************************************************************************
+ex4300-17                  : ok=3    changed=2    unreachable=0    failed=0   
+ex4300-18                  : ok=3    changed=2    unreachable=0    failed=0   
+ex4300-9                   : ok=3    changed=2    unreachable=0    failed=0   
+localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+```
+```
+# ls template/render/
+ex4300-17.conf  ex4300-18.conf  ex4300-9.conf
+```
+```
+# more template/render/ex4300-17.conf 
+system {
+    name-server {
+                8.8.8.8;
+                8.8.4.4;
+            }
+}
+```
+```
+# more template/ex4300-17.log 
+
+[edit system name-server]
+    172.30.179.3 { ... }
++   8.8.8.8;
++   8.8.4.4;
+```
+```
+# ssh pytraining@172.30.179.73
+Password:
+--- JUNOS 15.1R5.5 built 2016-11-25 16:55:57 UTC
+pytraining@ex4300-17> show system commit 
+0   2018-01-23 20:49:19 CET by pytraining via netconf
+    commit from ansible playbook pb_load_cfg_from_template.yml
+```                               
+```
+pytraining@ex4300-17> show configuration | compare rollback 1 
+[edit system name-server]
+    172.30.179.3 { ... }
++   8.8.8.8;
++   8.8.4.4;
+```
 
 ansible-playbook template/pb.load_cfg_from_template.replace.yml --check --diff
 ansible-playbook template/pb.load_cfg_from_template.replace.yml
