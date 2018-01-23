@@ -8,4 +8,6 @@
    tasks:
 
     - name: Assembling configurations
-      assemble: src={{playbook_dir}}/fragments dest={{playbook_dir}}/junos.conf
+      assemble:  
+        src: "{{playbook_dir}}/fragments" 
+        dest: "{{playbook_dir}}/junos.conf"

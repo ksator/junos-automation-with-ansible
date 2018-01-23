@@ -10,7 +10,7 @@ Both of them are used in this repository.
 
 ### Ansible modules for Junos built by Juniper:  
 Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).    
-Modules (version 1.4.0):     
+Modules (version 1.4.3):     
 - **junos_cli** - Execute CLI on device and save the output locally  
 - **junos_commit** - Execute commit on device  
 - **junos_get_config** - Retrieve configuration of device  
@@ -36,7 +36,7 @@ sudo ansible-galaxy install Juniper.junos
 
 ### Ansible core modules for Junos built by Ansible:   
 
-Modules (Ansible 2.1.1.0):   
+Modules (Ansible 2.4.2.0):   
 - **junos_command** - Execute arbitrary commands on a remote device running Junos  
 - **junos_config** - Manage configuration on remote devices running Junos  
 - **junos_facts** - Collect facts from remote device running Junos  
@@ -48,12 +48,13 @@ Documentation: http://docs.ansible.com/ansible/list_of_network_modules.html
 Installation: core modules. They ship with ansible itself (from Ansible 2.1). Ansible 2.1 or above is required.    
 Source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/junos  
 
-### Requirements:  
+### Requirements :  
 
 ##### On the Ansible server:
 
-Most of these Ansbile modules require installing the python library py-junos-eznc on the Ansible server.  
-Some options (like the console option in the junos_install_config module) also require the python library junos-netconify.
+Most of these Ansbile modules require installing the python library py-junos-eznc on the Ansible server. 
+Some options require also the python library jxmlease.  
+Some options (like the console option in the junos_install_config module) require also the python library junos-netconify.
 
 ##### On the Junos devices:
 
@@ -64,11 +65,59 @@ commit
 ```
 Note: It is not required to use cli to configure Netconf on Junos devices. This can be done with the Ansible module junos_netconf. 
 
+### Requirements to use this repository:  
+ 
+##### Get the content of the remote repository locally
+
+```
+sudo -s
+git clone https://github.com/ksator/ansible-training-for-junos-automation.git
+ls ansible-training-for-junos-automation/
+```
+
+##### Move to the local copy of the remote repo
+
+```
+cd ansible-training-for-junos-automation
+sudo -s
+```
+
+##### Install PyEZ, Ansible, JSNAPy
+
+This repository has been tested using Ansible 2.4.2.0  
+
+Run these commands on Ubuntu 16.04 to install these tools:
+```
+sudo -s
+apt-get update
+apt-get install -y python-dev libxml2-dev python-pip libxslt1-dev build-essential libssl-dev libffi-dev git
+pip install junos-eznc jxmlease wget jsnapy ansible==2.4.2.0 requests ipaddress cryptography 
+ansible-galaxy install Juniper.junos,1.4.3
+```
+Check the Ansible version:
+```
+ansible --version
+```
+Verify you have the Juniper.junos role: 
+```
+ls /etc/ansible/roles/
+```
+This repository has been tested using the version 1.4.3 of the Juniper.junos role available on Galaxy.  
+Use this command to see the name and version of each role installed:
+```
+ansible-galaxy list
+```
+
+You can now use the local copy of this remote repository.  
+You need to run the below commands within the root of the project tree.
+
+
+
 # About this project:   
 This project has many ready-to-use Ansible playbooks to interact with Junos devices.    
 I am using them to deliver Ansible trainings to network engineers.  
 
-There is an ansible presentation available in this repository: [ansible.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.pdf)
+There is an ansible presentation available in this repository: [ansible.pdf](https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.pdf)
  
 ### How to use this project: 
 

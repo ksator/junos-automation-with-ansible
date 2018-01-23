@@ -1,8 +1,8 @@
-*.log
-*.txt
-*.xml
+# *.log
+# *.txt
+# *.xml
 # *.conf
-*.diff
-*.json
+# *.diff
+# *.json
 
 

@@ -20,6 +20,8 @@ ex4200-12 junos_host=172.30.179.112
 [AMS-test]
 ex4200-7
 
+[servers]
+172.30.204.10
 
 [AMS-EX4300]
 #ex4300-4    junos_host=172.30.179.65

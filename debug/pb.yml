@@ -12,11 +12,12 @@
         
    - name: Retrieve information from devices running Junos
      junos_get_facts:
-      host={{ junos_host }}
-      user={{ ADMUSER }}
-      passwd={{ ADMPASS }}
+      host: "{{ junos_host }}"
+      user: "{{ ADMUSER }}"
+      passwd: "{{ ADMPASS }}"
      register: junos
      
    - name: Print some facts
-     debug: msg="device {{junos["facts"]["hostname"]}} runs version {{junos.facts.version}}" 
+     debug: 
+       msg: "device {{junos['facts']['hostname']}} runs version {{junos.facts.version}}" 
      when: junos.facts.version != "12.3R11.2"

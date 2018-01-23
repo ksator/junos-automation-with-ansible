@@ -1,5 +1,4 @@
 you can use the ansible ping module for testing: https://github.com/ksator/ansible-training-for-junos/tree/master/ping  
-
 Another Ansible module that is useful for testing is the command module.    
 module: command  
 this is a core module   
@@ -11,7 +10,13 @@ The module is command, the module argument is /bin/echo hello, the endpoint is 1
 
 ```
 ansible --help
-ansible 172.30.204.10 -m command -a "/bin/echo hello" -u administrator --ask-pass
+```
+```
+# more hosts | grep 172.30.204.10
+172.30.204.10
+```
+```
+# ansible 172.30.204.10 -m command -a "/bin/echo hello" -u administrator --ask-pass
 SSH password: 
 172.30.204.10 | SUCCESS | rc=0 >>
 hello
