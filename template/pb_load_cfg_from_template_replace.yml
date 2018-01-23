@@ -5,10 +5,14 @@
 
     tasks:
 
-    - name: create and push the directory render
+    - name: create directories
       file: 
-        path: "{{playbook_dir}}/render" 
+        path: "{{playbook_dir}}/{{ item }}" 
         state: directory
+      with_items: 
+       - render
+       - diff
+
 
   - name: Load Configs From Jinja2 Templates
     hosts: EX4300
@@ -17,7 +21,7 @@
     connection: local
     gather_facts: no
     vars:
-      - junos_jinja_template: "{{playbook_dir}}/dns-servers.replace.j2"
+      - junos_jinja_template: "{{playbook_dir}}/dns-servers_replace.j2"
     vars_files:
       - "{{playbook_dir}}/dns-servers.yml"
 
@@ -38,10 +42,10 @@
     - name: Install rendered configuration
       junos_install_config:
         host: "{{ junos_host }}"
-        user: "{{ADMUSER}}"
-        passwd: {{ADMPASS}}"
+        user: "{{ ADMUSER }}"
+        passwd: "{{ ADMPASS }}"
         file: "{{playbook_dir}}/render/{{ junos.facts.hostname }}.conf"
-        diffs_file: "{{playbook_dir}}/{{ junos.facts.hostname }}.log"
+        diffs_file: "{{playbook_dir}}/diff/{{ junos.facts.hostname }}.log"
         replace: yes
         overwrite: false
         
