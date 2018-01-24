@@ -5,11 +5,13 @@
  
    tasks:
 
-   - name: create and push the directory render
-     file: path={{playbook_dir}}/render state=directory
+   - name: create the directory render
+     file: 
+        path: "{{playbook_dir}}/render" 
+        state: directory
 
  - name: create BGP junos configuration
-   hosts: AMS-EX4200
+   hosts: EX4200
    connection: local
    gather_facts: no
    roles:
@@ -41,12 +43,21 @@
        action: "snap_pre"
        test_files: "{{playbook_dir}}/test_file_check_bgp_states.yml"
 
-   - name: push bgp configuration on devices
+   - name: push bgp configuration on devices if ansible version is >= 2.4
+     junos_config:
+      provider: "{{  credentials }}"
+      src: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
+      update: replace
+      src_format: text
+     when: ansible_version['major'] == 2 and ansible_version['minor']|int >= 4
+
+   - name: push bgp configuration on devices if ansible version is < 2.4
      junos_config:
       provider: "{{  credentials }}"
       src: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
       replace: yes
       src_format: text
+     when: ansible_version['major'] == 2 and ansible_version['minor']|int <= 3
 
    - name: Collect Post Snapshot
      junos_jsnapy:
@@ -61,10 +72,12 @@
       provider: "{{  credentials }}"
       commands:
        - show bgp neighbor "{{ item.peer_ip }}"
+      display: 'xml'
       waitfor:
-      - "result[0].bgp-information.bgp-peer.peer-state eq Established"
+      - "result[0].rpc-reply.bgp-information.bgp-peer.peer-state eq Established"
       retries: 15
       interval: 2
+     when: ansible_version['major'] == 2 and ansible_version['minor']|int >= 4
      with_items:
      - "{{ neighbors}}"
 
