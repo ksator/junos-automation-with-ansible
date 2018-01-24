@@ -1,6 +1,6 @@
 ---
  - name: install conf
-   hosts: AMS-test
+   hosts: test
    roles:
     - Juniper.junos
    connection: local
@@ -10,15 +10,15 @@
    
    - name: Install configuration to devices running Junos
      junos_install_config:
-      host={{ junos_host }}
-      user={{ ADMUSER }}
-      passwd={{ ADMPASS }}
-      logfile={{playbook_dir}}/install_config.log
-      replace=no
-      overwrite=no
-      file={{playbook_dir}}/{{ item }}
-      comment="configured by ansible"
-      diffs_file={{playbook_dir}}/{{ inventory_hostname }}_{{ item }}_{{ lookup('pipe', 'date +%d%m-%H%M%S') }}
+      host: "{{ junos_host }}"
+      user: "{{ ADMUSER }}"
+      passwd: "{{ ADMPASS }}"
+      logfile: "{{playbook_dir}}/install_config.log"
+      replace: no
+      overwrite: no
+      file: "{{playbook_dir}}/{{ item }}"
+      comment: "configured by ansible"
+      diffs_file: "{{playbook_dir}}/{{ inventory_hostname }}_{{ item }}_{{ lookup('pipe', 'date +%d%m-%H%M%S') }}"
      with_items:
       - syslog.set
       - banner.set

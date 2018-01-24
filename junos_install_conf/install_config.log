@@ -52,3 +52,135 @@
 2015-11-25 10:47:14,991:ncclient.operations.rpc:Requesting 'ExecuteRpc'
 2015-11-25 10:47:15,119:CONFIG:172.30.179.113:change completed
 2015-11-25 10:47:15,119:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 16:06:00,118:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 16:06:00,633:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 16:06:01,522:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 16:06:01,887:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 16:06:04,137:ncclient.transport.session:initialized: session-id=1969 | server_capabilities=<dictionary-keyiterator object at 0x7f469443a890>
+2018-01-23 16:06:04,137:CONFIG:172.30.179.107:pushing file: /home/ksator/ansible-training-for-junos-automation/junos_install_conf/syslog.set
+2018-01-23 16:06:04,137:CONFIG:172.30.179.107:taking lock
+2018-01-23 16:06:04,138:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:06:04,407:CONFIG:172.30.179.107:loading config
+2018-01-23 16:06:04,411:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:06:04,681:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:06:05,207:CONFIG:172.30.179.107:doing a commit-check, please be patient
+2018-01-23 16:06:05,207:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:06:06,843:CONFIG:172.30.179.107:committing change, please be patient
+2018-01-23 16:06:06,843:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:06:14,100:CONFIG:172.30.179.107:unlocking
+2018-01-23 16:06:14,101:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:06:14,473:CONFIG:172.30.179.107:change completed
+2018-01-23 16:06:14,473:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 16:06:15,146:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 16:06:15,499:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 16:06:16,540:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 16:06:16,895:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 16:06:19,191:ncclient.transport.session:initialized: session-id=2324 | server_capabilities=<dictionary-keyiterator object at 0x7f921a5b1838>
+2018-01-23 16:06:19,191:CONFIG:172.30.179.107:pushing file: /home/ksator/ansible-training-for-junos-automation/junos_install_conf/banner.set
+2018-01-23 16:06:19,191:CONFIG:172.30.179.107:taking lock
+2018-01-23 16:06:19,192:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:06:19,413:CONFIG:172.30.179.107:loading config
+2018-01-23 16:06:19,416:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:06:19,839:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:06:20,311:CONFIG:172.30.179.107:doing a commit-check, please be patient
+2018-01-23 16:06:20,312:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:06:21,592:CONFIG:172.30.179.107:committing change, please be patient
+2018-01-23 16:06:21,593:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:06:28,489:CONFIG:172.30.179.107:unlocking
+2018-01-23 16:06:28,490:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:06:28,913:CONFIG:172.30.179.107:change completed
+2018-01-23 16:06:28,914:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 16:10:39,348:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 16:10:39,853:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 16:10:40,799:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 16:10:41,189:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 16:10:43,402:ncclient.transport.session:initialized: session-id=3025 | server_capabilities=<dictionary-keyiterator object at 0x7f50579a8838>
+2018-01-23 16:10:43,402:CONFIG:172.30.179.107:pushing file: /home/ksator/ansible-training-for-junos-automation/junos_install_conf/syslog.set
+2018-01-23 16:10:43,402:CONFIG:172.30.179.107:taking lock
+2018-01-23 16:10:43,403:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:10:43,674:CONFIG:172.30.179.107:loading config
+2018-01-23 16:10:43,674:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:10:43,995:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:10:44,571:CONFIG:172.30.179.107:doing a commit-check, please be patient
+2018-01-23 16:10:44,571:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:10:46,564:CONFIG:172.30.179.107:Ansible check mode complete
+2018-01-23 16:10:46,995:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 16:10:47,317:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 16:10:48,305:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 16:10:48,741:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 16:10:53,443:ncclient.transport.session:initialized: session-id=3058 | server_capabilities=<dictionary-keyiterator object at 0x7f849c1a2838>
+2018-01-23 16:10:53,443:CONFIG:172.30.179.107:pushing file: /home/ksator/ansible-training-for-junos-automation/junos_install_conf/banner.set
+2018-01-23 16:10:53,447:CONFIG:172.30.179.107:taking lock
+2018-01-23 16:10:53,447:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:10:57,556:CONFIG:172.30.179.107:loading config
+2018-01-23 16:10:57,556:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:10:57,775:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:10:58,247:CONFIG:172.30.179.107:doing a commit-check, please be patient
+2018-01-23 16:10:58,248:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:10:59,632:CONFIG:172.30.179.107:Ansible check mode complete
+2018-01-23 16:11:03,876:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 16:11:04,098:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 16:11:04,924:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 16:11:05,118:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 16:11:07,134:ncclient.transport.session:initialized: session-id=3090 | server_capabilities=<dictionary-keyiterator object at 0x7f03fad11838>
+2018-01-23 16:11:07,135:CONFIG:172.30.179.107:pushing file: /home/ksator/ansible-training-for-junos-automation/junos_install_conf/syslog.set
+2018-01-23 16:11:07,135:CONFIG:172.30.179.107:taking lock
+2018-01-23 16:11:07,135:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:07,406:CONFIG:172.30.179.107:loading config
+2018-01-23 16:11:07,406:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:07,625:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:08,049:CONFIG:172.30.179.107:doing a commit-check, please be patient
+2018-01-23 16:11:08,050:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:09,687:CONFIG:172.30.179.107:Ansible check mode complete
+2018-01-23 16:11:10,175:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 16:11:10,364:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 16:11:10,951:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 16:11:11,265:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 16:11:13,580:ncclient.transport.session:initialized: session-id=3123 | server_capabilities=<dictionary-keyiterator object at 0x7f2710e4d890>
+2018-01-23 16:11:13,581:CONFIG:172.30.179.107:pushing file: /home/ksator/ansible-training-for-junos-automation/junos_install_conf/banner.set
+2018-01-23 16:11:13,581:CONFIG:172.30.179.107:taking lock
+2018-01-23 16:11:13,581:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:13,802:CONFIG:172.30.179.107:loading config
+2018-01-23 16:11:13,803:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:14,023:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:14,447:CONFIG:172.30.179.107:doing a commit-check, please be patient
+2018-01-23 16:11:14,448:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:15,935:CONFIG:172.30.179.107:Ansible check mode complete
+2018-01-23 16:11:22,276:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 16:11:22,633:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 16:11:23,496:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 16:11:23,995:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 16:11:26,411:ncclient.transport.session:initialized: session-id=3155 | server_capabilities=<dictionary-keyiterator object at 0x7ff7e8d1a838>
+2018-01-23 16:11:26,411:CONFIG:172.30.179.107:pushing file: /home/ksator/ansible-training-for-junos-automation/junos_install_conf/syslog.set
+2018-01-23 16:11:26,413:CONFIG:172.30.179.107:taking lock
+2018-01-23 16:11:26,414:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:26,583:CONFIG:172.30.179.107:loading config
+2018-01-23 16:11:26,584:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:26,756:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:27,180:CONFIG:172.30.179.107:doing a commit-check, please be patient
+2018-01-23 16:11:27,180:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:28,812:CONFIG:172.30.179.107:committing change, please be patient
+2018-01-23 16:11:28,813:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:35,706:CONFIG:172.30.179.107:unlocking
+2018-01-23 16:11:35,707:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:35,824:CONFIG:172.30.179.107:change completed
+2018-01-23 16:11:35,825:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-23 16:11:36,360:CONFIG:172.30.179.107:connecting to host: pytraining@172.30.179.107:830
+2018-01-23 16:11:36,513:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.0)
+2018-01-23 16:11:36,790:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-23 16:11:36,928:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-23 16:11:39,040:ncclient.transport.session:initialized: session-id=3510 | server_capabilities=<dictionary-keyiterator object at 0x7f20f56d1838>
+2018-01-23 16:11:39,041:CONFIG:172.30.179.107:pushing file: /home/ksator/ansible-training-for-junos-automation/junos_install_conf/banner.set
+2018-01-23 16:11:39,041:CONFIG:172.30.179.107:taking lock
+2018-01-23 16:11:39,041:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:39,212:CONFIG:172.30.179.107:loading config
+2018-01-23 16:11:39,213:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:39,382:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:39,754:CONFIG:172.30.179.107:doing a commit-check, please be patient
+2018-01-23 16:11:39,755:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:41,389:CONFIG:172.30.179.107:committing change, please be patient
+2018-01-23 16:11:41,389:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:48,496:CONFIG:172.30.179.107:unlocking
+2018-01-23 16:11:48,496:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-23 16:11:48,666:CONFIG:172.30.179.107:change completed
+2018-01-23 16:11:48,666:ncclient.operations.rpc:Requesting 'CloseSession'
