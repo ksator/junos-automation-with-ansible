@@ -6,7 +6,7 @@ Requirement on Junos devices: enable netconf on junos.
 
 playbooks:
 - **Pb.yml**: install a list of configuration files on junos devices (2 files: syslog.set and banner.set, this makes 2 separate commit, one per file).   
--**pb_bgp_replace.yml**: renders a template, and loads the configuration. uses jsnapy to take snapshots before and after the changes, and compare the snapshots.  
+- **pb_bgp_replace.yml**: renders a template, and loads the configuration. uses jsnapy to take snapshots before and after the changes, and compare the snapshots.  
 
 Usage:
 # pb.yml
