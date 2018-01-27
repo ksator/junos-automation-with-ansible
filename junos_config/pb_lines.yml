@@ -1,6 +1,6 @@
 ---
  - name: pass set and delete commands
-   hosts: AMS-test
+   hosts: test
    connection: local
    gather_facts: no
 
@@ -9,9 +9,11 @@
      junos_config:
       provider: "{{ credentials }}"
       lines:
-       - delete system name-server 172.30.179.2
+       - delete system name-server 1.2.3.4
        - set system host-name newname
        - set system login message newbanner
       comment: configured by Ansible module junos_config
-      #confirm: 2
+      backup: yes
+      update: merge
+#      confirm: 1
 

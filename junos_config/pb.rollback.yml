@@ -1,6 +1,6 @@
 ---
  - name: rollback configuration on junos devices
-   hosts: AMS-test
+   hosts: test
    connection: local
    gather_facts: no
 
@@ -8,5 +8,6 @@
    - name: rollback
      junos_config:
       provider: "{{ credentials }}"
-      rollback: 3
+      rollback: "{{ rbid }}"
+      backup: yes
 
