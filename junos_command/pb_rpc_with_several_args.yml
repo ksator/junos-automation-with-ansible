@@ -1,0 +1,22 @@
+---
+ - name: pass rpc with several args to Junos devices and print result in json
+   hosts: ex4200-7
+   connection: local
+   gather_facts: no
+
+   tasks:
+   - name: pass rpc 
+     junos_command:
+      provider: "{{ credentials }}"
+      # show route receive-protocol bgp 192.168.10.4 active-path hidden | display xml rpc 
+      rpcs:
+       - "get-route-information protocol=bgp peer=192.168.10.4 active-path=True hidden=True"
+     register: result
+
+   - name: results in json
+     debug: 
+       var=result['output'][0]['rpc-reply']['route-information']["route-table"]
+
+
+
+

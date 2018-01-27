@@ -1,6 +1,6 @@
 ---
 
- - name: pass rpc to a junos device and parse the output
+ - name: pass rpc with one arg to a junos device and parse the output
    hosts: ex4300-9
    connection: local
    gather_facts: no
@@ -17,7 +17,26 @@
       - "192.168.0.0"
       - "192.168.0.4"
 
- - name: pass rpc to a Junos device and parse the output
+ - name: pass rpc with one arg to Junos devices and print result in XML
+   hosts: qfx5100-44
+   connection: local
+   gather_facts: no
+
+   tasks:
+   - name: pass rpc 
+     junos_command:
+      provider: "{{ credentials }}"
+      # show chassis hardware clei-models | display xml rpc 
+      rpcs:
+       - "get-chassis-inventory verbosity=clei-models"
+     register: result
+
+   - name: results all result
+     debug: 
+        var=result
+
+
+ - name: pass rpc with one arg to a Junos device and parse the output
    hosts: ex4300-17
    connection: local
    gather_facts: no
