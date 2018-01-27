@@ -1,0 +1,58 @@
+---
+ - name: configure Junos devices with lldp 
+   hosts: EX4300
+   connection: local
+   gather_facts: no
+   
+   tasks:
+       
+  
+   - name: Check if Physical Interfaces are up
+     junos_command:
+      commands:
+       - "show interfaces terse {{ item.interface }}"
+      provider: "{{ credentials }}"
+      display: 'xml'
+      waitfor:
+       - "result[0]['rpc-reply']['interface-information']['physical-interface']['oper-status'] eq up"
+     with_items: 
+     - "{{ neighbors }}"
+      
+   - name: configure lldp
+     junos_config:
+      provider: "{{ credentials }}"
+      lines:
+        - set interfaces {{ item.interface }} unit 0 family inet address {{ item.local_ip }}/31
+        - set protocols lldp interface "{{ item.interface }}"
+     with_items:
+     - "{{ neighbors }}"
+     
+ - name: wait for lldp neighbors to be discovered
+   hosts: localhost
+   gather_facts: no
+   
+   tasks:
+   - pause: seconds=20
+   
+ - name: check devices lldp neighbors 
+   hosts: EX4300
+   connection: local
+   gather_facts: no
+   
+   tasks:
+  
+   - name: check if lldp neighbors are the ones we expect
+     junos_command:
+      provider: "{{ credentials }}"
+      commands:
+       - show lldp neighbors interface {{ item.interface }}
+      waitfor:
+       - "result[0]['rpc-reply']['lldp-neighbors-information']['lldp-neighbor-information']['lldp-remote-system-name'] contains {{ item.name }}"
+      retries: 10
+      interval: 2
+      display: xml
+     with_items:
+     - "{{ neighbors }}"
+
+
+

@@ -1,0 +1,63 @@
+# the structured response DOES include the 'rpc-reply' key.
+# the structured response is returned in the 'output' key.
+
+---
+ - name: check bgp states with items
+   hosts: EX4200
+   connection: local
+   gather_facts: no
+   tasks:
+
+   - name: check if bgp neighbors are established
+     junos_command:
+      provider: "{{  credentials }}"
+      display: 'xml'
+      commands:
+       - show bgp neighbor "{{ item.peer_ip }}"
+      waitfor:
+       - "result[0].rpc-reply.bgp-information.bgp-peer.peer-state eq 'Established'"
+     with_items:
+      - "{{ neighbors }}"
+     register: response
+
+   - name: check if bgp neighbors are established using another sysntax
+     junos_command:
+      provider: "{{  credentials }}"
+      display: 'xml'
+      commands:
+       - show bgp neighbor "{{ item.peer_ip }}"
+      waitfor:
+        - "result[0]['rpc-reply']['bgp-information']['bgp-peer']['peer-state'] eq 'Established'"
+     with_items:
+      - "{{ neighbors }}"
+
+    
+   - name: "Debug with items. 1st item"
+     debug:
+        var: response['results'][0]['output'][0]['rpc-reply']['bgp-information']['bgp-peer']['peer-state']
+     
+   - name: "Debug with items. last item"
+     debug:
+        var: response['results'][-1]['output'][0]['rpc-reply']['bgp-information']['bgp-peer']['peer-state']
+
+  
+ - name: check bgp states without item
+   hosts: ex4200-12
+   connection: local
+   gather_facts: no
+   tasks:
+
+   - name: check if bgp neighbors are established
+     junos_command:
+      provider: "{{  credentials }}"
+      display: 'xml'
+      commands:
+       - show bgp neighbor 192.168.10.1
+      waitfor:
+       - "result[0].rpc-reply.bgp-information.bgp-peer.peer-state eq 'Established'"
+     register: response
+
+
+   - name: "Debug without item"
+     debug:
+        var: response['output'][0]['rpc-reply']['bgp-information']['bgp-peer']['peer-state']
