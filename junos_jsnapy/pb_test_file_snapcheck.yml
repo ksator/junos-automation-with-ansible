@@ -1,0 +1,49 @@
+---
+ - name: load junos configuration and verify with jsnapy
+   hosts: EX4300
+   connection: local
+   gather_facts: no
+   roles:
+   - Juniper.junos
+
+   tasks:
+
+   - name: push configuration on devices
+     junos_install_config:
+      file: "{{ playbook_dir }}/name_servers.set"
+      host: "{{ junos_host }}"
+      user: "{{ credentials.username }}"
+      passwd: "{{ credentials.password }}"
+      replace: no
+      overwrite: no
+      comment: "configured by ansible"
+
+   - name: check configuration using jsnapy using test files only
+     junos_jsnapy:
+       host: "{{ junos_host }}"
+       user: "{{ credentials.username }}"
+       passwd: "{{ credentials.password }}"
+       action: "snapcheck"
+       test_files: test_file_snapcheck_name_servers_cfg.yml
+     register: jsnapy_test_1
+
+   - name: Debug jsnapy
+     debug: 
+       msg: "{{ jsnapy_test_1}}"
+   
+   - name: Send Slack notification when jsnapy fails
+     local_action:
+       module: slack
+       username: "Ansible on {{ inventory_hostname }}"
+       channel: general       
+       token: T2MBN64JX/B2N0Z2MEU/1OoB46XLX6Q1oFf89Xl2X9gq
+       icon_url: "https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png"
+       msg: "jsnapy test from pb.jsnapy.yml failed"
+     when: jsnapy_test_1.passPercentage != 100
+
+   - name: Check JSNAPy tests results
+     assert:
+       that:
+       - "jsnapy_test_1.passPercentage == 100"
+       msg: "jsnapy test from pb.jsnapy.yml on {{ inventory_hostname }} failed"
+

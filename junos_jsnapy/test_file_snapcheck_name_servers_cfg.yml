@@ -1,0 +1,28 @@
+tests_include:
+ - name-servers
+
+# check if dns 8.8.8.8 and 8.8.4.4 are configured, and check if dns 172.30.179.144 is not configured
+name-servers:
+  - rpc: get-config
+  - kwargs:
+      filter_xml: configuration/system/name-server
+  - item:
+      xpath: //configuration/system/name-server[normalize-space(name) = "8.8.8.8"]
+      tests:
+        - exists: name 
+          info: "Test Succeeded !!. The name server <{{post['name']}}> is configured."
+          err: "Test Failed !!. The name server <{{post['name']}}> is not configured."
+  - item:
+      xpath: //configuration/system/name-server[normalize-space(name) = "8.8.4.4"]
+      tests:
+        - exists: name 
+          info: "Test Succeeded !!. The name server <{{post['name']}}> is configured."
+          err: "Test Failed !!. The name server is <{{post['name']}}> not configured."
+  - item:
+      xpath: //configuration/system/name-server[normalize-space(name) = "172.30.179.144"]
+      tests:
+        - not-exists: name 
+          info: "Test Succeeded !! The name server 172.30.179.144 is not configured"
+          err: "Test Failed !!. The name server 172.30.179.144 is configured"
+          ignore-null: True
+
