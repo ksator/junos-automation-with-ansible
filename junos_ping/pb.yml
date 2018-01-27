@@ -1,7 +1,55 @@
 ---
+ - name: create a directory
+   hosts: localhost
+   gather_facts: no
+ 
+   tasks:
+
+   - name: create the directory render
+     file: 
+        path: "{{playbook_dir}}/render" 
+        state: directory
+
+ - name: create BGP junos configuration
+   hosts: EX4300
+   connection: local
+   gather_facts: no
+   roles:
+   - Juniper.junos
+
+   tasks:
+
+   - name: Render BGP configuration for junos devices
+     template: 
+       src: "{{playbook_dir}}/replacebgp.j2" 
+       dest: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
+
+   - name: push bgp configuration on devices if ansible version is >= 2.4
+     junos_config:
+      provider: "{{  credentials }}"
+      src: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
+      update: replace
+      src_format: text
+     when: ansible_version['major'] == 2 and ansible_version['minor']|int >= 4
+
+   - name: push bgp configuration on devices if ansible version is < 2.4
+     junos_config:
+      provider: "{{  credentials }}"
+      src: "{{playbook_dir}}/render/{{ inventory_hostname }}.text"
+      replace: yes
+      src_format: text
+     when: ansible_version['major'] == 2 and ansible_version['minor']|int <= 3
+
+ - name: wait for peers to establish connections
+   hosts: localhost
+   gather_facts: no
+
+   tasks:
+   - pause: seconds=25
+
 
  - name: check routing details
-   hosts: AMS-EX4300
+   hosts: EX4300
    connection: local
    gather_facts: no
    roles:
