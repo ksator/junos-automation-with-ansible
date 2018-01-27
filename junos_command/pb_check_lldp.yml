@@ -1,0 +1,21 @@
+---
+ - name: check lldp neighbors
+   hosts: ex4300-17
+   connection: local
+   gather_facts: no
+
+   tasks:
+   - name: check if lldp neighbors are the ones we expect
+     junos_command:
+      provider: "{{ credentials }}"
+      commands:
+       - show lldp neighbors interface {{ item.local_interface }} 
+      display: xml
+      waitfor:
+      - "result[0]['rpc-reply']['lldp-neighbors-information']['lldp-neighbor-information']['lldp-remote-system-name'] eq {{ item.neighbor }}"
+      retries: 11
+      interval: 3
+     when: (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
+     with_items: 
+      - { local_interface: "ge-0/0/0", neighbor: "ex4300-9" } 
+      - { local_interface: "ge-0/0/1", neighbor: "ex4300-18" }

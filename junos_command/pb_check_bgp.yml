@@ -1,6 +1,6 @@
 ---
  - name: check bgp states
-   hosts: ex4300-4
+   hosts: ex4300-17
    connection: local
    gather_facts: no
 
@@ -11,9 +11,12 @@
       commands:
        - show bgp neighbor "{{ item }}"
       waitfor:
-      - "result[0].bgp-information.bgp-peer.peer-state eq Established"
-      retries: 10
-      interval: 1
+      - "result[0]['rpc-reply']['bgp-information']['bgp-peer']['peer-state'] eq Established"
+      retries: 5
+      interval: 3
+      display: 'xml'
+     when: (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
      with_items:
-       - "192.168.0.1"
+       - "192.168.0.5"
        - "192.168.0.3"
+
