@@ -11,7 +11,7 @@
         state: directory
 
  - name: create BGP junos configuration
-   hosts: EX4200
+   hosts: EX4300
    connection: local
    gather_facts: no
    roles:
@@ -54,7 +54,7 @@
    - name: push bgp configuration on devices if ansible version is < 2.4
      junos_config:
       provider: "{{  credentials }}"
-      src: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
+      src: "{{playbook_dir}}/render/{{ inventory_hostname }}.text"
       replace: yes
       src_format: text
      when: ansible_version['major'] == 2 and ansible_version['minor']|int <= 3
