@@ -1,0 +1,65 @@
+---
+
+- name: Change configuration using junos_config module
+  hosts: ex4200-7, qfx5100-44
+  connection: local
+  gather_facts: no
+  vars_files:
+  - "vlans.yml"
+  tags: configuration
+  
+  tasks:
+
+  - name: create vlans
+    tags: configuration
+    junos_config:
+      lines:
+        - "set vlans {{ item.name }} vlan-id {{ item.id }}"
+      comment: "create vlans from Ansible"
+      provider: "{{ credentials }}"
+      backup: yes
+    with_items: "{{ vlans }}"
+
+
+
+- name: check from devices operationnal state if desirated vlans are presents
+  hosts: ex4200-7
+  connection: local
+  gather_facts: no
+  vars_files:
+  - "vlans.yml"
+  tags: audit
+  tasks:
+
+  - name: check vlan
+    junos_command:
+      provider: "{{  credentials }}"
+      display: 'xml'
+      commands:
+       - "show vlans {{item.name}}"
+      waitfor:
+       - "result[0]['rpc-reply']['vlan-information']['vlan']['vlan-name'] eq {{item.name }}"
+    with_items: "{{ vlans }}"
+    when: (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
+
+- name: check from devices operationnal state if desirated vlans are presents
+  hosts: qfx5100-44
+  connection: local
+  gather_facts: no
+  vars_files:
+  - "vlans.yml"
+  tags: audit
+  tasks:
+
+  - name: check vlan
+    junos_command:
+      provider: "{{  credentials }}"
+      display: 'xml'
+      commands:
+       - "show vlans {{item.name}}"
+      waitfor:
+       - "result[0]['rpc-reply']['l2ng-l2ald-vlan-instance-information']['l2ng-l2ald-vlan-instance-group']['l2ng-l2rtb-vlan-name'] eq {{ item.name }}"
+    with_items: "{{ vlans }}"
+    when: (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
+
+
