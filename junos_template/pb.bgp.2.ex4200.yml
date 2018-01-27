@@ -9,19 +9,23 @@
      file: path={{playbook_dir}}/render state=directory
 
  - name: create BGP junos configuration
-   hosts: AMS-EX4200
+   hosts: EX4200
    connection: local
    gather_facts: no
 
    tasks:
 
    - name: Render BGP configuration for junos devices
-     template: src={{playbook_dir}}/bgp.j2 dest={{playbook_dir}}/render/{{ inventory_hostname }}.conf
+     template: 
+        src: "{{playbook_dir}}/bgp.j2" 
+        dest: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
 
    - name: push bgp configuration on devices
      junos_template:
       provider: "{{  credentials }}"
       src: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
+     when: (ansible_version['major'] == 2 and ansible_version['minor']|int <= 3)
+
 
  - name: wait for peers to establish connections
    hosts: localhost
@@ -31,7 +35,7 @@
    - pause: seconds=25
 
  - name: check bgp states
-   hosts: AMS-EX4200
+   hosts: EX4200
    connection: local
    gather_facts: no
    roles:

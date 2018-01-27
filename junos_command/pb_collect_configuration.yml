@@ -1,0 +1,76 @@
+---
+- name: create configuration_backup directories
+  hosts: localhost
+  gather_facts: no
+  tasks:
+
+   - name: create configuration directory
+     file:
+       path: "{{playbook_dir}}/configuration"
+       state: directory
+
+
+   - name: create configuration subdirectories
+     file:
+       path: "{{playbook_dir}}/configuration/{{ item }}"
+       state: directory
+     with_items:
+       - text
+       - xml
+       - json
+       - set 
+
+- name: Collect configuration from devices
+  hosts: EX4300, QFX
+  connection: local
+  gather_facts: no
+  tasks:
+
+  - name: Collect configuration in text format from devices
+    junos_facts:
+      gather_subset: config
+      config_format: text
+      provider: "{{ credentials }}"
+    register: "result_text"
+
+  - name: copy collected configuration in configuration/text directory
+    copy: 
+      content: "{{ result_text.ansible_facts.ansible_net_config }}" 
+      dest: "{{ playbook_dir }}/configuration/text/{{ inventory_hostname }}.conf"
+ 
+  - name: Collect configuration in set format from devices
+    junos_facts:
+      gather_subset: config
+      config_format: set
+      provider: "{{ credentials }}"
+    register: "result_set"
+
+  - name: copy collected configuration in configuration/set directory
+    copy:
+      content: "{{ result_set.ansible_facts.ansible_net_config }}"
+      dest: "{{ playbook_dir }}/configuration/set/{{ inventory_hostname }}.set"
+ 
+  - name: Collect configuration in json format from devices
+    junos_facts:
+      gather_subset: config
+      config_format: json
+      provider: "{{ credentials }}"
+    register: "result_json"
+
+  - name: copy collected configuration in configuration/json directory
+    copy:
+      content: "{{ result_json.ansible_facts.ansible_net_config }}"
+      dest: "{{ playbook_dir }}/configuration/json/{{ inventory_hostname }}.json"
+
+  - name: Collect configuration in xml format from devices
+    junos_facts:
+      gather_subset: config
+      config_format: xml
+      provider: "{{ credentials }}"
+    register: "result_xml"
+
+  - name: copy collected configuration in configuration/xml directory
+    copy:
+      content: "{{ result_xml.ansible_facts.ansible_net_config }}"
+      dest: "{{ playbook_dir }}/configuration/xml/{{ inventory_hostname }}.xml"
+

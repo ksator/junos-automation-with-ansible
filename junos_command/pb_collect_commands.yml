@@ -1,0 +1,31 @@
+---
+ - name: create command directory
+   hosts: localhost
+   gather_facts: no
+   tasks:
+
+   - name: create command directory
+     file:
+       path: "{{playbook_dir}}/command"
+       state: directory
+
+ - name: pass commands on Junos devices
+   hosts: EX4300, QFX
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+   - name: pass commands on junos devices
+     junos_command:  
+      provider: "{{ credentials }}"
+      display: text
+      commands:
+       - show version
+       - show system uptime
+     register: cli
+
+   - name: save the output of the commands in the command dir
+     copy:
+      content: "{{ cli.stdout_lines }}"
+      dest: "{{playbook_dir}}/command/{{inventory_hostname}}.text"
