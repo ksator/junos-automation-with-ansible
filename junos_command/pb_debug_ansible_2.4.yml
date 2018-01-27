@@ -1,5 +1,6 @@
-# the structured response DOES include the 'rpc-reply' key.
-# the structured response is returned in the 'output' key.
+# with ansible 2.4
+# the structured response does include the 'rpc-reply' key
+# and the structured response is returned in the 'output' key.
 
 ---
  - name: check bgp states with items
