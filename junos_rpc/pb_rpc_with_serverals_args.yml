@@ -1,0 +1,22 @@
+# junos_rpc module from galaxy
+---
+- hosts: test
+  roles:
+    - Juniper.junos
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: send rpc with args
+      junos_rpc:
+        host: "{{ junos_host }}"
+        user: "{{ ADMUSER }}"
+        passwd: "{{ ADMPASS }}"
+        rpc: get-interface-information
+        logfile: 'rpc.log'
+        format: xml
+        dest: "{{ inventory_hostname }}.xml"
+        kwargs:
+          interface_name: ge-0/0/0
+          terse: True
+
