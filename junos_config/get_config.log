@@ -1,0 +1,58 @@
+2018-01-28 12:05:56,946:CONFIG:172.30.179.95:connecting to host: pytraining@172.30.179.95:830
+2018-01-28 12:05:56,953:CONFIG:172.30.179.74:connecting to host: pytraining@172.30.179.74:830
+2018-01-28 12:05:56,967:CONFIG:172.30.179.73:connecting to host: pytraining@172.30.179.73:830
+2018-01-28 12:05:57,133:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2018-01-28 12:05:57,142:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2018-01-28 12:05:57,142:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2018-01-28 12:05:57,483:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-28 12:05:57,514:ncclient.transport.ssh:Auth banner: hello
+
+2018-01-28 12:05:57,515:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-28 12:05:57,514:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-28 12:05:57,633:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-28 12:05:57,659:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-28 12:05:57,674:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-28 12:05:58,407:ncclient.transport.session:initialized: session-id=29243 | server_capabilities=<dictionary-keyiterator object at 0x7f4e9ee0c7e0>
+2018-01-28 12:05:58,408:CONFIG:172.30.179.73:Getting config with filter=<configuration><system/></configuration>
+2018-01-28 12:05:58,408:CONFIG:172.30.179.73:Getting config with options={'format': 'text'}
+2018-01-28 12:05:58,408:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-28 12:05:58,414:ncclient.transport.session:initialized: session-id=28634 | server_capabilities=<dictionary-keyiterator object at 0x7f4f0a8d97e0>
+2018-01-28 12:05:58,415:CONFIG:172.30.179.74:Getting config with filter=<configuration><system/></configuration>
+2018-01-28 12:05:58,415:CONFIG:172.30.179.74:Getting config with options={'format': 'text'}
+2018-01-28 12:05:58,415:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-28 12:05:58,480:ncclient.transport.session:initialized: session-id=30873 | server_capabilities=<dictionary-keyiterator object at 0x7fdd0d0937e0>
+2018-01-28 12:05:58,480:CONFIG:172.30.179.95:Getting config with filter=<configuration><system/></configuration>
+2018-01-28 12:05:58,480:CONFIG:172.30.179.95:Getting config with options={'format': 'text'}
+2018-01-28 12:05:58,481:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-28 12:05:58,584:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-28 12:05:58,627:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-28 12:05:58,650:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-28 12:06:44,657:CONFIG:172.30.179.74:connecting to host: pytraining@172.30.179.74:830
+2018-01-28 12:06:44,665:CONFIG:172.30.179.95:connecting to host: pytraining@172.30.179.95:830
+2018-01-28 12:06:44,676:CONFIG:172.30.179.73:connecting to host: pytraining@172.30.179.73:830
+2018-01-28 12:06:44,767:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2018-01-28 12:06:44,771:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2018-01-28 12:06:44,782:ncclient.transport.ssh:Connected (version 2.0, client OpenSSH_6.6.1)
+2018-01-28 12:06:45,056:ncclient.transport.ssh:Auth banner: hello
+
+2018-01-28 12:06:45,056:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-28 12:06:45,080:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-28 12:06:45,081:ncclient.transport.ssh:Authentication (publickey) failed.
+2018-01-28 12:06:45,275:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-28 12:06:45,288:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-28 12:06:45,288:ncclient.transport.ssh:Authentication (password) successful!
+2018-01-28 12:06:46,039:ncclient.transport.session:initialized: session-id=30900 | server_capabilities=<dictionary-keyiterator object at 0x7f53c1a677e0>
+2018-01-28 12:06:46,039:CONFIG:172.30.179.95:Getting config with filter=<configuration><system/></configuration>
+2018-01-28 12:06:46,040:CONFIG:172.30.179.95:Getting config with options={'format': 'text'}
+2018-01-28 12:06:46,040:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-28 12:06:46,069:ncclient.transport.session:initialized: session-id=28661 | server_capabilities=<dictionary-keyiterator object at 0x7fc2262ed838>
+2018-01-28 12:06:46,069:CONFIG:172.30.179.74:Getting config with filter=<configuration><system/></configuration>
+2018-01-28 12:06:46,069:CONFIG:172.30.179.74:Getting config with options={'format': 'text'}
+2018-01-28 12:06:46,069:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-28 12:06:46,086:ncclient.transport.session:initialized: session-id=29270 | server_capabilities=<dictionary-keyiterator object at 0x7fc5202a07e0>
+2018-01-28 12:06:46,086:CONFIG:172.30.179.73:Getting config with filter=<configuration><system/></configuration>
+2018-01-28 12:06:46,087:CONFIG:172.30.179.73:Getting config with options={'format': 'text'}
+2018-01-28 12:06:46,087:ncclient.operations.rpc:Requesting 'ExecuteRpc'
+2018-01-28 12:06:46,237:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-28 12:06:46,259:ncclient.operations.rpc:Requesting 'CloseSession'
+2018-01-28 12:06:46,306:ncclient.operations.rpc:Requesting 'CloseSession'

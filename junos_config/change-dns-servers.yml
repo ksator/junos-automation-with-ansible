@@ -1,0 +1,9 @@
+---
+#Note: you can not delete an entry that doesnt exist. you'll get a ConfigLoadError
+DNSSRVstodelete:
+  - 172.30.179.3 
+DNSSRVstoadd:
+  - 8.8.8.8
+  - 8.8.4.4
+
+ 

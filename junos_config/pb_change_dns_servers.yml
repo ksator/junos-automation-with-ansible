@@ -1,0 +1,38 @@
+---
+ - name: change DNS servers
+   hosts: EX4300
+   roles:
+    - Juniper.junos
+   gather_facts: no
+   connection: local
+   vars:
+      - junos_jinja_template: "{{ playbook_dir }}/templates/change-dns-servers.j2"
+   vars_files:
+      - "{{playbook_dir}}/change-dns-servers.yml"
+
+   tasks:
+
+   - name: Render configuration for junos devices
+     template: 
+       src: "{{ junos_jinja_template }}" 
+       dest: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
+
+   - name: configure devices
+     junos_config:
+      provider: "{{  credentials }}"
+      src:  "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
+      src_format: set
+      backup: yes
+      
+   - name: Retrieve configuration from devices running Junos
+     junos_get_config:
+      host: "{{ junos_host }}"
+      user: "{{ADMUSER}}"
+      passwd: "{{ADMPASS}}"
+      dest: "{{playbook_dir}}/backup/{{ inventory_hostname }}.conf"
+      format: text
+      logfile: "{{playbook_dir}}/get_config.log"
+      filter: system
+     tags:
+      - Retrieve configuration
+  
