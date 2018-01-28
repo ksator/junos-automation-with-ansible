@@ -49,6 +49,9 @@
    gather_facts: no
    tags: 
    - audit
+   roles:
+   - Juniper.junos
+
 
    tasks:
 
@@ -137,4 +140,28 @@
      with_items:
      - "{{ neighbors }}"
      when: (item.peer_ip) is defined and (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
+
+   - name: check if junos devices learnt some routes with BGP
+     junos_command:
+      provider: "{{  credentials }}"
+      display: 'xml'
+      commands:
+       - show route protocol bgp {{item.peer_loopback}}/32
+      waitfor:
+       - "result[0].rpc-reply.route-information.route-table.rt.rt-destination eq {{item.peer_loopback}}/32"
+     with_items:
+      - "{{ neighbors }}"
+     when: (item.peer_loopback) is defined and (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)     
+
+   - name: check if junos devices can ping some dest
+     junos_ping:
+        host: "{{ junos_host }}"
+        user: "{{ ADMUSER }}"
+        passwd: "{{ ADMPASS }}"
+        dest_ip: "{{ item.peer_loopback }}"
+        source_ip: "{{ item.local_ip }}"
+        ttl: 1
+     with_items:
+     - "{{ neighbors }}"
+     when: (item.local_ip) is defined and (item.peer_loopback) is defined
 
