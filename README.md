@@ -1,15 +1,24 @@
 [![Build Status](https://travis-ci.org/ksator/ansible-training-for-junos-automation.svg?branch=master)](https://travis-ci.org/ksator/ansible-training-for-junos-automation)
 
+This project has many ready-to-use Ansible playbooks to interact with Junos devices.    
 
 # Ansible librairies to interact with junos: 
-There are two Ansible librairies to interact with Junos
-- An Ansible library for Junos built by Juniper.  
-- An Ansible library for Junos built by Ansible.  
 
+There are two Ansible librairies to interact with Junos
+- An Ansible library for Junos built by Juniper, and available on [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)   
+- An Ansible library for Junos built by Ansible and shipped with Ansible installation: Since Ansible version >= 2.1, Ansible natively includes core modules for Junos. The Junos modules included in Ansible core have names which begin with the prefix junos_. 
+  
+These two sets of Junos modules can coexist on the same Ansible control machine.  
 Both of them are used in this repository.  
 
-### Ansible modules for Junos built by Juniper:  
-Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).    
+### Ansible modules for Junos built by Juniper:
+
+They are hosted on the [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)    
+The role is Juniper.junos
+
+Until the version [1.4.3](http://junos-ansible-modules.readthedocs.io/en/1.4.3/) of the modules included in the Juniper.junos role, their names begu with the prefix junos_. 
+To avoid conflict with the names used by ansible core modules for Junos, since the version 2, of the modules included in the Juniper.junos role, their names begu with the prefix juniper_junos_.
+
 Modules (version 1.4.3):     
 - **junos_cli** - Execute CLI on device and save the output locally  
 - **junos_commit** - Execute commit on device  
@@ -115,7 +124,6 @@ You need to run the below commands within the root of the project tree.
 
 # About this project:   
 This project has many ready-to-use Ansible playbooks to interact with Junos devices.    
-I am using them to deliver Ansible trainings to network engineers.  
 
 There is an ansible presentation available in this repository: [ansible.pdf](https://github.com/ksator/ansible-training-for-junos/blob/master/ansible.pdf)
  
