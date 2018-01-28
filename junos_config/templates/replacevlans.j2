@@ -1,0 +1,9 @@
+replace: 
+vlans {
+{% for item in vlans %}
+    {{ item.name }} {
+        vlan-id {{ item.id }};
+    }
+{% endfor %}
+}
+

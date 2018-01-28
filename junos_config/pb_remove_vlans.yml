@@ -1,0 +1,43 @@
+ - name: create render directory
+   hosts: localhost
+   gather_facts: no
+
+   tasks:
+
+   - name: create render directory
+     file:
+       path: "{{playbook_dir}}/{{item}}"
+       state: directory
+     with_items:
+       - render
+       - templates 
+
+ - name: render template 
+   hosts: EX4300, QFX
+   connection: local
+   gather_facts: no
+   vars_files:
+   - "vlans.yml"
+
+   tasks:
+
+    - name: remove files from render directory
+      file:
+       path: "{{playbook_dir}}/render/{{inventory_hostname}}_removevlans.set"
+       state: absent
+   
+    - name: Render template
+      template:
+       src: "{{playbook_dir}}/templates/removevlans.j2"
+       dest: "{{playbook_dir}}/render/{{ inventory_hostname }}_removevlans.set"
+   
+    - name: push bgp configuration on devices if ansible version is >= 2.4
+      junos_config:
+       provider: "{{  credentials }}"
+       src: "{{playbook_dir}}/render/{{ inventory_hostname }}_removevlans.set"
+       backup: yes
+       update: merge
+       comment: remove vlans from ansible
+       src_format: set
+      when: ansible_version['major'] == 2 and ansible_version['minor']|int >= 4
+

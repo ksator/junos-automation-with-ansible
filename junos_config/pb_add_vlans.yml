@@ -1,0 +1,55 @@
+ - name: create render directory
+   hosts: localhost
+   gather_facts: no
+
+   tasks:
+
+   - name: create render directory
+     file:
+       path: "{{playbook_dir}}/{{item}}"
+       state: directory
+     with_items:
+       - render
+       - templates 
+
+ - name: render template 
+   hosts: EX4300, QFX
+   connection: local
+   gather_facts: no
+   vars_files:
+   - "vlans.yml"
+
+   tasks:
+
+    - name: remove files from render directory
+      file:
+       path: "{{playbook_dir}}/render/{{inventory_hostname}}_addvlans.conf"
+       state: absent
+   
+    - name: Render template
+      template:
+       src: "{{playbook_dir}}/templates/addvlans.j2"
+       dest: "{{playbook_dir}}/render/{{ inventory_hostname }}_addvlans.conf"
+   
+    - name: push bgp configuration on devices if ansible version is >= 2.4
+      junos_config:
+       provider: "{{  credentials }}"
+       src: "{{playbook_dir}}/render/{{ inventory_hostname }}_addvlans.conf"
+       backup: yes
+       update: merge
+       comment: add vlans from ansible
+       src_format: text
+      when: ansible_version['major'] == 2 and ansible_version['minor']|int >= 4
+   
+    - name: check vlans
+      junos_command:
+       provider: "{{ credentials }}"
+       commands:
+        - show vlans {{ item.name }}
+       display: xml
+       waitfor:
+        - "result[0]['rpc-reply']['l2ng-l2ald-vlan-instance-information']['l2ng-l2ald-vlan-instance-group']['l2ng-l2rtb-vlan-name'] eq {{ item.name }}"
+      with_items: "{{ vlans }}"
+      when: ansible_version['major'] == 2 and ansible_version['minor']|int >= 4
+
+
