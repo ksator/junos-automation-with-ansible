@@ -7,8 +7,11 @@
 
    - name: create the directory render
      file: 
-        path: "{{playbook_dir}}/render" 
+        path: "{{playbook_dir}}/{{ item }}" 
         state: directory
+     with_items: 
+     - render
+     - templates 
 
  - name: create BGP junos configuration
    hosts: EX4300
@@ -32,7 +35,7 @@
 
    - name: Render BGP configuration for junos devices
      template: 
-       src: "{{playbook_dir}}/replacebgp.j2" 
+       src: "{{playbook_dir}}/templates/replacebgp.j2" 
        dest: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
 
    - name: Collect Pre Snapshot

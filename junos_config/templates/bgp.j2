@@ -1,0 +1,53 @@
+interfaces {
+{% for neighbor in neighbors %}
+    {{ neighbor.interface }} {
+        unit 0 {
+            description "{{ neighbor.name }}";
+            family inet {
+                address {{ neighbor.local_ip }}/31;
+            }
+        }
+    }
+{% endfor %}
+}
+protocols {
+    bgp {
+        group underlay {
+            import bgp-in;
+            export bgp-out;
+            type external;
+            local-as {{ local_asn }};
+            multipath multiple-as;
+{% for neighbor in neighbors %}
+            neighbor {{ neighbor.peer_ip }} {
+                peer-as {{ neighbor.asn }};
+            }
+{% endfor %}
+        }
+    }
+    lldp {
+{% for neighbor in neighbors %}
+        interface "{{ neighbor.interface }}";
+{% endfor %}
+    }
+}
+routing-options {
+    router-id {{ loopback }};
+    forwarding-table {
+        export bgp-ecmp;
+    }
+}
+
+policy-options {
+    policy-statement bgp-ecmp {
+        then {
+            load-balance per-packet;
+        }
+    }
+    policy-statement bgp-in {
+        then accept;
+    }
+    policy-statement bgp-out {
+        then accept;
+    }
+}
