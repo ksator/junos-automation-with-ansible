@@ -1,0 +1,174 @@
+---
+ - name: create render directories
+   hosts: localhost
+   gather_facts: no
+   tags: 
+   - configuration 
+   tasks:
+
+   - name: create configuration directory
+     file:
+       path: "{{ playbook_dir }}/{{ item }}"
+       state: directory
+     with_items: 
+       - render
+       - templates
+
+ - name: configure devices
+   hosts: EX4200
+   connection: local
+   gather_facts: no
+   tags: 
+   -  configuration
+   
+   tasks:
+
+   - name: Render BGP configuration for junos devices
+     template: 
+       src: "{{playbook_dir}}/templates/replacebgp.j2" 
+       dest: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
+
+   - name: push bgp configuration on devices if ansible version is >= 2.4
+     junos_config:
+      provider: "{{  credentials }}"
+      src: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
+      update: merge
+      src_format: text
+      backup: yes
+      comment: enforce desired bgp config from ansible
+     when: (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
+
+ - name: wait for op states to converge
+   hosts: localhost
+   gather_facts: no
+
+   tasks:
+   - pause: seconds=25
+
+ - name: check op states
+   hosts: EX4200
+   connection: local
+   gather_facts: no
+   tags: 
+   - audit
+   roles:
+   - Juniper.junos
+
+
+   tasks:
+
+   - name: Retrieve information from devices running Junos
+     junos_get_facts:
+      host: "{{ junos_host }}"
+      user: "{{ ADMUSER }}"
+      passwd: "{{ ADMPASS }}"
+     register: junos
+
+   - name: check if interfaces admin status is up
+     junos_command:
+      provider: "{{ credentials }}"
+      display: 'xml'
+      commands:
+       - "show interfaces terse {{ item.interface }}"
+      waitfor:
+       - "result[0]['rpc-reply']['interface-information']['physical-interface']['admin-status'] eq up"
+      retries: 3
+      interval: 3
+     with_items:
+     - "{{ neighbors }}"
+     when: (item.interface is defined) and ((ansible_version['major'] == 2 and ansible_version['minor']|int >= 4))
+
+   - name: check if interfaces op status is up
+     junos_command:
+      provider: "{{ credentials }}"
+      display: 'xml'
+      commands:
+       - "show interfaces terse {{ item.interface }}"
+      waitfor:
+       - "result[0]['rpc-reply']['interface-information']['physical-interface']['oper-status'] eq up"
+      retries: 3
+      interval: 3
+     with_items:
+     - "{{ neighbors }}"
+     when: (item.interface is defined) and ((ansible_version['major'] == 2 and ansible_version['minor']|int >= 4))
+
+   - name: check if lldp neighbors are the ones we expect, using xml
+     junos_command:
+      provider: "{{ credentials }}"
+      display: 'xml'
+      commands:
+       - show lldp neighbors interface "{{ item.interface }}"
+      waitfor:
+       - "result[0]['rpc-reply']['lldp-neighbors-information']['lldp-neighbor-information']['lldp-remote-system-name'] == {{ item.name }}"
+      retries: 3
+      interval: 3
+     with_items:
+     - "{{ neighbors }}"
+     when: (item.name is defined) and (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
+
+   - name: check if lldp neighbors are the ones we expect, using json
+     junos_command:
+      provider: "{{ credentials }}"
+      display: 'json'
+      commands:
+       - show lldp neighbors interface "{{ item.interface }}"
+      waitfor:
+       - "result[0]['lldp-neighbors-information'][0]['lldp-neighbor-information'][0]['lldp-remote-system-name'][0]['data'] eq {{ item.name }}"
+      retries: 3
+      interval: 3
+     with_items:
+     - "{{ neighbors }}"
+     when: (item.name is defined) and (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4) and (junos.facts.junos_info.fpc0.object.major[0]|int >=15)
+
+
+   - name: check if bgp peers state is Established
+     junos_command:
+      provider: "{{ credentials }}"
+      display: 'xml'
+      commands:
+       - show bgp neighbor "{{ item.peer_ip }}"
+      waitfor:
+       - "result[0]['rpc-reply']['bgp-information']['bgp-peer']['peer-state'] eq 'Established'"
+      retries: 3
+      interval: 3
+     with_items:
+     - "{{ neighbors }}"
+     when: (item.peer_ip) is defined and (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
+
+   - name: check if junos devices learnt some routes with BGP
+     junos_command:
+      provider: "{{  credentials }}"
+      display: 'xml'
+      commands:
+       - show route receive-protocol bgp "{{ item.peer_ip }}" table inet.0"
+      waitfor:
+       - "result[0]['rpc-reply']['route-information']['route-table']['total-route-count'] gt 2"
+      retries: 3
+      interval: 3
+     with_items:
+     - "{{ neighbors }}"
+     when: (item.peer_ip) is defined and (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)
+
+   - name: check if junos devices learnt some routes with BGP
+     junos_command:
+      provider: "{{  credentials }}"
+      display: 'xml'
+      commands:
+       - show route protocol bgp {{item.peer_loopback}}/32
+      waitfor:
+       - "result[0].rpc-reply.route-information.route-table.rt.rt-destination eq {{item.peer_loopback}}/32"
+     with_items:
+      - "{{ neighbors }}"
+     when: (item.peer_loopback) is defined and (ansible_version['major'] == 2 and ansible_version['minor']|int >= 4)     
+
+   - name: check if junos devices can ping some dest
+     junos_ping:
+        host: "{{ junos_host }}"
+        user: "{{ ADMUSER }}"
+        passwd: "{{ ADMPASS }}"
+        dest_ip: "{{ item.peer_loopback }}"
+        source_ip: "{{ item.local_ip }}"
+        ttl: 1
+     with_items:
+     - "{{ neighbors }}"
+     when: (item.local_ip) is defined and (item.peer_loopback) is defined
