@@ -1,0 +1,26 @@
+# junos_rpc core module
+---
+ - name: pass rpc
+   hosts: test
+   connection: local
+   gather_facts: no
+   tasks:
+
+   - name: pass rpc and print output     
+     junos_rpc:
+      provider: "{{ credentials }}"
+      rpc: "get-interface-information"
+      output: 'xml'
+      args: 
+       interface_name: ge-0/0/0
+       terse: True
+     register: junos
+
+
+   - name: Print details
+     debug: 
+       msg: "{{junos.xml}}" 
+ 
+
+
+
