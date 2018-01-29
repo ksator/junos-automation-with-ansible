@@ -9,7 +9,7 @@
 [**Requirements to use this repository**](README.md#requirements-to-use-this-repository)  
 [**Repository structure**](README.md#repository-structure)  
 [**Continuous integration with Travis CI**](README.md#continuous-integration-with-travis-ci)  
-[**Contributions, questions**](README.md#contributions, questions)  
+[**Contributions, questions**](README.md#contributions,-questions)  
 [**Looking for more examples on of how to use Ansible with Junos**](README.md#looking-for-more-examples-on-how-to-use-ansible-with-Junos)  
 [**Looking for more Junos automation solutions**](README.md#looking-for-more-junos-automation-solutions)  
 
