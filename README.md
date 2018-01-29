@@ -1,7 +1,14 @@
 [![Build Status](https://travis-ci.org/ksator/ansible-training-for-junos-automation.svg?branch=master)](https://travis-ci.org/ksator/ansible-training-for-junos-automation)
 
 # About this project   
-This project has many ready-to-use Ansible playbooks to interact with Junos devices.    
+
+This project has many ready-to-use Ansible playbooks to interact with Junos devices.   
+
+This repository has been tested using: 
+- Ubuntu 16.04
+- Ansible 2.4.2.0  
+- the version 1.4.3 of the Juniper.junos role available on Galaxy.  
+
 
 # About Ansible
 
@@ -47,9 +54,9 @@ Both of them are used in this repository.
 
 ##### On the Ansible server
 
-Most of these Ansbile modules require to install the python library py-junos-eznc on the Ansible server.  
-Some options require also to install the python library jxmlease on the Ansible server.  
-Some options (like the console option in the junos_install_config module) require also the python library junos-netconify on the Ansible server.  
+Most of these Ansbile modules require to install the python library **py-junos-eznc** on the Ansible server.  
+Some options require also to install the python library **jxmlease** on the Ansible server.  
+Some options (like the console option in the junos_install_config module) require also the python library **junos-netconify** on the Ansible server.  
 
 ##### On the Junos devices
 
@@ -114,11 +121,12 @@ You need to run the below commands within the root of the project tree.
 The default ```hosts``` file lives in ```/etc/ansible/hosts```.  
 
 The inventory file we are using in this repository is [**hosts**](hosts). It is at the root of the repository, so it is not at the default place. 
+It defines the inventory (hosts and groups).  
 It also defines the ip address of each device with the variable **junos_host**. This variable is re-used in the playbooks.     
 
 ##### Config file for ansible   
 There is an [**ansible.cfg**](ansible.cfg) file at the root of the repository.  
-It refers to our inventory file (**hosts**): So even if the inventory file is not /etc/ansible/hosts, there is no need to add ```-i hosts``` to your ```ansible-playbook``` commands.  
+It refers to [our inventory file](**hosts**): So even if the inventory file is not in ```/etc/ansible/hosts```, there is no need to add ```-i hosts``` to your ```ansible-playbook``` commands.  
 
 ##### Variables  
 [**group_vars**](group_vars) and [**host_vars**](host_vars) directories at the root of this repository define variables for hosts and for groups.  
