@@ -5,8 +5,9 @@ This project has many ready-to-use Ansible playbooks to interact with Junos devi
 # About Junos automation with Ansible
 
 There are two modules librairies to interact with Junos
-- An Ansible library for Junos built by Juniper, and available on [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)   
-- An Ansible library for Junos built by Ansible and shipped with Ansible installation
+- An Ansible library for Junos built by Juniper
+    - These modules are available on [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)   
+- An Ansible library for Junos built by Ansible and shipped with Ansible
   - Since Ansible version >= 2.1, Ansible natively includes [core modules for Junos](http://docs.ansible.com/ansible/latest/list_of_network_modules.html#junos). 
   - The Junos modules included in Ansible core have names which begin with the prefix **junos_**. 
   
@@ -16,7 +17,7 @@ Both of them are used in this repository.
 ### Ansible modules for Junos built by Juniper and hosted on Galaxy:
 
 They are hosted on the [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)    
-The role is Juniper.junos  
+- The role is Juniper.junos  
 
 Here's the [source code](https://github.com/Juniper/ansible-junos-stdlib)  
 
@@ -30,11 +31,9 @@ Here's the [source code](https://github.com/Juniper/ansible-junos-stdlib)
 
 ### Ansible modules for Junos built and shipped by Ansible:   
 
-[Documentation](http://docs.ansible.com/ansible/latest/list_of_network_modules.html#junos).  
-
-Installation: They are shipped with ansible itself (from Ansible 2.1). Ansible 2.1 or above is required. 
-
-Source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/junos  
+Here's the [documentation](http://docs.ansible.com/ansible/latest/list_of_network_modules.html#junos)   
+Here's the [source code](https://github.com/ansible/ansible/tree/devel/lib/ansible/modules/network/junos)    
+Installation: They are shipped with ansible itself (from Ansible 2.1). Ansible 2.1 or above is required.  
 
 ### Requirements :  
 
