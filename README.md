@@ -227,7 +227,7 @@ We are using two types of playbooks in this repository:
 Here's the last build status [![Build Status](https://travis-ci.org/ksator/junos-automation-with-ansible.svg?branch=master)](https://travis-ci.org/ksator/junos-automation-with-ansible)
 
 # Contributions, questions
-Please submit github **issues** or **pull requests**  
+Please submit github [**issues**](https://github.com/ksator/junos-automation-with-ansible/wiki) or **pull requests**  
 
 # Looking for more examples on how to use Ansible with Junos 
 
