@@ -188,11 +188,11 @@ ansible-playbook xxx/pb*.yml
 
 There are currently 2 branches in this repository: 
 - **master** - This is the default and active one. This is the one to use.  
-- **topology_independent** - This branch allows to use a different network topology without changing the playbooks. The automation content in this branch is probably not always up to date/in sync with the master branch.  
+- **topology_independent** - This branch allows to use a different network topology without changing the playbooks. The automation content in this branch is not up to date/in sync with the master branch, so, dont use it.  
 
 Here's how the **topology_independent** branch works: 
 
-There is a file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml) in group_vars/all. This yaml file defines the topology. Here's an example:  
+There is a file [topology.yml](https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml) in group_vars/all. This yaml file defines the topology. Here's an example:  
 ```
 ---
 topo:
@@ -209,7 +209,7 @@ topo:
         port2: { name: ge-0/0/1,    peer: ex4300-4,       pport: port2 }
 ```
 This file is a dictionary with the key topo. The value of this key is the topology.  
-Because this file is located in the directory group_vars/all, {{topo}} can be automatically used for all devices. 
+Because this file is located in the directory group_vars/all, ```{{topo}}``` can be automatically used for all devices. 
 
 Files in the host_vars directory were re-written.    
 - **files in the host_vars directory in the master branch:**    
