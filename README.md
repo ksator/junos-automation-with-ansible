@@ -21,8 +21,7 @@ They are hosted on the [Ansible Galaxy website](https://galaxy.ansible.com/Junip
 - The role is Juniper.junos  
 
 Here's the [source code](https://github.com/Juniper/ansible-junos-stdlib)  
-
-- Until the version 1.4.3 of the modules included in the Juniper.junos role, their names begun with the prefix **junos_**. 
+Until the version 1.4.3 of the modules included in the Juniper.junos role, their names begun with the prefix **junos_**. 
   - Here's the [doc for the version 1.4.3](http://junos-ansible-modules.readthedocs.io/en/1.4.3/)
   - To download and install them to the Ansible server, execute the command ```sudo ansible-galaxy install Juniper.junos,1.4.3```
 
