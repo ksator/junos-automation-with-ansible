@@ -32,7 +32,7 @@ Both of them are used in this repository.
   - Here's the [doc for the version 1.4.3](http://junos-ansible-modules.readthedocs.io/en/1.4.3/)
   - To download and install them to the Ansible server, execute the command ```sudo ansible-galaxy install Juniper.junos,1.4.3```
 - From version 2 of the modules included in the Juniper.junos role: 
-  - To avoid conflict with the names used by ansible core modules for Junos, since the version 2 of the modules included in the Juniper.junos role, their names begin with the prefix **juniper_junos_**. 
+  - To avoid conflict with the names used by ansible native modules for Junos, since the version 2 of the modules included in the Juniper.junos role on Galaxy, their names begin with the prefix **juniper_junos_**. 
   - Here's the [doc for the last version](http://junos-ansible-modules.readthedocs.io/en/stable/) 
   - To download and install them to the Ansible server, execute the command ```sudo ansible-galaxy install Juniper.junos```
 
