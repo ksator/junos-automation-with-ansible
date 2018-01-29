@@ -221,7 +221,7 @@ The files [**.travis.yml**](.travis.yml) and [**requirements.txt**](requirements
 We are using two types of playbooks in this repository:  
 
 - Some playbooks do not interact with Junos:   
-   -Travis CI is executing them.  
+   - Travis CI is executing them.  
 - Some playbooks interact with Junos
   - ansible-playbook has a built-in option to check only the playbook's syntax (```--syntax-check```). This is how Travis is testing them. If there is any syntax error, Travis will fail the build and output the errors in the log.  
 
