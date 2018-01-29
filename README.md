@@ -214,7 +214,7 @@ The files in the **host_vars** directory were re-written:
 
 # Continuous integration with Travis CI
 
-There is a github webhook with [**Travis CI**]((https://travis-ci.org/ksator/junos-automation-with-ansible)  
+There is a github webhook with [**Travis CI**](https://travis-ci.org/ksator/junos-automation-with-ansible)  
 The playbooks in  this repository are tested automatically by Travis CI.  
 The files [**.travis.yml**](.travis.yml) and [**requirements.txt**](requirements.txt) at the root of this repository are used for this.  
 
