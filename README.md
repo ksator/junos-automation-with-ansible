@@ -60,12 +60,8 @@ Some options (like the console option in the junos_install_config module) requir
 
 ##### On the Junos devices
 
-Except for the module junos_netconf, all the Ansible modules for Junos require the NETCONF to be configured on the Junos devices:
-```
-set system services netconf ssh
-commit
-```
-Note: It is not required to use cli to configure Netconf on Junos devices. This can be done with the Ansible module junos_netconf. 
+Except for the module junos_netconf, all the Ansible modules for Junos require the NETCONF to be configured on the Junos devices.  
+Note: It is not required to use Junos CLI to configure Netconf on Junos devices. This can be done with the Ansible module junos_netconf. 
 
 # How to use this repository  
  
@@ -111,8 +107,17 @@ Use this command to see the name and version of each role installed:
 ansible-galaxy list
 ```
 
+### Configure NETCONF On the Junos devices
+
+```
+set system services netconf ssh
+commit
+```
+
+
 You can now use the local copy of this remote repository.  
 You need to run the below commands within the root of the project tree.
+
 
 ### Repository structure 
  
