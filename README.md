@@ -2,11 +2,11 @@
 
 # Documentation structure
 
-[**About this project**](README.md#about-this-project)
-[**About Ansible**](README.md#about-ansible)
-[**About Ansible modules for Junos automation**](README.md#about-ansible-modules-for-Junos-automation)
-[**Requirements for Junos automation with Ansible**](README.md#requirements-for-junos-automation-with-ansible)
-[**Requirements to use this repository**](README.md#requirements-to-use-this-repository)
+[**About this project**](README.md#about-this-project)  
+[**About Ansible**](README.md#about-ansible)  
+[**About Ansible modules for Junos automation**](README.md#about-ansible-modules-for-Junos-automation)  
+[**Requirements for Junos automation with Ansible**](README.md#requirements-for-junos-automation-with-ansible)  
+[**Requirements to use this repository**](README.md#requirements-to-use-this-repository)  
 
 
 # About this project   
