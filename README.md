@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ksator/ansible-training-for-junos-automation.svg?branch=master)](https://travis-ci.org/ksator/ansible-training-for-junos-automation)
+[![Build Status](https://travis-ci.org/ksator/junos-automation-with-ansible.svg?branch=master)](https://travis-ci.org/ksator/junos-automation-with-ansible)
 
 # Documentation structure
 
