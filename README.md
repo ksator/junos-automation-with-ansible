@@ -8,7 +8,7 @@
 [**Requirements for Junos automation with Ansible**](README.md#requirements-for-junos-automation-with-ansible)  
 [**Requirements to use this repository**](README.md#requirements-to-use-this-repository)  
 [**Repository structure**](README.md#repository-structure)  
-[**Repository branches and network topology changes**](README.md#Repository-branches-and-network-topology-changes)  
+[**Repository branches and network topology changes**](README.md#repository-branches-and-network-topology-changes)  
 [**Continuous integration with Travis CI**](README.md#continuous-integration-with-travis-ci)  
 [**Contributions, questions**](README.md#contributions-questions)    
 [**Looking for more examples on of how to use Ansible with Junos**](README.md#looking-for-more-examples-on-how-to-use-ansible-with-junos)  
