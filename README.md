@@ -187,10 +187,10 @@ ansible-playbook xxx/pb*.yml
 ### Branches
 
 There are currently 2 branches in this repository: 
-- **master** - This is the default and active one. This is the one to use.  
-- **topology_independent** - This branch allows to use a different network topology without changing the playbooks. The automation content in this branch is not up to date/in sync with the master branch, so, dont use it.  
+- [**master**]() - This is the default and active one. This is the one to use.  
+- [**topology_independent**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent) - This branch allows to use a different network topology without changing the playbooks. The automation content in this branch is not up to date/in sync with the master branch, so, dont use it.  
 
-Here's how the **topology_independent** branch works: 
+Here's how the [**topology_independent**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent) branch works: 
 
 There is a file [topology.yml](https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml) in group_vars/all. This yaml file defines the topology. Here's an example:  
 ```
