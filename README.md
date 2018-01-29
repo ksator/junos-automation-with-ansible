@@ -63,7 +63,7 @@ Some options (like the console option in the junos_install_config module) requir
 Except for the module **junos_netconf**, all the Ansible modules for Junos require the NETCONF to be configured on the Junos devices.  
 Note: It is not required to use Junos CLI to configure Netconf on Junos devices. This can be done with the Ansible module junos_netconf. 
 
-# How to use this repository  
+# Requirements to use this repository  
  
 ### Get the content of the remote repository locally
 
@@ -114,9 +114,9 @@ set system services netconf ssh
 commit
 ```
 
-### Repository structure 
+# Repository structure 
 
-##### Inventory file:  
+### Inventory file:  
 
 The default ```hosts``` file lives in ```/etc/ansible/hosts```.  
 
@@ -125,11 +125,11 @@ The inventory file we are using in this repository is [**hosts**](hosts).
 - It defines the inventory (hosts and groups).  
 - It also defines the ip address of each device with the variable **junos_host**. This variable is re-used in the playbooks.     
 
-##### Config file for ansible   
+### Config file for ansible   
 There is an [**ansible.cfg**](ansible.cfg) file at the root of the repository.  
 It refers to [our inventory file](**hosts**): So even if the inventory file is not in ```/etc/ansible/hosts```, there is no need to add ```-i hosts``` to your ```ansible-playbook``` commands.  
 
-##### Variables  
+### Variables  
 [**group_vars**](group_vars) and [**host_vars**](host_vars) directories at the root of this repository define variables for hosts and for groups.  
 The inventory file [**hosts**](hosts) at the root of the repository also defines some variables.   
 The playbooks in this directory use all of them.   
@@ -139,23 +139,23 @@ In order to see all variables for a ```hostname```, you can run this command:
 ansible -m debug -a "var=hostvars['hostname']" localhost
 ```
 
-##### Playbooks  
+### Playbooks  
 All playbooks in this repository are named pb*.yml 
 These playbooks use the two sets of modules for Junos automation. They also use other Ansible modules (template, assemble, uri, wait_for, debug, ...).  
 
-##### Directories
+### Directories
 This repository use several directories.  
 I am reusing the Ansible module names for the directories names.  
 Each directory has: 
 - Playbooks
 - a readme fil
 
-##### Lab topology   
+### Lab topology   
 The lab topology is described in the file [lab topology.pdf] (lab%20topology.pdf)  
 
 You can very easily re-use this automation content with your own Junos devices: you just need to build a similar topology and then adapt this content with your IP addresses, username and password. 
 
-##### repository usage instructions  
+### repository usage instructions  
 
 You need to run the playbooks from the root of the project tree.  
 Use the ```ansible-playbook``` commands to execute the playbooks:    
@@ -168,7 +168,7 @@ more xxx/readme.md
 ansible-playbook xxx/pb*.yml  
 ```
 
-##### Branches
+### Branches
 
 There are currently 2 branches in this repository: 
 - **master** - This is the default and active one. This is the one to use.  
@@ -242,10 +242,7 @@ neighbors:
 ```
 
 
-### Contributions, questions, ... 
-Please submit github issues or pull requests.  
-
-### Continuous integration with Travis CI
+# Continuous integration with Travis CI
 
 There is a github webhook with Travis CI. 
 The playbooks in  this repository are tested automatically by Travis CI.  
@@ -258,7 +255,10 @@ We are using two types of playbooks in this repository:
 - Some playbooks interact with Junos
   - ansible-playbook has a built-in option to check only the playbook's syntax (```--syntax-check```). This is how Travis is testing them. If there is any syntax error, Travis will fail the build and output the errors in the log.  
 
-### More examples on of how to use Ansible with Junos:   
+# Contributions, questions, ... 
+Please submit github issues or pull requests.  
+
+# More examples on of how to use Ansible with Junos:   
 
 For more examples, you can visit these repositories:   
 https://github.com/JNPRAutomate/juniper_junos_ansible_modules_examples  
