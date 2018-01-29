@@ -4,7 +4,7 @@
 
 [**About this project**](README.md#about-this-project)  
 [**About Ansible**](README.md#about-ansible)  
-[**About Ansible modules for Junos automation**](README.md#README.md#about-ansible-modules-for-junos-automation)  
+[**About Ansible modules for Junos automation**](README.md#about-ansible-modules-for-junos-automation)  
 [**Requirements for Junos automation with Ansible**](README.md#requirements-for-junos-automation-with-ansible)  
 [**Requirements to use this repository**](README.md#requirements-to-use-this-repository)  
 [**Repository structure**](README.md#repository-structure)  
