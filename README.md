@@ -7,8 +7,9 @@ This project has many ready-to-use Ansible playbooks to interact with Junos devi
 There are two modules librairies to interact with Junos
 - An Ansible library for Junos built by Juniper
     - These modules are available on [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)   
-- An Ansible library for Junos built by Ansible and shipped with Ansible
-  - Since Ansible version >= 2.1, Ansible natively includes [core modules for Junos](http://docs.ansible.com/ansible/latest/list_of_network_modules.html#junos). 
+- An Ansible library for Junos built by Ansible 
+    - Since Ansible version >= 2.1, Ansible natively includes [core modules for Junos](http://docs.ansible.com/ansible/latest/list_of_network_modules.html#junos). 
+  - These modules are shipped with Ansible
   - The Junos modules included in Ansible core have names which begin with the prefix **junos_**. 
   
 These two sets of modules for Junos automation can coexist on the same Ansible control machine.  
