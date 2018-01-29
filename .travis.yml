@@ -20,54 +20,10 @@ install:
 
 script:
   - ansible-playbook assemble/pb.yml
-  - ansible-playbook apt/pb.yml --syntax-check
-  - ansible-playbook debug/pb.yml --syntax-check
-  - ansible-playbook debug/pb.verbose.yml --syntax-check
-  - ansible-playbook junos_install_conf/pb.yml --syntax-check
-  - ansible-playbook junos_cli/pb.txt.yml --syntax-check
-  - ansible-playbook junos_cli/pb.xml.yml --syntax-check  
-  - ansible-playbook junos_command/pb.check_lldp.yml --syntax-check
-  - ansible-playbook junos_command/pb.check.physical.topology.yml --syntax-check
-  - ansible-playbook junos_command/pb.check.bgp.yml --syntax-check
-  - ansible-playbook junos_command/pb.check.bgp_2.yml --syntax-check
-  - ansible-playbook junos_command/pb.check.vlans.yml --syntax-check
-  - ansible-playbook junos_command/pb.check.routes.yml --syntax-check
-  - ansible-playbook junos_command/pb.check.routes.2.yml --syntax-check
-  - ansible-playbook junos_command/pb.check.routes.3.yml --syntax-check
-  - ansible-playbook junos_command/pb.yml --syntax-check
-  - ansible-playbook junos_command/pb.rpc.yml --syntax-check
-  - ansible-playbook junos_command/pb.rpc3.yml --syntax-check
-  - ansible-playbook junos_commit/pb.yml --syntax-check
-  - ansible-playbook junos_config/pb.yml --syntax-check
-  - ansible-playbook junos_config/pb.vlans.yml --syntax-check
-  - ansible-playbook junos_config/pb.rollback.yml --syntax-check
-  - ansible-playbook junos_facts/pb.facts.yml --syntax-check
-  - ansible-playbook junos_facts/pb.conf.yml --syntax-check
-  - ansible-playbook junos_facts/pb.conf_json_and_xml.yml --syntax-check
-  - ansible-playbook junos_facts/pb.conf.txt.yaml --syntax-check
-  - ansible-playbook junos_get_config/pb.make_clean.yml --syntax-check
-  - ansible-playbook junos_get_config/pb.yml --syntax-check
-  - ansible-playbook junos_get_config/pb.2.yml --syntax-check
-  - ansible-playbook junos_get_facts/pb.yml --syntax-check
-  - ansible-playbook junos_netconf/pb.yml --syntax-check 
-  - ansible-playbook junos_package/pb.yml --syntax-check
+  - ansible-playbook junos_jsnapy/pb_test_file_snap_snap_check.yml --syntax-check
   - ansible-playbook junos_ping/pb.yml --syntax-check
-  - ansible-playbook junos_rpc/pb.yml --syntax-check
-  - ansible-playbook junos_rpc/pb.2.yml --syntax-check
-  - ansible-playbook junos_shutdown/pb.yml --syntax-check
-  - ansible-playbook junos_template/pb.change_dns_servers.yml --syntax-check
-  - ansible-playbook junos_template/pb.bgp.yml --syntax-check
-  - ansible-playbook junos_template/pb.bgp.2.yml --syntax-check
-  - ansible-playbook junos_rollback/pb.yml --syntax-check
-  - ansible-playbook lookup/pb.yml
-  - ansible-playbook slack/pb.yml --syntax-check
-  - ansible-playbook template/pb.initial_configuration.yml
-  - ansible-playbook template/pb.common_settings.yml
-  - ansible-playbook template/pb.bgp.yml
-  - ansible-playbook template/pb.load_cfg_from_template.yml --syntax-check 
-  - ansible-playbook template/pb.load_cfg_from_template.replace.yml --syntax-check 
-  - ansible-playbook uri/pb.yml --syntax-check 
-  - ansible-playbook wait_for/pb.yml --syntax-check
+  - ansible-playbook junos_install_conf/pb_bgp_replace.yml --syntax-check
+  - ansible-playbook junos_command/pb_check_op_states.yml --syntax-check
 
 branches:
   only:
