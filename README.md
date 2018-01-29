@@ -13,35 +13,27 @@ There are two modules librairies to interact with Junos
 These two sets of modules for Junos automation can coexist on the same Ansible control machine.  
 Both of them are used in this repository.  
 
-### Ansible modules for Junos built by Juniper:
+### Ansible modules for Junos built by Juniper and hosted on Galaxy:
 
 They are hosted on the [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)    
 The role is Juniper.junos  
 
-Here's the [source code](https://github.com/Juniper/ansible-junos-stdlib)
+Here's the [source code](https://github.com/Juniper/ansible-junos-stdlib)  
 
 - Until the version 1.4.3 of the modules included in the Juniper.junos role, their names begun with the prefix **junos_**. 
- - Here's the [doc for the version 1.4.3](http://junos-ansible-modules.readthedocs.io/en/1.4.3/)
- - To download and install them to the Ansible server, execute the command ```sudo ansible-galaxy install Juniper.junos,1.4.3```
+  - Here's the [doc for the version 1.4.3](http://junos-ansible-modules.readthedocs.io/en/1.4.3/)
+  - To download and install them to the Ansible server, execute the command ```sudo ansible-galaxy install Juniper.junos,1.4.3```
 
 - The Junos modules included in Ansible core have names which begin with the prefix junos_. To avoid conflict with the names used by ansible core modules for Junos, since the version 2 of the modules included in the Juniper.junos role, their names begin with the prefix **juniper_junos_**. 
   - Here's the [doc for the last version](http://junos-ansible-modules.readthedocs.io/en/stable/) 
   - To download and install them to the Ansible server, execute the command ```sudo ansible-galaxy install Juniper.junos```
 
+### Ansible modules for Junos built and shipped by Ansible:   
 
+[Documentation](http://docs.ansible.com/ansible/latest/list_of_network_modules.html#junos).  
 
-### Ansible core modules for Junos built by Ansible:   
+Installation: They are shipped with ansible itself (from Ansible 2.1). Ansible 2.1 or above is required. 
 
-Modules (Ansible 2.4.2.0):   
-- **junos_command** - Execute arbitrary commands on a remote device running Junos  
-- **junos_config** - Manage configuration on remote devices running Junos  
-- **junos_facts** - Collect facts from remote device running Junos  
-- **junos_netconf** - Configure the Junos Netconf system service  
-- **junos_package** - Install packages on remote devices running Junos  
-- **junos_template** - Manage configuration on remote devices running Junos  
-
-Documentation: http://docs.ansible.com/ansible/list_of_network_modules.html    
-Installation: core modules. They ship with ansible itself (from Ansible 2.1). Ansible 2.1 or above is required.    
 Source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/junos  
 
 ### Requirements :  
