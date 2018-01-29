@@ -18,8 +18,10 @@ Both of them are used in this repository.
 They are hosted on the [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)    
 The role is Juniper.junos
 
-- Until the version [1.4.3](http://junos-ansible-modules.readthedocs.io/en/1.4.3/) of the modules included in the Juniper.junos role, their names begun with the prefix **junos_**.  
-- The Junos modules included in Ansible core have names which begin with the prefix junos_. To avoid conflict with the names used by ansible core modules for Junos, since the version 2 of the modules included in the Juniper.junos role, their names begin with the prefix **juniper_junos_**. Here's the [doc for the last version of the modules included in the Juniper.junos role](http://junos-ansible-modules.readthedocs.io/en/stable/) 
+- Until the version 1.4.3 of the modules included in the Juniper.junos role, their names begun with the prefix **junos_**. 
+ - Here's the [doc for the 1.4.3 version of the modules included in the Juniper.junos role](http://junos-ansible-modules.readthedocs.io/en/1.4.3/) 
+- The Junos modules included in Ansible core have names which begin with the prefix junos_. To avoid conflict with the names used by ansible core modules for Junos, since the version 2 of the modules included in the Juniper.junos role, their names begin with the prefix **juniper_junos_**. 
+  - Here's the [doc for the last version of the modules included in the Juniper.junos role](http://junos-ansible-modules.readthedocs.io/en/stable/) 
 
 Modules (version 1.4.3):     
 - **junos_cli** - Execute CLI on device and save the output locally  
