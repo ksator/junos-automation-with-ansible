@@ -4,9 +4,14 @@
 
 [**About this project**](README.md#about-this-project)  
 [**About Ansible**](README.md#about-ansible)  
-[**About Ansible modules for Junos automation**](README.md#about-ansible-modules-for-Junos-automation)  
+[**About Ansible modules for Junos automation**](README.md#README.md#about-ansible-modules-for-junos-automation)
 [**Requirements for Junos automation with Ansible**](README.md#requirements-for-junos-automation-with-ansible)  
 [**Requirements to use this repository**](README.md#requirements-to-use-this-repository)  
+[**Repository structure**](README.md#repository-structure)
+[**Continuous integration with Travis CI**](README.md#continuous-integration-with-travis-ci)
+[**Contributions, questions, ...**](README.md#contributions, questions, ...)
+[**Looking for more examples on of how to use Ansible with Junos**](README.md#looking-for-more-examples-on-how-to-use-ansible-with-Junos)
+[**Looking for more Junos automation solutions**](README.md#looking-for-more-junos-automation-solutions)
 
 
 # About this project   
@@ -267,7 +272,7 @@ We are using two types of playbooks in this repository:
 # Contributions, questions, ... 
 Please submit github issues or pull requests.  
 
-# More examples on of how to use Ansible with Junos:   
+# Looking for more examples on how to use Ansible with Junos 
 
 For more examples, you can visit these repositories:   
 https://github.com/JNPRAutomate/juniper_junos_ansible_modules_examples  
@@ -276,8 +281,7 @@ https://github.com/dgjnpr/ansible-template-for-junos
 https://github.com/JNPRAutomate/ansible-junos-evpn-vxlan    
 https://github.com/JNPRAutomate/ansible-demo-ip-fabric   
 
-
-### Looking for more Junos automation solutions:  
+# Looking for more Junos automation solutions  
 
 https://github.com/ksator?tab=repositories  
 https://gitlab.com/users/ksator/projects  
