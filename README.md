@@ -8,12 +8,11 @@
 [**Requirements for Junos automation with Ansible**](README.md#requirements-for-junos-automation-with-ansible)  
 [**Requirements to use this repository**](README.md#requirements-to-use-this-repository)  
 [**Repository structure**](README.md#repository-structure)  
+[**Repository branches and network topology changes**](README.md#Repository-branches-and-network-topology-changes)  
 [**Continuous integration with Travis CI**](README.md#continuous-integration-with-travis-ci)  
 [**Contributions, questions**](README.md#contributions-questions)    
 [**Looking for more examples on of how to use Ansible with Junos**](README.md#looking-for-more-examples-on-how-to-use-ansible-with-junos)  
 [**Looking for more Junos automation solutions**](README.md#looking-for-more-junos-automation-solutions)  
-
-
 
 
 # About this project   
@@ -184,7 +183,7 @@ more xxx/readme.md
 ansible-playbook xxx/pb*.yml  
 ```
 
-### Branches
+# Repository branches and network topology changes
 
 There are currently 2 branches in this repository: 
 - [**master**](https://github.com/ksator/junos-automation-with-ansible) - This is the default and active one. This is the one to use.  
