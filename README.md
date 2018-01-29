@@ -1,5 +1,14 @@
 [![Build Status](https://travis-ci.org/ksator/ansible-training-for-junos-automation.svg?branch=master)](https://travis-ci.org/ksator/ansible-training-for-junos-automation)
 
+# Documentation structure
+
+[**About this project**](README.md#about-this-project)
+[**About Ansible**](README.md#about-ansible)
+[**About Ansible modules for Junos automation**](README.md#about-ansible-modules-for-Junos-automation)
+[**Requirements for Junos automation with Ansible**](README.md#requirements-for-junos-automation-with-ansible)
+[**Requirements to use this repository**](README.md#requirements-to-use-this-repository)
+
+
 # About this project   
 
 This project has many ready-to-use Ansible playbooks to interact with Junos devices.   
@@ -16,7 +25,7 @@ This repository has been tested using:
 
 [Ansible vs Saltstack vs Stackstorm](https://medium.com/@anthonypjshaw/ansible-v-s-salt-saltstack-v-s-stackstorm-3d8f57149368)  
 
-# Ansible modules for Junos automation
+# About Ansible modules for Junos automation
 
 There are two modules librairies to interact with Junos
 - An Ansible library for Junos built by Juniper
@@ -50,15 +59,15 @@ Both of them are used in this repository.
 - Here's the [source code](https://github.com/ansible/ansible/tree/devel/lib/ansible/modules/network/junos)    
 - Installation: They are shipped with ansible itself (from Ansible 2.1). Ansible 2.1 or above is required.  
 
-### Requirements for Junos automation with Ansible  
+# Requirements for Junos automation with Ansible  
 
-##### On the Ansible server
+### On the Ansible server
 
 Most of these Ansbile modules require to install the python library **py-junos-eznc** on the Ansible server.  
 Some options require also to install the python library **jxmlease** on the Ansible server.  
 Some options (like the console option in the junos_install_config module) require also the python library **junos-netconify** on the Ansible server.  
 
-##### On the Junos devices
+### On the Junos devices
 
 Except for the module **junos_netconf**, all the Ansible modules for Junos require the NETCONF to be configured on the Junos devices.  
 Note: It is not required to use Junos CLI to configure Netconf on Junos devices. This can be done with the Ansible module junos_netconf. 
