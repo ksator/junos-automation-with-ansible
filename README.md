@@ -272,7 +272,7 @@ We are using two types of playbooks in this repository:
   - ansible-playbook has a built-in option to check only the playbook's syntax (```--syntax-check```). This is how Travis is testing them. If there is any syntax error, Travis will fail the build and output the errors in the log.  
 
 # Contributions, questions
-Please submit github [issues](issues) or pull requests.  
+Please submit github **issues** or **pull requests**  
 
 # Looking for more examples on how to use Ansible with Junos 
 
