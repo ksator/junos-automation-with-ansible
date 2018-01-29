@@ -6,7 +6,9 @@ This project has many ready-to-use Ansible playbooks to interact with Junos devi
 
 There are two modules librairies to interact with Junos
 - An Ansible library for Junos built by Juniper, and available on [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)   
-- An Ansible library for Junos built by Ansible and shipped with Ansible installation: Since Ansible version >= 2.1, Ansible natively includes [core modules for Junos](http://docs.ansible.com/ansible/latest/list_of_network_modules.html#junos). The Junos modules included in Ansible core have names which begin with the prefix junos_. 
+- An Ansible library for Junos built by Ansible and shipped with Ansible installation
+  - Since Ansible version >= 2.1, Ansible natively includes [core modules for Junos](http://docs.ansible.com/ansible/latest/list_of_network_modules.html#junos). 
+  - The Junos modules included in Ansible core have names which begin with the prefix **junos_**. 
   
 These two sets of modules for Junos automation can coexist on the same Ansible control machine.  
 Both of them are used in this repository.  
@@ -16,11 +18,8 @@ Both of them are used in this repository.
 They are hosted on the [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)    
 The role is Juniper.junos
 
-Until the version [1.4.3](http://junos-ansible-modules.readthedocs.io/en/1.4.3/) of the modules included in the Juniper.junos role, their names begun with the prefix junos_.  
-The Junos modules included in Ansible core have names which begin with the prefix junos_.     
-To avoid conflict with the names used by ansible core modules for Junos, since the version 2 of the modules included in the Juniper.junos role, their names begin with the prefix juniper_junos_.  
-
-http://junos-ansible-modules.readthedocs.io/en/stable/ 
+- Until the version [1.4.3](http://junos-ansible-modules.readthedocs.io/en/1.4.3/) of the modules included in the Juniper.junos role, their names begun with the prefix **junos_**.  
+- The Junos modules included in Ansible core have names which begin with the prefix junos_. To avoid conflict with the names used by ansible core modules for Junos, since the version 2 of the modules included in the Juniper.junos role, their names begin with the prefix **juniper_junos_**. Here's the [doc for the last version of the modules included in the Juniper.junos role](http://junos-ansible-modules.readthedocs.io/en/stable/) 
 
 Modules (version 1.4.3):     
 - **junos_cli** - Execute CLI on device and save the output locally  
