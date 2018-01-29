@@ -120,7 +120,7 @@ You need to run the below commands within the root of the project tree.
 
 The default ```hosts``` file lives in ```/etc/ansible/hosts```.  
 
-The inventory file we are using in this repository is [**hosts**](hosts). It is at the root of the repository, so it is not at the default place. 
+The inventory file we are using in this repository is [**hosts**](hosts). It is at the root of the repository, so it is not at the default place.  
 It defines the inventory (hosts and groups).  
 It also defines the ip address of each device with the variable **junos_host**. This variable is re-used in the playbooks.     
 
@@ -138,29 +138,27 @@ In order to see all variables for a ```hostname```, you can run this command:
 ansible -m debug -a "var=hostvars['hostname']" localhost
 ```
 
-##### Playbooks:  
-All playbooks are named **pb*.yml**  
-These playbooks use the modules from the two Ansible librairies to interact with Junos (the one built by Juniper and hosted on galaxy, and the core modules built by Ansible).  
-They also use other Ansible modules (template, assemble, uri, wait_for, debug, ...).  
-They are all ready-to-use if you access to the lab.    
-You will find them in different directories.  
+##### Playbooks  
+All playbooks in this repository are named pb*.yml 
+These playbooks use the two sets of modules for Junos automation. They also use other Ansible modules (template, assemble, uri, wait_for, debug, ...).  
 
-##### Directories:
-Playbooks are in different directories.   
-Each directory has a readme file as well. Please read the instructions in the readme.md file of each directory before executing the playbooks.    
+##### Directories
+This repository use several directories.  
+I am reusing the Ansible module names for the directories names.  
+Each directory has: 
+- Playbooks
+- a readme fil
 
-##### Lab:  
-The Junos devices we are using in this repository are in a lab which is only accessible from the Juniper Networks corporate network.   
-The lab topology is described in the file [lab topology.pdf] (https://github.com/ksator/ansible-training-for-junos/blob/master/lab%20topology.pdf)  
+##### Lab topology   
+The lab topology is described in the file [lab topology.pdf] (lab%20topology.pdf)  
 
-You can very easily re-use this automation content with your own Junos devices (Junos physical devices, Junos virtual devices, vagrant boxes running Junos): you would just need to build a similar topology and to adapt this content with your IP addresses, username and password.   
-If you want to build a Junos topology using Vagrant boxes, you can refer to this repository: https://github.com/ksator/vagrant-junos  
+You can very easily re-use this automation content with your own Junos devices: you just need to build a similar topology and then adapt this content with your IP addresses, username and password. 
 
-##### Branches:
+##### Branches
 
 There are currently 2 branches in this repository: 
-- **master** - This is the original one, and the active one.   
-- **topology_independent** - This is a new one. The topology_independent branch allows to use a different network topology without changing the playbooks. The automation content in this branch is probably not always up to date/in sync with the master branch.  
+- **master** - This is the default and active one
+- **topology_independent** - This branch allows to use a different network topology without changing the playbooks. The automation content in this branch is probably not always up to date/in sync with the master branch.  
 
 Here's how the **topology_independent** branch works: 
 
