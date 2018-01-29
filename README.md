@@ -4,14 +4,14 @@
 
 [**About this project**](README.md#about-this-project)  
 [**About Ansible**](README.md#about-ansible)  
-[**About Ansible modules for Junos automation**](README.md#README.md#about-ansible-modules-for-junos-automation)
+[**About Ansible modules for Junos automation**](README.md#README.md#about-ansible-modules-for-junos-automation)  
 [**Requirements for Junos automation with Ansible**](README.md#requirements-for-junos-automation-with-ansible)  
 [**Requirements to use this repository**](README.md#requirements-to-use-this-repository)  
-[**Repository structure**](README.md#repository-structure)
-[**Continuous integration with Travis CI**](README.md#continuous-integration-with-travis-ci)
-[**Contributions, questions, ...**](README.md#contributions, questions, ...)
-[**Looking for more examples on of how to use Ansible with Junos**](README.md#looking-for-more-examples-on-how-to-use-ansible-with-Junos)
-[**Looking for more Junos automation solutions**](README.md#looking-for-more-junos-automation-solutions)
+[**Repository structure**](README.md#repository-structure)  
+[**Continuous integration with Travis CI**](README.md#continuous-integration-with-travis-ci)  
+[**Contributions, questions, ...**](README.md#contributions, questions, ...)  
+[**Looking for more examples on of how to use Ansible with Junos**](README.md#looking-for-more-examples-on-how-to-use-ansible-with-Junos)  
+[**Looking for more Junos automation solutions**](README.md#looking-for-more-junos-automation-solutions)  
 
 
 # About this project   
