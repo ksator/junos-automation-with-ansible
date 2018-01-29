@@ -9,7 +9,7 @@
 [**Requirements to use this repository**](README.md#requirements-to-use-this-repository)  
 [**Repository structure**](README.md#repository-structure)  
 [**Continuous integration with Travis CI**](README.md#continuous-integration-with-travis-ci)  
-[**Contributions, questions, ...**](README.md#contributions, questions, ...)  
+[**Contributions, questions**](README.md#contributions, questions)  
 [**Looking for more examples on of how to use Ansible with Junos**](README.md#looking-for-more-examples-on-how-to-use-ansible-with-Junos)  
 [**Looking for more Junos automation solutions**](README.md#looking-for-more-junos-automation-solutions)  
 
@@ -269,7 +269,7 @@ We are using two types of playbooks in this repository:
 - Some playbooks interact with Junos
   - ansible-playbook has a built-in option to check only the playbook's syntax (```--syntax-check```). This is how Travis is testing them. If there is any syntax error, Travis will fail the build and output the errors in the log.  
 
-# Contributions, questions, ... 
+# Contributions, questions
 Please submit github issues or pull requests.  
 
 # Looking for more examples on how to use Ansible with Junos 
