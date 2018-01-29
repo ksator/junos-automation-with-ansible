@@ -16,36 +16,19 @@ Both of them are used in this repository.
 ### Ansible modules for Junos built by Juniper:
 
 They are hosted on the [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)    
-The role is Juniper.junos
+The role is Juniper.junos  
+
+Here's the [source code](https://github.com/Juniper/ansible-junos-stdlib)
 
 - Until the version 1.4.3 of the modules included in the Juniper.junos role, their names begun with the prefix **junos_**. 
- - Here's the [doc for the 1.4.3 version of the modules included in the Juniper.junos role](http://junos-ansible-modules.readthedocs.io/en/1.4.3/) 
+ - Here's the [doc for the version 1.4.3](http://junos-ansible-modules.readthedocs.io/en/1.4.3/)
+ - To download and install them to the Ansible server, execute the command ```sudo ansible-galaxy install Juniper.junos,1.4.3```
+
 - The Junos modules included in Ansible core have names which begin with the prefix junos_. To avoid conflict with the names used by ansible core modules for Junos, since the version 2 of the modules included in the Juniper.junos role, their names begin with the prefix **juniper_junos_**. 
-  - Here's the [doc for the last version of the modules included in the Juniper.junos role](http://junos-ansible-modules.readthedocs.io/en/stable/) 
+  - Here's the [doc for the last version](http://junos-ansible-modules.readthedocs.io/en/stable/) 
+  - To download and install them to the Ansible server, execute the command ```sudo ansible-galaxy install Juniper.junos```
 
-Modules (version 1.4.3):     
-- **junos_cli** - Execute CLI on device and save the output locally  
-- **junos_commit** - Execute commit on device  
-- **junos_get_config** - Retrieve configuration of device  
-- **junos_get_facts** - Retrieve facts for a device running Junos OS. 
-- **junos_get_table** - Retrieve data from a Junos device using Tables/Views
-- **junos_install_config** - Load a configuration file or snippet onto a device running Junos OS.  
-- **junos_install_os** - Install a Junos OS image. 
-- **junos_jsnapy** - Execute JSNAPy test from Ansible
-- **junos_rollback** - Rollback configuration of device  
-- **junos_rpc** - Run given rpc  
-- **junos_shutdown** - Shut down or reboot a device running Junos OS.  
-- **junos_srx_cluster** - Create an srx chassis cluster for cluster capable srx running Junos OS.
-- **junos_ping** - Execute ping on junos devices
-- **junos_zeroize** - Erase all data including configuration and log files on a device running Junos OS.  
 
-Documentation: http://junos-ansible-modules.readthedocs.io/  
-Source code: https://github.com/Juniper/ansible-junos-stdlib  
-Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).  
-To download them to the Ansible server, execute the command:   
-```
-sudo ansible-galaxy install Juniper.junos  
-```
 
 ### Ansible core modules for Junos built by Ansible:   
 
