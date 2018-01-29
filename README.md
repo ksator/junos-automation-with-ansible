@@ -190,9 +190,7 @@ There are currently 2 branches in this repository:
 - [**master**](https://github.com/ksator/junos-automation-with-ansible) - This is the default and active one. This is the one to use.  
 - [**topology_independent**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent) - This branch allows to use a different network topology without changing the playbooks. The automation content in this branch is not up to date/in sync with the master branch, so, dont use it, so you can skip this section.   
 
-Here's how the [**topology_independent**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent) branch works: 
-
-There is a [**topology.yml**](https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml) file in [**group_vars/all**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent/group_vars/all) directory. This yaml file defines the topology. Here's an example:  
+Here's how the [**topology_independent**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent) branch works: There is a [**topology.yml**](https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml) file in [**group_vars/all**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent/group_vars/all) directory. This yaml file defines the topology. Here's an example:  
 ```
 ---
 topo:
@@ -211,51 +209,9 @@ topo:
 This file is a dictionary with the key topo. The value of this key is the topology.  
 Because this file is located in the [**group_vars/all**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent/group_vars/all) directory, the variable ```{{topo}}``` can be used for all devices. 
 
-The files in the [**host_vars**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent/host_vars) directory were re-written.    
-
-- files in the host_vars directory in the master branch: They are static. So if you use another network topology, it doesn’t work anymore until you rewrite these files. Example with this file (host_vars/ex4300-10/bgp.yml)  
-
-```
----  
-loopback: 10.20.1.3  
-local_asn: 110
-neighbors:
-   - interface: ge-0/0/0
-     name: ex4300-9
-     asn: 109
-     peer_ip: 192.168.0.5  
-     local_ip: 192.168.0.4
-     peer_loopback: 192.179.0.95
-   - interface: ge-0/0/1 
-     name: ex4300-4
-     asn: 104
-     peer_ip: 192.168.0.2
-     local_ip: 192.168.0.3
-     peer_loopback: 192.179.0.65
-```
-- **files in the host_vars directory in the topology_independent branch:**    
-In the topology_independent branch, they use {{topo}}. So if we change the file [topology.yml] (https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml), the content of the files in the host_vars directory change: no need to re-write it.   
-Example with https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/host_vars/ex4300-10/bgp.yml  
-
-```
----
-loopback: 10.20.1.3
-local_asn: 110
-neighbors:
-   - interface: "{{ topo[inventory_hostname].port1.name }}"
-     name: "{{ topo[inventory_hostname].port1.peer }}"
-     asn: 109
-     peer_ip: 192.168.0.5  
-     local_ip: 192.168.0.4
-     peer_loopback: 192.179.0.95
-   - interface: "{{ topo[inventory_hostname].port2.name }}"
-     name: "{{ topo[inventory_hostname].port2.peer }}"
-     asn: 104
-     peer_ip: 192.168.0.2
-     local_ip: 192.168.0.3
-     peer_loopback: 192.179.0.65
-```
-
+The files in the **host_vars** directory were re-written: 
+- The files in the [**host_vars**](host_vars) directory in the [**master**](https://github.com/ksator/junos-automation-with-ansible) branch are static. So if you use another network topology, it doesn’t work anymore until you rewrite these files. Example with this file (host_vars/ex4300-10/bgp.yml)  
+- The files in the [**host_vars**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent/host_vars) directory in the [**topology_independent**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent) branch use the ```{{topo}}``` variable. So if we change the topology, we just need to update the file [topology.yml](https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml), and there is no need to change the content of the files in the **host_vars** directory nor the playbooks.  
 
 # Continuous integration with Travis CI
 
