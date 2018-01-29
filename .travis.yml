@@ -7,9 +7,8 @@ dist: trusty
 
 env:
   #- ANSIBLE_VERSION=1.9.4
-  - ANSIBLE_VERSION=2.1.1.0
-  - ANSIBLE_VERSION=2.1.4.0
-  - ANSIBLE_VERSION=2.2.1.0
+  - ANSIBLE_VERSION=2.4.2.0
+  - ANSIBLE_VERSION=2.4.3.0
   
 before_install:
   - sudo apt-get install -y python-dev libxml2-dev python-pip libxslt1-dev build-essential libssl-dev libffi-dev
@@ -17,7 +16,7 @@ before_install:
 install:
   - pip install -r requirements.txt
   - pip install -q ansible==$ANSIBLE_VERSION
-  - ansible-galaxy --force install Juniper.junos -p ./
+  - ansible-galaxy --force install Juniper.junos,1.4.3 -p ./
 
 script:
   - ansible-playbook assemble/pb.yml
