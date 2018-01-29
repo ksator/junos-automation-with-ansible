@@ -210,7 +210,7 @@ Because this file is located in the [**group_vars/all**](https://github.com/ksat
 
 The files in the **host_vars** directory were re-written: 
 - The files in the [**host_vars**](host_vars) directory in the [**master**](https://github.com/ksator/junos-automation-with-ansible) branch are static. So if you use another network topology, it doesn’t work anymore until you rewrite these files. Example with this file (host_vars/ex4300-10/bgp.yml)  
-- The files in the [**host_vars**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent/host_vars) directory in the [**topology_independent**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent) branch use the ```{{topo}}``` variable. So if we change the topology, we just need to update the file [topology.yml](https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml), and there is no need to change the content of the files in the **host_vars** directory nor the playbooks.  
+- The files in the [**host_vars**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent/host_vars) directory in the [**topology_independent**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent) branch use the ```{{topo}}``` variable. So if we change the topology, we just need to update the file [**topology.yml**](https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml), and there is no need to change the content of the files in the [**host_vars**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent/host_vars) directory nor the playbooks.  
 
 # Continuous integration with Travis CI
 
