@@ -21,8 +21,6 @@ So the parsing (using the wait_for optionnal argument from this module) depends 
 ```
 # ansible --version
 ansible 2.2.3.0
-  config file = /home/ksator/ansible-training-for-junos-automation/ansible.cfg
-  configured module search path = Default w/o overrides
 ```
 ```
 # more junos_command/pb.check.bgp.yml 
@@ -132,9 +130,6 @@ ex4300-9                   : ok=5    changed=0    unreachable=0    failed=0
 ```
 $ ansible --version
 ansible 2.3.2.0
-  config file = /home/ksator/ansible-training-for-junos-automation/ansible.cfg
-  configured module search path = Default w/o overrides
-  python version = 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4]
 ```
 ##### with xml
 
@@ -325,13 +320,8 @@ ex4200-12                  : ok=8    changed=0    unreachable=0    failed=0
 ##### Ansible 2.4
 
 ```
-# ansible --versionansible 2.4.0.0
-  config file = /home/ksator/ansible-training-for-junos-automation/ansible.cfg
-  configured module search path = [u'/home/ksator/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
-  ansible python module location = /usr/local/lib/python2.7/dist-packages/ansible
-  executable location = /usr/local/bin/ansible
-  python version = 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4]
-
+# ansible --version
+ansible 2.4.0.0
 ```
 - the structured response DOES include the 'rpc-reply' key.
 - the structured response is returned in the 'output' key. 
