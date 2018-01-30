@@ -1,6 +1,6 @@
-Module: slack
-it send slack notifications.
-Documenatation: http://docs.ansible.com/ansible/slack_module.html
+Module: slack  
+it send slack notifications.  
+Documenatation: http://docs.ansible.com/ansible/slack_module.html  
 Installation: It ships with ansible itself.   
 
 Playbook: 
