@@ -8,7 +8,7 @@ Installation: this is a core module. It ships with ansible itself
 # Important Notes: 
 
 This ansible module provide a diff output from devices based on Ansible versions.  
-So the parsing (using the wait_for optionnal argument from this module) depends on Ansible versions.    
+So the parsing (using the **wait_for** optionnal argument from this module) depends on Ansible versions.    
 
 ### Ansible 2.2.3
 - the structured response is returned in the 'stdout' key. 
