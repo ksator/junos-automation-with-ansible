@@ -23,6 +23,7 @@ SSH password:
 hello
 ```
 
+About response code:  
 ```
 # ping 8.8.8.8
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
@@ -45,6 +46,7 @@ PING 1.2.3.4 (1.2.3.4) 56(84) bytes of data.
 # echo $?
 1
 ```
+Using response code with a playbook:
 ```
 # ansible-playbook command/pb.yml --ask-pass
 SSH password: 
