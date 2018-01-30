@@ -1,6 +1,6 @@
-Module: shell
-Executes commands
-Documentation : http://docs.ansible.com/ansible/shell_module.html  
+Module: shell  
+Executes commands  
+Documentation: http://docs.ansible.com/ansible/shell_module.html  
 Installation: this is a core module. It ships with ansible itself  
 
 Playbooks:  
