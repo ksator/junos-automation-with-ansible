@@ -17,6 +17,7 @@
     command: ping 8.8.8.1 -c 2
     register: output
     remote_user: administrator
+    ignore_errors: yes
 
   - name: print echo $?
     debug:
