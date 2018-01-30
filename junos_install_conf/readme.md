@@ -1,8 +1,7 @@
 Module: junos_install_config  
 Doc: http://junos-ansible-modules.readthedocs.io/en/1.4.3/    
-Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/). To download and install it to the Ansible server, execute the command ```ansible-galaxy install Juniper.junos,1.4.3```  
-Requirement on Ansible: junos-eznc  
-Requirement on Junos devices: enable netconf on junos.  
+Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).  
+To download and install it to the Ansible server, execute the command ```ansible-galaxy install Juniper.junos,1.4.3```  
 
 playbooks:
 - **Pb.yml**: install a list of configuration files on junos devices (2 files: syslog.set and banner.set, this makes 2 separate commit, one per file).   
