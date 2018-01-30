@@ -2,25 +2,15 @@ Module: junos_command
 Executes commands (cli or rpc) on Junos devices and return the results to the Ansible playbook.  
 This module includes an optional argument that cause the module to wait for a specific condition.  
 Documentation: http://docs.ansible.com/ansible/junos_command_module.html  
-source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/junos  
+source code: https://github.com/ansible/ansible/tree/devel/lib/ansible/modules/network/junos  
 Installation: this is a core module. It ships with ansible itself      
-Requirements on Ansible: Ansible 2.1 and junos-eznc   
-Requirements on  Junos devices: netconf  
 
-Playbooks:  
-
-Usage:  
-```
-```
-
-**Important Notes:**  
+# Important Notes: 
 
 This ansible module provide a diff output from devices based on Ansible versions.  
 So the parsing (using the wait_for optionnal argument from this module) depends on Ansible versions.    
-Above playbooks have been tested with Ansible 2.1/2.2  
-For other Ansible versions, see below examples  
 
-***Ansible 2.2.3*** 
+### Ansible 2.2.3
 - the structured response is returned in the 'stdout' key. 
 - the structured response does not include the 'rpc-reply' key.  
 - If you register a variable named response
@@ -29,13 +19,13 @@ For other Ansible versions, see below examples
 - The implicit result variable used in the wait_for conditions maps to response['results'][current_item_number]['stdout'].
 
 ```
-root@ksator-virtual-machine:~/ansible-training-for-junos-automation# ansible --version
+# ansible --version
 ansible 2.2.3.0
   config file = /home/ksator/ansible-training-for-junos-automation/ansible.cfg
   configured module search path = Default w/o overrides
 ```
 ```
-root@ksator-virtual-machine:~/ansible-training-for-junos-automation# more junos_command/pb.check.bgp.yml 
+# more junos_command/pb.check.bgp.yml 
 ---
  - name: check bgp states (with items)
    hosts: AMS-EX4300
@@ -48,7 +38,6 @@ root@ksator-virtual-machine:~/ansible-training-for-junos-automation# more junos_
       provider: "{{  credentials }}"
       commands:
        - show bgp neighbor "{{ item.peer_ip }}"
-#      display: 'xml'
       waitfor:
 #      - "result[0].bgp-information.bgp-peer.peer-state eq Established"
       - "result[0]['bgp-information']['bgp-peer']['peer-state'] eq Established"
@@ -87,7 +76,7 @@ root@ksator-virtual-machine:~/ansible-training-for-junos-automation# more junos_
 
 ```
 ```
-root@ksator-virtual-machine:~/ansible-training-for-junos-automation# ansible-playbook junos_command/pb.check.bgp.yml 
+# ansible-playbook junos_command/pb.check.bgp.yml 
 
 PLAY [check bgp states (with items)] *******************************************
 
@@ -136,25 +125,23 @@ ex4300-17                  : ok=3    changed=0    unreachable=0    failed=0
 ex4300-18                  : ok=3    changed=0    unreachable=0    failed=0   
 ex4300-9                   : ok=5    changed=0    unreachable=0    failed=0   
 
-root@ksator-virtual-machine:~/ansible-training-for-junos-automation# 
-
 ```
 
-***Ansible 2.3.2***  
+### Ansible 2.3.2
 
 ```
-ksator@ubuntu:~/ansible-training-for-junos-automation$ ansible --version
+$ ansible --version
 ansible 2.3.2.0
   config file = /home/ksator/ansible-training-for-junos-automation/ansible.cfg
   configured module search path = Default w/o overrides
   python version = 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4]
 ```
-****with xml****  
+##### with xml
 
-- the structured response DOES include the 'rpc-reply' key.  
+- The structured response DOES include the 'rpc-reply' key.  
 
 ```
-ksator@ubuntu:~/ansible-training-for-junos-automation$ more junos_command/pb.check.bgp.xml.yml 
+$ more junos_command/pb.check.bgp.xml.yml 
 ---
  - name: check bgp states
    hosts: AMS-EX4200
@@ -185,7 +172,7 @@ ksator@ubuntu:~/ansible-training-for-junos-automation$ more junos_command/pb.che
       - "{{ neighbors }}"
 ```
 ```
-ksator@ubuntu:~/ansible-training-for-junos-automation$ ansible-playbook junos_command/pb.check.bgp.xml.yml 
+$ ansible-playbook junos_command/pb.check.bgp.xml.yml 
 
 PLAY [check bgp states] ***********************************************************************************************************************************************************
 
@@ -210,16 +197,16 @@ ex4200-12                  : ok=2    changed=0    unreachable=0    failed=0
 ex4200-7                   : ok=2    changed=0    unreachable=0    failed=0   
 ex4200-8                   : ok=2    changed=0    unreachable=0    failed=0   
 
-ksator@ubuntu:~/ansible-training-for-junos-automation$ 
 
 ```
 
 
-****with json****   
+##### with json   
+
 Parsing for json output from ex4200-24t running Junos 15.1R2.9:  
 
 ```
-ksator@ubuntu:~/ansible-training-for-junos-automation$ more junos_command/pb.check.bgp.yml
+$ more junos_command/pb.check.bgp.yml
 ---
  - name: check bgp states
    hosts: ex4200-12
@@ -288,7 +275,7 @@ ksator@ubuntu:~/ansible-training-for-junos-automation$ more junos_command/pb.che
 
 ```
 ```
-ksator@ubuntu:~/ansible-training-for-junos-automation$ ansible-playbook junos_command/pb.check.bgp.yml
+$ ansible-playbook junos_command/pb.check.bgp.yml
 
 PLAY [check bgp states] ***********************************************************************************************************************************************************
 
@@ -333,23 +320,23 @@ ok: [ex4200-12] => (item=(censored due to no_log)) => {"censored": "the output h
 PLAY RECAP ************************************************************************************************************************************************************************
 ex4200-12                  : ok=8    changed=0    unreachable=0    failed=0   
 
-ksator@ubuntu:~/ansible-training-for-junos-automation$ 
 ```
 
-***Ansible 2.4***
+##### Ansible 2.4
+
 ```
-root@ubuntu:~/ansible-training-for-junos-automation# ansible --versionansible 2.4.0.0
+# ansible --versionansible 2.4.0.0
   config file = /home/ksator/ansible-training-for-junos-automation/ansible.cfg
   configured module search path = [u'/home/ksator/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
   ansible python module location = /usr/local/lib/python2.7/dist-packages/ansible
   executable location = /usr/local/bin/ansible
   python version = 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4]
-root@ubuntu:~/ansible-training-for-junos-automation# 
+
 ```
 - the structured response DOES include the 'rpc-reply' key.
 - the structured response is returned in the 'output' key. 
 ```
-root@ubuntu:~/ansible-training-for-junos-automation# more junos_command/pb.check.bgp.xml.yml 
+# more junos_command/pb.check.bgp.xml.yml 
 ---
  - name: check bgp states with items
    hosts: AMS-EX4200
@@ -413,7 +400,7 @@ root@ubuntu:~/ansible-training-for-junos-automation# more junos_command/pb.check
 
 ```
 ```
-root@ubuntu:~/ansible-training-for-junos-automation# ansible-playbook junos_command/pb.check.bgp.xml.yml 
+# ansible-playbook junos_command/pb.check.bgp.xml.yml 
 
 PLAY [check bgp states with items] ************************************************************************************************************************************************
 
