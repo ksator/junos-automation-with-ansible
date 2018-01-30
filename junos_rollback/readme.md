@@ -4,10 +4,6 @@ Documentation: http://junos-ansible-modules.readthedocs.io/en/1.4.3/
 Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).   
 To download and install it to the Ansible server, execute the command: ```ansible-galaxy install Juniper.junos,1.4.3```  
 
-Requirement on Ansible: junos-eznc  
-Requirement on Junos devices: enable netconf on junos.  
-
-
 Playbooks: 
 - pb.yml: it rollbacks Junos configuration on junos devices. The rollback id is a variable. This variable is not defined. so you need to pass it as an ```extra-var```.     
 
