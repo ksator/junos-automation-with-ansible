@@ -27,13 +27,15 @@ This repository has been tested using:
 
 # About Ansible
 
+Ansible is an open-source IT automation tool.  
+
 [Here's an ansible presentation](ansible.pdf)  
 
 [Ansible vs Saltstack vs Stackstorm](https://medium.com/@anthonypjshaw/ansible-v-s-salt-saltstack-v-s-stackstorm-3d8f57149368)  
 
 # About Ansible modules for Junos automation
 
-There are two modules librairies to interact with Junos
+There are two modules librairies to interact with Junos:
 - An Ansible library for Junos built by Juniper
     - These modules are available on [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)   
 - An Ansible library for Junos built by Ansible 
@@ -46,10 +48,10 @@ Both of them are used in this repository.
 
 ### Ansible modules for Junos built by Juniper and hosted on Galaxy
 
-- They are hosted on the [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)    
+- They are hosted on the [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/):      
   - The role is Juniper.junos  
 - Here's the [source code](https://github.com/Juniper/ansible-junos-stdlib)  
-- Until the version 1.4.3 of the modules included in the Juniper.junos role
+- Until the version 1.4.3 of the modules included in the Juniper.junos role:
   - Their names begun with the prefix **junos_**. 
   - Here's the [doc for the version 1.4.3](http://junos-ansible-modules.readthedocs.io/en/1.4.3/)
   - To download and install them to the Ansible server, execute the command ```sudo ansible-galaxy install Juniper.junos,1.4.3```
