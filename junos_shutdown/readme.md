@@ -3,8 +3,6 @@ Shut down or reboot a device running Junos OS.
 Documentation: http://junos-ansible-modules.readthedocs.io/en/1.4.3/
 Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).   
 To download and install it to the Ansible server, execute the command ```sudo ansible-galaxy install Juniper.junos,1.4.3```  
-Requirement on Ansible: junos-eznc  
-Requirement on Junos devices: enable netconf on junos. 
 
 
 Playbooks:  
