@@ -1,0 +1,25 @@
+- name: run commands and print response codes
+  hosts: 172.30.204.10
+  gather_facts: no
+  tasks: 
+
+  - name: run a command that is going to succeed
+    command: ping 8.8.8.8 -c 2
+    register: output
+    remote_user: administrator
+
+  - name: print echo $?
+    debug:
+       msg: "response code is {{ output.rc }}"
+
+
+  - name: run a command that is going to fail
+    command: ping 8.8.8.1 -c 2
+    register: output
+    remote_user: administrator
+
+  - name: print echo $?
+    debug:
+       msg: "response code is {{ output.rc }}"
+
+
