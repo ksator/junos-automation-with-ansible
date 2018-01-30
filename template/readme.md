@@ -5,11 +5,11 @@ Installation: this is a core module. It ships with ansible itself
 
 Playbooks:  
 
-- **pb_render_initial_configuration.yml**: creates junos configuration for new devices based on the template **initial_configuration.j2**. The junos configuration files created are stored in the directory **render**. Nothing is loaded on Junos devices.  
-- **pb_render_common_settings.yml**: creates junos configuration for common settings (syslog, ntp, snmp...) based on the template **common_settings.j2**. The junos configuration files created are stored in the directory **render**. Nothing is loaded on Junos devices.  
-- **pb_render_bgp.yml**: creates Junos BGP configuration based on the template **bgp.j2**. The junos configuration files created are stored in the directory **render**. Nothing is loaded on Junos devices.  
-- **pb_load_cfg_from_template.yml**: uses the template **dns-servers.j2** and the variables **dns-servers.yml** to create a Junos configuration file to add DNS servers, and applies the document to Junos devices. This playbook adds DNS servers to the existing configuration on devices. 
-- **pb_load_cfg_from_template_replace.yml**: uses the template **dns-servers_replace.j2** and the variables **dns-servers.yml** to create a Junos configuration file to add DNS servers, and applies the document to Junos devices. This playbook replaces the DNS configuration on devices. The diff is saved in the directory **diff**
+- [**pb_render_initial_configuration.yml**](pb_render_initial_configuration.yml): creates junos configuration for new devices based on the template [**initial_configuration.j2**](initial_configuration.j2). The junos configuration files created are stored in the directory [**render**](render). Nothing is loaded on Junos devices.  
+- [**pb_render_common_settings.yml**](pb_render_common_settings.yml): creates junos configuration for common settings (syslog, ntp, snmp...) based on the template [**common_settings.j2**](common_settings.j2). The junos configuration files created are stored in the directory [**render**](render). Nothing is loaded on Junos devices.  
+- [**pb_render_bgp.yml**](pb_render_bgp.yml): creates Junos BGP configuration based on the template [**bgp.j2**](bgp.j2). The junos configuration files created are stored in the directory [**render**](render). Nothing is loaded on Junos devices.  
+- [**pb_load_cfg_from_template.yml**](pb_load_cfg_from_template.yml): uses the template [**dns-servers.j2**](dns-servers.j2) and the variables [**dns-servers.yml**](dns-servers.yml) to create a Junos configuration file to add DNS servers, and applies the document to Junos devices. This playbook adds DNS servers to the existing configuration on devices. 
+- [**pb_load_cfg_from_template_replace.yml**](pb_load_cfg_from_template_replace.yml): uses the template [**dns-servers_replace.j2**](dns-servers_replace.j2) and the variables [**dns-servers.yml**](dns-servers.yml) to create a Junos configuration file to add DNS servers, and applies the document to Junos devices. This playbook replaces the DNS configuration on devices. The diff is saved in the directory [**diff**](diff)
 
 Usage:   
 # pb_render_common_settings.yml
