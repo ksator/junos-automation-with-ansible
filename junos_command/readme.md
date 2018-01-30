@@ -1,5 +1,6 @@
 Module: junos_command  
-Executes commands (cli or rpc) on Junos devices and return the results to the Ansible playbook. In addition, you can specify how to evaluate the output (with the optional argument waitfor) 
+Executes commands (cli or rpc) on Junos devices and return the results to the Ansible playbook.  
+This module includes an optional argument that cause the module to wait for a specific condition.  
 Documentation: http://docs.ansible.com/ansible/junos_command_module.html  
 source code: https://github.com/ansible/ansible-modules-core/tree/devel/network/junos  
 Installation: this is a core module. It ships with ansible itself      
