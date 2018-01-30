@@ -1,6 +1,3 @@
-you can use the ansible ping module for testing: https://github.com/ksator/ansible-training-for-junos/tree/master/ping  
-Another Ansible module that is useful for testing is the command module.    
-
 module: command  
 this is a core module   
 doc: http://docs.ansible.com/ansible/command_module.html   
