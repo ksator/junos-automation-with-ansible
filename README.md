@@ -168,7 +168,7 @@ Each directory has:
 - a readme fil
 
 ### Lab topology   
-The lab topology is described in the file [lab topology.pdf] (lab%20topology.pdf)  
+The lab topology is described in the file [lab topology.pdf](lab%20topology.pdf)  
 
 You can very easily re-use this automation content with your own Junos devices: you just need to build a similar topology and then adapt this content with your IP addresses, username and password. 
 
