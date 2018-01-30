@@ -1,8 +1,7 @@
 Module: junos_get_config  
 Documentation: http://junos-ansible-modules.readthedocs.io/en/1.4.3/  
-Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/). To download and install it to the Ansible server, execute the command ```ansible-galaxy install Juniper.junos,1.4.3```  
-Requirement on Ansible: junos-eznc  
-Requirement on Junos devices: enable netconf  
+Installation: Hosted on the Ansible Galaxy website (https://galaxy.ansible.com/Juniper/junos/).  
+To download and install it to the Ansible server, execute the command ```ansible-galaxy install Juniper.junos,1.4.3```  
 
 Playbooks: 
 - **pb_junos_get_config.yml**: It retrieves junos configuration from junos devices and save it to a file in the **configs** directory on the Ansible server. This will fail if the configs directory doesnt exist on the Ansible server.
