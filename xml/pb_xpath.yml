@@ -1,0 +1,34 @@
+# junos_rpc module from galaxy
+---
+ - name: pass rpc to junos devices, save the output and parse it with xpath
+   hosts: test
+   roles:
+    - Juniper.junos
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+   - name: get interface information
+     junos_rpc:
+        host: "{{ junos_host }}"
+        user: "{{ ADMUSER }}"
+        passwd: "{{ ADMPASS }}"
+        rpc: "get-lldp-interface-neighbors-information"
+        dest: "{{playbook_dir}}/{{ inventory_hostname }}.xml"
+        format: xml
+
+   - name: get neighbor details
+     xml:
+        path: "{{playbook_dir}}/{{ inventory_hostname }}.xml"
+        # xpath: /lldp-neighbors-information/lldp-neighbor-information/lldp-remote-system-name
+        # xpath: //lldp-remote-system-name
+        # xpath: //lldp-neighbor-information[lldp-local-interface='ge-0/0/1.0']/*
+        # xpath: //lldp-neighbor-information[lldp-local-interface='ge-0/0/0.0']/lldp-remote-system-name
+        xpath: //lldp-neighbor-information[starts-with(lldp-local-interface, 'ge-0/0/')]/lldp-remote-system-name
+        content: text
+     register: neighbors
+
+   - debug: 
+        var: neighbors
+
