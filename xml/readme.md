@@ -1,4 +1,7 @@
 core module.  
+https://docs.ansible.com/ansible/2.4/xml_module.html  
+requires lxml >= 2.3.0 on host that execute this module.  
+
 ```
 # ansible-playbook xml/pb_xpath.yml 
 
