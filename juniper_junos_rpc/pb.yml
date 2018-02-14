@@ -1,0 +1,35 @@
+---                                                                                                               
+- name: Get device information
+  hosts: ex4300-9
+  roles:
+    - Juniper.junos
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Get software and system uptime information
+      juniper_junos_rpc:
+        host: "{{ junos_host }}"
+        user: "{{ ADMUSER }}"
+        passwd: "{{ ADMPASS }}"
+        rpcs:
+          - "get-interface-information"
+        kwargs:
+        - level_extra: terse
+        formats: "json"
+      register: junos_result
+
+#    - name: testing
+#      debug:
+#         msg: "{{ item['oper-status'][0]['data'] }}"
+#      with_items:
+#        - "{{ junos_result.parsed_output['interface-information'][0]['physical-interface'] }}"
+
+    - name: assert
+      assert:
+        that:
+        - "item['oper-status'][0]['data'] == 'up'"
+        msg: "status for {{ item['name'][0]['data'] }} is Down"
+      with_items: 
+        - "{{ junos_result.parsed_output['interface-information'][0]['physical-interface'] }}"
+      when: (item['admin-status'][0]['data'] == 'up')
+
