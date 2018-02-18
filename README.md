@@ -35,7 +35,7 @@ Ansible is an open-source IT automation tool.
 
 # About Ansible modules for Junos automation
 
-There are two modules librairies to interact with Junos:
+There are two modules libraries to interact with Junos:
 - An Ansible library for Junos built by Juniper
     - These modules are available on [Ansible Galaxy website](https://galaxy.ansible.com/Juniper/junos/)   
 - An Ansible library for Junos built by Ansible 
@@ -52,7 +52,7 @@ Both of them are used in this repository.
   - The role is Juniper.junos  
 - Here's the [source code](https://github.com/Juniper/ansible-junos-stdlib)  
 - Until the version 1.4.3 of the modules included in the Juniper.junos role:
-  - Their names begun with the prefix **junos_**. 
+  - Their names begin with the prefix **junos_**. 
   - Here's the [doc for the version 1.4.3](http://junos-ansible-modules.readthedocs.io/en/1.4.3/)
   - To download and install them to the Ansible server, execute the command ```sudo ansible-galaxy install Juniper.junos,1.4.3```
 - From version 2 of the modules included in the Juniper.junos role: 
@@ -71,9 +71,9 @@ Both of them are used in this repository.
 
 ### On the Ansible server
 
-Most of these Ansbile modules require to install the python library **py-junos-eznc** on the Ansible server.  
-Some options require also to install the python library **jxmlease** on the Ansible server.  
-Some options (like the console option in the junos_install_config module) require also the python library **junos-netconify** on the Ansible server.  
+Most of these Ansbile modules require installing the python library **py-junos-eznc** on the Ansible server.  
+Some options also require installing the python library **jxmlease** on the Ansible server.  
+Some options (like the console option in the junos_install_config module) also require the python library **junos-netconify** on the Ansible server.  
 
 ### On the Junos devices
 
@@ -150,7 +150,7 @@ It refers to [our inventory file](**hosts**): So even if the inventory file is n
 [**group_vars**](group_vars) and [**host_vars**](host_vars) directories at the root of this repository define variables for hosts and for groups.  
 The inventory file [**hosts**](hosts) at the root of the repository also defines some variables.   
 The playbooks in this directory use all of them.   
-Some playbooks use also other variables.  
+Some playbooks also use other variables.  
 In order to see all variables for a ```hostname```, you can run this command:  
 ```
 ansible -m debug -a "var=hostvars['hostname']" localhost
@@ -161,11 +161,11 @@ All playbooks in this repository are named pb*.yml
 These playbooks use the two sets of modules for Junos automation. They also use other Ansible modules (template, assemble, uri, wait_for, debug, ...).  
 
 ### Directories
-This repository use several directories.  
-I am reusing the Ansible module names for the directories names.  
+This repository uses several directories.  
+I am re-using the Ansible module names for the directories names.  
 Each directory has: 
 - Playbooks
-- a readme fil
+- a readme file
 
 ### Lab topology   
 The lab topology is described in the file [lab topology.pdf](lab%20topology.pdf)  
@@ -189,7 +189,7 @@ ansible-playbook xxx/pb*.yml
 
 There are currently 2 branches in this repository: 
 - [**master**](https://github.com/ksator/junos-automation-with-ansible) - This is the default and active one. This is the one to use.  
-- [**topology_independent**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent) - This branch allows to use a different network topology without changing the playbooks. The automation content in this branch is not up to date/in sync with the master branch, so, dont use it, so you can skip this section.   
+- [**topology_independent**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent) - This branch allows to use a different network topology without changing the playbooks. The automation content in this branch is not up to date/in sync with the master branch, so, don’t use it, so you can skip this section.   
 
 Here's how the [**topology_independent**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent) branch works: There is a [**topology.yml**](https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml) file in [**group_vars/all**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent/group_vars/all) directory. This yaml file defines the topology. Here's an example:  
 ```
@@ -211,13 +211,13 @@ This file is a dictionary with the key topo. The value of this key is the topolo
 Because this file is located in the [**group_vars/all**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent/group_vars/all) directory, the variable ```{{topo}}``` can be used for all devices. 
 
 The files in the **host_vars** directory were re-written: 
-- The files in the [**host_vars**](host_vars) directory in the [**master**](https://github.com/ksator/junos-automation-with-ansible) branch are static. So if you use another network topology, it doesn’t work anymore until you rewrite these files. Example with this file (host_vars/ex4300-10/bgp.yml)  
+- The files in the [**host_vars**](host_vars) directory in the [**master**](https://github.com/ksator/junos-automation-with-ansible) branch are static. So if you use another network topology, it doesn’t work anymore until you re-write these files. Example with this file (host_vars/ex4300-10/bgp.yml)  
 - The files in the [**host_vars**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent/host_vars) directory in the [**topology_independent**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent) branch use the ```{{topo}}``` variable. So if we change the topology, we just need to update the file [**topology.yml**](https://github.com/ksator/ansible-training-for-junos/blob/topology_independent/group_vars/all/topology.yml), and there is no need to change the content of the files in the [**host_vars**](https://github.com/ksator/junos-automation-with-ansible/tree/topology_independent/host_vars) directory nor the playbooks.  
 
 # Continuous integration with Travis CI
 
 There is a github webhook with [**Travis CI**](https://travis-ci.org/ksator/junos-automation-with-ansible)  
-The playbooks in  this repository are tested automatically by Travis CI.  
+The playbooks in this repository are tested automatically by Travis CI.  
 The files [**.travis.yml**](.travis.yml) and [**requirements.txt**](requirements.txt) at the root of this repository are used for this.  
 
 We are using two types of playbooks in this repository:  
