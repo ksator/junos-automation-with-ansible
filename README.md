@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/ksator/junos-automation-with-ansible.svg?branch=master)](https://travis-ci.org/ksator/junos-automation-with-ansible)
 
-# Documentation structure
+# Documentation Structure
 
 [**About this project**](README.md#about-this-project)  
 [**About Ansible**](README.md#about-ansible)  
