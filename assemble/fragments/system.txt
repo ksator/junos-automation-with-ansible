@@ -1,7 +1,0 @@
-set system services ftp
-set system services ssh
-set system services telnet
-set system services netconf ssh
-set system domain-name ansible-training.jnpr.net
-set system time-zone Europe/Amsterdam
-set system name-server 8.8.8.8
