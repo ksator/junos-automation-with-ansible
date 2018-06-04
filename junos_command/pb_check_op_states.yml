@@ -25,7 +25,8 @@
      template: 
        src: "{{playbook_dir}}/replacebgp.j2" 
        dest: "{{playbook_dir}}/render/{{ inventory_hostname }}.conf"
-
+     check_mode: no
+     
    - name: push bgp configuration on devices if ansible version is >= 2.4
      junos_config:
       provider: "{{  credentials }}"
