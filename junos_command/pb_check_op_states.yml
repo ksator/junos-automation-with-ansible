@@ -12,7 +12,7 @@
        path: "{{playbook_dir}}/render"
        state: directory
 
- - name: configure devices
+ - name: configure my devices
    hosts: EX4300
    connection: local
    gather_facts: no
