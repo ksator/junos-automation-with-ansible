@@ -1,7 +1,7 @@
 ---
 
  - name: create render directories
-   hosts: localhost
+     hosts: localhost
    gather_facts: no
    tags: 
    - configuration 
