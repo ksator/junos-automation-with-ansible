@@ -1,4 +1,0 @@
-
-Local Interface    Parent Interface    Chassis Id          Port info          System Name
-ge-0/0/1.0         -                   00:23:9c:07:da:c0   ex4200-7           ex4200-8            
-ge-0/0/0.0         -                   2c:6b:f5:94:b1:00   ex4200-7           ex4200-12           
