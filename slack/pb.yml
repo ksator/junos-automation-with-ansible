@@ -19,6 +19,6 @@
        #http://docs.ansible.com/ansible/slack_module.html
        username: "Ansible on {{ inventory_hostname }}"
        channel: general       
-       token: T2MBN64JX/B2N0Z2MEU/1OoB46XLX6Q1oFf89Xl2X9gq
+       token: XXXXXXXXXXXXXXXXXXXXXX
        icon_url: "https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png"
        msg: "configuration commited using pb.slack.yml"
